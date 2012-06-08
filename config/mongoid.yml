@@ -21,4 +21,6 @@ test:
     use_utc: true
 
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>   
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>   
