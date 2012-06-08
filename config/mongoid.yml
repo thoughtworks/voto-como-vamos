@@ -1,0 +1,24 @@
+development:
+  sessions:
+    default:
+      database: voto_como_vamos_development
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+  options:
+    use_utc: true
+
+test:
+  sessions:
+    default:
+      database: voto_como_vamos_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+  options:
+    use_utc: true
+
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>   
