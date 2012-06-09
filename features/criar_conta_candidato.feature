@@ -25,7 +25,7 @@ Funcionalidade: Reinvindicar conta de candidato
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
   * Acesso do candidato a está aplicação (envio de links, etc)
 
-  @pending @smoke
+  @wip @smoke
   Cenario: Solicitando Cadastro
     Dado que eu estou na home page do Votar Como Vamos
     Quando eu pesquiso pela minha conta
@@ -110,7 +110,7 @@ Funcionalidade: Reinvindicar conta de candidato
     Entao o sistema deve exibir a mensagem:
       |Obrigado pelo Cadastro. Cadastro submetido com sucesso, entraremos em contato o mais breve possível para ativação|
 
- @pending
+ @wip
  Cenario: Opções de candidatos
     Dado que eu estou na página de informações básicas de candidatos
     Entao eu devo ver as seguintes opções para se candidatar:
@@ -122,7 +122,7 @@ Funcionalidade: Reinvindicar conta de candidato
       | Governador              | 
       | Senador                 | 
 
-  @pending
+  @wip
   Esquema do Cenario: Obrigatoriedade dos campos de informações Básicas
     Dado que eu estou na página de informações básicas de candidatos
     E todos os campos estão preenchidos
@@ -144,7 +144,7 @@ Funcionalidade: Reinvindicar conta de candidato
     Entao eu devo ver a mensagem:
       |Gentileza preencher todos os campos para prosseguir|
 
-  @pending
+  @wip
   Esquema do Cenario: Requisitos de segurança da senha
     Dado que eu estou na página de informações básicas de candidatos
     E todos os campos estão preenchidos
@@ -156,7 +156,7 @@ Funcionalidade: Reinvindicar conta de candidato
     Entao eu devo ver a mensagem:
       | A senha precisa ter no mínimo doze caracteres, ser alphanumerica e possuir pelo menos um simbolo (!@#$%&*)|
 
-  @pending
+  @wip
   Cenario: Cadastrando candidato com login duplicado
     Dado que eu estou na página de informações básicas de candidatos
     E todos os campos estão preenchidos
@@ -165,7 +165,7 @@ Funcionalidade: Reinvindicar conta de candidato
     Entao eu devo ver a mensagem:
       | O login solicitado ja existe, gentileza informa um novo login |
 
-  @pending
+  @wip
   Cenario: Cadastrando candidato com legenda duplicada
     Dado que eu estou na página de informações básicas de candidatos
     E todos os campos estão preenchidos
