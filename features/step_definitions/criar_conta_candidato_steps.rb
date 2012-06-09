@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 Dado /^que eu estou na home page do Votar Como Vamos$/ do
   pending # express the regexp above with the code you wish you had
 end
