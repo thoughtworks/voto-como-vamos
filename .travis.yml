@@ -6,7 +6,7 @@ rvm:
 before_install:
   - gem update --system
   - rvm @default,@global do gem uninstall -ax bundler
-  - gem install bundle --pre
+  - gem install bundler --pre
   - bundle --version  
 
 before_script:
