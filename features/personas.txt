@@ -1,0 +1,43 @@
+Personas
+========
+
+Elector
+-------
+Elector affiliated with a party
+
+Elector with no party, but likes to engage with politics
+
+Elector who is not much into politics, but wants to search what is going on in his city and who
+are the candidates.
+
+Citizen non-elector
+-------------------
+
+A teenager who wants to know more about politics
+
+Moderator
+
+Name: João Pereira
+
+Description: É voluntário do POA Como Vamos; não tem vínculo com partidos; jovem; heavy user
+internet/redes sociais; tem meio período disponível para moderação diária
+
+João zela pela veracidade das informações e que não exista conteúdo ofensivo.
+
+Candidate
+---------
+
+Nelice Heck
+
+Description: She is city council and is running for reelection. Her main proposals are related
+to environmental initiatives for Porto Alegre. She would like to have a space on the internet
+where she can upload her proposals and updates and get feedback from electors.
+
+She uses computer daily reading emails, news, interacting on social networks.
+
+
+Candidate’s Public relations manager
+------------------------------------
+Name: Rodrigo Farias
+
+Description: Rodrigo works with Pedro Santos who is running
