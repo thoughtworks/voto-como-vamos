@@ -1,0 +1,9 @@
+common:
+  facebook_app_id:
+  facebook_secret:
+
+development:
+
+test:
+
+production:
