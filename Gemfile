@@ -6,6 +6,7 @@ gem 'rails', '3.2.5'
 gem "mongoid", "~> 3.0.0.rc"
 gem 'jquery-rails'
 gem 'heroku'
+gem 'omniauth-facebook'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
