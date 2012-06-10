@@ -3,10 +3,12 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '3.2.5'
-gem "mongoid", "~> 3.0.0.rc"
+gem 'mongoid', '~> 3.0.0.rc'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'omniauth-facebook'
+gem 'koala'
+gem 'slim'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,13 +18,17 @@ group :assets do
 end
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem 'rspec-rails', '~> 2.0'
+  gem 'pry'
+  gem 'launchy'
 end
 
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :production do

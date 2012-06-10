@@ -1,5 +1,12 @@
 class WelcomeController < ApplicationController
+  before_filter :ensure_canvas
+
   def index
-    redirect_to "/auth/facebook?signed_request=#{request.params['signed_request']}"
+  end
+
+  private
+
+  def ensure_canvas
+    redirect_to Settings.facebook_app_url if params[:canvas]
   end
 end
