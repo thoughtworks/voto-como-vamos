@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # TODO Refatorar isso pra Page Objects
 
 Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
