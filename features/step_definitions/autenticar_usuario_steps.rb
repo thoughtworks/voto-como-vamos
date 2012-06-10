@@ -33,10 +33,6 @@ end
 
 Quando /^confirmo o pedido de autorização$/ do
   within_frame "iframe_canvas" do
-    wait_until do
-      page.has_content? "Acesse Facebook.com"
-    end
-
     click_link "Acesse Facebook.com"
   end  
   click_button "Ir para o aplicativo"
