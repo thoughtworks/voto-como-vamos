@@ -1,11 +1,4 @@
-class User
-  include Mongoid::Document
- 
-  field :provider, :type => String
-  field :uid, :type => String
-  field :name, :type => String
-  field :email, :type => String
-  
+class User < ActiveRecord::Base
   validates :name, :uid, :provider, :email, :presence => true
 
   def self.create_with_auth(auth)
