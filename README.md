@@ -46,6 +46,7 @@ Developing
 
 Fork the project
 Install RVM
+Install Mongo ( $brew install mongodb )
   $ rvm install 1.9.3
   $ rvm gemset use global
   $ gem uninstall -ax bundler
