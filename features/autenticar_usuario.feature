@@ -10,7 +10,7 @@ Funcionalidade: Autenticar Usuário
     Quando eu acesso a página principal
     Então devo ser autenticado com sucesso
 
-  @javascript
+  @wip @bug @javascript
   Cenario: Novo usuário
     Dado que sou um usuário não cadastrado no Votar Como Vamos
     Quando eu acesso a página principal
