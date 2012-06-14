@@ -13,10 +13,14 @@ Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
 end
 
 Quando /^eu acesso a página principal$/ do
-  visit @user["login_url"]
-  visit @user["login_url"]
-
   visit Settings.facebook_app_url 
+end
+
+Dado /^que estou logado no facebook$/ do
+  visit "http://www.facebook.com"
+  fill_in "email", with: @user['email']
+  fill_in "pass", with: @user['password']
+  click_button "Log In"
 end
 
 Então /^devo ser autenticado com sucesso$/ do
