@@ -1,0 +1,847 @@
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>TSE - Eleições 2008 - Divulga&ccedil;&atilde;o de Registro de Candidatura</title>
+
+	<link rel="stylesheet" type="text/css" href="../comuns/css/padraoTSE-01.css"/>
+    <link rel="stylesheet" type="text/css" href="../comuns/css/padraoTSE-02.css"/>
+    	
+	<script type="text/javascript" language="javascript" src="../comuns/js/formatacaoGeral.js"></script>
+	<script type="text/javascript" language="javascript" src="../comuns/js/util.js"></script>
+
+	<script type="text/javascript">
+	<!--
+		
+		function abrirTelaDetalhesCandidato() {
+			
+			var strNomeJanelaPopup = "fichaRegistroCandidato";
+            var resolucaoTelaCliente = screen.width + "x" + screen.height;
+
+            if (resolucaoTelaCliente == "800x600") {			
+				abrirJanelaPopup(strNomeJanelaPopup, 750, 530, 10, 0, "false", "false");
+			}
+			else {
+				abrirJanelaPopup(strNomeJanelaPopup, 750, 700, 100, 10, "false", "false");
+			}
+		}
+		
+		
+		function abrirTelaDetalhesPartido() {
+			
+			var strNomeJanelaPopup = "fichaPartido";
+			
+			abrirJanelaPopup(strNomeJanelaPopup, 500, 300, 200, 300, "false", "false");
+		}
+						
+		function pesquisarAlfabeto( letra ){
+		  document.getElementById("nome").value = letra;
+		  document.getElementById("matchMode").value = "START";
+		  document.forms[0].submit();
+		}	
+		
+	//-->
+	</script>
+	
+	
+	
+</head>
+<link rel="stylesheet" href="/sadEleicaoDivulgaCand2008/struts/css_xhtml/styles.css" type="text/css" />
+<script type="text/javascript">
+    // Dojo configuration
+    djConfig = {
+        baseRelativePath: "/sadEleicaoDivulgaCand2008/struts/dojo",
+        isDebug: false,
+        bindEncoding: "ISO-8859-1",
+        debugAtAllCosts: true // not needed, but allows the Venkman debugger to work with the includes
+    };
+</script>
+<script type="text/javascript"
+        src="/sadEleicaoDivulgaCand2008/struts/dojo/dojo.js"></script>
+<script type="text/javascript"
+        src="/sadEleicaoDivulgaCand2008/struts/simple/dojoRequire.js"></script>
+<body>
+ 
+
+			
+<form id="manterCandidato" name="manterCandidato" onsubmit="return true;" action="/sadEleicaoDivulgaCand2008/gerenciarregistrocandidatura/manterCandidato!listarCandidatosPorMunicipio.action" method="post">
+<input type="hidden" name="codigoUESelec" value="88013" id="manterCandidato_codigoUESelec"/>
+<input type="hidden" name="codigoCargoEletivoSelec" value="11" id="manterCandidato_codigoCargoEletivoSelec"/>
+<input type="hidden" name="codigoSituacaoRegistro" value="12" id="manterCandidato_codigoSituacaoRegistro"/>
+<input type="hidden" name="queryHelperDTO.mudouParamPesquisa" value="true" id="manterCandidato_queryHelperDTO_mudouParamPesquisa"/>
+<input type="hidden" name="matchMode" value="START" id="manterCandidato_matchMode"/>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="style13" nowrap="nowrap" width="100%" colspan="2">
+			<table border="0" width="100%" align="left">
+				<tr>
+					<td class="clsTitulo01" width="60%">
+						Candidatos Inscritos para 
+						PREFEITO em 
+						PORTO ALEGRE (RS)
+					</td>
+					<td align="left" class="style13" width="40%">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="left" class="clsCabecalhoCol02" valign="bottom">
+                                    Candidato:
+                                </td>
+                                <td align="left" class="clsCabecalhoCol02" rowspan="2">
+                                    <input type="image" alt="Submit" src="../comuns/imagens/icones/icon-search.gif" id="manterCandidato_0" value="Submit"/>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" class="clsCabecalhoCol02">
+                                    <input type="text" name="parteNomeCandidato" size="15" value="" id="idParteNomeCandidato" class="clsCampoForm-Left"/> 
+                                </td>
+                            </tr>
+                        </table>					
+					</td>
+				</tr> 
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="right" class="style13">
+		    <!--  
+			<img src=".../comuns/imagens/icones/linhaOrdemAlfabeticaAaZ.gif" alt="Pesquisa pela inicial" name="imgIniciais" width="514" height="12" border="0" usemap="#Iniciais" id="idIniciais" />
+			<map name="Iniciais" id="idIniciais">
+				<area shape="rect" coords="104,0,114,12" href="" onclick="pesquisarAlfabeto('A'); return false;" alt="A" />
+				<area shape="rect" coords="118,0,126,12" href="" onclick="pesquisarAlfabeto('B'); return false;" alt="B" />
+				<area shape="rect" coords="133,0,144,12" href="" onclick="pesquisarAlfabeto('C'); return false;" alt="C" />
+				<area shape="rect" coords="149,0,160,12" href="" onclick="pesquisarAlfabeto('D'); return false;" alt="D" />
+				<area shape="rect" coords="168,0,176,12" href="" onclick="pesquisarAlfabeto('E'); return false;" alt="E" />
+				<area shape="rect" coords="183,0,192,12" href="" onclick="pesquisarAlfabeto('F'); return false;" alt="F" />
+				<area shape="rect" coords="199,0,210,12" href="" onclick="pesquisarAlfabeto('G'); return false;" alt="G" />
+				<area shape="rect" coords="215,0,225,11" href="" onclick="pesquisarAlfabeto('H'); return false;" alt="H" />
+				<area shape="rect" coords="231,0,240,14" href="" onclick="pesquisarAlfabeto('I'); return false;" alt="I" />
+				<area shape="rect" coords="244,0,255,12" href="" onclick="pesquisarAlfabeto('J'); return false;" alt="J" />
+				<area shape="rect" coords="259,0,269,12" href="" onclick="pesquisarAlfabeto('K'); return false;" alt="K" />
+				<area shape="rect" coords="274,0,286,12" href="" onclick="pesquisarAlfabeto('L'); return false;" alt="L" />
+				<area shape="rect" coords="290,0,303,12" href="" onclick="pesquisarAlfabeto('M'); return false;" alt="M" />
+				<area shape="rect" coords="308,0,321,12" href="" onclick="pesquisarAlfabeto('N'); return false;" alt="N" />
+				<area shape="rect" coords="324,0,334,12" href="" onclick="pesquisarAlfabeto('O'); return false;" alt="O" />
+				<area shape="rect" coords="338,0,350,12" href="" onclick="pesquisarAlfabeto('P'); return false;" alt="P" />
+				<area shape="rect" coords="354,0,366,12" href="" onclick="pesquisarAlfabeto('Q'); return false;" alt="Q" />
+				<area shape="rect" coords="371,0,382,12" href="" onclick="pesquisarAlfabeto('R'); return false;" alt="R" />
+				<area shape="rect" coords="387,0,398,12" href="" onclick="pesquisarAlfabeto('S'); return false;" alt="S" />
+				<area shape="rect" coords="402,0,414,12" href="" onclick="pesquisarAlfabeto('T'); return false;" alt="T" />
+				<area shape="rect" coords="419,0,430,12" href="" onclick="pesquisarAlfabeto('U'); return false;" alt="U" />
+				<area shape="rect" coords="434,0,447,12" href="" onclick="pesquisarAlfabeto('V'); return false;" alt="V" />
+				<area shape="rect" coords="452,0,466,12" href="" onclick="pesquisarAlfabeto('W'); return false;" alt="W" />
+				<area shape="rect" coords="471,0,482,12" href="" onclick="pesquisarAlfabeto('X'); return false;" alt="X" />
+				<area shape="rect" coords="487,0,498,12" href="" onclick="pesquisarAlfabeto('Y'); return false;" alt="Y" />
+				<area shape="rect" coords="502,0,514,12" href="" onclick="pesquisarAlfabeto('Z'); return false;" alt="Z" />
+			</map>
+		    -->
+		</td>
+	</tr>
+
+</table>
+
+</form>
+
+
+
+
+
+
+ 
+
+ <center> 
+ 
+<table cellpadding="2" class="clsListagemPadrao" style="width: 100%;" cellspacing="2" id="wObjLinhaCorrente">
+<thead>
+<tr>
+<th class="clsCabecalhoCol03">Nome do Candidato:</th>
+<th class="clsCabecalhoCol03">Nome da Urna:</th>
+<th class="clsCabecalhoCol03">Número:</th>
+<th class="clsCabecalhoCol03">Situação:</th>
+<th class="clsCabecalhoCol03">Partido:</th>
+<th class="clsCabecalhoCol03">Coligação:</th>
+<th class="clsCabecalhoCol03">Detalhes:</th></tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=27163" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          CARLOS ANTONIO GOMES
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=27163" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              CARLOS GOMES
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		31
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=P&amp;codigoEleicao=30&amp;sqDRAP=2207&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=31" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PHS
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="">
+	            Sem Coliga&#xE7;&#xE3;o
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=27163" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="even">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=16741" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          JOS&#xC9; ALBERTO FOGA&#xC7;A DE MEDEIROS
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=16741" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              JOS&#xC9; FOGA&#xC7;A
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		15
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=1811&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=15" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PMDB
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="PTB / PSDC / PMDB / PDT">
+	            CIDADE MELHOR - FUTURO MELHOR
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=16741" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="odd">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1188" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          LUCIANA KREBS GENRO
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1188" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              LUCIANA GENRO
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		50
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=131&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=50" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PSOL
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="PSOL / PV">
+	            SOL E VERDE
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1188" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="even">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=3101" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          MANUELA PINTO VIEIRA D'AVILA
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=3101" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              MANUELA
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		65
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=319&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=65" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PC do B
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="PC do B / PPS / PR / PT do B / PMN / PSB / PTN">
+	            PORTO ALEGRE &#xC9; MAIS
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=3101" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="odd">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1568" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          MARIA DO ROSARIO NUNES
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1568" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              MARIA DO ROS&#xC1;RIO
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		13
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=158&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=13" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PT
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="PSL / PTC / PRB / PT">
+	            FRENTE POPULAR
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=1568" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="even">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=21331" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          NELSON MARCHEZAN JUNIOR
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=21331" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              NELSON MARCHEZAN JUNIOR
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		45
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=P&amp;codigoEleicao=30&amp;sqDRAP=2281&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=45" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PSDB
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="">
+	            Sem Coliga&#xE7;&#xE3;o
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=21331" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="odd">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=475" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          ONYX DORNELLES LORENZONI
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=475" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              ONYX
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		25
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=67&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=25" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    DEM
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="DEM / PP / PSC">
+	            PORTO FUTURO ALEGRE
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=475" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr>
+<tr class="even">
+<td>
+         
+	      
+	          
+	                         
+	                      
+	      <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=570" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+	          VERA JUSTINA GUASSO
+	      </a>
+			 
+         
+     </td>
+<td>
+         
+          
+              
+                              
+                          
+          <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=570" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+              VERA GUASSO
+          </a>
+           	 
+         
+     </td>
+<td style="text-align: center;">
+		
+		
+		16
+					
+     </td>
+<td>                
+
+         <center>
+			
+			    <!-- 
+			    <img src="../comuns/imagens/icones/checked_big.gif" />
+			    -->
+			    <font color="green">
+			
+			
+			
+			Apto
+			</font>
+         </center>
+     </td>
+<td>                
+
+		<center>
+		
+		    
+		                    
+            
+            
+            
+            
+		                
+		<a href="../gerenciarpartidopolitico/manterPartidoPolitico!mostrarDetalhesEntidadePoliticoPartidaria.action?tipoDRAP=C&amp;codigoEleicao=30&amp;sqDRAP=75&amp;codigoUE=88013&amp;codigoCargo=11&amp;numeroPartido=16" target="fichaPartido" onclick="abrirTelaDetalhesPartido();">
+		    PSTU
+		</a> 
+		</center>
+
+     </td>
+<td>                
+
+         <center>
+	         
+	         	<div title="PSTU / PCB">
+	            FRENTE DE ESQUERDA
+	            </div>
+	         
+         </center>
+
+     </td>
+<td>                
+
+        <center>
+			<a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroCandidatura.action?codigoUECandidato=88013&amp;sqCandidato=570" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+			    <img src="../comuns/imagens/icones/tooltip.gif" alt="Detalhes do Candidato" border="0"/>
+			</a> 
+        </center>
+     </td></tr></tbody></table>
+                <center>
+                    <span class=pagebanner> 8 item(ns) encontrado(s). Mostrando todos.</span>
+                </center>
+             
+ 
+ </center>
+ 
+
+</body>
+</html>
