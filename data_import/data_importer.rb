@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-require './candidate'
+require 'ostruct'
 
 class DataImporter
 	def initialize(url)
@@ -17,7 +17,7 @@ class DataImporter
 	private
 	def load_candidates
 		 @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
-		 	candidate = Candidate.new
+		 	candidate = OpenStruct.new
 		 	candidate.name = get_name(row)
 		 	candidate.short_name = get_short_name(row)
 		 	candidate.number = get_number(row)
