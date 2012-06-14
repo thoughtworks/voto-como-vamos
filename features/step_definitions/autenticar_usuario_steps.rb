@@ -39,5 +39,5 @@ Quando /^confirmo o pedido de autorização$/ do
   within_frame "iframe_canvas" do
     find(".platform_dialog a").click
   end
-  click_button "Ir para o aplicativo"
+  find('#grant_clicked input').click
 end
