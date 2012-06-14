@@ -8,24 +8,31 @@ describe DataImporter do
 	context "importing mayor data" do
 		before do
 			@importer = DataImporter.new MAYOR_LIST_URL
+			@vera = @importer.candidates.last
 		end
 		
 		it "extracts candidates from document" do 
 			@importer.candidates.size.should == 8
 		end
 
-		context "mapping candidate data" do
-			before do
-				@carlos = @importer.candidates.first
-			end
-			
-			it "maps candidate name" do
-				@carlos.name.should == "CARLOS ANTONIO GOMES"
-			end
+		it "maps candidate name" do
+			@vera.name.should == "VERA JUSTINA GUASSO"
+		end
 
-			it "maps candidate simplified name" do
-				@carlos.short_name.should == "CARLOS GOMES"
-			end
+		it "maps candidate simplified name" do
+			@vera.short_name.should == "VERA GUASSO"
+		end
+
+		it "maps candidate number" do
+			@vera.number.should == 16
+		end
+
+		it "maps candidate political party" do
+			@vera.party.should == "PSTU"
+		end
+
+		it "maps candidate coalition" do
+			@vera.coalition.should == "FRENTE DE ESQUERDA"
 		end
 	end
 end
