@@ -37,7 +37,7 @@ end
 
 Quando /^confirmo o pedido de autorização$/ do
   within_frame "iframe_canvas" do
-    click_link "Acesse Facebook.com"
-  end  
+    find(".platform_dialog a").click
+  end
   click_button "Ir para o aplicativo"
 end
