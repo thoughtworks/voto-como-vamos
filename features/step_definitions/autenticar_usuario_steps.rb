@@ -13,10 +13,14 @@ Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
 end
 
 Quando /^eu acesso a página principal$/ do
-  visit @user["login_url"]
-  visit @user["login_url"]
-
   visit Settings.facebook_app_url 
+end
+
+Dado /^que estou logado no facebook$/ do
+  visit "http://www.facebook.com"
+  fill_in "email", with: @user['email']
+  fill_in "pass", with: @user['password']
+  click_button "Log In"
 end
 
 Então /^devo ser autenticado com sucesso$/ do
@@ -33,7 +37,7 @@ end
 
 Quando /^confirmo o pedido de autorização$/ do
   within_frame "iframe_canvas" do
-    click_link "Acesse Facebook.com"
-  end  
-  click_button "Ir para o aplicativo"
+    find(".platform_dialog a").click
+  end
+  find('#grant_clicked input').click
 end

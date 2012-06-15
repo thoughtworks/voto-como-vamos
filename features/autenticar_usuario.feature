@@ -7,12 +7,14 @@ Funcionalidade: Autenticar Usuário
   @javascript
   Cenario: Usuário existente
     Dado que sou um usuário já cadastrado no Votar Como Vamos
+    E que estou logado no facebook
     Quando eu acesso a página principal
     Então devo ser autenticado com sucesso
 
   @javascript
   Cenario: Novo usuário
     Dado que sou um usuário não cadastrado no Votar Como Vamos
+    E que estou logado no facebook
     Quando eu acesso a página principal
     E confirmo o pedido de autorização
     Então devo ser autenticado com sucesso
