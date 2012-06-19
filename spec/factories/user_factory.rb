@@ -6,4 +6,3 @@ FactoryGirl.define do
     name 'Test user'
   end
 end
-
