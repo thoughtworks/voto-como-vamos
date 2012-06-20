@@ -1,6 +1,6 @@
 common:
   facebook_app_id: 341926772543413
-  facebook_secret: 4c884c387b7afb11c6e70473584c01e6
+  facebook_secret: 14a850bdc51644e279dca141408208ba
   facebook_scopes: "offline_access,read_stream"
   facebook_app_url: "http://apps.facebook.com/341926772543413/"
 
