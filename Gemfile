@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'rails', '3.2.5'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'omniauth-facebook'
@@ -21,6 +20,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'pry'
   gem 'launchy'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -33,4 +33,5 @@ end
 
 group :production do
   gem 'thin'
+  gem 'pg'
 end
