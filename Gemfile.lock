@@ -121,6 +121,7 @@ GEM
     omniauth-oauth2 (1.0.2)
       oauth2 (~> 0.6.0)
       omniauth (~> 1.0)
+    pg (0.13.2)
     polyglot (0.3.3)
     pry (0.9.9.6)
       coderay (~> 1.0.5)
@@ -220,6 +221,7 @@ DEPENDENCIES
   koala
   launchy
   omniauth-facebook
+  pg
   pry
   rails (= 3.2.5)
   rspec-rails (~> 2.0)
