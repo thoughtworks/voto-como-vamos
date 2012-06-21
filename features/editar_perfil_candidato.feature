@@ -4,7 +4,6 @@ Funcionalidade: Editar perfil candidato
   Quero editar informações do meu perfil 
   Para garantir a atualização das informações
 
-  @wip
   Cenario: Alteração de email
     Dado que eu estou logado na aplicação
     E que existe um candidato
