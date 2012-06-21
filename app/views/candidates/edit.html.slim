@@ -1,0 +1,9 @@
+h1 Editar Candidato
+= form_for @candidate do |f|
+  	p
+  	  = f.label :name
+  	  = f.text_field :name
+  	p
+  	  = f.label :email
+  	  = f.text_field :email
+  	= f.submit 'Salvar'
