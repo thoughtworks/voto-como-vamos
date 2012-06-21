@@ -8,6 +8,7 @@ gem 'heroku'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'slim'
+gem 'inherited_resources'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -29,6 +30,7 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'simplecov', :require => false
 end
 
 group :production do

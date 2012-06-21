@@ -1,1 +1,6 @@
 h1 Seja bem vindo!
+
+ul
+  - @candidates.each do |c|
+    li
+      = link_to c.name, candidate_path(c)

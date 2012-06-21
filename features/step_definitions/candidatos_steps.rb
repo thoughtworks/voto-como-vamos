@@ -29,3 +29,25 @@ def login_with(mock_options = nil)
 
   visit "/auth/facebook"
 end
+
+Dado /^que existem alguns candidatos$/ do
+  @candidates = []
+  3.times do |i|
+    @candidates << FactoryGirl.create(:candidate, name: "Candidato #{i}")
+  end
+end
+
+Quando /^eu acesso a listagem de candidatos$/ do
+  visit root_path
+end
+
+Entao /^eu devo ver tais candidatos$/ do
+  @candidates.each do |candidate|
+    page.should have_content(candidate.name)
+  end
+end
+
+Quando /^escolho o perfil de um determinado candidato$/ do
+  @candidate = @candidates.first
+  click_link "Candidato 0"
+end
