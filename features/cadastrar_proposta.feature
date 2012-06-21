@@ -1,5 +1,6 @@
 # language: pt
 
+@pending
 Funcionalidade: Cadastrar Proposta
   Como um candidato
   Eu quero cadastrar minhas propostas
