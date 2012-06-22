@@ -13,7 +13,11 @@ Quando /^eu acesso o perfil do mesmo$/ do
 end
 
 Entao /^eu devo ver as suas informações$/ do
-  page.should have_content(@candidate.name)
+  [
+    :alliance, :about, :name, :party
+  ].each do |field|
+    page.should have_content(@candidate.send(field))
+  end
 end
 
 private
