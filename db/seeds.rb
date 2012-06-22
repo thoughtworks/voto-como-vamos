@@ -4,5 +4,5 @@
 # Examples:
 
 10.times do |i|
-  Candidate.create(name: "Candidato #{i}")
+  FactoryGirl.create :candidate, name: "Candidato #{i}"
 end

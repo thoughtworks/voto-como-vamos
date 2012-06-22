@@ -1,16 +1,19 @@
 - if flash[:notice]
   span class="label success" #{flash[:notice]}
 div class="row"
-  
   div class="span6"
-    h1 #{@candidate.name} - 14441
-    h2 Partido do Movimento dos Pampas (PMP)
-    h2 Coligação Chimarrão Para Todos
+    h1
+      = "#{@candidate.name} - 14441"
+    h2
+      = @candidate.party
+    h2
+      = @candidate.alliance
     br
     img src="http://www.online-spanisch.com/blog/wp-content/uploads/2008/11/el-gaucho-150x150.jpg"
     br
     h3 Sobre o candidato
-    p Ex-aluno do Colégio União quando seu pai era diretor da Estação Experimental de Uruguaiana, foi ele que carinhosamente deu o apelido para o Colégio União de Baio Velho. Também estudou no Instituto Porto Alegre e no Colégio Estadual Júlio de Castilhos. Paixão Côrtes é um personagem decisivo da cultura gaúcha e do movimento tradicionalista.
+    p
+      = @candidate.about
 
   div class="span6"
     h1 Propostas

@@ -7,16 +7,17 @@ describe User do
   it { should validate_presence_of :email }
 
   it 'can be created via auth hash' do
-    auth_hash = { 
+    auth_hash = {
       'provider' => 'facebook',
       'uid' => '1234',
-      'info' => { 
+      'info' => {
         'name' => 'Test',
-        'email' => 'test@test.com' 
+        'email' => 'test@test.com'
       }
     }
 
     expect { User.create_with_auth(auth_hash) }.to change(User, :count).by(1)
+
     created_user = User.last
     created_user.provider.should == 'facebook'
     created_user.uid.should == '1234'

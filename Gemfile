@@ -22,6 +22,7 @@ group :test, :development do
   gem 'pry'
   gem 'launchy'
   gem 'sqlite3'
+  gem 'factory_girl_rails'
 end
 
 group :test do
@@ -29,7 +30,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'simplecov', :require => false
 end
 

@@ -13,28 +13,17 @@ Quando /^eu acesso o perfil do mesmo$/ do
 end
 
 Entao /^eu devo ver as suas informações$/ do
-  page.should have_content(@candidate.name)
+  [
+    :alliance, :about, :name, :party
+  ].each do |field|
+    page.should have_content(@candidate.send(field))
+  end
 end
 
 private
 
-def login_with(mock_options = nil)
-  OmniAuth.config.test_mode = true
-
-  if mock_options == :invalid_credentials
-    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
-  elsif mock_options
-    OmniAuth.config.add_mock :facebook, mock_options
-  end
-
-  visit "/auth/facebook"
-end
-
 Dado /^que existem alguns candidatos$/ do
-  @candidates = []
-  3.times do |i|
-    @candidates << FactoryGirl.create(:candidate, name: "Candidato #{i}")
-  end
+  @candidates = 3.times.map { |i| FactoryGirl.create(:candidate) }
 end
 
 Quando /^eu acesso a listagem de candidatos$/ do
@@ -49,5 +38,18 @@ end
 
 Quando /^escolho o perfil de um determinado candidato$/ do
   @candidate = @candidates.first
-  click_link "Candidato 0"
+  click_link @candidate.name
 end
+
+def login_with(mock_options = nil)
+  OmniAuth.config.test_mode = true
+
+  if mock_options == :invalid_credentials
+    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
+  elsif mock_options
+    OmniAuth.config.add_mock :facebook, mock_options
+  end
+
+  visit "/auth/facebook"
+end
+
