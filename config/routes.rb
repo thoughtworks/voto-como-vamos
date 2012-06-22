@@ -4,6 +4,7 @@ VotoComoVamos::Application.routes.draw do
 
   resources :candidates do
     resources :proposals, :only => :new
+    resource :revindication, :only => :new
   end
 
   root :to => 'welcome#index'

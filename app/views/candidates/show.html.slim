@@ -1,9 +1,10 @@
 - if flash[:notice]
   span class="label success" #{flash[:notice]}
 div class="row"
-  div class="span6"
-    h1
+  div class="span12"
+    h1 class="tab"
       = "#{@candidate.name} - 14441"
+  div class="span-one-third"
     h2
       = @candidate.party
     h2
@@ -14,8 +15,9 @@ div class="row"
     h3 Sobre o candidato
     p
       = @candidate.about
+    = link_to "Sou esse candidato", new_candidate_revindication_path(@candidate), class: 'btn primary'
 
-  div class="span6"
+  div class="span-two-thirds"
     h1 Propostas
     h2 Remodelagem do arroio Ipiranga
     p Culminando uma cidade mais bonita e turística, a remodelagem do arroio Ipiranga permitirá que pessoas andem de bicicleta, parem pra tomar uma cerveja ou façam compras no quiosque do arroio.
