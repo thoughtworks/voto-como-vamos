@@ -6,14 +6,14 @@ Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
   @user = test_users.create(true, Settings.facebook_scopes)
   User.create!(
-    provider: 'facebook', 
+    provider: 'facebook',
     uid: @user['id'],
     name: 'Test User',
     email: 'test@test.com')
 end
 
 Quando /^eu acesso a página principal$/ do
-  visit Settings.facebook_app_url 
+  visit Settings.facebook_app_url
 end
 
 Dado /^que estou logado no facebook$/ do
@@ -24,7 +24,7 @@ Dado /^que estou logado no facebook$/ do
 end
 
 Então /^devo ser autenticado com sucesso$/ do
-  within_frame "iframe_canvas" do 
+  within_frame "iframe_canvas" do
     page.should have_content("Seja bem vindo!")
   end
 end
