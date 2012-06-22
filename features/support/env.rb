@@ -37,6 +37,12 @@ rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
 end
 
+Before do
+  test_users = Koala::Facebook::TestUsers.new(
+    :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
+  test_users.delete_all
+end
+
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
 #
