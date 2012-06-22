@@ -5,12 +5,33 @@ div.row
 	    legend 
 	      | Editar Candidato
         div.clearfix
-          = f.label :name
+          = f.label :about, 'Sobre Mim'
           div.input
-            = f.text_field :name
+            = f.text_field :about
+        div.clearfix
+          = f.label :phone, 'Telefone'
+          div.input
+            = f.text_field :phone
         div.clearfix
           = f.label :email
           div.input
             = f.text_field :email
+        div.clearfix
+          = f.label :site
+          div.input
+            = f.text_field :site
+        div.clearfix
+          = f.label :blog
+          div.input
+            = f.text_field :blog
+        div.clearfix
+          = f.label :facebook
+          div.input
+            = f.text_field :facebook
+        div.clearfix
+          = f.label :twitter
+          div.input
+            = f.text_field :twitter
+
         div.actions
           = f.submit 'Salvar', :class => 'btn primary'
