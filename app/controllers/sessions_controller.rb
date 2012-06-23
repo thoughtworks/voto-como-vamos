@@ -8,11 +8,6 @@ class SessionsController < ApplicationController
     redirect_to @canvas ? root_path(:canvas => true) : root_path
   end
 
-  def destroy
-    session[:user_id] = nil
-    render :text => 'Session Destroyed'
-  end
-
   private
 
   def auth_hash
