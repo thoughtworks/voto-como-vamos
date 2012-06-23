@@ -35,9 +35,9 @@ describe SessionsController do
         .with(auth['provider'], auth['uid'])
         .and_return(nil)
     end
-  
+
     context "creating user with success" do
-      before do 
+      before do
         User.should_receive(:create_with_auth)
           .with(auth)
           .and_return(user)
