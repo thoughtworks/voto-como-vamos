@@ -9,6 +9,7 @@ gem 'omniauth-facebook'
 gem 'koala'
 gem 'slim'
 gem 'inherited_resources'
+gem 'factory_girl_rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -22,7 +23,6 @@ group :test, :development do
   gem 'pry'
   gem 'launchy'
   gem 'sqlite3'
-  gem 'factory_girl_rails'
 end
 
 group :test do
