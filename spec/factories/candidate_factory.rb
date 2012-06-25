@@ -5,7 +5,7 @@ FactoryGirl.define do
     party      'F_PARTY'
     alliance   'F_ALLIANCE'
     tse_number 'F_TSE_NUMBER'
-    email      'F_EMAIL'
+    email      'F_EMAIL@CANDIDATO.GOV.BR'
     about      'F_ABOUT'
     phone      '(51)9999-7777'
     site       'F_SITE'

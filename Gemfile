@@ -10,6 +10,7 @@ gem 'koala'
 gem 'slim'
 gem 'inherited_resources'
 gem 'factory_girl_rails'
+gem 'valid_email'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
