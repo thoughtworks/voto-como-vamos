@@ -24,4 +24,4 @@ Funcionalidade: Editar perfil candidato
 	Quando o candidato editar seu perfil
 	E alterar o campo Telefone para 'invalido'
 	E confirmar a alteração
-	Entao ele deve ver uma mensagem de erro indicando que o Phone é inválido
+	Entao ele deve ver uma mensagem de erro indicando que o Telefone é inválido

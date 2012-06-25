@@ -4,16 +4,16 @@ div.row
 	  - if @candidate.errors.any?
 	    div.alert-message.error
 	      - @candidate.errors.full_messages.each do |msg| 
-            = msg
+            p = msg
 	  fieldset
 	    legend 
 	      | Editar Candidato
         div.clearfix
-          = f.label :about, 'Sobre Mim'
+          = f.label :about
           div.input
-            = f.text_field :about
+            = f.text_area :about
         div.clearfix
-          = f.label :phone, 'Telefone'
+          = f.label :phone
           div.input
             = f.text_field :phone
         div.clearfix
