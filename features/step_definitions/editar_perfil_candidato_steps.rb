@@ -14,3 +14,7 @@ end
 Entao /^ele deve ver suas informações atualizadas$/ do
   page.should have_content('Perfil atualizado com sucesso')
 end
+
+Entao /^ele deve ver uma mensagem de erro indicando que o (.*?) é inválido$/ do |nome_do_campo|
+  page.should have_css(".error", :text => nome_do_campo )
+end

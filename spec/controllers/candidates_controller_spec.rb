@@ -8,11 +8,11 @@ describe CandidatesController do
 
   before :each do
     controller.stub!(current_user: true)
+    Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
   end
 
   describe 'showing' do
     before(:each) do
-      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
       get :show, {:id => candidate_id }
     end
 
@@ -23,7 +23,6 @@ describe CandidatesController do
 
   describe 'editing' do
     before(:each) do
-      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
       get :edit, {:id => candidate_id }
     end
 
@@ -34,14 +33,23 @@ describe CandidatesController do
 
   describe 'updating' do
     before(:each) do
-      params = {'name' => 'fulaninho', 'email' => 'e@mail.com'}
-      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
-      candidate.should_receive(:update_attributes).with(params)
+      params = { 'name' => 'fulaninho', 'email' => 'e@mail.com'}
+      candidate.should_receive(:update_attributes).with(params).and_return(true)
       post :update, :id => candidate_id, :candidate => params
     end
 
     it { should respond_with(:redirect) }
     it { should assign_to(:candidate).with(candidate) }
     it { should redirect_to candidate_path(candidate_id) }
+  end
+  
+  describe 'updating with error' do
+    before(:each) do
+      params = {'phone' => 'invalid'}
+      candidate.should_receive(:update_attributes).with(params).and_return(false)
+      post :update, :id => candidate_id, :candidate => params
+    end
+    
+    it{ should render_template('edit') }
   end
 end

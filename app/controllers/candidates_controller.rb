@@ -11,7 +11,10 @@ class CandidatesController < ApplicationController
 
   def update
     @candidate = Candidate.find(params[:id])
-    @candidate.update_attributes(params[:candidate])
-    redirect_to candidate_path(@candidate.id), :notice => "Perfil atualizado com sucesso"
+    if @candidate.update_attributes(params[:candidate])
+      redirect_to candidate_path(@candidate.id), :notice => "Perfil atualizado com sucesso"
+    else
+      render :edit
+    end
   end
 end

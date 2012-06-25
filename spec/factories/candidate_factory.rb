@@ -7,7 +7,7 @@ FactoryGirl.define do
     tse_number 'F_TSE_NUMBER'
     email      'F_EMAIL'
     about      'F_ABOUT'
-    phone      'F_HONE'
+    phone      '(51)9999-7777'
     site       'F_SITE'
     blog       'F_BLOG'
     facebook   'F_FACEBOOK'
