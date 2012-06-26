@@ -11,21 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120620233257) do
+ActiveRecord::Schema.define(:version => 20120626024147) do
 
   create_table "candidates", :force => true do |t|
-    t.string "name"
-    t.string "role"
-    t.string "party"
-    t.string "alliance"
-    t.string "tse_number"
-    t.string "email"
-    t.text   "about"
-    t.string "phone"
-    t.string "site"
-    t.string "blog"
-    t.string "facebook"
-    t.string "twitter"
+    t.string  "name"
+    t.string  "role"
+    t.string  "party"
+    t.string  "alliance"
+    t.string  "tse_number"
+    t.string  "email"
+    t.text    "about"
+    t.string  "phone"
+    t.string  "site"
+    t.string  "blog"
+    t.string  "facebook"
+    t.string  "twitter"
+    t.boolean "press_agent"
   end
 
   create_table "proposals", :force => true do |t|

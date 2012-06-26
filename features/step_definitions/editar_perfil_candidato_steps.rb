@@ -7,6 +7,10 @@ Quando /^alterar o campo (.*?) para '(.*?)'$/ do |field_name, about|
  fill_in field_name, :with => about
 end
 
+Quando /^marcar o campo Acessoria de Imprensa$/ do
+  choose('Sim')
+end
+
 Quando /^confirmar a alteração$/ do
   click_button 'Salvar'
 end
@@ -17,4 +21,8 @@ end
 
 Entao /^ele deve ver uma mensagem de erro indicando que o campo (.*?) é inválido$/ do |nome_do_campo|
   page.should have_css(".error", :text => nome_do_campo )
+end
+
+Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela acessoria de imprensa$/ do
+  page.should have_content('Este perfil é gerenciado pela Acessoria de Imprensa')
 end

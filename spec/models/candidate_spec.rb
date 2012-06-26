@@ -16,5 +16,9 @@ describe Candidate do
   it { should validate_format_of(:site).not_with("invalid_url") }
   it { should validate_format_of(:blog).not_with("invalid_url") }
   it { should validate_format_of(:facebook).not_with("invalid_url") }
-  it { should validate_format_of(:twitter).not_with("invalid_url") }    
+  it { should validate_format_of(:twitter).not_with("invalid_url") }
+  
+  it { should allow_value(nil).for(:press_agent) }  
+  it { should allow_value(true).for(:press_agent) }
+  it { should allow_value(false).for(:press_agent) }
 end

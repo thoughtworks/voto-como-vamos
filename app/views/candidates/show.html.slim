@@ -4,6 +4,9 @@ div class="row"
   div class="span12"
     h1 class="tab"
       = "#{@candidate.name} - 14441"
+	- if @candidate.press_agent
+	  p
+	    | * Este perfil é gerenciado pela Acessoria de Imprensa
   div class="span-one-third"
     h2
       = @candidate.party

@@ -213,6 +213,7 @@ pt-BR:
         about: "Sobre Mim"
         phone: "Telefone"
         email: "Email"
+        press_agent: "Acessoria de Imprensa"
     
   valid_email:
     validations:

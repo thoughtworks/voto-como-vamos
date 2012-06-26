@@ -36,6 +36,18 @@ div.row
           = f.label :twitter
           div.input
             = f.text_field :twitter
+        div.clearfix
+		  = f.label :press_agent
+		  div.input
+			ul.inputs-list
+			  li
+			    label
+				  = f.radio_button :press_agent, "true"
+				  span="Sim"
+			  li
+				label
+				  = f.radio_button :press_agent, "false"
+				  span="Não"
 
         div.actions
           = f.submit 'Salvar', :class => 'btn primary'
