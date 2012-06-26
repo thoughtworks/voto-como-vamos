@@ -8,9 +8,9 @@ FactoryGirl.define do
     email      'F_EMAIL@CANDIDATO.GOV.BR'
     about      'F_ABOUT'
     phone      '(51)9999-7777'
-    site       'F_SITE'
-    blog       'F_BLOG'
-    facebook   'F_FACEBOOK'
-    twitter    'F_TWITTER'
+    site       'http://site.fulano.gov'
+    blog       'http://blog.fulano.com'
+    facebook   'http://facebook.com/fulano.de.tal'
+    twitter    'http://twitter.com/fulaninho'
   end
 end

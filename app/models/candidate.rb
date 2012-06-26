@@ -6,4 +6,5 @@ class Candidate < ActiveRecord::Base
   validates :about, :length => { :maximum => 500}
   validates :phone, :length => { :is => 13}
   validates :email, :presence => true, :email => true
+  validates :site, :blog, :facebook, :twitter, :url => true
 end

@@ -11,10 +11,10 @@ Funcionalidade: Editar perfil candidato
     E alterar o campo Sobre Mim para 'Candidato muito engajado em causas sociais.'
     E alterar o campo Email para 'fulano@governo.br'
     E alterar o campo Telefone para '(51)9999-5555'
-    E alterar o campo Site para 'www.fulanodetal.br'
-    E alterar o campo Blog para 'www.fulanodetal.br/blog'
-    E alterar o campo Facebook para 'www.facebook.com/Fulano.Tal'
-    E alterar o campo Twitter para '@fulanodetal'
+    E alterar o campo Site para 'http://www.fulanodetal.br'
+    E alterar o campo Blog para 'http://www.fulanodetal.br/blog'
+    E alterar o campo Facebook para 'http://facebook.com/Fulano.Tal'
+    E alterar o campo Twitter para 'http://twitter.com/fulanodetal'
     E confirmar a alteração
 	Entao ele deve ver suas informações atualizadas
 	
