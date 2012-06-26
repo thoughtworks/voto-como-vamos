@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120626024147) do
+ActiveRecord::Schema.define(:version => 20120626231453) do
 
   create_table "candidates", :force => true do |t|
     t.string  "name"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20120626024147) do
   create_table "proposals", :force => true do |t|
     t.string  "title",        :null => false
     t.integer "candidate_id", :null => false
-    t.text    "resumo",       :null => false
-    t.text    "descricao",    :null => false
+    t.text    "abstract",     :null => false
+    t.text    "description",  :null => false
   end
 
   create_table "users", :force => true do |t|

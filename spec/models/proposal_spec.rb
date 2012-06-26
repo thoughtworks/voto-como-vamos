@@ -10,9 +10,9 @@ describe Proposal do
   it { should validate_presence_of(:title) }
   it { should ensure_length_of(:title).is_at_most(100) }
 
-  it { should validate_presence_of(:resumo) }
-  it { should ensure_length_of(:resumo).is_at_most(300) }
+  it { should validate_presence_of(:abstract) }
+  it { should ensure_length_of(:abstract).is_at_most(300) }
 
-  it { should validate_presence_of(:descricao) }
+  it { should validate_presence_of(:description) }
 
 end

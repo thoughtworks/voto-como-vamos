@@ -8,9 +8,9 @@ class Proposal < ActiveRecord::Base
   validates :title, :presence => true,
                     :length => { :maximum => 100 }
 
-  validates :resumo, :presence => true,
-                     :length => { :maximum => 300 }
+  validates :abstract, :presence => true,
+                       :length => { :maximum => 300 }
 
-  validates :descricao, :presence => true
+  validates :description, :presence => true
 
 end
