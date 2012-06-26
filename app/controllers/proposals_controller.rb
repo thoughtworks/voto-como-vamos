@@ -2,10 +2,12 @@
 
 class ProposalsController < ApplicationController
 
-  inherit_resources
+  respond_to :html
 
-  respond_to :html, :only => :new
-
-  belongs_to :candidate
+  def new
+    @candidate = Candidate.find(params[:candidate_id])
+    @proposal = Proposal.new(:candidate_id => @candidate.id)
+    respond_with(@proposal)
+  end
 
 end

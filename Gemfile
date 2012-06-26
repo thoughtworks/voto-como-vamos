@@ -8,7 +8,6 @@ gem 'heroku'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'slim'
-gem 'inherited_resources'
 gem 'factory_girl_rails'
 gem 'valid_email'
 
