@@ -9,25 +9,25 @@ Dado /^que eu estou cadastrando uma proposta$/ do
 end
 
 Quando /^eu preencher todos os campos da proposta$/ do
-  pending
-end
-
-Entao /^a proposta deve ser salva$/ do
-  pending
-end
-
-Entao /^eu devo ver meu perfil$/ do
-  pending
+  @proposal = Factory.build(:proposal, :candidate => @candidate)
+  fill_proposal_form_with(@proposal)
 end
 
 Quando /^eu preencher os campos da proposta com dados inválidos$/ do
-  pending
+  @proposal = Factory.build(:invalid_proposal, :candidate => @candidate)
+  fill_proposal_form_with(@proposal)
 end
 
-Entao /^a proposta não deve ser salva$/ do
-  pending
+Entao /^eu devo ver uma mensagem de sucesso$/ do
+  page.should have_selector('.alert-message.success')
 end
 
-Entao /^eu devo ver os campos que contem erros$/ do
-  pending
+Entao /^eu devo ver a página do candidato/ do
+  current_path.should == candidate_path(@candidate)
+end
+
+Entao /^eu devo ver os campos que contêm erros$/ do
+  page.should have_selector('#proposal_title + .help-inline')
+  page.should have_selector('#proposal_abstract + .help-inline')
+  page.should have_selector('#proposal_description + .help-inline')
 end

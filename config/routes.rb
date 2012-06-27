@@ -3,7 +3,7 @@ VotoComoVamos::Application.routes.draw do
   match '/logout' => 'sessions#destroy'
 
   resources :candidates do
-    resources :proposals, :only => :new
+    resources :proposals, :only => [:new, :create]
     resources :revindications, :shallow => true,
       :only => [:new, :create, :show]
   end

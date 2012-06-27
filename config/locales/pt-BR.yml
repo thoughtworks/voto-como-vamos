@@ -209,6 +209,7 @@ pt-BR:
       <<: *errors
     models:
       candidate: "Candidato"
+      proposal: "Proposta"
     attributes:
       candidate:
         name: "Nome"
@@ -218,7 +219,15 @@ pt-BR:
         press_agent: "Acessoria de Imprensa"
       revindication:
         terms_and_conditions: "Aceito os Termos e Condições"
+      proposal:
+        title: "Título"
+        abstract: "Resumo"
+
   valid_email:
     validations:
       email:
         invalid: "não é válido"
+
+  proposals:
+    create:
+      success: 'Proposta criada com sucesso'

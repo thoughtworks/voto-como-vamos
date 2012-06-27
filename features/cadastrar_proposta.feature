@@ -1,6 +1,5 @@
 # language: pt
 
-@pending
 Funcionalidade: Cadastrar Proposta
   Como um candidato
   Eu quero cadastrar minhas propostas
@@ -13,11 +12,10 @@ Funcionalidade: Cadastrar Proposta
   Cenário: Proposta cadastrada
     Dado que eu estou cadastrando uma proposta
     Quando eu preencher todos os campos da proposta
-    Entao a proposta deve ser salva
-    E eu devo ver meu perfil
+    Então eu devo ver uma mensagem de sucesso
+    E eu devo ver a página do candidato
 
   Cenário: Dados inválidos
     Dado que eu estou cadastrando uma proposta
     Quando eu preencher os campos da proposta com dados inválidos
-    Entao a proposta não deve ser salva
-    E eu devo ver os campos que contem erros
+    Então eu devo ver os campos que contêm erros

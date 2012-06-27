@@ -8,6 +8,17 @@
 </head>
 <body>
   <div class="container canvas">
+    <% if flash[:notice] %>
+      <div class="alert-message success">
+        <%= h flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:error] %>
+      <div class="alert-message error">
+        <%= h flash[:error] %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </div>
 </body>
