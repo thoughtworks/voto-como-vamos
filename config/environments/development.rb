@@ -34,4 +34,13 @@ VotoComoVamos::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+      :user_name => "votocomovamos",
+      :password => "7abaf1e52c5bc55d",
+      :address => "mailtrap.io",
+      :port => 2525,
+      :authentication => :plain
+  }
 end

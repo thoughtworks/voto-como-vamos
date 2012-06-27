@@ -29,11 +29,29 @@ Funcionalidade: Reinvindicar conta de candidato
   Contexto:
     Dado que eu estou logado na aplicação
 
-  @pending
   Cenario: Reinvidicando Propriedade
-    Dado que estou na minha página de candidato
-    Quando que reinvindico propriedade sobre ela
-    E preencho as informações necessárias
-    E que aceito os termos de uso da aplicação
-    Então devo receber uma confirmação de que a reinvidicação foi realizada
-    E os administradores da aplicação devem receber uma notificação para aprovação
+    Dado que estou na minha página de candidato ou do candidato que acessoro
+    Quando reinvindico propriedade sobre ela
+    E aceito os termos de uso da aplicação
+    E confirmo a solicitação
+    Então devo ver que minha solicitação foi feita
+    E o candidato em seu e-mail oficial deve receber pedido de validação
+
+  @pending
+  Cenario: Não aceitando os termos de uso
+    Dado que estou na minha página de candidato ou do candidato que acessoro
+    Quando reinvidico propriedade sobre ela
+    E não aceito os termos de uso da aplicação
+    Então não devo receber nenhuma notificação em meu e-mail oficial
+
+  @pending
+  Cenario: Validando Propriedade
+    Dado que recebi uma notificação para validação de propriedade de meu perfil
+    Quando eu confirmo essa solicitação
+    Então o usuário solicitante deve poder editar as propriedades do meu perfil
+
+  @pending
+  Cenario: Negando propriedade
+    Dado que recebi uma notificação para validação de propriedade de meu perfil
+    Quando nego essa solicitação
+    Então o usuário solicitante não deverá poder editar as propriedades do meu perfil

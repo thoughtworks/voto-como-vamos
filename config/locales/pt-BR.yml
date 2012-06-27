@@ -1,4 +1,6 @@
 pt-BR:
+  common:
+    confirm: 'Confirmar'
   date:
     abbr_day_names:
     - Dom
@@ -205,7 +207,7 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
-    models: 
+    models:
       candidate: "Candidato"
     attributes:
       candidate:
@@ -214,9 +216,9 @@ pt-BR:
         phone: "Telefone"
         email: "Email"
         press_agent: "Acessoria de Imprensa"
-    
+      revindication:
+        terms_and_conditions: "Aceito os Termos e Condições"
   valid_email:
     validations:
       email:
         invalid: "não é válido"
-  

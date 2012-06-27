@@ -1,4 +1,17 @@
 # -*- encoding : utf-8 -*-
+
+def login_with(mock_options = nil)
+  OmniAuth.config.test_mode = true
+
+  if mock_options == :invalid_credentials
+    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
+  elsif mock_options
+    OmniAuth.config.add_mock :facebook, mock_options
+  end
+
+  visit "/auth/facebook"
+end
+
 Dado /^que eu estou logado na aplicação$/ do
   @current_user = FactoryGirl.create :user
   login_with uid: @current_user.uid
@@ -20,8 +33,6 @@ Entao /^eu devo ver as suas informações$/ do
   end
 end
 
-private
-
 Dado /^que existem alguns candidatos$/ do
   @candidates = 3.times.map { |i| FactoryGirl.create(:candidate) }
 end
@@ -41,39 +52,29 @@ Quando /^escolho o perfil de um determinado candidato$/ do
   click_link @candidate.name
 end
 
-def login_with(mock_options = nil)
-  OmniAuth.config.test_mode = true
-
-  if mock_options == :invalid_credentials
-    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
-  elsif mock_options
-    OmniAuth.config.add_mock :facebook, mock_options
-  end
-
-  visit "/auth/facebook"
-end
-
-Dado /^que estou na minha página de candidato$/ do
-  @candidate = Factory :candidate
+Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
+  @candidate = FactoryGirl.create :candidate
   visit candidate_path(@candidate)
 end
-
-Quando /^que reinvindico propriedade sobre ela$/ do
+Quando /^reinvindico propriedade sobre ela$/ do
   click_link "Sou esse candidato"
 end
 
-Quando /^preencho as informações necessárias$/ do
-  pending # express the regexp above with the code you wish you had
+Quando /^aceito os termos de uso da aplicação$/ do
+  check "Aceito os Termos e Condições"
 end
 
-Quando /^que aceito os termos de uso da aplicação$/ do
-  pending # express the regexp above with the code you wish you had
+Quando /^confirmo a solicitação$/ do
+  click_button "Confirmar"
 end
 
-Então /^devo receber uma confirmação de que a reinvidicação foi realizada$/ do
-  pending # express the regexp above with the code you wish you had
+Então /^devo ver que minha solicitação foi feita$/ do
+  page.should have_content("Solicitação realizada com sucesso")
 end
 
-Então /^os administradores da aplicação devem receber uma notificação para aprovação$/ do
-  pending # express the regexp above with the code you wish you had
+Então /^o candidato em seu e\-mail oficial deve receber pedido de validação$/ do
+  @email = ActionMailer::Base.deliveries.first
+  @email.from.should == ["admin@votocomovamos.org.br"]
+  @email.to.should == [@candidate.email]
+  @email.body.should include("O usuário #{@current_user.name} está requisitando permissão para administrar seu perfil")
 end

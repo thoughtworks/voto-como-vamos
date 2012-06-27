@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(:version => 20120626231453) do
     t.text    "description",  :null => false
   end
 
+  create_table "revindications", :force => true do |t|
+    t.integer "candidate_id"
+    t.string  "user_id"
+    t.boolean "accepted"
+  end
+
   create_table "users", :force => true do |t|
     t.string "provider"
     t.string "uid"
