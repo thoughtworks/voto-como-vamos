@@ -19,6 +19,9 @@ Funcionalidade: Reinvindicar conta de candidato
   ---------------
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
+  Contexto:
+    Dado que eu estou logado na aplicação
+
   @pending
   Cenario: Reinvidicando Propriedade
     Dado que as informações do candidato foram importadas do TSE
@@ -49,9 +52,6 @@ Funcionalidade: Reinvindicar conta de candidato
     Entao o voto como vamos deve exibir os termos de uso
     Dado que o candidato não aceitou os termos de uso
     Entao deve redirecioná-lo para a Home Page do Voto Como Vamos
-
-  Contexto:
-    Dado que eu estou logado na aplicação
 
   Cenario: Reinvidicando Propriedade
     Dado que estou na minha página de candidato ou do candidato que acessoro
