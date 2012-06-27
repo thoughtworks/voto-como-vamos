@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class CandidateMailer < ActionMailer::Base
   default from: "admin@votocomovamos.org.br"
   
