@@ -20,6 +20,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'debugger'
   gem 'rspec-rails', '~> 2.0'
   gem 'pry'
   gem 'launchy'
