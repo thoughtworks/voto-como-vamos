@@ -12,11 +12,13 @@ describe Revindication do
                      double('candidate2', id: 2, email: 'test2@candidate.com') ]
       Candidate.should_receive(:all).and_return(candidates)
 
-      CandidateMailer.should_receive(:send_message_for_revindication).with(1)
-      CandidateMailer.should_receive(:send_message_for_revindication).with(2)
+      message1 = double('Message 1', :deliver => true)
+      message2 = double('Message 2', :deliver => true)
+
+      CandidateMailer.should_receive(:revindication).with(1).and_return(message1)
+      CandidateMailer.should_receive(:revindication).with(2).and_return(message2)
 
       Revindication.send_to_all_candidates
-
     end
   end
 end

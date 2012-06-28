@@ -11,7 +11,7 @@ class Revindication < ActiveRecord::Base
   def self.send_to_all_candidates
     candidates = Candidate.all
     candidates.each do |candidate|
-      CandidateMailer.send_message_for_revindication(candidate.id)
+      CandidateMailer.revindication(candidate.id).deliver
     end
   end
 end

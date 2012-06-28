@@ -1,5 +1,4 @@
 # -*- encoding : utf-8 -*-
-
 def login_with(mock_options = nil)
   OmniAuth.config.test_mode = true
 
@@ -47,7 +46,7 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
   ActionMailer::Base.deliveries.each do |message|
     message.from.should == ["admin@votocomovamos.org.br"]
     candidate_emails.should include(message.to.first)
-    message.body.should include("Clique aqui para reinvindicar o seu perfil de administrador.")
+    message.body.should include("Clique aqui para administrar seu perfil no Voto Como Vamos")
   end
 end
 

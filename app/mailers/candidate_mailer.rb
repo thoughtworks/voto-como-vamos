@@ -2,7 +2,7 @@
 class CandidateMailer < ActionMailer::Base
   default from: "admin@votocomovamos.org.br"
   
-  def send_message_for_revindication(candidate_id)
+  def revindication(candidate_id)
     candidate = Candidate.find(candidate_id)
     mail(
       :to => candidate.email, 
