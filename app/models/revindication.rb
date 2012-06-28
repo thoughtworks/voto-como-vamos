@@ -8,7 +8,6 @@ class Revindication < ActiveRecord::Base
   validates_presence_of :user
   validates_presence_of :candidate
 
-
   def self.send_to_all_candidates
     candidates = Candidate.all
     candidates.each do |candidate|

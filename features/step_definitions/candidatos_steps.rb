@@ -51,15 +51,6 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
   end
 end
 
-
-
-Entao /^o candidato deve receber em seu e\-mail oficial uma URL de acesso$/ do
-  @email = ActionMailer::Base.deliveries.first
-  @email.from.should == ["admin@votocomovamos.org.br"]
-  @email.to.should == [@candidate.email]
-  @email.body.should include("O usuário #{@current_user.name} está requisitando permissão para administrar seu perfil")
-end
-
 Quando /^eu acesso o perfil do mesmo$/ do
   visit candidate_path(@candidate)
 end
@@ -95,9 +86,6 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
   @candidate = FactoryGirl.create :candidate
   visit candidate_path(@candidate)
 end
-Quando /^reinvindico propriedade sobre ela$/ do
-  click_link "Sou esse candidato"
-end
 
 Quando /^aceito os termos de uso da aplicação$/ do
   check "Aceito os Termos e Condições"
@@ -109,11 +97,4 @@ end
 
 Então /^devo ver que minha solicitação foi feita$/ do
   page.should have_content("Solicitação realizada com sucesso")
-end
-
-Então /^o candidato em seu e\-mail oficial deve receber pedido de validação$/ do
-  @email = ActionMailer::Base.deliveries.first
-  @email.from.should == ["admin@votocomovamos.org.br"]
-  @email.to.should == [@candidate.email]
-  @email.body.should include("O usuário #{@current_user.name} está requisitando permissão para administrar seu perfil")
 end

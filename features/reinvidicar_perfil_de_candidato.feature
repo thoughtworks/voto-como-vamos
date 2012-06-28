@@ -11,7 +11,7 @@ Funcionalidade: Reinvindicar conta de candidato
   que contem as informações importadas do candidato tse, as informações básicas, os links de redes sociais
   e os termos de uso que da aplicação Votar Como Vamos.
 
-  O voto como vamos deve enviar um e-mail para os e-mails importados no voto como vamos, solicitando
+  O voto como vamos deve enviar uma mensagem para os e-mails importados no voto como vamos, solicitando
   um perfil de acesso do facebook para administração do candidato, mediante a aceitação dos termos de uso.
 
   Fora de Escopo:

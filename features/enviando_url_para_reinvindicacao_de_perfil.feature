@@ -6,4 +6,3 @@ Funcionalidade: Enviando mensagem para reinvindicação de perfil
     Dado que existem alguns candidatos válidos
     Quando solicitamos envio de reinvindicação de perfil em massa
     Entao todos os candidatos devem receber um e-mail com a solicitação
-
