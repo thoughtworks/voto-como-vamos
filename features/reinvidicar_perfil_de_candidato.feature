@@ -1,4 +1,3 @@
-
 #language: pt
 Funcionalidade: Reinvindicar conta de candidato
   Como candidato
@@ -19,18 +18,10 @@ Funcionalidade: Reinvindicar conta de candidato
   ---------------
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
-  Contexto:
-    Dado que eu estou logado na aplicação
-
   @pending
-  Cenario: Reinvidicando Propriedade
-    Dado que as informações do candidato foram importadas do TSE
-    E que o cadastro do candidato possui um e-mail válido
-    Quando solicitamos envio de reinvindicação de e-mail
-    Entao o candidato deve receber em seu e-mail oficial uma URL de acesso
+  Cenario: Aceitar os termos de uso  
     Quando essa URL for acessada
     Entao o candidato deve ver a pagina do candidato associada ao e-mail
-    E deve ver a opção de reinvindicação da administração
     Dado que o candidato está logado com uma conta válida do Facebook
     Quando o candidato solicitar a administração
     Entao o voto como vamos deve exibir os termos de uso
@@ -53,6 +44,7 @@ Funcionalidade: Reinvindicar conta de candidato
     Dado que o candidato não aceitou os termos de uso
     Entao deve redirecioná-lo para a Home Page do Voto Como Vamos
 
+  @pending
   Cenario: Reinvidicando Propriedade
     Dado que estou na minha página de candidato ou do candidato que acessoro
     Quando reinvindico propriedade sobre ela

@@ -21,6 +21,45 @@ Dado /^que existe um candidato$/ do
   @candidate = FactoryGirl.create :candidate
 end
 
+Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
+  @candidate.email.should match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i)
+end
+
+Quando /^solicitamos envio de reinvindicação de e\-mail$/ do
+  Revindication.send_to_all_candidates 
+end
+
+Dado /^que existem alguns candidatos válidos$/ do
+ @candidates = 3.times.map do |i|
+   FactoryGirl.create :candidate, email: "candidato#{i}@tse.gov.br" 
+ end
+end
+
+Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
+  Revindication.send_to_all_candidates 
+end
+
+Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
+  candidate_emails = @candidates.map { |c| c.email }
+  
+  ActionMailer::Base.deliveries.size.should == 3
+
+  ActionMailer::Base.deliveries.each do |message|
+    message.from.should == ["admin@votocomovamos.org.br"]
+    candidate_emails.should include(message.to.first)
+    message.body.should include("Clique aqui para reinvindicar o seu perfil de administrador.")
+  end
+end
+
+
+
+Entao /^o candidato deve receber em seu e\-mail oficial uma URL de acesso$/ do
+  @email = ActionMailer::Base.deliveries.first
+  @email.from.should == ["admin@votocomovamos.org.br"]
+  @email.to.should == [@candidate.email]
+  @email.body.should include("O usuário #{@current_user.name} está requisitando permissão para administrar seu perfil")
+end
+
 Quando /^eu acesso o perfil do mesmo$/ do
   visit candidate_path(@candidate)
 end
