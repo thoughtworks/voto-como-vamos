@@ -7,6 +7,9 @@ div class="row"
 	- if @candidate.press_agent
 	  p
 	    | * Este perfil é gerenciado pela Acessoria de Imprensa
+	- unless @candidate.press_agent.nil? || @candidate.press_agent
+	  p
+	    | * Este perfil é gerenciado pelo Candidato
   div class="span-one-third"
     h2
       = @candidate.party

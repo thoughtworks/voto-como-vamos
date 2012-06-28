@@ -7,8 +7,8 @@ Quando /^alterar o campo (.*?) para '(.*?)'$/ do |field_name, about|
  fill_in field_name, :with => about
 end
 
-Quando /^marcar o campo Acessoria de Imprensa$/ do
-  choose('Sim')
+Quando /^marcar '(.*?)' no campo Acessoria de Imprensa$/ do |option|
+  choose option
 end
 
 Quando /^confirmar a alteração$/ do
@@ -25,4 +25,8 @@ end
 
 Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela acessoria de imprensa$/ do
   page.should have_content('Este perfil é gerenciado pela Acessoria de Imprensa')
+end
+
+Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pelo candidato$/ do
+  page.should have_content('Este perfil é gerenciado pelo Candidato')
 end
