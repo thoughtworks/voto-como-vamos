@@ -8,4 +8,9 @@ class CandidateMailer < ActionMailer::Base
     @user = User.find(user_id)
     mail(:to => @candidate.email, :subject => "Solicitação de Gerenciamento de Perfil")
   end
+
+  def send_message_for_revindication(candidate_id)
+    @candidate = Candidate.all.at(candidate_id)
+    mail(:to => @candidate.email, :subject => "Voto Como Vamos! Reinvindique a administração do seu perfil")
+  end
 end
