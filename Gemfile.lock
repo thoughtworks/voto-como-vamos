@@ -92,7 +92,10 @@ GEM
       rubyzip
     heroku-api (0.2.4)
       excon (~> 0.14.0)
+    highline (1.6.13)
     hike (1.2.1)
+    hitch (0.7.1)
+      highline (>= 1.6.2)
     httpauth (0.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -236,6 +239,7 @@ DEPENDENCIES
   debugger
   factory_girl_rails
   heroku
+  hitch
   jquery-rails
   koala
   launchy
