@@ -28,11 +28,17 @@ Funcionalidade: Editar perfil candidato
 	Entao ele deve ver uma mensagem de erro indicando que o campo Telefone é inválido
 	E ele deve ver uma mensagem de erro indicando que o campo Email é inválido
 
-
   Cenário: Informando que o perfil é controlado por acessoria de imprensa
     Quando o candidato editar seu perfil
-	E marcar o campo Acessoria de Imprensa
+	E marcar 'Sim' no campo Acessoria de Imprensa
 	E confirmar a alteração
 	Então ele deve ver suas informações atualizadas
 	E ele deve ser uma mensagem informando que seu perfil é gerenciado pela acessoria de imprensa
 	
+  Cenário: Informando que o perfil é controlado pelo Candidato
+    Quando o candidato editar seu perfil
+  E marcar 'Não' no campo Acessoria de Imprensa
+  E confirmar a alteração
+  Então ele deve ver suas informações atualizadas
+  E ele deve ser uma mensagem informando que seu perfil é gerenciado pelo candidato
+  

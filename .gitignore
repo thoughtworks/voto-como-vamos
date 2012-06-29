@@ -1,4 +1,5 @@
 *.rbc
+*.swp
 *.sassc
 .sass-cache
 capybara-*.html
@@ -15,3 +16,4 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 config/application.yml
+*.swp
