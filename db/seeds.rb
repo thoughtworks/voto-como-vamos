@@ -1,8 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
+# encoding: utf-8
 
 10.times do |i|
-  FactoryGirl.create :candidate, name: "Candidato #{i}"
+  FactoryGirl.create :candidate, :name => "Candidato #{i}"
 end
+
+Category.create(:name => 'Educação')
+Category.create(:name => 'Meio-ambiente')
+Category.create(:name => 'Segurança')
+Category.create(:name => 'Mobilidade Urbana')
+Category.create(:name => 'Saúde')
+Category.create(:name => 'Cultura e lazer')
+Category.create(:name => 'Infra-estrutura')
+Category.create(:name => 'Economia')
+Category.create(:name => 'Outros')
