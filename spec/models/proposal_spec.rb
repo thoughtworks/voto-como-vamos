@@ -4,6 +4,8 @@ require 'spec_helper'
 
 describe Proposal do
 
+  it { should have_and_belong_to_many(:categories) }
+
   it { should belong_to(:candidate) }
   it { should validate_presence_of(:candidate) }
 
