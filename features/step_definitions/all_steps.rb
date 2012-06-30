@@ -88,6 +88,10 @@ Dado /^que existe um candidato$/ do
   @candidate = FactoryGirl.create :candidate
 end
 
+Dado /^que existe um candidato com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_with_proposals
+end
+
 Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
   @candidate.email.should match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i)
 end
@@ -124,9 +128,22 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :name, :party
+    :alliance, :about, :email, :name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
+  end
+
+  [
+    :blog, :facebook, :site, :twitter
+  ].each do |field|
+    page.should have_css("a[href='#{@candidate.send(field)}']")
+  end
+
+  page.should have_css("img[src='#{@candidate.photo}']")
+
+  @candidate.proposals.each do |proposal|
+    page.should have_content(proposal.title)
+    page.should have_content(proposal.abstract)
   end
 end
 
