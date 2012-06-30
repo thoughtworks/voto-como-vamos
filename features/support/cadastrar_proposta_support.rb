@@ -6,6 +6,9 @@ module CadastrarPropostaSupport
       fill_in 'proposal_title', :with => proposal.title
       fill_in 'proposal_abstract', :with => proposal.abstract
       fill_in 'proposal_description', :with => proposal.description
+      proposal.categories.each do |category|
+        check category.name
+      end
       find('input[type="submit"]').click
     end
   end

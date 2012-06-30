@@ -34,6 +34,10 @@ Dado /^que sou um usuário não cadastrado no Votar Como Vamos$/ do
   @user = test_users.create(false)
 end
 
+Dado /^que existe um macro-tema cadastrado$/ do
+  @category = FactoryGirl.create(:category)
+end
+
 Quando /^confirmo o pedido de autorização$/ do
   within_frame "iframe_canvas" do
     find(".platform_dialog a").click
@@ -50,7 +54,9 @@ Dado /^que eu estou cadastrando uma proposta$/ do
 end
 
 Quando /^eu preencher todos os campos da proposta$/ do
-  @proposal = FactoryGirl.build(:proposal, :candidate => @candidate)
+  @proposal = FactoryGirl.build(:proposal,
+                                :candidate => @candidate,
+                                :categories => [@category])
   fill_proposal_form_with(@proposal)
 end
 
