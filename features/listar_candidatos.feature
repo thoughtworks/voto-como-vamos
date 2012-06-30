@@ -15,4 +15,4 @@ Funcionalidade: Listar Candidatos
     E que existem alguns candidatos
     Quando eu acesso a listagem de candidatos
     E escolho o perfil de um determinado candidato
-    Entao eu devo ver as suas informações
+    Entao eu devo ver a página do candidato
