@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 10.times do |i|
-  FactoryGirl.create :candidate, :name => "Candidato #{i}"
+  FactoryGirl.create :candidate_with_proposals, :name => "Candidato #{i}"
 end
 
 Category.create(:name => 'Educação')
