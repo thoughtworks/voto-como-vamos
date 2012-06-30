@@ -59,8 +59,72 @@ describe ProposalsController do
         post :create, fake_params
       end
 
+      it { should assign_to(:candidate).with(candidate) }
+      it { should assign_to(:proposal).with(proposal) }
       it { should render_template(:new) }
     end
+  end
+
+  describe '#show' do
+    let(:proposal_id) { '1' }
+    let(:fake_params) do
+      {
+        :candidate_id => candidate_id,
+        :id           => proposal_id
+      }
+    end
+
+    before do
+      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+
+      get :show, fake_params
+    end
+
+    it { should assign_to(:candidate).with(candidate) }
+    it { should assign_to(:proposal).with(proposal) }
+    it { should respond_with(:success) }
+    it { should render_template(:show) }
+  end
+
+  describe '#delete' do
+    let(:proposal_id) { '1' }
+    let(:fake_params) do
+      {
+        :candidate_id => candidate_id,
+        :proposal_id  => proposal_id
+      }
+    end
+
+    before do
+      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+
+      get :delete, fake_params
+    end
+
+    it { should assign_to(:candidate).with(candidate) }
+    it { should assign_to(:proposal).with(proposal) }
+    it { should respond_with(:success) }
+    it { should render_template(:delete) }
+  end
+
+  describe '#destroy' do
+    let(:proposal_id) { '1' }
+    let(:fake_params) do
+      {
+        :candidate_id => candidate_id,
+        :id           => proposal_id
+      }
+    end
+
+    before do
+      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+      proposal.should_receive(:delete)
+
+      delete :destroy, fake_params
+    end
+
+    it { should respond_with(:redirect) }
+    it { should redirect_to(candidate_path(candidate)) }
   end
 
 end

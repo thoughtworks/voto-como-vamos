@@ -1,0 +1,7 @@
+= form_for([@candidate, @proposal], :method => :delete) do |f|
+  p
+    = t('proposals.delete.confirmation', :title => @proposal.title)
+  p
+    = f.submit t('yes')
+    = " #{t('or')} "
+    = link_to t('cancel'), candidate_proposal_path(@candidate, @proposal)

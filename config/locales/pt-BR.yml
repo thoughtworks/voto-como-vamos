@@ -231,6 +231,15 @@ pt-BR:
       email:
         invalid: "não é válido"
 
+  cancel: "Cancelar"
+  or: "ou"
+  'yes': "Sim"
+
   proposals:
     create:
       success: 'Proposta criada com sucesso'
+    delete:
+      title: 'Excluir Proposta'
+      confirmation: 'Tem certeza que deseja excluir a proposta %{title}?'
+    destroy:
+      success: 'Proposta excluída com sucesso'

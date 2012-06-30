@@ -209,3 +209,27 @@ def login_with(mock_options = nil)
 
   visit "/auth/facebook"
 end
+
+Dado /^que eu tenha uma proposta cadastrada$/ do
+  @proposal = FactoryGirl.create(:proposal, :candidate => @candidate)
+end
+
+Dado /^que eu estou visualizando uma proposta$/ do
+  visit candidate_proposal_path(@proposal.candidate, @proposal)
+end
+
+Quando /^eu tentar excluir a proposta$/ do
+  click_on I18n.t('proposals.delete.title')
+end
+
+Quando /^eu confirmar a exclusão da proposta$/ do
+  click_on I18n.t('yes')
+end
+
+Quando /^eu cancelar a exclusão da proposta$/ do
+  click_on I18n.t('cancel')
+end
+
+Então /^eu devo ver a proposta$/ do
+  current_path.should == candidate_proposal_path(@candidate, @proposal)
+end
