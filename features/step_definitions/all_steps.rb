@@ -169,12 +169,10 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
   visit candidate_path(@candidate)
 end
 
-Quando /^aceito os termos de uso da aplicação$/ do
-  check "Aceito os Termos e Condições"
-end
-
 Quando /^confirmo a solicitação$/ do
-  click_button "Confirmar"
+  within_frame "iframe_canvas" do
+    click_button 'Confirmar'
+  end
 end
 
 Então /^devo ver que minha solicitação foi feita$/ do
@@ -247,4 +245,21 @@ end
 
 Então /^devo ir para aceitação dos termos de uso$/ do
   current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate))
+end
+
+Dado /^que estou na página de solicitação de administração do meu perfil$/ do
+  @candidate = FactoryGirl.create :candidate
+  visit new_candidate_ownership_path(@candidate)
+end
+
+Quando /^aceito os termos de uso$/ do
+  within_frame "iframe_canvas" do
+    check "Aceito os Termos e Condições"
+  end
+end
+
+Então /^devo poder administrar o meu perfil$/ do
+  within_frame "iframe_canvas" do
+    page.should have_content "Editar Candidato"
+  end
 end

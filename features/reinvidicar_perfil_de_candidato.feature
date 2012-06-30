@@ -24,3 +24,12 @@ Funcionalidade: Reinvindicar conta de candidato
     Quando acesso endereço de solicitação fornecido no e-mail 
     E entro com minhas credenciais no facebook
     Então devo ir para aceitação dos termos de uso
+
+  @javascript
+  Cenario: Me tornando administrador do meu perfil de candidato
+    Dado que sou um usuário já cadastrado no Votar Como Vamos
+    E que estou logado no facebook
+    E que estou na página de solicitação de administração do meu perfil
+    Quando aceito os termos de uso
+    E confirmo a solicitação
+    Então devo poder administrar o meu perfil
