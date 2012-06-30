@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'ostruct'
 
+TSE_URL = "http://www.tse.jus.br"
 class DataImporter
 	def initialize(url)
 		@candidates = []
@@ -16,16 +17,22 @@ class DataImporter
 
 	private
 	def load_candidates
-		 @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
-		 	candidate = OpenStruct.new
-		 	candidate.name = get_name row
-		 	candidate.short_name = get_short_name row
-		 	candidate.number = get_number row
-		 	candidate.party = get_party row
-		 	candidate.alliance = get_alliance row
+  
+	  @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
+	  	candidate = OpenStruct.new
+	 	  candidate.name = get_name row
+	 	  candidate.short_name = get_short_name row
+	 	  candidate.number = get_number row
+	 	  candidate.party = get_party row
+	 	  candidate.alliance = get_alliance row
       candidate.profile_link = get_profile_link row
-		 	@candidates << candidate
-		end
+
+      # Candidate Details Page
+      @profile_details_doc = Nokogiri::HTML(open candidate.profile_link)
+      candidate.photo = get_photo_link row
+
+	 	  @candidates << candidate
+	  end
 	end
 
 	def get_name(row)
@@ -51,10 +58,14 @@ class DataImporter
   def get_profile_link(row)
     profile_link = row.children[0].children[1]['href']
     if profile_link.include? "\.\." 
-      "http://www.tse.jus.br/sadEleicaoDivulgaCand2008#{profile_link.gsub "\.\.", ''}"
+      TSE_URL + "/sadEleicaoDivulgaCand2008" + (profile_link.gsub "\.\.", '')
     else
       profile_link
     end
+  end
+
+  def get_photo_link(row)
+    TSE_URL + @profile_details_doc.xpath("//img")[0]['src']
   end
 
 	def remove_specials(text)
