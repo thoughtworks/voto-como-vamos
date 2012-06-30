@@ -10,7 +10,7 @@ div class="row"
 	- unless @candidate.press_agent.nil? || @candidate.press_agent
 	  p
 	    | * Este perfil é gerenciado pelo Candidato
-  div class="span-one-third"
+  div.span-one-third
     h2
       = @candidate.party
     h2
@@ -18,14 +18,24 @@ div class="row"
     br
     img src="#{@candidate.photo}"
     br
-    p
-      = @candidate.email
-      = @candidate.phone
-    p
-      a href="#{@candidate.blog}" Blog
-      a href="#{@candidate.facebook}" Facebook
-      a href="#{@candidate.site}" Site
-      a href="#{@candidate.twitter}" Twitter
+    ol.contact
+      li
+        a href="mailto:#{@candidate.email}" #{@candidate.email}
+      li
+        = @candidate.phone
+    ol.social
+      li
+        a.blog href="#{@candidate.blog}" title="Blog"
+          span Blog
+      li
+        a.facebook href="#{@candidate.facebook}" title="Facebook"
+          span Facebook
+      li
+        a.site href="#{@candidate.site}" title="Site"
+          span Site
+      li
+        a.twitter href="#{@candidate.twitter}" title="Twitter"
+          span Twitter
     h3 Sobre o candidato
     p
       = @candidate.about
