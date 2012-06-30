@@ -1,0 +1,432 @@
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html>
+<head>
+  <title>TSE - Eleições 2008 - Divulga&ccedil;&atilde;o de Registro de Candidatura</title>
+  <link rel="stylesheet" type="text/css" href="../comuns/css/padraoTSE-01.css">
+  <link rel="stylesheet" type="text/css" href="../comuns/css/padraoTSE-02.css">
+  <link rel="stylesheet" type="text/css" href="../comuns/css/padraoAbas.css">
+  
+  <script type="text/javascript" language="javascript" src="../comuns/js/formatacaoGeral.js"></script>
+  <script type="text/javascript" language="javascript" src="../comuns/js/util.js"></script>
+  
+  <script type="text/javascript">
+  <!--
+    
+  function abrirTelaDetalhesCandidato() {
+    
+    var strNomeJanelaPopup = "fichaRegistroCandidato";
+           var resolucaoTelaCliente = screen.width + "x" + screen.height;
+
+           if (resolucaoTelaCliente == "800x600") {     
+      abrirJanelaPopup(strNomeJanelaPopup, 750, 530, 10, 0, "false", "false");
+    }
+    else {
+      abrirJanelaPopup(strNomeJanelaPopup, 750, 700, 100, 10, "false", "false");
+    }
+  }   
+
+
+  function stAba(menu,conteudo)
+  {
+    this.menu = menu;
+    this.conteudo = conteudo;
+  }
+
+  var arAbas = new Array();
+  arAbas[0] = new stAba('td_sadp','div_sadp');
+  arAbas[1] = new stAba('td_bens','div_bens');
+  arAbas[2] = new stAba('td_spce1','div_spce1');
+  arAbas[3] = new stAba('td_spce2','div_spce2');
+  
+
+  function AlternarAbas(menu,conteudo)
+  {
+    for (i=0;i<arAbas.length;i++)
+    {
+      m = document.getElementById(arAbas[i].menu);
+      m.className = 'menu';
+      c = document.getElementById(arAbas[i].conteudo)
+      c.style.display = 'none';
+    }
+    m = document.getElementById(menu)
+    m.className = 'menu-sel';
+    c = document.getElementById(conteudo)
+    c.style.display = '';
+    if (menu == 'td_sadp'){
+      carregaProcessoCandidato(); 
+    }
+    if (menu == 'td_spce1'){
+      carregaSPCECandidato('1');  
+    } 
+    if (menu == 'td_spce2'){
+      carregaSPCECandidato('2');  
+    }
+  }
+
+  function carregaProcessoCandidato(){
+    var ufs = "AC,CE,GO,RN,SC";
+    var regional = "RS";
+    if(ufs.indexOf(regional) != -1){        
+      var uf = "RS";
+      uf = uf.toLowerCase();
+      var protoc = "21127/2008";
+      protoc = protoc.replace("/","");
+      protoc = protoc.replace("/08","");
+      protoc = protoc.replace("-","");
+      protoc = protoc.replace(".","");
+      protoc = protoc.replace(" ","");
+  
+      if (protoc.indexOf("2008") == -1) {
+        protoc = protoc + "2008";
+      }
+  
+      
+        var link = "'http://www.tse.jus.br/sadJudSadpPush/ExibirDadosProcesso.do?nprot=" + protoc + "&comboTribunal=" + uf + "'";   
+                   
+      
+          document.getElementById('div_sadp').innerHTML = "<iframe src=" + link + " height='235' width='735'></iframe>";
+    }else{
+      document.getElementById('div_sadp').innerHTML = "<center><span class='clsTitulo01'>Processo de candidatura não disponível.</span></center>"     
+    }
+    //document.getElementById('div_sadp').innerHTML = "<br/><center><p class='clsTitulo01'>Serviço indisponível das 20h de sábado, dia 25 de outubro, às 12h de segunda-feira, dia 27 de outubro de 2008.</p></center>";    
+  }
+
+  function carregaSPCECandidato( parcial ){
+    var uf = "RS";
+    var sgUe = "88013";
+    var cdCargo = "11";
+    var nrTitulo = "038554380400";
+
+    
+      var link = "'http://www.tse.jus.br/spce2008DivHtml/candidatoServlet.do?acao=relatorio&sgUf=" + uf + "&sgUe=" + sgUe + "&dsNrTituloEleitor=" + nrTitulo + "&candidatura=" + cdCargo + "&parcial=" + parcial + "'";   
+    
+               
+    if(cdCargo != 12){
+          document.getElementById('div_spce' + parcial).innerHTML = "<iframe src=" + link + " height='235' width='735'></iframe>";
+    }
+    else{
+      document.getElementById('div_spce' + parcial).innerHTML = "<br/><center><p class='clsTitulo01'>As contas do candidato a vice-prefeito estarão contidas na prestação de contas do candidato a prefeito - §º 3, art. 26, Res. 22.715/08.</p></center>";
+    }
+    //document.getElementById('div_spce' + parcial).innerHTML = "<br/><center><p class='clsTitulo01'>Serviço indisponível das 20h de sábado, dia 25 de outubro, às 12h de segunda-feira, dia 27 de outubro de 2008.</p></center>";  
+  }
+  
+    function fecharJanela() {
+        window.close();
+    }
+    
+  
+  //-->
+  </script> 
+
+</head>
+
+<link rel="stylesheet" href="/sadEleicaoDivulgaCand2008/struts/css_xhtml/styles.css" type="text/css" />
+<script type="text/javascript">
+    // Dojo configuration
+    djConfig = {
+        baseRelativePath: "/sadEleicaoDivulgaCand2008/struts/dojo",
+        isDebug: false,
+        bindEncoding: "ISO-8859-1",
+        debugAtAllCosts: true // not needed, but allows the Venkman debugger to work with the includes
+    };
+</script>
+<script type="text/javascript"
+        src="/sadEleicaoDivulgaCand2008/struts/dojo/dojo.js"></script>
+<script type="text/javascript"
+        src="/sadEleicaoDivulgaCand2008/struts/simple/dojoRequire.js"></script>
+
+<body onLoad="AlternarAbas('td_bens','div_bens')">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    
+          <script type="text/javascript">
+          <!--    
+          
+      var resolucaoTelaCliente = screen.width + "x" + screen.height;
+
+           if (resolucaoTelaCliente != "800x600") {
+    document.writeln('<tr>');
+      document.writeln('<td align="center" colspan="2" bgcolor="#002340">');
+            document.writeln('<table border="0" cellpadding="0" cellspacing="0" width="100%">');
+                document.writeln('<tr>');
+                  document.writeln('<td align="left" width="20%">');
+                      document.writeln('<img src="../comuns/imagens/logotipos/brasaoRepublica-PeB.gif" align="middle" />');
+                    document.writeln('</td>');
+                  document.writeln('<td align="left" width="65%">');
+              document.writeln('<table align="left" cellpadding="0" cellspacing="0">');
+                document.writeln('<tr>');
+                  document.writeln('<td class="clsTitulo02" nowrap="nowrap">');
+                    document.writeln('TRIBUNAL SUPERIOR ELEITORAL');
+                  document.writeln('</td>');
+                document.writeln('</tr>');
+                document.writeln('<tr>');
+                  document.writeln('<td class="clsSubTitulo01">');
+                    document.writeln('Eleições 2008');
+                  document.writeln('</td>');
+                document.writeln('</tr>');
+                document.writeln('<tr>');
+                  document.writeln('<td class="clsSubTitulo02">');
+                    document.writeln('Divulgação de Registro de Candidaturas');
+                  document.writeln('</td>');
+                document.writeln('</tr>');
+              document.writeln('</table>');
+                    document.writeln('</td>');
+                  document.writeln('<td align="right" width="15%">');
+                      document.writeln('<img src="../comuns/imagens/logotipos/fragmentoUrna.gif" align="middle" />');
+                    document.writeln('</td>');
+          document.writeln('</tr>');
+                document.writeln('</table>');
+      document.writeln('</td>');
+    document.writeln('</tr>');}
+
+          //-->
+          </script>
+
+
+    <tr>
+      <td align="center" colspan="2" class="clsTitulo01">
+        Detalhes do Registro de Candidatura - Prefeito
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+            <table border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                  <td align="center">
+                    
+                                    
+                  
+                      <!-- img src=" " width="168" height="204" border="2" align="middle" / -->
+                            <img src="/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-570.jpg" width="168" height="204" border="2" align="middle" />                      
+                    </td>
+                  </tr>
+          <tr>
+            <td class="clsCabecalho04" align="center">Situa&ccedil;&atilde;o do Registro:</td>
+          </tr>
+          <tr>
+            <td class="clsTitulo01" align="center">
+              Apto
+              <br/>
+                          <span class="clsCabecalhoCol02">
+                            (Deferido)
+                          </span>
+            </td>
+          </tr>
+                </table>
+      </td>
+      <td align="left">
+            <table border="0" cellpadding="3" cellspacing="2">
+              <tr>
+                <td colspan="4">
+                              
+                </td>
+              </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Nome na urna eletr&ocirc;nica:</td>
+            <td class="clsTitulo01">VERA GUASSO</td>
+            <td class="clsCabecalhoCol05">Número:</td>
+            <td class="clsTitulo01" align="center">
+              
+              
+              16
+              
+            </td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Nome completo:</td>
+            <td class="clsItemNormal03" nowrap="nowrap">VERA JUSTINA GUASSO</td>
+            <td class="clsCabecalhoCol05">Sexo:</td>
+            <td class="clsItemNormal03">Feminino</td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Data de nascimento:</td>
+            <td class="clsItemNormal03">13/04/1963 </td>
+            <td class="clsCabecalhoCol05">Estado civil:</td>
+            <td class="clsItemNormal03">Solteiro(a)</td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Nacionalidade:</td>
+            <td class="clsItemNormal03">Brasileira nata</td>
+            <td class="clsCabecalhoCol05">Naturalidade:</td>
+            <td class="clsItemNormal03">PORTO ALEGRE - RS</td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Grau de instrução:</td>
+            <td class="clsItemNormal03">Superior incompleto</td>
+            <td class="clsCabecalhoCol05">Ocupação:</td>
+            <td class="clsItemNormal03">Servidor P&#xFA;blico Federal</td>
+                </tr>
+
+                <tr>
+            <td class="clsCabecalhoCol05" colspan="4">
+              <hr>
+            </td>
+                </tr>
+          
+                <tr>
+            <td class="clsCabecalhoCol05">Partido:</td>
+            <td class="clsItemNormal03" colspan="3">
+                          PSTU -
+                          Partido Socialista dos Trabalhadores Unificado - 
+                          (16)                                                              
+            </td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Coligação:</td>
+            <td class="clsItemNormal03" colspan="3">
+              FRENTE DE ESQUERDA
+            </td>
+                </tr>
+
+                <tr>
+            <td class="clsCabecalhoCol05">Composição da coligação:</td>
+            <td class="clsItemNormal03" colspan="3">
+              PSTU / PCB
+            </td>
+                </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">Cargo a que concorre:</td>
+            <td class="clsTitulo01"colspan="3">
+              Prefeito - 
+              PORTO ALEGRE 
+              (RS)
+            </td>
+          </tr>
+                <tr>
+            <td class="clsCabecalhoCol05">No. processo/protocolo:</td>
+            <td class="clsItemNormal03" colspan="3">
+              041/161/2008 / 21127/2008
+            </td>
+          </tr>
+
+          
+          <tr>
+              <td align="center" class="clsTitulo01" colspan="4">
+                    
+                        
+                        
+                        
+                        
+                                      
+                                    
+                    <a href="../gerenciarregistrocandidatura/manterCandidato!mostrarRegistroVice.action?codigoUECandidato=88013&amp;sqCandidato=570&amp;codigoEleicao=30&amp;numeroCandidato=16" target="fichaRegistroCandidato" onclick="abrirTelaDetalhesCandidato();">
+                  Visualizar dados do Vice-Prefeito
+              </a> 
+            </td>
+          </tr>
+          
+                
+            </table>
+          </td>
+    </tr>   
+    <tr>
+      <td align="center" colspan="2">
+        <hr>
+      </td>
+    </tr>
+
+  </table>           
+  <table width="100%">
+    <tr>
+      <td class="clsItemNormal01" align="right">
+              Dados fornecidos pelo candidato no processo de registro de candidaturas. Outras informa&ccedil;&otilde;es, entrar em contato com o cart&oacute;rio eleitoral no munic&iacute;pio.
+              <br/>
+            </td>
+        </tr>     
+  </table>
+
+  <table> 
+    <tr>        
+      <td class="menu" height="20" width="150" id="td_sadp" onClick="AlternarAbas('td_sadp','div_sadp')">
+        Processo de Candidatura
+      </td>     
+      <td class="menu" height="20" width="120" id="td_bens" onClick="AlternarAbas('td_bens','div_bens')">
+        Declaração de Bens
+      </td>
+      <td class="menu" height="20" width="190" id="td_spce1" onClick="AlternarAbas('td_spce1','div_spce1')">
+        Prestação de Contas - 1ª Parcial
+      </td>
+      <td class="menu" height="20" width="190" id="td_spce2" onClick="AlternarAbas('td_spce2','div_spce2')">
+        Prestação de Contas - 2ª Parcial
+      </td>     
+      <td width="1" style="border-bottom: 1px solid #000000">
+        &nbsp;
+      <td>    
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div id="div_sadp" class="conteudo" style="display: none">
+          
+        </div>
+        
+        <div id="div_bens" class="conteudo" style="display: none; overflow: auto; height: 245px; width: 740px">
+            
+          <center>
+            
+<table cellpadding="2" class="clsListagemPadrao" style="width: 100%;" cellspacing="2" id="objLinhaCorrente">
+<thead>
+<tr>
+<th class="clsCabecalhoCol03">Seq.</th>
+<th class="clsCabecalhoCol03">Descrição</th>
+<th class="clsCabecalhoCol03">Total</th></tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>APARTAMENTO QUITADO</td>
+<td style="text-align: right;">R$ 55,000.00</td></tr>
+<tr class="even">
+<td>2</td>
+<td>CARRO CELTA 2002</td>
+<td style="text-align: right;">R$ 16,000.00</td></tr>
+<tr class="odd">
+<td>3</td>
+<td>LINHA TELEFÔNICA</td>
+<td style="text-align: right;">R$ 50.00</td></tr>
+<tr class="total"><td></td><td></td><td>R$ 71,050.00</td></tr></tbody></table>
+          </center>
+        </div>
+        
+        <div id="div_spce1" class="conteudo" style="display: none">
+                   
+        </div>
+        
+        <div id="div_spce2" class="conteudo" style="display: none">
+                   
+        </div>        
+      </td>
+    </tr>
+        <tr>
+            <td colspan="4" class="clsTableComBackground01" align="right">
+                <table width="15%" align="right">
+                    <tr>
+                        <td class="clsCabecalhoCol05">
+                            <a href="" onclick="fecharJanela(); return false;">
+                                <img src="../comuns/imagens/icones/fechar.gif" alt="Fechar a janela" name="imgFechar" border="0" id="idImgFechar" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td> 
+        </tr>
+    </table>    
+</body>
+</html>
+
