@@ -6,6 +6,7 @@ VotoComoVamos::Application.routes.draw do
     resources :proposals, :only => [:new, :create, :show, :destroy] do
       get :delete
     end
+    resources :ownerships
     resources :revindications, :shallow => true,
       :only => [:new, :create, :show]
   end

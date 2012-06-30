@@ -18,56 +18,18 @@ Funcionalidade: Reinvindicar conta de candidato
   ---------------
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
-  @pending
-  Cenario: Aceitar os termos de uso  
-    Quando essa URL for acessada
-    Entao o candidato deve ver a pagina do candidato associada ao e-mail
-    Dado que o candidato está logado com uma conta válida do Facebook
-    Quando o candidato solicitar a administração
-    Entao o voto como vamos deve exibir os termos de uso
-    Dado que o candidato aceitou os termos de uso
-    Entao o sistema deve expirar a URL
-    E deve redirecioná-lo para a Página de administração de candidato
+  @javascript
+  Cenario: Recebendo e-mail de reinvidicação de propriedade
+    Dado que o Voto Como Vamos me enviou um e-mail solicitando que eu administre meu peril
+    Quando acesso endereço de solicitação fornecido no e-mail 
+    E entro com minhas credenciais no facebook
+    Então devo ir para aceitação dos termos de uso
 
-  @pending
-  Cenario: Candidato não aceita os termos de uso 
-    Dado que as informações do candidato foram importadas do TSE
-    E que o cadastro do candidato possui um e-mail válido
-    Quando solicitamos envio de reinvindicação de e-mail
-    Entao o candidato deve receber em seu e-mail oficial uma URL de acesso
-    Quando essa URL for acessada
-    Entao o candidato deve ver a pagina do candidato associada ao e-mail
-    E deve ver a opção de reinvindicação da administração
-    Dado que o candidato está logado com uma conta válida do Facebook
-    Quando o candidato solicitar a administração
-    Entao o voto como vamos deve exibir os termos de uso
-    Dado que o candidato não aceitou os termos de uso
-    Entao deve redirecioná-lo para a Home Page do Voto Como Vamos
-
-  @pending
-  Cenario: Reinvidicando Propriedade
-    Dado que estou na minha página de candidato ou do candidato que acessoro
-    Quando reinvindico propriedade sobre ela
-    E aceito os termos de uso da aplicação
+  @javascript
+  Cenario: Me tornando administrador do meu perfil de candidato
+    Dado que sou um usuário já cadastrado no Votar Como Vamos
+    E que estou logado no facebook
+    E que estou na página de solicitação de administração do meu perfil
+    Quando aceito os termos de uso
     E confirmo a solicitação
-    Então devo ver que minha solicitação foi feita
-    E o candidato em seu e-mail oficial deve receber pedido de validação
-
-  @pending
-  Cenario: Não aceitando os termos de uso
-    Dado que estou na minha página de candidato ou do candidato que acessoro
-    Quando reinvidico propriedade sobre ela
-    E não aceito os termos de uso da aplicação
-    Então não devo receber nenhuma notificação em meu e-mail oficial
-
-  @pending
-  Cenario: Validando Propriedade
-    Dado que recebi uma notificação para validação de propriedade de meu perfil
-    Quando eu confirmo essa solicitação
-    Então o usuário solicitante deve poder editar as propriedades do meu perfil
-
-  @pending
-  Cenario: Negando propriedade
-    Dado que recebi uma notificação para validação de propriedade de meu perfil
-    Quando nego essa solicitação
-    Então o usuário solicitante não deverá poder editar as propriedades do meu perfil
+    Então devo poder administrar o meu perfil

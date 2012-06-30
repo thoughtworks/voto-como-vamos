@@ -1,37 +1,48 @@
 div class="row"
   div class="span12"
+    h3
+      = @candidate.role
     h1 class="tab"
-      = "#{@candidate.name} - 14441"
+      = "#{@candidate.name} - #{@candidate.tse_number}"
 	- if @candidate.press_agent
 	  p
 	    | * Este perfil é gerenciado pela Acessoria de Imprensa
 	- unless @candidate.press_agent.nil? || @candidate.press_agent
 	  p
 	    | * Este perfil é gerenciado pelo Candidato
-  div class="span-one-third"
+  div.span-one-third
     h2
       = @candidate.party
     h2
       = @candidate.alliance
     br
-    img src="http://www.online-spanisch.com/blog/wp-content/uploads/2008/11/el-gaucho-150x150.jpg"
+    img src="#{@candidate.photo}"
     br
+    ol.contact
+      li
+        a href="mailto:#{@candidate.email}" #{@candidate.email}
+      li
+        = @candidate.phone
+    ol.social
+      li
+        a.blog href="#{@candidate.blog}" title="Blog"
+          span Blog
+      li
+        a.facebook href="#{@candidate.facebook}" title="Facebook"
+          span Facebook
+      li
+        a.site href="#{@candidate.site}" title="Site"
+          span Site
+      li
+        a.twitter href="#{@candidate.twitter}" title="Twitter"
+          span Twitter
     h3 Sobre o candidato
     p
       = @candidate.about
 
   div class="span-two-thirds"
     h1 Propostas
-    h2 Remodelagem do arroio Ipiranga
-    p Culminando uma cidade mais bonita e turística, a remodelagem do arroio Ipiranga permitirá que pessoas andem de bicicleta, parem pra tomar uma cerveja ou façam compras no quiosque do arroio.
-    a href="#" Saiba mais
-    br
-    br
-    h2 Novo cais do porto
-    p Culminando uma cidade mais bonita e turística, a remodelagem do arroio Ipiranga permitirá que pessoas andem de bicicleta, parem pra tomar uma cerveja ou façam compras no quiosque do arroio.
-    a href="#" Saiba mais
-    br
-    br
-    h2 Churrasco como merenda nas escolas públicas
-    p Culminando uma cidade mais bonita e turística, a remodelagem do arroio Ipiranga permitirá que pessoas andem de bicicleta, parem pra tomar uma cerveja ou façam compras no quiosque do arroio.
-    a href="#" Saiba mais
+
+    - @candidate.proposals.each do |proposal|
+      = render :partial => 'proposal', :locals => { :proposal => proposal }
+    end

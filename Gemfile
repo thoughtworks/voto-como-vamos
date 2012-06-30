@@ -34,6 +34,7 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false
+  gem 'email_spec'
 end
 
 group :production do

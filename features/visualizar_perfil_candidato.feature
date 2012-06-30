@@ -6,6 +6,6 @@ Funcionalidade: Visualizar perfil de candidato
 
   Cenario: Visualizar a página do candidato
     Dado que eu estou logado na aplicação
-    E que existe um candidato
+    E que existe um candidato com propostas
     Quando eu acesso o perfil do mesmo
     Entao eu devo ver as suas informações

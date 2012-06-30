@@ -5,6 +5,7 @@ FactoryGirl.define do
     title       'Título'
     abstract    'Resumo'
     description 'Descrição'
+    candidate
   end
 
   factory :invalid_proposal, :class => Proposal do

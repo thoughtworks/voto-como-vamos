@@ -88,6 +88,10 @@ Dado /^que existe um candidato$/ do
   @candidate = FactoryGirl.create :candidate
 end
 
+Dado /^que existe um candidato com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_with_proposals
+end
+
 Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
   @candidate.email.should match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i)
 end
@@ -107,15 +111,13 @@ Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
-  candidate_emails = @candidates.map { |c| c.email }
-  
   ActionMailer::Base.deliveries.size.should == 3
 
-  ActionMailer::Base.deliveries.each do |message|
-    message.from.should == ["admin@votocomovamos.org.br"]
-    candidate_emails.should include(message.to.first)
-    message.body.should include("Clique aqui para administrar seu perfil no Voto Como Vamos")
-  end
+  @candidates.each do |candidate|
+    open_email(candidate.email)
+    current_email.should be_delivered_from("admin@votocomovamos.org.br")
+    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate))
+  end  
 end
 
 Quando /^eu acesso o perfil do mesmo$/ do
@@ -124,9 +126,22 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :name, :party
+    :alliance, :about, :email, :name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
+  end
+
+  [
+    :blog, :facebook, :site, :twitter
+  ].each do |field|
+    page.should have_css("a[href='#{@candidate.send(field)}']")
+  end
+
+  page.should have_css("img[src='#{@candidate.photo}']")
+
+  @candidate.proposals.each do |proposal|
+    page.should have_content(proposal.title)
+    page.should have_content(proposal.abstract)
   end
 end
 
@@ -154,12 +169,10 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
   visit candidate_path(@candidate)
 end
 
-Quando /^aceito os termos de uso da aplicação$/ do
-  check "Aceito os Termos e Condições"
-end
-
 Quando /^confirmo a solicitação$/ do
-  click_button "Confirmar"
+  within_frame "iframe_canvas" do
+    click_button 'Confirmar'
+  end
 end
 
 Então /^devo ver que minha solicitação foi feita$/ do
@@ -232,4 +245,45 @@ end
 
 Então /^eu devo ver a proposta$/ do
   current_path.should == candidate_proposal_path(@candidate, @proposal)
+end
+
+Dado /^que o Voto Como Vamos me enviou um e\-mail solicitando que eu administre meu peril$/ do
+  @candidate = FactoryGirl.create :candidate
+  Revindication.send_to_all_candidates
+end
+
+Quando /^acesso endereço de solicitação fornecido no e\-mail$/ do
+  open_last_email
+  visit_in_email('aqui')
+end
+
+Quando /^entro com minhas credenciais no facebook$/ do
+  test_users = Koala::Facebook::TestUsers.new(
+    :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
+  @user = test_users.create(false)
+  fill_in "email", with: @user['email']
+  fill_in "pass", with: @user['password']
+  click_button "Log In"
+  find('#grant_clicked input').click  
+end
+
+Então /^devo ir para aceitação dos termos de uso$/ do
+  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate))
+end
+
+Dado /^que estou na página de solicitação de administração do meu perfil$/ do
+  @candidate = FactoryGirl.create :candidate
+  visit new_candidate_ownership_path(@candidate)
+end
+
+Quando /^aceito os termos de uso$/ do
+  within_frame "iframe_canvas" do
+    check "Aceito os Termos e Condições"
+  end
+end
+
+Então /^devo poder administrar o meu perfil$/ do
+  within_frame "iframe_canvas" do
+    page.should have_content "Editar Candidato"
+  end
 end

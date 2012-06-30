@@ -12,5 +12,12 @@ FactoryGirl.define do
     blog       'http://blog.fulano.com'
     facebook   'http://facebook.com/fulano.de.tal'
     twitter    'http://twitter.com/fulaninho'
+    photo      'http://myphoto.fulano.com'
+  end
+
+  factory :candidate_with_proposals, :parent => :candidate do
+    after_build do |candidate|
+      candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
+    end
   end
 end
