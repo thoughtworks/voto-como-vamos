@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120629224623) do
+ActiveRecord::Schema.define(:version => 20120630180454) do
 
   create_table "candidates", :force => true do |t|
     t.string  "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120629224623) do
     t.string  "facebook"
     t.string  "twitter"
     t.boolean "press_agent"
+    t.string  "photo"
   end
 
   create_table "categories", :force => true do |t|
