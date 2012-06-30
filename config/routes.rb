@@ -4,6 +4,7 @@ VotoComoVamos::Application.routes.draw do
 
   resources :candidates do
     resources :proposals, :only => [:new, :create]
+    resources :ownerships
     resources :revindications, :shallow => true,
       :only => [:new, :create, :show]
   end

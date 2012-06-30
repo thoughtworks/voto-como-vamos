@@ -111,15 +111,13 @@ Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
-  candidate_emails = @candidates.map { |c| c.email }
-  
   ActionMailer::Base.deliveries.size.should == 3
 
-  ActionMailer::Base.deliveries.each do |message|
-    message.from.should == ["admin@votocomovamos.org.br"]
-    candidate_emails.should include(message.to.first)
-    message.body.should include("Clique aqui para administrar seu perfil no Voto Como Vamos")
-  end
+  @candidates.each do |candidate|
+    open_email(candidate.email)
+    current_email.should be_delivered_from("admin@votocomovamos.org.br")
+    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate))
+  end  
 end
 
 Quando /^eu acesso o perfil do mesmo$/ do
@@ -225,4 +223,28 @@ def login_with(mock_options = nil)
   end
 
   visit "/auth/facebook"
+end
+
+Dado /^que o Voto Como Vamos me enviou um e\-mail solicitando que eu administre meu peril$/ do
+  @candidate = FactoryGirl.create :candidate
+  Revindication.send_to_all_candidates
+end
+
+Quando /^acesso endereço de solicitação fornecido no e\-mail$/ do
+  open_last_email
+  visit_in_email('aqui')
+end
+
+Quando /^entro com minhas credenciais no facebook$/ do
+  test_users = Koala::Facebook::TestUsers.new(
+    :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
+  @user = test_users.create(false)
+  fill_in "email", with: @user['email']
+  fill_in "pass", with: @user['password']
+  click_button "Log In"
+  find('#grant_clicked input').click  
+end
+
+Então /^devo ir para aceitação dos termos de uso$/ do
+  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate))
 end

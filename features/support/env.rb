@@ -41,6 +41,7 @@ Before do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
   test_users.delete_all
+  OmniAuth.config.test_mode = false
 end
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
@@ -61,5 +62,8 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
+Capybara.app_host = "http://localhost:3000"
 Capybara.server_port = 3000 
+
+require 'email_spec' # add this line if you use spork
+require 'email_spec/cucumber'
