@@ -29,7 +29,7 @@ class ProposalsController < ApplicationController
 
   def update
     @proposal = find_proposal
-    if @proposal.update_attributes(params)
+    if @proposal.update_attributes(params[:proposal])
       redirect_to candidate_path(@candidate.id),
         :notice => I18n.t('proposals.edit.success')
     else
