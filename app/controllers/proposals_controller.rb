@@ -17,9 +17,23 @@ class ProposalsController < ApplicationController
     @proposal.candidate = @candidate
     if @proposal.save
       redirect_to candidate_path(@candidate),
-                  :notice => I18n.t('proposals.create.success')
+        :notice => I18n.t('proposals.create.success')
     else
       render :new
+    end
+  end
+
+  def edit
+    @proposal = find_proposal
+  end
+
+  def update
+    @proposal = find_proposal
+    if @proposal.update_attributes(params)
+      redirect_to candidate_path(@candidate.id),
+        :notice => I18n.t('proposals.edit.success')
+    else
+      render :edit
     end
   end
 
@@ -38,4 +52,8 @@ class ProposalsController < ApplicationController
     @candidate = Candidate.find(params[:candidate_id])
   end
 
+  def find_proposal
+    proposals = @candidate.proposals
+    proposals.find(params[:id])
+  end
 end

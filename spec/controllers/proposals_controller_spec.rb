@@ -5,7 +5,7 @@ require 'spec_helper'
 describe ProposalsController do
   let(:candidate_id) { '1' }
   let(:candidate)    { stub('candidate', :id => candidate_id) }
-  let(:proposal)     { mock('proposal') }
+  let(:proposal)     { mock_model(Proposal)}
 
   before :each do
     controller.stub!(:current_user => true)
@@ -38,7 +38,7 @@ describe ProposalsController do
     end
 
     context 'when input is valid' do
-      before do
+      before do 
         Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
         proposal.should_receive(:candidate=).with(candidate)
         proposal.should_receive(:save).and_return(true)
@@ -62,6 +62,68 @@ describe ProposalsController do
       it { should assign_to(:candidate).with(candidate) }
       it { should assign_to(:proposal).with(proposal) }
       it { should render_template(:new) }
+    end
+  end
+
+
+  describe "#edit" do
+
+    let(:proposal_id) { "1" }
+    let(:proposals_collection) { mock('proposals') }
+
+    before do
+      candidate.should_receive(:proposals).
+        and_return(proposals_collection)
+
+      proposals_collection.should_receive(:find).
+        with(proposal_id).
+        and_return(proposal)
+
+      get :edit, {:candidate_id => candidate_id, :id => proposal_id}
+    end
+
+    it { should respond_with(:success) }
+    it { should assign_to(:proposal).with(proposal) }
+    it { should render_template('edit') }
+
+  end
+
+  describe "#update" do
+
+    let(:proposal_id) { "1" }
+    let(:proposals_collection) { mock('proposals') }
+    
+    before do
+      candidate.should_receive(:proposals).
+        and_return(proposals_collection)
+
+      proposals_collection.should_receive(:find).
+        with(proposal_id).
+        and_return(proposal)
+
+      proposal.should_receive(:update_attributes).
+        with(kind_of(Hash)).
+        and_return(valid?)
+
+      put :update, {:candidate_id => candidate_id, :id => proposal_id}
+    end
+
+    context "when the proposal data is valid" do
+
+      let(:valid?){ true }
+
+      it { should respond_with(:redirect) }
+      it { should assign_to(:proposal).with(proposal) }
+      it { should redirect_to(candidate_path(candidate_id)) }
+    end
+
+    context "when the proposal data is not valid" do
+
+      let(:valid?){ false }
+
+      it { should respond_with(:success) }
+      it { should assign_to(:proposal).with(proposal) }
+      it { should render_template('edit') }
     end
   end
 
