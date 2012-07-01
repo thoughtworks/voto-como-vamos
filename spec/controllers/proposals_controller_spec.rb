@@ -92,8 +92,11 @@ describe ProposalsController do
 
     let(:proposal_id) { "1" }
     let(:proposals_collection) { mock('proposals') }
-    
+    let(:proposal_params){ { "title" => "test" } }
+
     before do
+
+      
       candidate.should_receive(:proposals).
         and_return(proposals_collection)
 
@@ -102,10 +105,10 @@ describe ProposalsController do
         and_return(proposal)
 
       proposal.should_receive(:update_attributes).
-        with(kind_of(Hash)).
+        with(proposal_params).
         and_return(valid?)
 
-      put :update, {:candidate_id => candidate_id, :id => proposal_id}
+      put :update, {:candidate_id => candidate_id, :id => proposal_id, :proposal => proposal_params}
     end
 
     context "when the proposal data is valid" do
