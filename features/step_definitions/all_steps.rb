@@ -170,9 +170,7 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
 end
 
 Quando /^confirmo a solicitação$/ do
-  within_frame "iframe_canvas" do
-    click_button 'Confirmar'
-  end
+  click_button 'Confirmar'
 end
 
 Então /^devo ver que minha solicitação foi feita$/ do
@@ -277,13 +275,9 @@ Dado /^que estou na página de solicitação de administração do meu perfil$/ 
 end
 
 Quando /^aceito os termos de uso$/ do
-  within_frame "iframe_canvas" do
-    check "Aceito os Termos e Condições"
-  end
+  check "Aceito os Termos e Condições"
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  within_frame "iframe_canvas" do
-    page.should have_content "Editar Candidato"
-  end
+  page.should have_content "Editar Candidato"
 end
