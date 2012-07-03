@@ -1,15 +1,20 @@
 # encoding: utf-8
+require 'open-uri'
 
-10.times do |i|
-  FactoryGirl.create :candidate_with_proposals, :name => "Candidato #{i}"
+open('lib/data_import/candidates_2008.txt') do |file|
+  file.each_line do |line|
+    v = line.split(",")
+    FactoryGirl.create( :candidate_with_proposals, 
+      :role => v[0], 
+      :name => v[1], 
+      :tse_number => v[3], 
+      :party => v[4], 
+      :alliance => v[5], 
+      :photo => v[6]
+    )
+  end
 end
 
-Category.create(:name => 'Educação')
-Category.create(:name => 'Meio-ambiente')
-Category.create(:name => 'Segurança')
-Category.create(:name => 'Mobilidade Urbana')
-Category.create(:name => 'Saúde')
-Category.create(:name => 'Cultura e lazer')
-Category.create(:name => 'Infra-estrutura')
-Category.create(:name => 'Economia')
-Category.create(:name => 'Outros')
+['Educação', 'Meio-ambiente', 'Segurança', 'Mobilidade Urbana', 'Saúde', 'Cultura e Lazer', 'Infra-estrutura', 'Economia', 'Outros'].each do |category|
+  Category.create!(:name => category)
+end

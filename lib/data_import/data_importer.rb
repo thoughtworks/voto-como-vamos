@@ -15,9 +15,12 @@ class DataImporter
 		@candidates
 	end
 
+  def candidate_to_s(c)
+    c.name + "," + c.short_name + "," + c.number.to_s + "," + c.party + "," + c.alliance + "," + c.photo
+  end
+
 	private
 	def load_candidates
-  
 	  @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
 	  	candidate = OpenStruct.new
 	 	  candidate.name = get_name row
@@ -72,4 +75,5 @@ class DataImporter
 		text.gsub! /[\r\n\t]/, ""
 		text.strip!
 	end
+
 end

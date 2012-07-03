@@ -1,0 +1,376 @@
+Prefeito,CARLOS ANTONIO GOMES,CARLOS GOMES,31,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-27163.jpg
+Prefeito,JOSÉ ALBERTO FOGAÇA DE MEDEIROS,JOSÉ FOGAÇA,15,PMDB,CIDADE MELHOR - FUTURO MELHOR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16741.jpg
+Prefeito,LUCIANA KREBS GENRO,LUCIANA GENRO,50,PSOL,SOL E VERDE,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1188.jpg
+Prefeito,MANUELA PINTO VIEIRA D'AVILA,MANUELA,65,PC do B,PORTO ALEGRE É MAIS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3101.jpg
+Prefeito,MARIA DO ROSARIO NUNES,MARIA DO ROSÁRIO,13,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1568.jpg
+Prefeito,NELSON MARCHEZAN JUNIOR,NELSON MARCHEZAN JUNIOR,45,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21331.jpg
+Prefeito,ONYX DORNELLES LORENZONI,ONYX,25,DEM,PORTO FUTURO ALEGRE,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-475.jpg
+Prefeito,VERA JUSTINA GUASSO,VERA GUASSO,16,PSTU,FRENTE DE ESQUERDA,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-570.jpg
+Vereador,ABEL PEDRO FLORES BARRIA,ABEL FLORES,13118,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1570.jpg
+Vereador,ABILIO MOREIRA,MOREIRA,45450,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21333.jpg
+Vereador,ADAIL SIDNEI CORDEIRO,CORDEIRO,20123,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22611.jpg
+Vereador,ADECIR BERLE,ADECIR,31313,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20548.jpg
+Vereador,ADELAIDE IOLANDA ZANETTI RAMOS,ADELAIDE DA FEIRA,65949,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15838.jpg
+Vereador,ADELI SELL,ADELI SELL,13601,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1571.jpg
+Vereador,ADONIRO RODRIGUES LEAL,MIRO LEAL,15999,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20177.jpg
+Vereador,AGNALDO MUNHOZ DE CAMARGO,AGNALDO MANO OXI,65456,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15839.jpg
+Vereador,AIRTO JOAO FERRONATO,AIRTO FERRONATO,40540,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21663.jpg
+Vereador,ALAIN CÁSSIO LUIS BEIERSDORF,ALAN,14569,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16425.jpg
+Vereador,ALAN RICARDO DE SOUZA,ALAN DO JULINHO,43200,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3753.jpg
+Vereador,ALBERTO BESCKOW,CORRETOR ALBERTO,50456,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2108.jpg
+Vereador,ALBERTO MOURA TERRES,ALBERTO TERRES,13100,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1572.jpg
+Vereador,ALBERTO PRETTO MOESCH,BETO MOESCH,11234,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10430.jpg
+Vereador,ALBINO MONTEIRO DE SOUZA,ALBINO SOUZA,14185,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16426.jpg
+Vereador,ALCEU OLIVEIRA DA ROSA,BRASINHA,14118,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16427.jpg
+Vereador,ALDA MARIA BASTOS SOUZA,PROFESSORA ALDA,12100,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26267.jpg
+Vereador,ALDACIR JOSE OLIBONI,ALDACIR OLIBONI,13580,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1573.jpg
+Vereador,ALDO JOSÉ JURADO DA ROCHA,ALDO ROCHA,12631,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26268.jpg
+Vereador,ALEX ANTONIO KERBER,ALEX KERBER,12321,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26269.jpg
+Vereador,ALEX JOSIEL SILVA DA SILVA,ALEX SILVA,70070,PT do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15841.jpg
+Vereador,ALEXANDRE DE SOUZA FERREIRA,KIKO,11311,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10431.jpg
+Vereador,ALEXANDRE FERREIRA CORREIA,LOBINHO,50575,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2109.jpg
+Vereador,ALEXSANDER FRAGA DA SILVA,PROF. ALEX,65555,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15844.jpg
+Vereador,ALEXSANDRO BARBOSA DIAS,ALEX DIAS,23987,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15846.jpg
+Vereador,ALEXSANDRO FERNANDES,ALEX DA BANCA,45640,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21334.jpg
+Vereador,ALMERINDO DA ROSA FILHO,ALMERINDO FILHO,14521,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16428.jpg
+Vereador,ALTAIR MARX MUMBACH,ALTAIR FALA FINA,23999,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15848.jpg
+Vereador,ALVACI CARLOS BELLO DA SILVA,BELLO,20111,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22612.jpg
+Vereador,ÁLVARO AUGUSTO JANONI DE CARVALHO,ÁLVARO CARVALHO,12422,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26314.jpg
+Vereador,AMANCIO DOS SANTOS FERREIRA,AMANCIO FERREIRA,15125,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20181.jpg
+Vereador,AMERICO LANGES,AMERICO LANGES,50220,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2110.jpg
+Vereador,ANA ALICE FELBERMAYER CASTELLAN,ANA CASTELLAN,14141,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16429.jpg
+Vereador,ANA CERIS DOS SANTOS,ANA CERIS,13513,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1574.jpg
+Vereador,ANA LAURA DE SOUZA BARONI,ALEMOA MOTOGIRL,12444,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26270.jpg
+Vereador,ANA LUCIA JANSON ROSEK,ANA ROSEK,11478,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10432.jpg
+Vereador,ANA MARIA DE ARAÚJO COSTA MAIA,ANA MAIA,11000,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10433.jpg
+Vereador,ANDERSON VIEIRA BITTENCOURT,ANDERSON BITTENCOURT,45451,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21335.jpg
+Vereador,ANDRE BITTENCOURT,BITTENCOURT,33033,PMN,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15850.jpg
+Vereador,ANDRÉ DE OLIVEIRA CARÚS,ANDRÉ CARÚS,15300,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20191.jpg
+Vereador,ANDRÉ LUIS VICENTINI,VICENTINI,11389,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10434.jpg
+Vereador,ANDRE LUIZ BUENO IRIGON,ANDRÉ LUIZ,65000,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15852.jpg
+Vereador,ANDREIA AMORIM CAMPOS,ANDREIA CAMPOS,31111,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20551.jpg
+Vereador,ANGELICA KONZEN,ANGELICA KONZEN,15222,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20194.jpg
+Vereador,ANGELO EDUARDO BALDUZZI PAVAN,ANGELO PAVAN,40400,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21664.jpg
+Vereador,ANTONIO CARLOS ALVES DE FREITAS,ANTONIO DE FREITAS,13300,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1575.jpg
+Vereador,ANTONIO CARLOS DAMASCENO LIMA,LIMA,23789,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15854.jpg
+Vereador,ANTONIO CARLOS MORAES DUARTE,TINO MORAES,25134,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10436.jpg
+Vereador,ANTONIO CARLOS ROSS DE ABREU,TONINHO DO TÁXI,14914,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16430.jpg
+Vereador,ANTONIO FERNANDES LIMA,ANTONIO LIMA,40007,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21665.jpg
+Vereador,ANTONIO LUIZ BRAZ,LUIZ BRAZ,45678,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21336.jpg
+Vereador,ANY MACHADO ORTIZ,ANY ORTIZ,45222,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21337.jpg
+Vereador,ARCELI DA SILVEIRA,ARCELI,15002,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20197.jpg
+Vereador,ARIANE CHAGAS LEITÃO,ARIANE,13070,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1576.jpg
+Vereador,ARILTON SERAFIM CARDOSO,ARILTON,50123,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2111.jpg
+Vereador,ATILA CORREA DA SILVEIRA,ATILA (LED),20015,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-27050.jpg
+Vereador,AURELIANO CORRÊA BERTOCHE,AURELIANO BERTOCHE,40345,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21666.jpg
+Vereador,AZIMAR FONSECA GARCIA,AZIMAR  (MAGRÃO),43111,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3754.jpg
+Vereador,BELONI RITZEL,BELONI RITZEL,14900,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16431.jpg
+Vereador,BERNARDINO VENDRUSCOLO,BERNARDINO VENDRUSCOLO,15815,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20199.jpg
+Vereador,CÂNDIDO IVAN RIBEIRO ACOSTA,CÂNDIDO ACOSTA,65123,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15858.jpg
+Vereador,CARLO RAMIRO PEREIRA DUTRA,MANO DUTRA,11619,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10437.jpg
+Vereador,CARLOS ALBERTO KALINOVSKI HOFFMANN,CARLOS HOFFMANN,15051,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20200.jpg
+Vereador,CARLOS ALBERTO OLIVEIRA GARCIA,PROFESSOR GARCIA,15000,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20201.jpg
+Vereador,CARLOS ATILIO TODESCHINI,TODESCHINI,13001,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1577.jpg
+Vereador,CARLOS AUGUSTO GONÇALVES LEITE,CARLOS BREIK,40234,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21667.jpg
+Vereador,CARLOS AUGUSTO PINTO DA SILVEIRA,GONHA,11209,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10438.jpg
+Vereador,CARLOS DE MARTINI DUARTE,DE MARTINI,65651,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15856.jpg
+Vereador,CARLOS EDUARDO CHAISE,CARLOS CHAISE,15115,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20202.jpg
+Vereador,CARLOS EUGENIO CUNA LIGOCKY,CARLOS LIGOCKY,12034,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26271.jpg
+Vereador,CARLOS ROBERTO CHAGAS DA SILVA,CARLOS ROBERTO,50401,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2112.jpg
+Vereador,CARLOS ROBERTO COMASSETTO,COMASSETTO,13013,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1578.jpg
+Vereador,CARLOS ROBERTO OLIVEIRA,CARLÃO OLIVEIRA,40555,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21668.jpg
+Vereador,CASSIANO NOIMANN LEAL,PROF. CASSIANO LEAL,15151,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20203.jpg
+Vereador,CASSIO SILVA MOREIRA,PROF. CASSIO MOREIRA,65065,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-24579.jpg
+Vereador,CELIO GOLIN,CELIO GOLIN,13024,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1579.jpg
+Vereador,CELMIS ALESSANDRO VIEIRA DE OLIVEIRA,CELMIS,40900,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21669.jpg
+Vereador,CESAR RONALDO DA SILVA JACQUES,RONALDO JACQUES,25603,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10439.jpg
+Vereador,CIRILO DUTRA BARBOSA,CIRILO DUTRA,14314,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16432.jpg
+Vereador,CIRILO JOÃO FAE,CIRILO FAE,14903,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16433.jpg
+Vereador,CLARICE AMARAL DA SILVA,CLARICE ARAGUAIA,40777,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21670.jpg
+Vereador,CLAUDIO CESAR FURTADO,CLAUDIO FURTADO,12315,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26272.jpg
+Vereador,CLAUDIO JORGE DOS SANTOS ALVES,INSTRUTOR CLAUDIO,11678,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10440.jpg
+Vereador,CLAUDIO JOSE DE SOUZA SEBENELO,CLAUDIO SEBENELO,45622,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21338.jpg
+Vereador,CLAUDIO RENATO COSTA FRANZEN,FRANZEN,45100,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21339.jpg
+Vereador,CLAUDIR ANTONIO NESPOLO,CLAUDIR,13313,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1580.jpg
+Vereador,CLEBER DORNELES COHEN,CLEBER COHEN,50600,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2113.jpg
+Vereador,CLEBER MAURICIO FONSECA IBIAS,CLEBER IBIAS,43173,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3755.jpg
+Vereador,CLEBER MELO DA SILVA,CLEBER DO PINHEIRO,50398,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2114.jpg
+Vereador,CLEI EVERTON DE MORAES,CLEI MORAES,40140,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21671.jpg
+Vereador,CLEITON SILVESTRE MUNHOZ DE FREITAS,DELEGADO CLEITON,12035,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26273.jpg
+Vereador,CLOVIS ACOSTA FERNANDES,GAUCHO DA COPA,15123,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20204.jpg
+Vereador,CONSUELO ESCALIER FERNADES,CONSUELO,40011,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21672.jpg
+Vereador,CRISTIANO DE BEM GLUCK,CRISTIANO DE BEM,12200,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26274.jpg
+Vereador,CRISTIANO ZAGO,CRISTIANO ZAGO,15912,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20205.jpg
+Vereador,CRISTINA VIEIRA DOS REIS,CRISTINA REIS,15150,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20206.jpg
+Vereador,CYRO MARTINI DA SILVA,CYRO MARTINI,15333,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20207.jpg
+Vereador,DAISY MAYER VALAU,DAISY VALAU,45079,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-27014.jpg
+Vereador,DANILO TOIO FARIAS,DANILO CAÇAPAVA,13607,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1581.jpg
+Vereador,DARI RODRIGUES DA SILVA,DARI RODRIGUES,14067,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16434.jpg
+Vereador,DARLAN DA COSTA FELIZARDO,DARLAN FELIZARDO,15644,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20208.jpg
+Vereador,DENECI FERREIRA CARDOSO,DENECI ROCHINHA,31100,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20557.jpg
+Vereador,DENIS RAFAEL RATHMANN,DENIS RAFAEL,13008,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1582.jpg
+Vereador,DIAMANTINO DE MELO BASTOS DE LIMA,BORJÃO,45627,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21340.jpg
+Vereador,DIEGO JACOBSEN NICKEL,DIEGO NICKEL,25965,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10441.jpg
+Vereador,DJAIR LORETO DE VARGAS,DJAIR,15666,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20209.jpg
+Vereador,DOROTHY TRINDADE ALTENHOFEN,DOTHY,31000,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20560.jpg
+Vereador,DULCIMAR PORTELLA DE SOUZA,PORTELLA,23400,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15860.jpg
+Vereador,EDENILSON DAVI,FAÍSCA,23678,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15862.jpg
+Vereador,EDER LUIS FARIAS,EDER CARTEIRO,13025,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1584.jpg
+Vereador,EDIMAR GONÇALVES DOS SANTOS,JACARÉ,11500,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10442.jpg
+Vereador,EDUARDO MORALES MORALES,EDUARDO MORALES,40111,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21673.jpg
+Vereador,EDUARDO TEIXEIRA RALDI,RALDI,43123,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3756.jpg
+Vereador,ELEANDRO DE SOUZA FEIJÓ,PROFESSOR ELEANDRO FEIJÓ,43210,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3757.jpg
+Vereador,ELIAS NUNES VIDAL,ELIAS VIDAL,23700,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15864.jpg
+Vereador,ELISABETE PEREZ REIS,BETI REIS,14444,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16435.jpg
+Vereador,ELÓI FRANCISCO PEDROSO GUIMARÃES,ELÓI GUIMARÃES,14999,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16436.jpg
+Vereador,ELOISA HELENA CHAVES STREHLAU,ELÔ STREHLAU,23119,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15866.jpg
+Vereador,EMERSON CORREA SILVA,TÔ EMERSON CORREA,23123,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15868.jpg
+Vereador,EMERSON MARTINS DUTRA,EMERSON DUTRA,50501,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2115.jpg
+Vereador,ENILSON SCHEPFF GAMBARRA DA SILVA,TOCO,50550,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2116.jpg
+Vereador,ENIO GIAMBASTIANI,GIAM GOULART,50505,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2118.jpg
+Vereador,ENOIR PAULO MARTINI,PAULO MARTINI,50160,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2120.jpg
+Vereador,ÉRLON JACQUES DE OLIVEIRA,E L O J A C (ÉRLON JACQUES),11111,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10514.jpg
+Vereador,ERVINO BESSON,ERVINO BESSON,12642,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26275.jpg
+Vereador,EURIPEDES CONCEICAO JUNIOR,EURIPEDES,50050,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2122.jpg
+Vereador,EVANDRO LEONAN BATISTA,EVANDRO BATISTA,25060,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10443.jpg
+Vereador,FABIANO PINHEIRO QUINES,FABIANO PINHEIRO,11669,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10444.jpg
+Vereador,FABIO BERNI REATEGUI,FABINHO DO CAFE DO LAGO,13000,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1585.jpg
+Vereador,FÁBIO FERRAZ DA SILVA,DJ FÁBIO TITICO,40444,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21677.jpg
+Vereador,FABRIZIO DALL'BELLO ARRIENS,FABRIZIO ARRIENS,43113,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3758.jpg
+Vereador,FERNANDA MACHADO INACIO,FERNANDA MACHADO,45777,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21342.jpg
+Vereador,FERNANDA MELCHIONNA E SILVA,FERNANDA,50500,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2124.jpg
+Vereador,FERNANDO BRIGIDI DE MELLO,FERNANDO MELLO,15007,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20210.jpg
+Vereador,FERNANDO DORNELLES MAGADAN,MAGADAN,23233,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15870.jpg
+Vereador,FERNANDO EDISON DOMINGUES SOARES,DELEGADO FERNANDO,14007,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16438.jpg
+Vereador,FERNANDO FERREIRA BRAGA,BOMBOM,50180,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2126.jpg
+Vereador,FERNANDO FREDO NACIUK,FERNANDO NACIUK,15192,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20211.jpg
+Vereador,FERNANDO MAZZOLA,FERNANDO MAZZOLA,22171,PR,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15871.jpg
+Vereador,FERNANDO PEDROSO DE CASTRO,FERNANDO CASTRO,40789,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21674.jpg
+Vereador,FERNANDO RODRIGUES CANTES,MESTRE PELÉ,65777,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15872.jpg
+Vereador,FERNANDO VASCONCELLOS DORNELLES,FERNANDO "BALA" DORNELLES,50266,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2128.jpg
+Vereador,FLORENICIO ALVES DOS SANTOS,FLORENÍCIO,40014,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21675.jpg
+Vereador,FRANCISCO DEASSIS DOS SANTOS RODRIGUES,FRANCISCO DE ASSIS,40333,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21676.jpg
+Vereador,FRANCISCO FERRARI,CHICO FERRARI,15100,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20212.jpg
+Vereador,FRANCISCO GEOVANI DE SOUSA,GEOVANI,13413,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1586.jpg
+Vereador,FRANCISCO JORGE VICENTE,CHICO VICENTE,13400,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1587.jpg
+Vereador,FRANCO ANDREI DEWITT PAIVA,FRANCO PAIVA,14567,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16439.jpg
+Vereador,GABRIELA CAROLINA CATTANI DELORD,GABI,43001,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3759.jpg
+Vereador,GENI SELAU DOS SANTOS,GENI SELAU,13022,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1588.jpg
+Vereador,GÉRSON LUIS DE ÁVILA ASSIS,GERSON ASSIS,23727,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15876.jpg
+Vereador,GERSON LUIS ROLIM,GERSON ROLIM,50789,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2129.jpg
+Vereador,GILBERTO ARION BATISTA,GILBERTO BATISTA,25622,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10445.jpg
+Vereador,GILBERTO HERSCHDORFER,GILBERTO HERSCHDORFER -B. BAUM,65665,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15873.jpg
+Vereador,GILBERTO LEMES DA SILVA,BETO DO MIXTO,31081,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20564.jpg
+Vereador,GILMAR LUIS DE FRANÇA,GILMAR FRANÇA,13600,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1589.jpg
+Vereador,GILNEI ANTONIO DOS SANTOS GOSS,GILNEI GOSS,50055,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2130.jpg
+Vereador,GILSOMAR DA SILVA,GILSON "PADEIRO",23723,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15874.jpg
+Vereador,GILSON GONÇALVES,GILSON GONÇALVES,43043,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3761.jpg
+Vereador,GISELE DE CÁSSIA FLECK,PROFESSORA GISELE,43303,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3762.jpg
+Vereador,GISELE DE SOUZA BORGES,GISELE,65100,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15875.jpg
+Vereador,GLENIO FERNANDES DA SILVA,GLENIO FERNANDES,45017,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21346.jpg
+Vereador,GUILHERME MAGRINELLI GONÇALVES,GUILHERME GNOMO,40440,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21678.jpg
+Vereador,GUSTAVO BIERHALS,GUSTAVO,15323,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20213.jpg
+Vereador,GUSTAVO FREGAPANI DE ALMEIDA,GUSTAVO FREGAPANI,11911,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10446.jpg
+Vereador,GUSTAVO SIRANGELO CAUDURO,GUSTAVO CAUDURO,43444,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3763.jpg
+Vereador,HAROLDO JOAQUIM DE SOUZA,HAROLDO DE SOUZA,15111,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20214.jpg
+Vereador,HELENA CRISTINA BORGES,HELENA CRISTINA,50777,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2131.jpg
+Vereador,HÉLIO NUNES DA COSTA JUNIOR,HÉLIO COSTA,43190,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3764.jpg
+Vereador,HENRIQUE FIGUEIREDO,HENRIQUE FIGUEIREDO,40135,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21679.jpg
+Vereador,HERNANDI CASTANHO DE MELLO,HERNANDI MELLO,45745,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21348.jpg
+Vereador,HUMBERTO CIULLA GOULART,DR. GOULART,14014,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16440.jpg
+Vereador,IDENIR JOÃO CECCHIM,IDENIR CECCHIM,15500,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20215.jpg
+Vereador,IDOVINO SELLE,SELLE TAFAREL,50888,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2132.jpg
+Vereador,IONE DIAS DA SILVA,IONE DIAS,19100,PTN,PSB-PTN,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,IONE RODRIGUES BENFICA,IONE DE BELÉM,31222,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20567.jpg
+Vereador,JORGE HORACIO CORREA,JORGE HORACIO CORRÊA,19019,PTN,PSB-PTN,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,JORGE LUIZ ALVES RIBEIRO,JORGE RIBEIRO,14214,PTB,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,JORGE LUIZ LOPES COSTA,JORGE (BOLO),20459,PSC,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,JORGE PAULO TEIXEIRA,PAULO TEIXEIRA,12313,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26278.jpg
+Vereador,JORGE VALDERES SOARES DOS SANTOS,JORGE DÓIA,31031,PHS,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,JORGE VERARDI,JORGE VERARDI DE XANGO,12812,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26279.jpg
+Vereador,JOSÉ ADEMIR TEDESCO BUENO,JOSÉ BUENO,11909,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10451.jpg
+Vereador,JOSÉ ALBERTO ZELANIS DA SILVA,ZÉ ALBERTO,11122,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10452.jpg
+Vereador,JOSE ALEXANDRE SILVA POSSOLINO,ZICO,45010,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21360.jpg
+Vereador,JOSE ALVARO BARRETO PEREIRA,ALVARO BARRETO L. COMUNITARIO,13555,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1593.jpg
+Vereador,JOSE AMARO AZEVEDO DE FREITAS,JOSE FREITAS,10700,PRB,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1594.jpg
+Vereador,JOSE ANTONIO SANCHES DE VALLADARES,JOSÉ VALLADARES,20729,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22618.jpg
+Vereador,JOSE CALMO DA SILVA,ZE CALMO,50200,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2137.jpg
+Vereador,JOSE CARLOS RESENDE DE ARAUJO,ZÉ DA LAVANDERIA,40133,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21687.jpg
+Vereador,JOSÉ CARLOS SERPA VILAR,PINGO VILAR,14123,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16447.jpg
+Vereador,JOSE CARLOS TAVARES,TAVARES,40005,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21688.jpg
+Vereador,JOSÉ CLAUDIO FREITAS CONCEIÇÃO,CLAUDIO CONCEIÇÃO,25677,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10453.jpg
+Vereador,JOSÉ DELMAR SILVEIRA DE ARAUJO,JOSÉ ARAUJO,43000,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3766.jpg
+Vereador,JOSÉ FELIPE ARAÚJO,ZÉ FELIPE,12008,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26280.jpg
+Vereador,JOSE FRANCISCO PROVIDEL DOS SANTOS,JOSÉ PROVIDEL,65345,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15879.jpg
+Vereador,JOSE HENRIQUE DUARTE,HENRIQUE,50350,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2138.jpg
+Vereador,JOSÉ IAMANDU BAUCE MACHADO,IAMANDU,43777,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3767.jpg
+Vereador,JOSÉ ISMAEL HEINEN,ISMAEL,25690,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10454.jpg
+Vereador,JOSE LEODORO RODRIGUES,JOSE SANTIAGO,45045,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21362.jpg
+Vereador,JOSE PAULO DE OLIVEIRA BARROS,BARROS,10500,PRB,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1595.jpg
+Vereador,JOSÉ PAULO GRACIOLI,PAULINHO DA FARMÁCIA,14959,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16449.jpg
+Vereador,JOSE SANTA HELENA,JOSE SANTA HELENA,50400,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2139.jpg
+Vereador,JOSÉ TARCISO DE SOUZA,TARCISO FLECHA NEGRA,12007,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26281.jpg
+Vereador,JOSÉ TELVIO DE SOUZA,JOSÉ TELVIO,25601,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10455.jpg
+Vereador,JOSE WILMAR GOVINATZKI,JOSE WILMAR GOVINATZKI,45444,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21364.jpg
+Vereador,JUAREZ TÁVORA DO NASCIMENTO,JUAREZ,14033,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16450.jpg
+Vereador,JULIANA BRIZOLA,JULIANA BRIZOLA,12001,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26283.jpg
+Vereador,JULIANA LOPES PORTO,JULIANA PORTO,15015,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20217.jpg
+Vereador,JULIANO CARRICONDE FRIPP,JULIANO FRIPP,65633,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15884.jpg
+Vereador,JULIO CESAR DE SOUZA GONÇALVES,PROF. TÓVI,65999,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15885.jpg
+Vereador,JULIO CEZAR LEIRIAS FLORES,JÚLIO FLORES,16600,PSTU,FRENTE DE ESQUERDA,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-572.jpg
+Vereador,JULIO CEZAR NAPOLI RESCHKE,JULIO NAPOLI,45245,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21365.jpg
+Vereador,JUSCELINO VIEIRA MARQUES,JUSCELINO MARQUES,40456,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21690.jpg
+Vereador,JUSSARA BARROS DE FARIAS,JUSSARA FARIAS,50560,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2140.jpg
+Vereador,JUVENCIL PERES MACHADO,CAJU,23160,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15887.jpg
+Vereador,KEVIN CHAVES KRIEGER,KEVIN KRIEGER,11011,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10458.jpg
+Vereador,LANE HELENA TOSCA TOLDO,HELENA DO BRIQUE,45007,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21366.jpg
+Vereador,LAURO POGOZELSKI,LAURO,13613,PT,FRENTE POPULAR,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LEANDRO CARDOSO DE JESUS,LECO,40321,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21691.jpg
+Vereador,LEANDRO DIAS SOARES,LEANDRO SOARES,11456,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10459.jpg
+Vereador,LEANDRO RAMOS CAMBRAIA,LEANDRO CAMBRAIA,50268,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2141.jpg
+Vereador,LENEMAR BASTOS DOS SANTOS,LENEMAR BASTOS DOS SANTOS,65888,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LIANE POINTNER,LIANE DO PV,43222,PV,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUCIANE NEME STEINBACH,LÚ NEME,43333,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3769.jpg
+Vereador,LUCIANO BRASILIENSE MARCANTÔNIO,LUCIANO MARCANTÔNIO,12112,PDT,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUCIANO PERLIN MÜLLER,LUCIANO MÜLLER,43034,PV,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUCIANO ROBERTO GOULART MIRALES,LUCIANO MIRALES,14555,PTB,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUCIO BORGES BARCELOS,LUCIO BARCELOS,50001,PSOL,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUDENDORFE XAVIER,LUDENDORF XAVIER,12510,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26288.jpg
+Vereador,LUIS CARLOS RIBEIRO DA SILVA,LUCA RISI,40193,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21692.jpg
+Vereador,LUIS FERNANDO COIMBRA ALBINO,FERNANDO ALBINO,12777,PDT,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUIS FERNANDO DE MOURA FORTUNATO,FERNANDO FORTUNATO,14207,PTB,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUIS FRANCISCO SIQUEIRA BARBOSA,DETETIVE MADRUGA,50999,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2143.jpg
+Vereador,LUIZ ALBERTO RIGOTTI,BETO RIGOTTI,25017,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUIZ AMARO PRESTES DE OLIVEIRA,GAUCHINHO DE DEUS,20456,PSC,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,LUIZ ANTONIO PROENÇA FERNANDES,TONI PROENÇA,23238,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15891.jpg
+Vereador,LUIZ CARLOS BANDEIRA,TENENTE BANDEIRA,13539,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1597.jpg
+Vereador,LUIZ CARLOS MACHADO,MACHADO,25777,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10463.jpg
+Vereador,LUIZ CLAUDIO GOMES DE SOUZA,LUIZ BALA DE GOMA,20318,PSC,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MANOEL VIGNEAUX,MANOEL VIGNEAUX,14150,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16453.jpg
+Vereador,MARA VANESSA POHLMANN,MARA POHLMANN,13369,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1600.jpg
+Vereador,MARCELLO FRANCISCO CHIODO,MARCELLO CHIODO,14000,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16454.jpg
+Vereador,MARCELO BALBO MUNHOS TEIXEIRA,MARCELO BALBO TEIXEIRA,22123,PR,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARCELO ESTEVES DA SILVA,MARCELINHO GARÇOM,14888,PTB,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARCELO PEREIRA DA SILVA,MARCELO PEREIRA,13130,PT,FRENTE POPULAR,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARCELO SGARBOSSA,MARCELO SGARBOSSA,13123,PT,FRENTE POPULAR,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARCELO SILVEIRA DE ALMEIDA,MARCELO DE ALMEIDA BOM FIM,12254,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26292.jpg
+Vereador,MARIA REGINA DA SILVA,REGINA CONZATTI,31333,PHS,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARILI MAIESKI RODRIGUES',PROFESSORA MARILÍ,25222,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10467.jpg
+Vereador,MARIO ANTONIO MANFRO,MARIO MANFRO,45321,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21370.jpg
+Vereador,MARIO CARDOSO CARVALHO,MARIO CARDOSO GAUDÉRIO,43120,PV,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARIO JOSE DE CARVALHO CANDIDO,MARIO CANDIDO,45800,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21371.jpg
+Vereador,MARIO LAURO OTTO LUDWIG JUNIOR,MARIO LUDWIG JR,25555,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARIO PINTO DE FRAGA,MARIO FRAGA,12600,PDT,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MARISA DE SOUZA GODINHO,MARISA GODINHO,50666,PSOL,Sem Coligação,http://www.tse.jus.br../imagens/icones/voltar.gif
+Vereador,MOACIR ALAN KARDEC DA SILVA CESAR,MOACIR ALAN KARDEC,40000,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21696.jpg
+Vereador,MOACIR FISCHMANN,MOACIR FISCHMANN,20620,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22625.jpg
+Vereador,MOISES DA SILVA BARBOZA,MOISES BARBOZA,45900,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21372.jpg
+Vereador,MOISES DE MATTOS DIAS,PROFESSOR MOISES DE MATTOS,12888,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26297.jpg
+Vereador,MOIZES MARTINS BRAGA,MOIZES BRAGA,12999,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26298.jpg
+Vereador,MYRELA LEITÃO BARROS,MYRELA LEITÃO,16001,PSTU,FRENTE DE ESQUERDA,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-573.jpg
+Vereador,NEIO LUCIO FRAGA PEREIRA,DR. NEIO LUCIO,65165,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15897.jpg
+Vereador,NELCIR REIMUNDO TESSARO,TESSARO,14333,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16461.jpg
+Vereador,NEMIAS ROCHA SANCHES,PROFESSOR SANCHEZ,11666,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10482.jpg
+Vereador,NEREU D'AVILA,NEREU D'AVILA,12601,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26300.jpg
+Vereador,NERY VOLTERREIS MÜLLER ANNES,NERY MÜLLER,14620,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16463.jpg
+Vereador,NEUZA CELINA CANABARRO ELIZEIRE,NEUZA CANABARRO,12012,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26301.jpg
+Vereador,NEWTON BRAGA ROSA,NEWTON BRAGA ROSA,11222,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10485.jpg
+Vereador,NEWTON ROBERTO LOPES BOA NOVA,PAPAI NOEL DO TAXI,14714,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16464.jpg
+Vereador,NILO FERNANDO FERNANDES,NILO FERNANDES,45230,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21373.jpg
+Vereador,NILO SÉRGIO SANTOS DO SANTOS,NILO SANTOS,14120,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16465.jpg
+Vereador,NILSA TEREZINHA CAPIEM DE FIGUEIREDO,NILSA FIGUEIREDO,45845,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21374.jpg
+Vereador,OFLIDES DE OLIVEIRA PAZ JUNIOR,JUNIOR PAZ,13456,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1608.jpg
+Vereador,OLAVO SOARES RIBEIRO FILHO,OLAVO S R FILHO,13800,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1609.jpg
+Vereador,OLYNTHO CHAGAS FILHO,OLYNTHO,13111,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1610.jpg
+Vereador,OSCAR JOSE PLENTZ NETO,OSCAR PLENTZ,65022,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15899.jpg
+Vereador,OSMAR ANTONIO GOI,SARGENTO GOI,15020,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20223.jpg
+Vereador,OTÁVIO MAXIMILIANO REICHERT,OTAVIO,40666,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21697.jpg
+Vereador,PARAGUASSÚ CAMARGO GONÇALVES,PARAGUASSÚ,15010,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20224.jpg
+Vereador,PATRICIA LUCEIRO DE OLIVEIRA,PATI LUCERO,50100,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2148.jpg
+Vereador,PAULO ADIR FERREIRA,PAULO ADIR,45999,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21375.jpg
+Vereador,PAULO ANTAO AZAMBUJA BAPTISTA,PAULO ANTAO,45621,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21376.jpg
+Vereador,PAULO CÉSAR RAMIRES BOEIRA,PAULO BOEIRA,14422,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16466.jpg
+Vereador,PAULO CESAR SANTOS DA SILVA,PAULINHO RUBEM BERTA,23444,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15901.jpg
+Vereador,PAULO CESAR TONELLO,TONELLO,33167,PMN,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15903.jpg
+Vereador,PAULO ELISEO BAPTISTA DA SILVA,PAULO ELISEU,45645,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21377.jpg
+Vereador,PAULO FERNANDO BICCA GUIMARAES,PAULO BICCA,45111,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21378.jpg
+Vereador,PAULO GONÇALVES,PAULINHO DA ESCOLA ABERTA,23364,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15905.jpg
+Vereador,PAULO MARQUES DOS REIS,PAULO MARQUES,15915,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20225.jpg
+Vereador,PAULO RENATO MOLLER PARADEDA,PARADEDA,23456,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15907.jpg
+Vereador,PAULO RENATO PULZ,PAULO PULZ,25225,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10488.jpg
+Vereador,PAULO RICARDO DE SOUZA FURTADO,PAULO FURTADO,45224,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21379.jpg
+Vereador,PAULO RICARDO MORAES MOURA,PAULO MOURA,50150,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2149.jpg
+Vereador,PAULO RICARDO PIERETTI,GREMINHO,45333,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21380.jpg
+Vereador,PAULO RICARDO RUMAYOR SANCHES,PAULO SANCHES,21021,PCB,FRENTE DE ESQUERDA,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-574.jpg
+Vereador,PAULO RICARDO TRINDADE DOS SANTOS,PAULO RICARDO,43138,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3775.jpg
+Vereador,PAULO ROBERTO DA ROCHA,BETINHO,45123,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21381.jpg
+Vereador,PAULO ROBERTO IRION JOBIM,PAULO JOBIM,12120,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26303.jpg
+Vereador,PAULO ROBERTO VIEIRA,PAULÃO DO CAMPO NOVO,31139,PHS,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20582.jpg
+Vereador,PAULO SERGIO ALVES,PAULO,10123,PRB,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1611.jpg
+Vereador,PAULO SERGIO DIAS,PAULO DIAS,15022,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20226.jpg
+Vereador,PAULO SERGIO DIAS DA ROSA,PAULO ROSA,20013,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22626.jpg
+Vereador,PAULO SERGIO DOS SANTOS,PAULO SERGIO DOS SANTOS ZULÚ,40640,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21698.jpg
+Vereador,PEDRO CLÁUDIO PANDOLFO,PEDRINHO DO PEDRO CAR,14666,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16467.jpg
+Vereador,PEDRO DORNELES VIEIRA,PEDRO DORNELES,40888,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21699.jpg
+Vereador,PEDRO HENRIQUE DENARDIN,PEDRO DENARDIN,11013,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10491.jpg
+Vereador,PEDRO JOSE MORAES BUENO,BUENO MORAES,45127,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21382.jpg
+Vereador,PEDRO LARRE LOPES,PEDRO LOPES DA LARRÉ TUR,50333,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2150.jpg
+Vereador,PEDRO LUIZ FAGUNDES RUAS,PEDRO RUAS,50000,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2151.jpg
+Vereador,PEDRO OLIVEIRA ANTUNES,PEDRO-PEDRINHO,20777,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22627.jpg
+Vereador,PEDRO RENI PEREIRA DA SILVA,PEDRO,15109,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20227.jpg
+Vereador,PEDRO RUBEM NASCIMENTO,PEDRAO,13255,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1612.jpg
+Vereador,PERICLES MACHADO DA SILVA,SARARA,45055,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21383.jpg
+Vereador,PETER SILVA DA SILVA,PETER FALEIRO,45145,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21384.jpg
+Vereador,RAFAEL CASTILHOS FURTADO,RAFAEL FURTADO,45011,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21385.jpg
+Vereador,RAFAEL MACHADO DE OLIVEIRA,RAFA MACHADO,43888,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3776.jpg
+Vereador,RAFAEL MENEGHETTI DA ROSA,RAFAEL MENEGHETTI,12222,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26305.jpg
+Vereador,RAMIRO SANTANA MORENO LÓPEZ,RAMIRO LÓPEZ,65653,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15911.jpg
+Vereador,RAUL TORELLY FRAGA,DR. RAUL,15555,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20228.jpg
+Vereador,REGINALDO DA LUZ PUJOL,PUJOL,25625,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21545.jpg
+Vereador,RENATO FARIAS DOS SANTOS,RENATO FARIAS DOS SANTOS,13670,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1613.jpg
+Vereador,RENATO LUIS DA SILVA OLIVEIRA,RENATO OLIVEIRA,65223,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15913.jpg
+Vereador,RENATO TADEU DE MATTOS STRADOLINI,RENATO STRADOLINI,15655,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20229.jpg
+Vereador,RICARDO PORTO LOW,RICARDO PORTO,27027,PSDC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26250.jpg
+Vereador,RICARDO ROBERSON RIVERO,ENFERMEIRO RICARDO,11369,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10494.jpg
+Vereador,RICHARD BRANDI CASTRO,PROFESSOR BRANDI,13947,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1614.jpg
+Vereador,RICHARD REINISCH,RICHARD REINISCH,50234,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2152.jpg
+Vereador,RINALDO COSTA SIMÕES,RINALDO SIMÕES,25256,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10497.jpg
+Vereador,ROBERTO ALBINO SCHMITZ,PARECI ROBERTO SCHMITZ,12040,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26306.jpg
+Vereador,ROBERTO ALEXANDRE VUCETIC,ROBERTO VUCETIC,40199,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21700.jpg
+Vereador,ROBERTO FERRAZ SABINO,SABINO,45855,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21386.jpg
+Vereador,ROBERTO LUIZ MADRUGA MACIEL,ROBERTO MADRUGA,25694,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10499.jpg
+Vereador,ROBERTO NACHTIGALL,PROFESSOR ROBERTO,40222,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21701.jpg
+Vereador,ROBERTO SCHNEIDER SEITENFUS,ROBERTO SEITENFUS,50250,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2153.jpg
+Vereador,ROCHELLE FRAGA BENITES,ROCHELLE FRAGA,11333,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10501.jpg
+Vereador,RODEMIR JERONIMO BECK,JERÔNIMO BECK,40004,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21702.jpg
+Vereador,RODOLFO LANDGRAF SANTOS,PROF. RODOLFO LANDGRAF,25445,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10503.jpg
+Vereador,ROGER PACHECO MACHADO,ROGER MACHADO,11033,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10505.jpg
+Vereador,RONALDO DE SOUZA FLORIANO,RONALDO FLORIANO,12000,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26307.jpg
+Vereador,RONALDO PAIM CÂNDIDO DOS SANTOS,RONALDO PAIM,14114,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16468.jpg
+Vereador,RUBEM DE CASTRO,RUBEM DE CASTRO,12246,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26309.jpg
+Vereador,RUDMAR MENDES MOSCARELLI,RUDMAR MOSCARELLI,23007,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15915.jpg
+Vereador,RUI SAUL DA SILVA,RUI SILVA,20008,PSC,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-22628.jpg
+Vereador,RUY BITTENCOURT DE ALMEIDA NETO,RUY ALMEIDA,50900,PSOL,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-2154.jpg
+Vereador,SABRINA DE FREITAS PEIXOTO,SABRINA FLOW,11999,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10507.jpg
+Vereador,SANDRA MENEGHETTI SADER,SANDRA MENEGHETTI SADER,43126,PV,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-3777.jpg
+Vereador,SANDRO LUIZ AMARAL FERRAZ,SANDRO FERRAZ,65765,PC do B,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15917.jpg
+Vereador,SANDRO NUNES DA SILVA,SANDRO NUNES,25888,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10509.jpg
+Vereador,SEBASTIÃO DE ARAUJO MELO,SEBASTIÃO MELO,15686,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20230.jpg
+Vereador,SÉRGIO ANTÔNIO ROSA,SERJÃO,12013,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26311.jpg
+Vereador,SERGIO DILNEI MOTTA HALFEN,SERGIO MOTTA,15008,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20231.jpg
+Vereador,SERGIO FETT SPARTA DE SOUZA,SPARTA,45300,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21387.jpg
+Vereador,SÉRGIO JUAREZ KAMINSKI,SÉRGIO KAMINSKI,11001,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10511.jpg
+Vereador,SÉRGIO PANASUK,SÉRGIO PANASUK,25123,DEM,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10512.jpg
+Vereador,SÉRGIO ROBERTO DA SILVA,SÉRGIO SILVA,11276,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10513.jpg
+Vereador,SIDNEI ROSA AYALA,AYALA,11777,PP,A FORÇA DAS NOVAS IDÉIAS,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-10510.jpg
+Vereador,SILVIO LUCIANO DA SILVA RIBEIRO,SILVIO RIBEIRO,12333,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26310.jpg
+Vereador,SILVIO MÁRIO MARQUES LOPES,SILVIO LOPES,23988,PPS,PCDOB, PPS , PR , PMN , PTDOB,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-15919.jpg
+Vereador,SIMONE DA CUNHA PEIXOTO,SIMONE DO BELLA DONNA,14414,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16469.jpg
+Vereador,SOFIA CAVEDON NUNES,SOFIA CAVEDON,13113,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1615.jpg
+Vereador,STENIO DIAS PINTO RODRIGUES,STENIO,13004,PT,FRENTE POPULAR,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-1616.jpg
+Vereador,SUSI ANDREA FONTOURA DA SILVA GARCIA,SUSI GARCIA,45888,PSDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21388.jpg
+Vereador,TADEU DE FREITAS PARAGUASSÚ,TADEU PARAGUASSU,15677,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20232.jpg
+Vereador,TATIANA CAROLINE MANICA SCHAPKE,TATIANA SCHAPKE,14814,PTB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-16471.jpg
+Vereador,THIAGO PEREIRA DUARTE,DR THIAGO DUARTE,12122,PDT,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-26312.jpg
+Vereador,THYAGO DUARTE DA CUNHA,THYAGO DUARTE,15888,PMDB,Sem Coligação,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-20233.jpg
+Vereador,UBIRAJARA RIBEIRO DA ROCHA,BIRA,40420,PSB,PSB-PTN,http://www.tse.jus.br/sadEleicaoDivulgaCand2008/comuns/imagens/fotosCandidatosTemp/FotoCandidato-88013-21704.jpg
