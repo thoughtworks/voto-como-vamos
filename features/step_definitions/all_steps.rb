@@ -120,7 +120,7 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
   @candidates.each do |candidate|
     open_email(candidate.email)
     current_email.should be_delivered_from("admin@votocomovamos.org.br")
-    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate))
+    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate.reload.obfuscated_slug))
   end  
 end
 
@@ -270,12 +270,12 @@ Quando /^entro com minhas credenciais no facebook$/ do
 end
 
 Então /^devo ir para aceitação dos termos de uso$/ do
-  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate))
+  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate.obfuscated_slug))
 end
 
 Dado /^que estou na página de solicitação de administração do meu perfil$/ do
   @candidate = FactoryGirl.create :candidate
-  visit new_candidate_ownership_path(@candidate)
+  visit new_candidate_ownership_path(@candidate.obfuscated_slug)
 end
 
 Quando /^aceito os termos de uso$/ do

@@ -22,7 +22,7 @@ describe OwnershipsController do
 
     before(:each) do
       controller.stub!(current_user: current_user)
-      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
+      Candidate.should_receive(:find_by_obfuscated_slug!).with(candidate_id).and_return(candidate)
     end
 
     describe 'new' do

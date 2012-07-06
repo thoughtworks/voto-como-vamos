@@ -27,4 +27,10 @@ describe Candidate do
     it { should validate_format_of(:email).with("valid@email.com") }
     it { should validate_format_of(:email).not_with("invalid.com") }
   end
+
+  it 'should generate a unique slug for candidate' do
+    Digest::SHA1.should_receive(:hexdigest).with('Test').and_return('obfuscated')
+    candidate = Candidate.create!(:name => 'Test', :email => 'test@test.com')
+    candidate.obfuscated_slug.should == 'obfuscated'
+  end
 end

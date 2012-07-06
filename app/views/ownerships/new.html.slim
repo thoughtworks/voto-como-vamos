@@ -1,3 +1,3 @@
-= simple_form_for [@candidate, @ownership] do |f|
+= simple_form_for [@candidate, @ownership], :url => candidate_ownerships_path(@candidate.obfuscated_slug) do |f|
   = f.input :terms_and_conditions, :as => :boolean
   = f.submit t('common.confirm')

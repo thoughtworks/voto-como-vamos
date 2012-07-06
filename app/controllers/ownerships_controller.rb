@@ -21,7 +21,7 @@ class OwnershipsController < ApplicationController
   private 
 
   def load_candidate
-    @candidate = Candidate.find(params[:candidate_id])
+    @candidate = Candidate.find_by_obfuscated_slug!(params[:candidate_id])
   end
 
   def authenticate_outside_canvas!
