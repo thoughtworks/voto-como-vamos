@@ -26,6 +26,7 @@ group :test, :development do
   gem 'launchy'
   gem 'sqlite3'
   gem 'hitch'
+  gem 'spork'
 end
 
 group :test do

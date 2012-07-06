@@ -7,6 +7,7 @@ Funcionalidade: Editar perfil candidato
   Contexto:
     Dado que eu estou logado na aplicação
     E que existe um candidato
+    E que eu represento o candidato
 
   Cenário: Atualização de perfil com sucesso
     Quando o candidato editar seu perfil

@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   def self.find_by_provider_and_uid(provider, uid)
     where(provider: provider, uid: uid).first 
   end
+
+  def represents? candidate
+    Ownership.where(:candidate_id => candidate.id, :user_id => self.id).exists?
+  end
 end

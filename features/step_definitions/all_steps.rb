@@ -49,6 +49,10 @@ Dado /^que eu sou um candidato cadastrado$/ do
   @candidate = FactoryGirl.create(:candidate)
 end
 
+Dado /^que eu represento o candidato$/ do
+  @ownership = Ownership.create! :candidate => @candidate, :user => @user
+end
+
 Dado /^que eu estou cadastrando uma proposta$/ do
   visit new_candidate_proposal_path(@candidate)
 end
@@ -80,8 +84,8 @@ Entao /^eu devo ver os campos que contêm erros$/ do
 end
 
 Dado /^que eu estou logado na aplicação$/ do
-  @current_user = FactoryGirl.create :user
-  login_with uid: @current_user.uid
+  @user = FactoryGirl.create :user
+  login_with uid: @user.uid
 end
 
 Dado /^que existe um candidato$/ do
@@ -281,3 +285,21 @@ end
 Então /^devo poder administrar o meu perfil$/ do
   page.should have_content "Editar Candidato"
 end
+
+Dado /^que outro candidato tenha uma proposta cadastrada$/ do
+  candidate = FactoryGirl.create :candidate
+  @proposal = FactoryGirl.create :proposal, :candidate => candidate
+end
+
+Então /^eu não posso editar a proposta do outro candidato$/ do
+  page.should_not have_selector "#edit_proposal"
+end
+
+Então /^eu posso editar a proposta$/ do
+  page.should have_selector "#edit_proposal"
+end
+
+Quando /^eu estou visualizando uma proposta$/ do
+  visit candidate_proposal_path(@proposal.candidate, @proposal)
+end
+

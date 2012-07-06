@@ -8,6 +8,7 @@ Funcionalidade: Cadastrar Proposta
   Contexto:
     Dado que eu estou logado na aplicação
     E que eu sou um candidato cadastrado
+    E que eu represento o candidato
     E que existe um macro-tema cadastrado
 
   Cenário: Proposta cadastrada
