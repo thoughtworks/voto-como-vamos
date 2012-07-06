@@ -5,4 +5,6 @@ class Ownership < ActiveRecord::Base
   belongs_to :candidate
 
   validates_acceptance_of :terms_and_conditions
+  validates_presence_of :candidate, :user
+
 end
