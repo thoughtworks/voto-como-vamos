@@ -303,3 +303,22 @@ Quando /^eu estou visualizando uma proposta$/ do
   visit candidate_proposal_path(@proposal.candidate, @proposal)
 end
 
+Dado /^que outro candidato exista$/ do
+  @another_candidate = FactoryGirl.create :candidate
+end
+
+Quando /^eu estou visualizando o perfil de outro candidato$/ do
+  visit candidate_path @another_candidate
+end
+
+Então /^eu não posso editar o perfil$/ do
+  page.should_not have_selector "#edit_profile"
+end
+
+Quando /^eu estou visualizando o meu perfil$/ do
+  visit candidate_path @candidate
+end
+
+Então /^eu posso editar o perfil$/ do
+  page.should have_selector "#edit_profile"
+end

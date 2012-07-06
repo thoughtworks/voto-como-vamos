@@ -1,6 +1,5 @@
 # language: pt
 
-@working
 Funcionalidade: Autenticar usuario
   Como um candidato
   Eu quero editar apenas minhas propostas
@@ -21,3 +20,13 @@ Funcionalidade: Autenticar usuario
     Dado que eu tenha uma proposta cadastrada
     Quando eu estou visualizando uma proposta
     Então eu posso editar a proposta
+
+  Cenário: Editar perfil de outro candidato
+    Dado que outro candidato exista
+    Quando eu estou visualizando o perfil de outro candidato
+    Então eu não posso editar o perfil
+
+  @working
+  Cenário: Editar perfil do candidato
+    Quando eu estou visualizando o meu perfil
+    Então eu posso editar o perfil
