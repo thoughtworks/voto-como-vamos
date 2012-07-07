@@ -8,6 +8,7 @@ Funcionalidade: Excluir Proposta
   Contexto:
     Dado que eu estou logado na aplicação
     E que eu sou um candidato cadastrado
+    E que tenho permissão para administrar meu perfil
     E que eu tenha uma proposta cadastrada
 
   Cenário: Proposta excluída

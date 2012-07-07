@@ -398,3 +398,11 @@ Entao /^devo ver apenas propostas naquele macrotema$/ do
     page.should_not have_content(proposal.title)
   end
 end
+
+Dado /^que tenho permissão para administrar meu perfil$/ do
+  Ownership.create!(
+    :user => @user, 
+    :candidate => @candidate, 
+    :terms_and_conditions => '1'
+  )
+end
