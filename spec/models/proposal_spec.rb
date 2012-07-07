@@ -32,4 +32,23 @@ describe Proposal do
     Proposal.stub!(:tire).and_return(search_engine)
     Proposal.search(nil, 'category')
   end
+
+  it 'indexes categories together with proposal' do
+    categories = [
+      mock_model(Category, :name => 'category1'), 
+      mock_model(Category, :name => 'category2')
+    ]
+    proposal = Proposal.new(
+      :title => 'Title',
+      :abstract => 'Abstract',
+      :description => 'Description',
+      :categories => categories
+    )
+    proposal.to_indexed_json.should == {
+      :title => 'Title',
+      :abstract => 'Abstract',
+      :description => 'Description',
+      :categories => ['category1', 'category2']
+    }.to_json
+  end
 end
