@@ -1,6 +1,6 @@
 # encoding: utf-8
 class ProposalsController < ApplicationController
-  before_filter :load_candidate, :except => [:index]
+  before_filter :load_candidate, :except => [:index, :show]
 
   def index
     @proposals = Proposal.search(params[:query], params[:categories])
@@ -8,6 +8,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
+    @candidate = @proposal.candidate
   end
 
   def new
