@@ -3,7 +3,7 @@ require 'open-uri'
 
 namespace :candidates do
   desc 'Import all candidates'
-  task :import => :enviroment do
+  task :import => :environment do
     open('lib/data_import/candidates_2008.txt') do |file|
       file.each_line do |line|
         v = line.split(",")
