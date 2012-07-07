@@ -101,7 +101,7 @@ Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
 end
 
 Quando /^solicitamos envio de reinvindicação de e\-mail$/ do
-  Revindication.send_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates 
 end
 
 Dado /^que existem alguns candidatos válidos$/ do
@@ -111,7 +111,7 @@ Dado /^que existem alguns candidatos válidos$/ do
 end
 
 Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
-  Revindication.send_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates 
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
@@ -251,7 +251,7 @@ end
 
 Dado /^que o Voto Como Vamos me enviou um e\-mail solicitando que eu administre meu peril$/ do
   @candidate = FactoryGirl.create :candidate
-  Revindication.send_to_all_candidates
+  Ownership.send_revindication_to_all_candidates
 end
 
 Quando /^acesso endereço de solicitação fornecido no e\-mail$/ do
