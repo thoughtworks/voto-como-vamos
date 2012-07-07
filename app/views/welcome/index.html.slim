@@ -1,6 +1,6 @@
-h1 Seja bem vindo!
+h1 Frase bem queridona (by Silvia)
 
 ul
-  - @candidates.each do |c|
+  - @categories.each do |c|
     li
-      = link_to c.name, candidate_path(c)
+      = link_to c.name, proposals_path(:categories => [c.name])

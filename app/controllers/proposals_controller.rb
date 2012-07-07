@@ -1,8 +1,10 @@
 # encoding: utf-8
-
 class ProposalsController < ApplicationController
+  before_filter :load_candidate, :except => [:index]
 
-  before_filter :load_candidate
+  def index
+    @proposals = Proposal.search(params[:query], params[:categories])
+  end
 
   def show
     @proposal = Proposal.find(params[:id])
@@ -48,6 +50,7 @@ class ProposalsController < ApplicationController
   end
 
   private
+
   def load_candidate
     @candidate = Candidate.find(params[:candidate_id])
   end

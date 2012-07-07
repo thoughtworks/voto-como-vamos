@@ -1,13 +1,13 @@
 # encoding: utf-8
 class CandidatesController < ApplicationController
-  before_filter :candidate, :except => [:index]
+  before_filter :load_candidate, :except => [:index]
   before_filter :authorize_candidate, :only => [:edit, :update]
 
   def index
-    if params[:query].present?
-      @candidates = Candidate.search(params[:query], :load => true)
+    @candidates = if params[:query].present?
+      Candidate.search(params[:query], :load => true)
     else
-      @candidates = Candidate.all
+      Candidate.all
     end
   end
 
@@ -27,13 +27,14 @@ class CandidatesController < ApplicationController
   end
 
   private
+
   def authorize_candidate
     unless current_user.represents? @candidate
       redirect_to root_path
     end
   end
 
-  def candidate
+  def load_candidate
     @candidate = Candidate.find(params[:id])
   end
 end

@@ -3,5 +3,6 @@
     = text_field_tag :query, params[:query]
     = submit_tag "Buscar", name: nil
   ul
-    - @candidates.each do |candidate|
-      li= candidate.name
+    - @candidates.each do |c|
+      li
+        = link_to c.name, candidate_path(c)

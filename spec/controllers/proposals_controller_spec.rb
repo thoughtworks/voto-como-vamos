@@ -1,195 +1,212 @@
 # encoding: utf-8
-
 require 'spec_helper'
 
 describe ProposalsController do
-  let(:candidate_id) { '1' }
-  let(:candidate)    { stub('candidate', :id => candidate_id) }
-  let(:proposal)     { mock_model(Proposal)}
-
   before :each do
     controller.stub!(:current_user => true)
-    Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
   end
 
-  describe '#new' do
+  describe 'listing' do
+    let(:proposals) { [double('proposal1'), double('proposal2')] }
 
-    before do
-      Proposal.should_receive(:new).
-               with({:candidate_id => candidate_id}).
-               and_return(proposal)
-      get :new, {:candidate_id => candidate_id}
+    it 'search by category when specified' do
+      Proposal.should_receive(:search).with(nil, ['Test']).and_return(proposals)
+      get :index, :categories => ['Test']
+
+      should respond_with(:success)
+      should assign_to(:proposals).with(proposals)
+      should render_template('index')
     end
 
-    it { should respond_with(:success) }
-    it { should assign_to(:proposal).with(proposal) }
-    it { should render_template('new') }
+    it 'search by text criteria when specified' do
+      Proposal.should_receive(:search).with('test', nil).and_return(proposals)
+      get :index, :query => 'test'
+
+      should respond_with(:success)
+      should assign_to(:proposals).with(proposals)
+      should render_template('index')
+    end
   end
 
-  describe '#create' do
-    let(:fake_params) do
-      {
-        'proposal' => {
-          'title' => 'Foo',
-          'category_ids' => ['1', '2', '3']
-        },
-        'candidate_id' => candidate_id
-      }
+  context 'for a specified candidate' do
+    let(:candidate_id) { '1' }
+    let(:candidate)    { stub('candidate', :id => candidate_id) }
+    let(:proposal)     { mock_model(Proposal)}
+
+    before :each do
+      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
     end
-
-    context 'when input is valid' do
-      before do 
-        Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
-        proposal.should_receive(:candidate=).with(candidate)
-        proposal.should_receive(:save).and_return(true)
-
-        post :create, fake_params
-      end
-
-      it { should respond_with(:redirect) }
-      it { should redirect_to(candidate_path(candidate)) }
-    end
-
-    context 'when input is invalid' do
+    describe '#new' do
       before do
-        Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
-        proposal.should_receive(:candidate=).with(candidate)
-        proposal.should_receive(:save).and_return(false)
-
-        post :create, fake_params
+        Proposal.should_receive(:new).
+                 with({:candidate_id => candidate_id}).
+                 and_return(proposal)
+        get :new, {:candidate_id => candidate_id}
       end
 
-      it { should assign_to(:candidate).with(candidate) }
+      it { should respond_with(:success) }
       it { should assign_to(:proposal).with(proposal) }
-      it { should render_template(:new) }
-    end
-  end
-
-
-  describe "#edit" do
-
-    let(:proposal_id) { "1" }
-    let(:proposals_collection) { mock('proposals') }
-
-    before do
-      candidate.should_receive(:proposals).
-        and_return(proposals_collection)
-
-      proposals_collection.should_receive(:find).
-        with(proposal_id).
-        and_return(proposal)
-
-      get :edit, {:candidate_id => candidate_id, :id => proposal_id}
+      it { should render_template('new') }
     end
 
-    it { should respond_with(:success) }
-    it { should assign_to(:proposal).with(proposal) }
-    it { should render_template('edit') }
+    describe '#create' do
+      let(:fake_params) do
+        {
+          'proposal' => {
+            'title' => 'Foo',
+            'category_ids' => ['1', '2', '3']
+          },
+          'candidate_id' => candidate_id
+        }
+      end
 
-  end
+      context 'when input is valid' do
+        before do 
+          Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
+          proposal.should_receive(:candidate=).with(candidate)
+          proposal.should_receive(:save).and_return(true)
 
-  describe "#update" do
+          post :create, fake_params
+        end
 
-    let(:proposal_id) { "1" }
-    let(:proposals_collection) { mock('proposals') }
-    let(:proposal_params){ { "title" => "test" } }
+        it { should respond_with(:redirect) }
+        it { should redirect_to(candidate_path(candidate)) }
+      end
 
-    before do
+      context 'when input is invalid' do
+        before do
+          Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
+          proposal.should_receive(:candidate=).with(candidate)
+          proposal.should_receive(:save).and_return(false)
 
-      
-      candidate.should_receive(:proposals).
-        and_return(proposals_collection)
+          post :create, fake_params
+        end
 
-      proposals_collection.should_receive(:find).
-        with(proposal_id).
-        and_return(proposal)
-
-      proposal.should_receive(:update_attributes).
-        with(proposal_params).
-        and_return(valid?)
-
-      put :update, {:candidate_id => candidate_id, :id => proposal_id, :proposal => proposal_params}
+        it { should assign_to(:candidate).with(candidate) }
+        it { should assign_to(:proposal).with(proposal) }
+        it { should render_template(:new) }
+      end
     end
 
-    context "when the proposal data is valid" do
+    describe "#edit" do
+      let(:proposal_id) { "1" }
+      let(:proposals_collection) { mock('proposals') }
 
-      let(:valid?){ true }
+      before do
+        candidate.should_receive(:proposals).
+          and_return(proposals_collection)
 
-      it { should respond_with(:redirect) }
-      it { should assign_to(:proposal).with(proposal) }
-      it { should redirect_to(candidate_path(candidate_id)) }
-    end
+        proposals_collection.should_receive(:find).
+          with(proposal_id).
+          and_return(proposal)
 
-    context "when the proposal data is not valid" do
-
-      let(:valid?){ false }
+        get :edit, {:candidate_id => candidate_id, :id => proposal_id}
+      end
 
       it { should respond_with(:success) }
       it { should assign_to(:proposal).with(proposal) }
       it { should render_template('edit') }
     end
+
+    describe "#update" do
+      let(:proposal_id) { "1" }
+      let(:proposals_collection) { mock('proposals') }
+      let(:proposal_params){ { "title" => "test" } }
+
+      before do
+        candidate.should_receive(:proposals).
+          and_return(proposals_collection)
+
+        proposals_collection.should_receive(:find).
+          with(proposal_id).
+          and_return(proposal)
+
+        proposal.should_receive(:update_attributes).
+          with(proposal_params).
+          and_return(valid?)
+
+        put :update, {
+          :candidate_id => candidate_id, 
+          :id => proposal_id, 
+          :proposal => proposal_params
+        }
+      end
+
+      context "when the proposal data is valid" do
+        let(:valid?){ true }
+
+        it { should respond_with(:redirect) }
+        it { should assign_to(:proposal).with(proposal) }
+        it { should redirect_to(candidate_path(candidate_id)) }
+      end
+
+      context "when the proposal data is not valid" do
+        let(:valid?){ false }
+
+        it { should respond_with(:success) }
+        it { should assign_to(:proposal).with(proposal) }
+        it { should render_template('edit') }
+      end
+    end
+
+    describe '#show' do
+      let(:proposal_id) { '1' }
+      let(:fake_params) do
+        {
+          :candidate_id => candidate_id,
+          :id           => proposal_id
+        }
+      end
+
+      before do
+        Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+        get :show, fake_params
+      end
+
+      it { should assign_to(:candidate).with(candidate) }
+      it { should assign_to(:proposal).with(proposal) }
+      it { should respond_with(:success) }
+      it { should render_template(:show) }
+    end
+
+    describe '#delete' do
+      let(:proposal_id) { '1' }
+      let(:fake_params) do
+        {
+          :candidate_id => candidate_id,
+          :proposal_id  => proposal_id
+        }
+      end
+
+      before do
+        Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+        get :delete, fake_params
+      end
+
+      it { should assign_to(:candidate).with(candidate) }
+      it { should assign_to(:proposal).with(proposal) }
+      it { should respond_with(:success) }
+      it { should render_template(:delete) }
+    end
+
+    describe '#destroy' do
+      let(:proposal_id) { '1' }
+      let(:fake_params) do
+        {
+          :candidate_id => candidate_id,
+          :id           => proposal_id
+        }
+      end
+
+      before do
+        Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+        proposal.should_receive(:delete)
+
+        delete :destroy, fake_params
+      end
+
+      it { should respond_with(:redirect) }
+      it { should redirect_to(candidate_path(candidate)) }
+    end
   end
-
-  describe '#show' do
-    let(:proposal_id) { '1' }
-    let(:fake_params) do
-      {
-        :candidate_id => candidate_id,
-        :id           => proposal_id
-      }
-    end
-
-    before do
-      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
-
-      get :show, fake_params
-    end
-
-    it { should assign_to(:candidate).with(candidate) }
-    it { should assign_to(:proposal).with(proposal) }
-    it { should respond_with(:success) }
-    it { should render_template(:show) }
-  end
-
-  describe '#delete' do
-    let(:proposal_id) { '1' }
-    let(:fake_params) do
-      {
-        :candidate_id => candidate_id,
-        :proposal_id  => proposal_id
-      }
-    end
-
-    before do
-      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
-
-      get :delete, fake_params
-    end
-
-    it { should assign_to(:candidate).with(candidate) }
-    it { should assign_to(:proposal).with(proposal) }
-    it { should respond_with(:success) }
-    it { should render_template(:delete) }
-  end
-
-  describe '#destroy' do
-    let(:proposal_id) { '1' }
-    let(:fake_params) do
-      {
-        :candidate_id => candidate_id,
-        :id           => proposal_id
-      }
-    end
-
-    before do
-      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
-      proposal.should_receive(:delete)
-
-      delete :destroy, fake_params
-    end
-
-    it { should respond_with(:redirect) }
-    it { should redirect_to(candidate_path(candidate)) }
-  end
-
 end

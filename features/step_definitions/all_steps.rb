@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 
+WELCOME_MESSAGE = "Frase bem queridona"
+
 Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
@@ -24,7 +26,7 @@ end
 
 Então /^devo ser autenticado com sucesso$/ do
   within_frame "iframe_canvas" do
-    page.should have_content("Seja bem vindo!")
+    page.should have_content(WELCOME_MESSAGE)
   end
 end
 
@@ -154,7 +156,7 @@ Dado /^que existem alguns candidatos$/ do
 end
 
 Quando /^eu acesso a listagem de candidatos$/ do
-  visit root_path
+  visit candidates_path
 end
 
 Entao /^eu devo ver tais candidatos$/ do
@@ -348,5 +350,51 @@ Então /^devo ver apenas os candidados que atendem ao criterio de busca$/ do
   end
   @out_search_candidates.each do |candidate|
     page.should_not have_content candidate.name
+  end
+end
+
+Dado /^que existem alguns macrotemas$/ do
+  @categories = 3.times.map do |i|
+    FactoryGirl.create :category, :name => "Category #{i}"
+  end
+end
+
+Quando /^eu acesso a página inicial da aplicação$/ do
+  visit root_path
+end
+
+Entao /^eu devo ver tais macrotemas$/ do
+  @categories.each do |category|
+    page.should have_content(category.name)
+  end
+end
+
+Dado /^que existem algumas propostas para cada macrotema$/ do
+  @in_category = @categories.shift
+
+  @in_category_proposals = 2.times.map do |i| 
+    FactoryGirl.create :proposal, :title => "In Proposal #{i}", :categories => [@in_category]
+  end
+
+  @out_category_proposals = @categories.each_with_index.map do |out_category, i|
+    FactoryGirl.create :proposal, :title => "Out Proposal #{i}", :categories => [out_category]
+  end
+end
+
+Dado /^que estou na página inicial da aplicação$/ do
+  visit root_path
+end
+
+Quando /^eu escolho determinado macrotema$/ do
+  Proposal.tire.index.refresh
+  click_link @in_category.name
+end
+
+Entao /^devo ver apenas propostas naquele macrotema$/ do
+  @in_category_proposals.each do |proposal|
+    page.should have_content(proposal.title)
+  end
+  @out_category_proposals.each do |proposal|
+    page.should_not have_content(proposal.title)
   end
 end

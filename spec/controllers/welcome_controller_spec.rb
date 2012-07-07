@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe WelcomeController do
-  let(:candidates) do
-    [double('candidate1'), double('candidate2')]
+  let(:categories) do
+    [double('category1'), double('category2')]
   end
 
   before :each do
@@ -11,12 +11,12 @@ describe WelcomeController do
 
   context 'landing outside facebook' do
     before(:each) do
-      Candidate.should_receive(:all).and_return(candidates)
+      Category.should_receive(:all).and_return(categories)
       get :index
     end
 
     it { should respond_with(:success) }
-    it { should assign_to(:candidates).with(candidates) }
+    it { should assign_to(:categories).with(categories) }
     it { should render_template('index') }
   end
 

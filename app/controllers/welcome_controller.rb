@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   before_filter :ensure_canvas
 
   def index
-    @candidates = Candidate.all
+    @categories = Category.all
   end
 
   private

@@ -12,6 +12,7 @@ gem 'factory_girl_rails'
 gem 'valid_email'
 gem 'simple_form'
 gem 'tire'
+gem 'will_paginate', '~> 3.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
