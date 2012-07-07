@@ -6,6 +6,31 @@ describe ProposalsController do
     controller.stub!(:current_user => true)
   end
 
+  let(:proposal)     { mock_model(Proposal)}
+  let(:candidate_id) { '1' }
+  let(:candidate)    { stub('candidate', :id => candidate_id) }
+
+  describe '#show' do
+    let(:proposal_id) { '1' }
+    let(:fake_params) do
+      {
+        :candidate_id => candidate_id,
+        :id           => proposal_id
+      }
+    end
+
+    before do
+      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+      proposal.should_receive(:candidate).and_return(candidate)
+      get :show, fake_params
+    end
+
+    it { should assign_to(:candidate).with(candidate) }
+    it { should assign_to(:proposal).with(proposal) }
+    it { should respond_with(:success) }
+    it { should render_template(:show) }
+  end
+
   describe 'listing' do
     let(:proposals) { [double('proposal1'), double('proposal2')] }
 
@@ -29,10 +54,6 @@ describe ProposalsController do
   end
 
   context 'for a specified candidate' do
-    let(:candidate_id) { '1' }
-    let(:candidate)    { stub('candidate', :id => candidate_id) }
-    let(:proposal)     { mock_model(Proposal)}
-
     before :each do
       Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
     end
@@ -147,26 +168,6 @@ describe ProposalsController do
         it { should assign_to(:proposal).with(proposal) }
         it { should render_template('edit') }
       end
-    end
-
-    describe '#show' do
-      let(:proposal_id) { '1' }
-      let(:fake_params) do
-        {
-          :candidate_id => candidate_id,
-          :id           => proposal_id
-        }
-      end
-
-      before do
-        Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
-        get :show, fake_params
-      end
-
-      it { should assign_to(:candidate).with(candidate) }
-      it { should assign_to(:proposal).with(proposal) }
-      it { should respond_with(:success) }
-      it { should render_template(:show) }
     end
 
     describe '#delete' do
