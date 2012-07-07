@@ -1,5 +1,8 @@
 require 'valid_email'
 class Candidate < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
   has_many :proposals
 
   before_create :generate_obfuscated_slug

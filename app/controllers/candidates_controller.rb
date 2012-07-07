@@ -1,9 +1,15 @@
 # encoding: utf-8
-
 class CandidatesController < ApplicationController
-
-  before_filter :candidate
+  before_filter :candidate, :except => [:index]
   before_filter :authorize_candidate, :only => [:edit, :update]
+
+  def index
+    if params[:query].present?
+      @candidates = Candidate.search(params[:query], :load => true)
+    else
+      @candidates = Candidate.all
+    end
+  end
 
   def show
   end
@@ -13,7 +19,8 @@ class CandidatesController < ApplicationController
 
   def update
     if @candidate.update_attributes(params[:candidate])
-      redirect_to candidate_path(@candidate.id), :notice => "Perfil atualizado com sucesso"
+      redirect_to candidate_path(@candidate.id), 
+        :notice => "Perfil atualizado com sucesso"
     else
       render :edit
     end
@@ -29,5 +36,4 @@ class CandidatesController < ApplicationController
   def candidate
     @candidate = Candidate.find(params[:id])
   end
-  
 end

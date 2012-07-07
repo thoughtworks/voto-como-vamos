@@ -322,3 +322,31 @@ end
 Então /^eu posso editar o perfil$/ do
   page.should have_selector "#edit_profile"
 end
+
+Dado /^que existem alguns candidatos que atendem ao criterio de busca$/ do
+  @in_search_candidates = 3.times.map do |i|
+    FactoryGirl.create :candidate, :name => "XYZ #{i}"
+  end
+end
+
+Dado /^que existem alguns candidatos que não atendem ao criterio de busca$/ do
+  @out_search_candidates = 3.times.map  do |i|
+    FactoryGirl.create :candidate, :name => "PTW #{i}"
+  end
+end
+
+Quando /^peço para listar os candidatos de acordo com o critério de busca$/ do
+  Candidate.tire.index.refresh
+  visit candidates_path
+  fill_in "query", :with => "XYZ" 
+  click_button "Buscar"
+end
+
+Então /^devo ver apenas os candidados que atendem ao criterio de busca$/ do
+  @in_search_candidates.each do |candidate|
+    page.should have_content candidate.name
+  end
+  @out_search_candidates.each do |candidate|
+    page.should_not have_content candidate.name
+  end
+end

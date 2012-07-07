@@ -1,0 +1,7 @@
+= form_tag candidates_path, method: :get do
+  p
+    = text_field_tag :query, params[:query]
+    = submit_tag "Buscar", name: nil
+  ul
+    - @candidates.each do |candidate|
+      li= candidate.name

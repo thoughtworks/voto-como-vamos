@@ -11,6 +11,7 @@ gem 'slim'
 gem 'factory_girl_rails'
 gem 'valid_email'
 gem 'simple_form'
+gem 'tire'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
