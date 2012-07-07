@@ -1,0 +1,184 @@
+
+<!-- saved from url=(0148)http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?noCandLimpo=&siglaUFSelecionada=RS&codigoMunicipio=88013&codigoCargo=13# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><script type="text/javascript">
+$(document).ready(function() {
+	$("#exportarCandidatoCSV").click(
+		function () { 
+			exportarCandidatoCSV(); 
+		}
+	);
+	
+	function exportarCandidatoCSV() {
+		var noCandLimpo = $("#noCandLimpo").val();
+		var siglaUFSelecionada = $("#siglaUFSelecionada").val();
+		var codigoSituacao = $("input[name='codigoSituacao']:checked").val();
+
+		if (codigoSituacao == 0)
+			codigoSituacao = "";
+
+		var codigoMunicipio  = $("#codigoMunicipio").val();
+		var codigoCargo  = $("#codigoCargo").val();
+
+		if (codigoCargo == 11)
+			cargo="Prefeito";
+		else if(codigoCargo == 13)
+			cargo="Vereador";
+		
+		link = 'exportarCandidatoCSV.action?';
+		link += 'noCandLimpo='+noCandLimpo +'&';
+		link += 'siglaUFSelecionada='+siglaUFSelecionada+'&';
+		link += 'codigoMunicipio='+codigoMunicipio+'&';
+		link += 'codigoCargo='+codigoCargo+'&';
+		link += 'codigoSituacao='+codigoSituacao;
+		
+		var altura = screen.height - 55;
+		var largura = screen.width - 10;
+		abrir(link, largura, altura, 'Exporta dados de Candidatos CSV');
+	}
+});
+</script>
+
+
+
+
+
+</head><body><div class="pagebanner pagelinks">583 itens encontrados - 1 de 10.&nbsp;&nbsp;&nbsp;[Primeiro&nbsp;/&nbsp;Último]&nbsp; <strong>1</strong>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=2&noCandLimpo=&codigoCargo=13" title="ir página 2">2</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=3&noCandLimpo=&codigoCargo=13" title="ir página 3">3</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=4&noCandLimpo=&codigoCargo=13" title="ir página 4">4</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=5&noCandLimpo=&codigoCargo=13" title="ir página 5">5</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=6&noCandLimpo=&codigoCargo=13" title="ir página 6">6</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=7&noCandLimpo=&codigoCargo=13" title="ir página 7">7</a>, <a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=8&noCandLimpo=&codigoCargo=13" title="ir página 8">8</a> &nbsp;[<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=2&noCandLimpo=&codigoCargo=13">Próximo</a>&nbsp;/&nbsp;<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=59&noCandLimpo=&codigoCargo=13">Último</a>]</div>
+<table id="candidato" class="tabela_dados tabelaCandidatos" cellspacing="0">
+<thead>
+<tr>
+<th class="hidden">v</th>
+<th>Nome do Candidato</th>
+<th>Nome para Urna</th>
+<th>Número</th>
+<th>Situação</th>
+<th>Partido</th>
+<th>Coligação</th></tr></thead>
+<tbody>
+<tr class="odd">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000357">		
+	</td>
+<td style="text-align: left;">
+	 	ABEL PEDRO FLORES BARRIA
+	</td>
+<td>ABEL FLORES</td>
+<td style="text-align: center;">13118</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PT</td>
+<td>COLIGAÇÃO PT - PPL - PTC</td></tr>
+<tr class="even">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000017152">		
+	</td>
+<td style="text-align: left;">
+	 	ABILIO MOREIRA
+	</td>
+<td>ABILIO MOREIRA</td>
+<td style="text-align: center;">45450</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PSDB</td>
+<td>Porto Alegre Para Todos</td></tr>
+<tr class="odd">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000017153">		
+	</td>
+<td style="text-align: left;">
+	 	ADAIR CORREIA VARGAS
+	</td>
+<td>VARGUINHAS</td>
+<td style="text-align: center;">45345</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PSDB</td>
+<td>Porto Alegre Para Todos</td></tr>
+<tr class="even">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000290">		
+	</td>
+<td style="text-align: left;">
+	 	ADALBERTO CÉSAR PEREIRA
+	</td>
+<td>ADALBERTO PEREIRA</td>
+<td style="text-align: center;">65541</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PC do B</td>
+<td>Juntos por Porto Alegre</td></tr>
+<tr class="odd">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000358">		
+	</td>
+<td style="text-align: left;">
+	 	ADECIR BERLE
+	</td>
+<td>ADECIR BERLE</td>
+<td style="text-align: center;">13121</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PT</td>
+<td>COLIGAÇÃO PT - PPL - PTC</td></tr>
+<tr class="even">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000291">		
+	</td>
+<td style="text-align: left;">
+	 	ADELI PACHECO DE MORAIS
+	</td>
+<td>MORVANA</td>
+<td style="text-align: center;">65111</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PC do B</td>
+<td>Juntos por Porto Alegre</td></tr>
+<tr class="odd">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000359">		
+	</td>
+<td style="text-align: left;">
+	 	ADELI SELL
+	</td>
+<td>ADELI SELL</td>
+<td style="text-align: center;">13601</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PT</td>
+<td>COLIGAÇÃO PT - PPL - PTC</td></tr>
+<tr class="even">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000010593">		
+	</td>
+<td style="text-align: left;">
+	 	ADELINA DE FÁTIMA LEMOS DE FREITAS
+	</td>
+<td>ADELINA J. FREITAS</td>
+<td style="text-align: center;">40333</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PSB</td>
+<td>Unidos por Porto Alegre</td></tr>
+<tr class="odd">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000017154">		
+	</td>
+<td style="text-align: left;">
+	 	ADI PEREIRA DE BRUM
+	</td>
+<td>ADVOGADA ADI PEREIRA DE BRUM</td>
+<td style="text-align: center;">45888</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PSDB</td>
+<td>Porto Alegre Para Todos</td></tr>
+<tr class="even">
+<td class="hidden">
+		<input type="hidden" name="sqCandidato" value="210000000360">		
+	</td>
+<td style="text-align: left;">
+	 	ADILSO LUIS PIMENTEL CORLASSOLI
+	</td>
+<td>PROFESSOR ADILSO</td>
+<td style="text-align: center;">13333</td>
+<td style="text-align: center;">Aguardando julgamento</td>
+<td style="text-align: center;">PT</td>
+<td>COLIGACAO PT - PPL - PTC</td></tr></tbody></table><div class="exportlinks"></div>
+
+ 
+		<a id="exportarCandidatoCSV" href="./candidate_list_2012_files/candidate_list_2012.html" style="width: 100%; text-align: center">
+			<p>Exportar dados de candidatos</p>
+		</a>		
+  
+
+</body></html>

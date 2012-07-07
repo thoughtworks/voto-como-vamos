@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0120)http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="./adenliso_files/jquery-ui.css">
+
+<!-- JS -->
+<script type="text/javascript" src="./adenliso_files/jquery.js"></script>
+<script type="text/javascript" src="./adenliso_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./adenliso_files/util.js"></script>
+
+<script>
+	$(function() {
+		$("#tabs").tabs({
+			   select: function(event, ui) { 
+				   if (ui.panel.id == "div_sadp") {
+					   pesquisarSADP();
+				   }
+			   }
+		});
+		$("#idImgGerarPdf").click(gerarRelatorioPDF);
+	});
+
+	function pesquisarSADP() {
+		var nprot = $("input[name='candidato.nrProtocolo']").val();
+		var comboTribunal = $("input[name='candidato.tribunal']").val(); 
+		var serverName = $("input[name='serverName']").val();
+
+		if ("intranet.tse.jus.br" == serverName) 
+			var url_sadp = "http://intranet.tse.jus.br/sadJudSadpPush/ExibirDadosProcesso.do?nprot=";
+		else
+			var url_sadp = "http://www.tse.jus.br/sadJudSadpPush/ExibirDadosProcesso.do?nprot=";
+			
+		$("#retornoSADP").attr("src", url_sadp + nprot + "&comboTribunal=" + comboTribunal);
+
+	}
+	
+	
+	function gerarRelatorioPDF() {
+		var sqCandidato = $("#sqCandidato").val(); 
+		var sgUe =$("#sgUe").val();
+		var nome	    = "Ficha Candidato PDF";
+		var url         = "RelatorioDetalheCandidato/gerarRelatorio?sqCandidato="+sqCandidato+"&sgUe="+sgUe;
+		novoAbrir(url, nome, screen.height-55 , screen.width-10);
+	}
+</script>
+<script type="text/javascript">
+function xgerarRelatorioPDF(){
+	var sqCandidato = document.getElementById("sqCandidato").value;
+	var sgUe = document.getElementById("sgUe").value;
+ 	window.open("RelatorioDetalheCandidato/gerarRelatorio?sqCandidato="+sqCandidato+"&sgUe="+sgUe);
+}
+function confirmaNavegacaoExterna() {
+	if (confirm("O acesso solicitado será direcionado a um sítio externo ao ambiente da Justiça Eleitoral. Deseja continuar?"))
+		return true;
+	else
+		return false;  
+}
+function visualizarCertidaoCriminal(sqProcesso){
+	var sqCandidato = document.getElementById("sqCandidato").value;
+	var sgUe = document.getElementById("sgUe").value;
+    var strNomeJanelaPopup = "wndTelaProcessoDivulgaCand2010";
+    definirParamsTamanhoTela("mostrarArquivoCertidaoCriminal.action?sqCand="+sqCandidato+"&codigoMunicipio="+sgUe+"&sqProcesso="+sqProcesso, strNomeJanelaPopup);
+}
+
+function visualizarPropostaGovernoCandidato(sqPropostaGoverno){
+	var sqCandidato = document.getElementById("sqCandidato").value;
+	var sgUe = document.getElementById("sgUe").value;
+    var strNomeJanelaPopup = "wndTelaPropostaGovernoDivulgaCand2012";
+    definirParamsTamanhoTela("mostrarPropostaGoverno.action?sqCand="+sqCandidato+"&codigoMunicipio="+sgUe, strNomeJanelaPopup);
+}
+
+function visualizarProcessoAtribuicaoCnpjCampanha(){
+	var sqCandidato = document.getElementById("sqCandidato").value;
+	var sgUe = document.getElementById("sgUe").value;
+    var strNomeJanelaPopup = "wndTelaCnpjCampanhaDivulgaCand2010";
+    definirParamsTamanhoTela("http://spce2010.tse.jus.br/spceweb.consulta.cnpj2010/consulta/HistoricoCandidatoPorId.action?sqCandidato="+sqCandidato+"&sgUe="+sgUe+"&origemUrl=divulgacand",strNomeJanelaPopup,180,110);
+}
+
+
+// 	var url_sadp = "http://intranet.tse.jus.br/sadJudSadpPush/ExibirDadosProcesso.do?nprot=369802012&comboTribunal=rs";
+
+// 	var url_sadp = "http://www.tse.jus.br/sadJudSadpPush/ExibirDadosProcesso.do?nprot=369802012&comboTribunal=rs";
+
+/**
+ * Essa funcao carrega o iframe apenas quando a aba 'Situação do processo' (SADP) eh clicada.
+ 
+function CarregarAbaSadp(){
+	if (document.getElementById("frameSadp").src != url_sadp) {
+		document.getElementById("frameSadp").src = url_sadp;
+	}
+}
+ */
+/**
+ * Essa funcao carrega o iframe apenas quando a aba de 'Prestação de contas' (SPCE) eh clicada.
+ */
+function CarregarAbaSpce(){
+	var url_spce = "http://spce2010.tse.jus.br/spceweb.consulta.prestacaoconta2010/divulgaParciaisServlet2.do?acao=relatorio&sgUe=88013&sqCandidato=210000000360&parcial=2&origem=divulgacand";
+
+	if (document.getElementById("frameSpce").src != url_spce) {
+		document.getElementById("frameSpce").src = url_spce;
+	}
+}
+</script><title>DivulgaCand - Divulgação de Registro de Candidaturas 2012</title><link href="./adenliso_files/layout.css" rel="stylesheet" type="text/css"><link href="./adenliso_files/estilo.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./adenliso_files/divhtml.js"></script><script type="text/javascript" src="./adenliso_files/util.js"></script><script type="text/javascript" src="./adenliso_files/ajax.js"></script><style type="text/css">
+ul {
+	padding-left: 15px;
+}
+
+.mouseOut {
+	cursor: pointer;
+}
+
+.mouseOver {
+	cursor: hand;
+}
+</style></head>
+
+
+
+
+
+
+
+
+
+
+<!-- CSS -->
+
+<!-- <link href="/divulgacand2012/css/padraoAbas.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="/divulgacand2012/css/padraoTSE-01.css" rel="stylesheet" type="text/css" /> -->
+
+
+
+
+
+
+
+
+
+<body>
+	<form id="idFrmDetalheCandidato" name="FrmDetalheCandidato" action="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action" method="post">
+		<div id="header">
+			<img id="template_topo_left" src="./adenliso_files/top_left.png" alt="Brasão das Armas"> 
+			<img id="template_topo_right" src="./adenliso_files/top_right.jpg" alt="Banner com o nome do sistema sob fundo azul e marca d&#39;agua de urna eletrônica">
+		</div>
+
+
+		<input type="hidden" name="candidato" value="br.jus.tse.sepel2.divulgacand.core.dominio.candidato.Candidato@25ce68f8" id="idFrmDetalheCandidato_candidato">
+		<input type="hidden" name="candidato.nrProtocolo" value="369802012" id="idFrmDetalheCandidato_candidato_nrProtocolo">
+		<input type="hidden" name="candidato.tribunal" value="rs" id="idFrmDetalheCandidato_candidato_tribunal">
+		<input type="hidden" name="serverName" value="divulgacand2012.tse.jus.br" id="idFrmDetalheCandidato_serverName">
+
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td align="center" class="xclsTitulo01">Detalhes do Registro de
+					Candidatura - Vereador
+				</td>
+			</tr>
+		</tbody></table>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr>
+				<td>
+				   <input type="hidden" name="sqCandidato" id="sqCandidato" value="210000000360"> 
+				   <input type="hidden" name="sgUe" id="sgUe" value="88013">
+
+					<table border="0" cellpadding="0" cellspacing="2">
+						<tbody><tr>
+							<td align="center">
+								<img src="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000360&codigoMunicipio=88013" width="168" height="204" border="2" align="middle">
+							</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalho04" align="center">Situação
+								do Registro</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalho04" style="font-size: 8px;" align="center">
+								<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" title="Resumo de situações" onclick="abrir(&#39;jsp/textoAjudaSituacao.jsp&#39;, &#39;800&#39;, &#39;420&#39;, &#39;txtAjudaSituacao&#39;)">[Sobre
+									a Situação do Registro] </a>
+							</td>
+						</tr>
+						<tr>
+							<td width="168" class="clsTitulo01" align="center">CADASTRADO <br> <span class="clsCabecalhoCol02"> (Aguardando julgamento)
+							</span></td>
+						</tr>
+						
+						
+					</tbody></table></td>
+				<td align="left"><br>
+					<table border="0" cellpadding="3" cellspacing="2">
+						<tbody><tr>
+							<td class="clsCabecalhoCol05 textoNegrito" nowrap="nowrap">Nome para urna eletrônica:</td>
+							<td class="clsTitulo01b textoNegrito">PROFESSOR ADILSO</td>
+									
+							<td class="clsCabecalhoCol05 textoNegrito">Número:</td>
+							
+							<td class="clsTitulo01b textoNegrito" align="left">13333</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Nome completo:</td>
+							<td class="clsTitulo01" nowrap="nowrap">ADILSO LUÍS PIMENTEL CORLASSOLI</td>
+							<td class="clsCabecalhoCol05 textoNegrito">Sexo:</td>
+							<td class="clsTitulo01">Masculino</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Data de nascimento:</td>
+							<td class="clsTitulo01">23/04/1970</td>
+							<td class="clsCabecalhoCol05 textoNegrito">Estado civil:</td>
+							<td class="clsTitulo01">Divorciado(a)</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Nacionalidade:</td>
+							<td class="clsTitulo01">Brasileira nata</td>
+							<td class="clsCabecalhoCol05 textoNegrito">Naturalidade:</td>
+							<td class="clsTitulo01">
+								ESMERALDA / RS
+							</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Grau de instrução:</td>
+							<td class="clsTitulo01">Superior completo</td>
+							<td class="clsCabecalhoCol05 textoNegrito">Ocupação:</td>
+							<td class="clsTitulo01">Outros</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Endereço do site do candidato:</td>
+							<td class="clsTitulo01" colspan="3"><a href="http://www.professoradilso.blogspot.com/" target="_blank" style="color: #375F8A;" onclick="return confirmaNavegacaoExterna();">
+								http://www.professoradilso.blogspot.com</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05" colspan="4">
+								<hr>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Partido:</td>
+							<td class="clsTitulo01" colspan="3">Partido dos Trabalhadores&nbsp;-&nbsp;
+								PT&nbsp;-&nbsp;(13)
+							</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Coligação:</td>
+							<td class="clsTitulo01" colspan="3">COLIGAÇÃO PT - PPL - PTC</td>
+						</tr>
+
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Composição da coligação:</td>
+							<td class="clsTitulo01" colspan="3">PT / PTC / PPL</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Cargo a que concorre:</td>
+							<td class="clsTitulo01b textoNegrito" colspan="3">
+								Vereador&nbsp;-&nbsp;(PORTO ALEGRE)
+							</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">No. processo/protocolo:</td>
+							<td class="clsTitulo01" colspan="3">
+								 
+								
+										157-64.2012.6.21.0161
+								 /  
+								
+									369802012
+								
+							</td>
+						</tr>
+<!--
+	        		    <tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Julgamento da prest. de contas:</td>
+							<td class="clsTitulo01" colspan="3">
+							  
+							</td>
+						</tr>
+-->
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">CNPJ de campanha:</td>
+							<td class="clsTitulo01" colspan="3">
+								
+									15.817.782/0001-23
+								</td>
+						</tr>
+						<tr>
+							<td class="clsCabecalhoCol05 textoNegrito">Limite de gastos de campanha:&nbsp;&nbsp;
+								<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" title="Sobre limite de gastos de campanha"> 
+								<img id="imgLimiteGastos" src="./adenliso_files/tooltip.gif" "="" alt="Sobre limite de gastos de campanha" name="imgHelp" border="0" height="13px" onclick="abrir(&#39;jsp/textoAjudaLimiteGastoCampanha.jsp&#39;, &#39;610&#39;, &#39;320&#39;, &#39;txtAjudaSituacao&#39;)">
+							</a>
+							</td>
+							<td class="clsTitulo01" colspan="3">350.000,00
+							</td>
+						</tr>
+						
+
+						
+						
+						
+							
+						
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="left" valign="middle">
+					<table width="53%" border="0">
+						<tbody><tr>
+							<td align="center">
+								<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#">
+								   <img src="./adenliso_files/gerar-pdf.png" alt="Gerar PDF" name="imgGerarPdf" border="0" id="idImgGerarPdf">
+ 								   								</a> &nbsp;  
+								<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" onclick="window.close();"> 
+								   <img src="./adenliso_files/fechar.png" alt="Fechar" name="imgFechar" border="0" id="idImgFechar">
+								</a>
+							</td>
+						</tr>
+					</tbody></table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="4"><hr></td>
+			</tr>
+		</tbody></table>
+		<table width="100%">
+			<tbody><tr>
+				<td class="clsItemNormal01" align="center">Dados fornecidos pelo candidato no processo de registro de candidaturas.&nbsp;
+					Outras informações, entrar em contato com o cartório eleitoral do município.<br>
+				</td>
+			</tr>
+		</tbody></table>
+
+		<!-- ---- -->
+		<!-- tabs -->
+		<!-- ---- -->
+
+		<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+			<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+				<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#div_bens"><span>Declaração de bens</span></a></li>
+				<li class="ui-state-default ui-corner-top"><a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#div_procjud"><span>Certidões criminais</span></a></li>
+				<li class="ui-state-default ui-corner-top"><a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#div_sadp"><span>Situação do processo</span></a></li>
+				<li class="ui-state-default ui-corner-top ui-state-disabled"><a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#"><span>Prestação de contas</span></a></li>
+			</ul>
+
+			<div id="div_sadp" class="conteudo ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+				
+					<iframe id="retornoSADP" src="./adenliso_files/carregando.html" height="100%" width="100%">
+					</iframe>
+				
+				
+			</div>
+
+			<div id="div_bens" class="conteudo ui-tabs-panel ui-widget-content ui-corner-bottom">
+				
+<table id="bemCandidato" class="tabela_dados" cellspacing="0">
+<thead>
+<tr>
+<th>Seq.</th>
+<th>Descrição do bem</th>
+<th>Tipo do bem</th>
+<th>Valor do bem (R$)</th></tr></thead>
+<tfoot>
+						<tr>
+							<td colspan="4" style="text-align: right;">Total: 110,106.32
+							</td>
+						</tr><tr>
+					</tr></tfoot>
+<tbody>
+<tr class="odd">
+<td>
+						1
+					</td>
+<td>1 AUTOMÓVEL CORSA CLASSIQUE LIFE ANO E MODELO 2008</td>
+<td>Veículo automotor terrestre: caminhão, automóvel, moto, etc.</td>
+<td style="text-align: right;">22.575,89</td></tr>
+<tr class="even">
+<td>
+						2
+					</td>
+<td>SITUADO NA BENTO GONÇALVES,188 APTO 106 - PORTO ALEGRE</td>
+<td>Apartamento</td>
+<td style="text-align: right;">87.530,43</td></tr></tbody></table>
+
+				
+					<p>
+						2
+						bem(ns) encontrado(s).
+					</p>
+				
+
+			</div>
+
+			<div id="div_spce1" class="conteudo" style="display: none; width: 99%; height: 350px;">
+				<iframe id="frameSpce" src="./adenliso_files/carregando.html" height="100%" width="100%"></iframe>
+			</div>
+
+			<div id="div_procjud" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+				
+<table id="processo" style="width: 40%" class="tabela_dados" cellspacing="0">
+<thead>
+<tr>
+<th>Seq.</th>
+<th>Visualizar certidão</th></tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+						1
+					</td>
+<td style="text-align: center">
+					 
+						<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" onclick="visualizarCertidaoCriminal(1);" style="color: #505458;">
+						 		<img id="botaoPesquisarMunicipios" class="pesquisar" src="./adenliso_files/icon-search.png" alt="Pesquisar">
+						</a>
+					</td></tr>
+<tr class="even">
+<td>
+						2
+					</td>
+<td style="text-align: center">
+					 
+						<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" onclick="visualizarCertidaoCriminal(2);" style="color: #505458;">
+						 		<img id="botaoPesquisarMunicipios" class="pesquisar" src="./adenliso_files/icon-search.png" alt="Pesquisar">
+						</a>
+					</td></tr>
+<tr class="odd">
+<td>
+						3
+					</td>
+<td style="text-align: center">
+					 
+						<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" onclick="visualizarCertidaoCriminal(3);" style="color: #505458;">
+						 		<img id="botaoPesquisarMunicipios" class="pesquisar" src="./adenliso_files/icon-search.png" alt="Pesquisar">
+						</a>
+					</td></tr>
+<tr class="even">
+<td>
+						4
+					</td>
+<td style="text-align: center">
+					 
+						<a href="http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFichaCandidato.action?sqCand=210000000360&codigoMunicipio=88013#" onclick="visualizarCertidaoCriminal(4);" style="color: #505458;">
+						 		<img id="botaoPesquisarMunicipios" class="pesquisar" src="./adenliso_files/icon-search.png" alt="Pesquisar">
+						</a>
+					</td></tr></tbody></table>
+
+				
+				    
+				    
+						<p>
+						   4
+   						       Certidões encontradas.
+						</p>
+	  		        
+				
+
+			</div>
+		</div>
+	</form>
+
+
+
+
+
+
+</body></html>
