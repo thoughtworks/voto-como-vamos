@@ -226,7 +226,7 @@ pt-BR:
         about: "Sobre Mim"
         phone: "Telefone"
         email: "Email"
-        press_agent: "Acessoria de Imprensa"
+        press_agent: "Assessoria de Imprensa"
       ownership:
         terms_and_conditions: "Aceito os Termos e Condições"
       proposal:
@@ -264,6 +264,6 @@ pt-BR:
       title: 'Editar Candidato'
       success: 'Perfil atualizado com sucesso'
     show:
-      press_agent: '* Este perfil é gerenciado pela Assessoria de Imprensa'
-      candidate: '* Este perfil é gerenciado pelo Candidato'
+      press_agent: 'Este perfil é gerenciado pela Assessoria de Imprensa'
+      candidate: 'Este perfil é gerenciado pelo Candidato'
       edit_profile: 'Editar perfil'

@@ -190,7 +190,7 @@ Quando /^alterar o campo (.*?) para '(.*?)'$/ do |field_name, about|
  fill_in field_name, :with => about
 end
 
-Quando /^marcar '(.*?)' no campo Acessoria de Imprensa$/ do |option|
+Quando /^marcar '(.*?)' no campo Assessoria de Imprensa$/ do |option|
   choose option
 end
 
@@ -206,8 +206,8 @@ Entao /^ele deve ver uma mensagem de erro indicando que o campo (.*?) é inváli
   page.should have_css(".error", :text => nome_do_campo )
 end
 
-Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela acessoria de imprensa$/ do
-  page.should have_content('Este perfil é gerenciado pela Acessoria de Imprensa')
+Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela assessoria de imprensa$/ do
+  page.should have_content('Este perfil é gerenciado pela Assessoria de Imprensa')
 end
 
 Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pelo candidato$/ do
