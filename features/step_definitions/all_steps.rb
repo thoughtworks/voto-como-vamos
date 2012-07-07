@@ -1,5 +1,4 @@
 # -*- encoding : utf-8 -*-
-
 WELCOME_MESSAGE = "Frase bem queridona"
 
 Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
@@ -405,4 +404,18 @@ Dado /^que tenho permissão para administrar meu perfil$/ do
     :candidate => @candidate, 
     :terms_and_conditions => '1'
   )
+end
+
+Dado /^que existe uma proposta cadastrada$/ do
+  @proposal = FactoryGirl.create :proposal
+end
+
+Quando /^peço pra visualizar a proposta$/ do
+  visit proposal_path(@proposal)
+end
+
+Então /^devo ver as informações da proposta$/ do
+  [:title, :abstract, :description].each do |attribute|
+    page.should have_content(@proposal.send(attribute))
+  end 
 end
