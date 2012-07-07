@@ -1,7 +1,7 @@
 require 'rspec'
 require '../src/data_importer'
 
-MAYOR_LIST_URL = "mayors.html"
+MAYOR_LIST_URL = "mayor_list_2008.html"
 
 describe DataImporter do
 	context "importing mayor data" do
