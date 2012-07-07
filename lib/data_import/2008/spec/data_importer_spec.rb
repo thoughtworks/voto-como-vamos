@@ -1,5 +1,5 @@
 require 'rspec'
-require './data_importer'
+require '../src/data_importer'
 
 MAYOR_LIST_URL = "mayors.html"
 
