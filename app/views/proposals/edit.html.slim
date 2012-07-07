@@ -25,5 +25,5 @@ div
           div.input
             = f.association :categories, :as => :check_boxes
         div.actions
-          = f.submit 'Salvar', :class => 'btn primary'
-          = link_to 'Cancelar', candidate_proposal_path(@candidate,@proposal), :class => 'btn'
+          = f.submit t('common.save'), :class => 'btn primary'
+          = link_to t('common.cancel'), candidate_proposal_path(@candidate,@proposal), :class => 'btn'

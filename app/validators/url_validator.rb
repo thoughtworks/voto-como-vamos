@@ -8,6 +8,6 @@ class UrlValidator < ActiveModel::EachValidator
         false
       end
 
-      record.errors[attribute] << "não é válido" unless valid
+      record.errors[attribute] << I18n.t('url_validator.invalid') unless valid
     end
 end

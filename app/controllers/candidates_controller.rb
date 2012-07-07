@@ -20,7 +20,7 @@ class CandidatesController < ApplicationController
   def update
     if @candidate.update_attributes(params[:candidate])
       redirect_to candidate_path(@candidate.id), 
-        :notice => "Perfil atualizado com sucesso"
+        :notice => I18n.t('candidates.edit.success')
     else
       render :edit
     end

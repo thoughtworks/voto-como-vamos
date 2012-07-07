@@ -1,7 +1,7 @@
 = form_tag candidates_path, method: :get do
   p
     = text_field_tag :query, params[:query]
-    = submit_tag "Buscar", name: nil
+    = submit_tag t('common.search'), name: nil
   ul
     - @candidates.each do |c|
       li
