@@ -16,7 +16,7 @@ FactoryGirl.define do
   end
 
   factory :candidate_with_proposals, :parent => :candidate do
-    after_build do |candidate|
+    after(:build) do |candidate|
       candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
     end
   end

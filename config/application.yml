@@ -8,5 +8,8 @@ development:
 
 test:
 
+staging:
+  facebook_app_url: "http://apps.facebook.com/250842391695084/"
+
 production:
   facebook_app_url: "http://apps.facebook.com/250842391695084/"

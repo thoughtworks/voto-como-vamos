@@ -1,6 +1,14 @@
 pt-BR:
   common:
     confirm: 'Confirmar'
+    search: 'Buscar'
+    yes_option: 'Sim'
+    no_option: 'Não'
+    save: 'Salvar'
+    cancel: 'Cancelar'
+    edit: 'Editar'
+    welcome: 'Seja bem vindo!'
+
   date:
     abbr_day_names:
     - Dom
@@ -207,6 +215,7 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+
     models:
       candidate: "Candidato"
       proposal: "Proposta"
@@ -217,7 +226,7 @@ pt-BR:
         about: "Sobre Mim"
         phone: "Telefone"
         email: "Email"
-        press_agent: "Acessoria de Imprensa"
+        press_agent: "Assessoria de Imprensa"
       ownership:
         terms_and_conditions: "Aceito os Termos e Condições"
       proposal:
@@ -231,15 +240,30 @@ pt-BR:
       email:
         invalid: "não é válido"
 
+  url_validator:
+    invalid: "não é válido"
+
   cancel: "Cancelar"
   or: "ou"
-  'yes': "Sim"
+  yes: "Sim"
 
   proposals:
+    edit:
+      success: 'Proposta editada com sucesso!'
     create:
-      success: 'Proposta criada com sucesso'
+      success: 'Proposta criada com sucesso!'
     delete:
       title: 'Excluir Proposta'
       confirmation: 'Tem certeza que deseja excluir a proposta %{title}?'
     destroy:
-      success: 'Proposta excluída com sucesso'
+      success: 'Proposta excluída com sucesso!'
+    more: 'Saiba Mais'
+
+  candidates:
+    edit:
+      title: 'Editar Candidato'
+      success: 'Perfil atualizado com sucesso'
+    show:
+      press_agent: 'Este perfil é gerenciado pela Assessoria de Imprensa'
+      candidate: 'Este perfil é gerenciado pelo Candidato'
+      edit_profile: 'Editar perfil'

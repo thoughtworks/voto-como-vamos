@@ -1,0 +1,3 @@
+ul
+  - @proposals.each do |p|
+    li= link_to p.title, proposal_path(p)

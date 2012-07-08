@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+WELCOME_MESSAGE = "Frase bem queridona"
 
 Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
@@ -24,7 +25,7 @@ end
 
 Então /^devo ser autenticado com sucesso$/ do
   within_frame "iframe_canvas" do
-    page.should have_content("Seja bem vindo!")
+    page.should have_content(WELCOME_MESSAGE)
   end
 end
 
@@ -49,6 +50,10 @@ Dado /^que eu sou um candidato cadastrado$/ do
   @candidate = FactoryGirl.create(:candidate)
 end
 
+Dado /^que eu represento o candidato$/ do
+  @ownership = Ownership.create! :candidate => @candidate, :user => @user
+end
+
 Dado /^que eu estou cadastrando uma proposta$/ do
   visit new_candidate_proposal_path(@candidate)
 end
@@ -60,8 +65,15 @@ Quando /^eu preencher todos os campos da proposta$/ do
   fill_proposal_form_with(@proposal)
 end
 
-Quando /^eu preencher os campos da proposta com dados inválidos$/ do
-  @proposal = FactoryGirl.build(:invalid_proposal, :candidate => @candidate)
+Quando /^eu não preencho os campos da proposta$/ do
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_all_fields, :candidate => @candidate)
+  fill_proposal_form_with(@proposal)
+end
+
+Quando /^eu não preencho o campo (descrição|titulo|abstract)$/ do |field|
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_description, :candidate => @candidate) if field == 'descrição'
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_abstract, :candidate => @candidate) if field == 'abstract'
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_title, :candidate => @candidate) if field == 'titulo'
   fill_proposal_form_with(@proposal)
 end
 
@@ -73,15 +85,21 @@ Entao /^eu devo ver a página do candidato/ do
   current_path.should == candidate_path(@candidate)
 end
 
-Entao /^eu devo ver os campos que contêm erros$/ do
+Entao /^eu devo ver uma mensagem informando que eu preciso preencher cada um dos três campos$/ do
   page.should have_selector('#proposal_title + .error')
   page.should have_selector('#proposal_abstract + .error')
   page.should have_selector('#proposal_description + .error')
 end
 
+Entao /^eu devo ver uma mensagem informando que o campo (descrição|abstract|titulo) é obriatório$/ do |field|
+  page.should have_selector('#proposal_title + .error') if field == 'titulo'
+  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
+  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+end
+
 Dado /^que eu estou logado na aplicação$/ do
-  @current_user = FactoryGirl.create :user
-  login_with uid: @current_user.uid
+  @user = FactoryGirl.create :user
+  login_with uid: @user.uid
 end
 
 Dado /^que existe um candidato$/ do
@@ -97,7 +115,7 @@ Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
 end
 
 Quando /^solicitamos envio de reinvindicação de e\-mail$/ do
-  Revindication.send_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates 
 end
 
 Dado /^que existem alguns candidatos válidos$/ do
@@ -106,8 +124,21 @@ Dado /^que existem alguns candidatos válidos$/ do
  end
 end
 
+Quando /^eu preencho um (titulo|abstract|descrição) com muitos caracteres$/ do |field|
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_description, :candidate => @candidate) if field == 'descrição'
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_abstract, :candidate => @candidate) if field == 'abstract'
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_title, :candidate => @candidate) if field == 'titulo'
+  fill_proposal_form_with(@proposal)
+end
+
+Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) é inválido$/ do |field|
+  page.should have_selector('#proposal_title + .error') if field == 'titulo'
+  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
+  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+end
+
 Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
-  Revindication.send_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates 
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
@@ -116,7 +147,7 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
   @candidates.each do |candidate|
     open_email(candidate.email)
     current_email.should be_delivered_from("admin@votocomovamos.org.br")
-    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate))
+    current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate.reload.obfuscated_slug))
   end  
 end
 
@@ -150,7 +181,7 @@ Dado /^que existem alguns candidatos$/ do
 end
 
 Quando /^eu acesso a listagem de candidatos$/ do
-  visit root_path
+  visit candidates_path
 end
 
 Entao /^eu devo ver tais candidatos$/ do
@@ -185,7 +216,7 @@ Quando /^alterar o campo (.*?) para '(.*?)'$/ do |field_name, about|
  fill_in field_name, :with => about
 end
 
-Quando /^marcar '(.*?)' no campo Acessoria de Imprensa$/ do |option|
+Quando /^marcar '(.*?)' no campo Assessoria de Imprensa$/ do |option|
   choose option
 end
 
@@ -201,8 +232,8 @@ Entao /^ele deve ver uma mensagem de erro indicando que o campo (.*?) é inváli
   page.should have_css(".error", :text => nome_do_campo )
 end
 
-Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela acessoria de imprensa$/ do
-  page.should have_content('Este perfil é gerenciado pela Acessoria de Imprensa')
+Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pela assessoria de imprensa$/ do
+  page.should have_content('Este perfil é gerenciado pela Assessoria de Imprensa')
 end
 
 Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pelo candidato$/ do
@@ -247,7 +278,7 @@ end
 
 Dado /^que o Voto Como Vamos me enviou um e\-mail solicitando que eu administre meu peril$/ do
   @candidate = FactoryGirl.create :candidate
-  Revindication.send_to_all_candidates
+  Ownership.send_revindication_to_all_candidates
 end
 
 Quando /^acesso endereço de solicitação fornecido no e\-mail$/ do
@@ -266,12 +297,12 @@ Quando /^entro com minhas credenciais no facebook$/ do
 end
 
 Então /^devo ir para aceitação dos termos de uso$/ do
-  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate))
+  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate.obfuscated_slug))
 end
 
 Dado /^que estou na página de solicitação de administração do meu perfil$/ do
   @candidate = FactoryGirl.create :candidate
-  visit new_candidate_ownership_path(@candidate)
+  visit new_candidate_ownership_path(@candidate.obfuscated_slug)
 end
 
 Quando /^aceito os termos de uso$/ do
@@ -280,4 +311,137 @@ end
 
 Então /^devo poder administrar o meu perfil$/ do
   page.should have_content "Editar Candidato"
+end
+
+Dado /^que outro candidato tenha uma proposta cadastrada$/ do
+  candidate = FactoryGirl.create :candidate
+  @proposal = FactoryGirl.create :proposal, :candidate => candidate
+end
+
+Então /^eu não posso editar a proposta do outro candidato$/ do
+  page.should_not have_selector "#edit_proposal"
+end
+
+Então /^eu posso editar a proposta$/ do
+  page.should have_selector "#edit_proposal"
+end
+
+Quando /^eu estou visualizando uma proposta$/ do
+  visit candidate_proposal_path(@proposal.candidate, @proposal)
+end
+
+Dado /^que outro candidato exista$/ do
+  @another_candidate = FactoryGirl.create :candidate
+end
+
+Quando /^eu estou visualizando o perfil de outro candidato$/ do
+  visit candidate_path @another_candidate
+end
+
+Então /^eu não posso editar o perfil$/ do
+  page.should_not have_selector "#edit_profile"
+end
+
+Quando /^eu estou visualizando o meu perfil$/ do
+  visit candidate_path @candidate
+end
+
+Então /^eu posso editar o perfil$/ do
+  page.should have_selector "#edit_profile"
+end
+
+Dado /^que existem alguns candidatos que atendem ao criterio de busca$/ do
+  @in_search_candidates = 3.times.map do |i|
+    FactoryGirl.create :candidate, :name => "XYZ #{i}"
+  end
+end
+
+Dado /^que existem alguns candidatos que não atendem ao criterio de busca$/ do
+  @out_search_candidates = 3.times.map  do |i|
+    FactoryGirl.create :candidate, :name => "PTW #{i}"
+  end
+end
+
+Quando /^peço para listar os candidatos de acordo com o critério de busca$/ do
+  Candidate.tire.index.refresh
+  visit candidates_path
+  fill_in "query", :with => "XYZ" 
+  click_button "Buscar"
+end
+
+Então /^devo ver apenas os candidados que atendem ao criterio de busca$/ do
+  @in_search_candidates.each do |candidate|
+    page.should have_content candidate.name
+  end
+  @out_search_candidates.each do |candidate|
+    page.should_not have_content candidate.name
+  end
+end
+
+Dado /^que existem alguns macrotemas$/ do
+  @categories = 3.times.map do |i|
+    FactoryGirl.create :category, :name => "Category #{i}"
+  end
+end
+
+Quando /^eu acesso a página inicial da aplicação$/ do
+  visit root_path
+end
+
+Entao /^eu devo ver tais macrotemas$/ do
+  @categories.each do |category|
+    page.should have_content(category.name)
+  end
+end
+
+Dado /^que existem algumas propostas para cada macrotema$/ do
+  @in_category = @categories.shift
+
+  @in_category_proposals = 2.times.map do |i| 
+    FactoryGirl.create :proposal, :title => "In Proposal #{i}", :categories => [@in_category]
+  end
+
+  @out_category_proposals = @categories.each_with_index.map do |out_category, i|
+    FactoryGirl.create :proposal, :title => "Out Proposal #{i}", :categories => [out_category]
+  end
+end
+
+Dado /^que estou na página inicial da aplicação$/ do
+  visit root_path
+end
+
+Quando /^eu escolho determinado macrotema$/ do
+  Proposal.tire.index.refresh
+  click_link @in_category.name
+end
+
+Entao /^devo ver apenas propostas naquele macrotema$/ do
+  @in_category_proposals.each do |proposal|
+    page.should have_content(proposal.title)
+  end
+  @out_category_proposals.each do |proposal|
+    page.should_not have_content(proposal.title)
+  end
+end
+
+Dado /^que tenho permissão para administrar meu perfil$/ do
+  Ownership.create!(
+    :user => @user, 
+    :candidate => @candidate, 
+    :terms_and_conditions => '1'
+  )
+end
+
+Dado /^que existe uma proposta cadastrada$/ do
+  @proposal = FactoryGirl.create :proposal
+end
+
+Quando /^peço pra visualizar a proposta$/ do
+  visit proposal_path(@proposal)
+end
+
+Então /^devo ver as informações da proposta$/ do
+  [:title, :abstract, :description].each do |attribute|
+    page.should have_content(@proposal.send(attribute))
+  end 
 end

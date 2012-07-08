@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+
+body {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+}

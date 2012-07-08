@@ -4,12 +4,12 @@ div class="row"
       = @candidate.role
     h1 class="tab"
       = "#{@candidate.name} - #{@candidate.tse_number}"
-	- if @candidate.press_agent
-	  p
-	    | * Este perfil é gerenciado pela Acessoria de Imprensa
-	- unless @candidate.press_agent.nil? || @candidate.press_agent
-	  p
-	    | * Este perfil é gerenciado pelo Candidato
+  - if @candidate.press_agent
+    p
+      = t('candidates.show.press_agent')
+  - unless @candidate.press_agent.nil? || @candidate.press_agent
+    p
+      = t('candidates.show.candidate')
   div.span-one-third
     h2
       = @candidate.party
@@ -40,6 +40,9 @@ div class="row"
     p
       = @candidate.about
 
+    - if current_user.represents? @candidate
+      = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
+      
   div class="span-two-thirds"
     h1 Propostas
 

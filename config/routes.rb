@@ -11,5 +11,7 @@ VotoComoVamos::Application.routes.draw do
       :only => [:new, :create, :show]
   end
 
+  resources :proposals
+
   root :to => 'welcome#index'
 end

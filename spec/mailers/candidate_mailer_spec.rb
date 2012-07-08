@@ -3,7 +3,7 @@ require "spec_helper"
 describe CandidateMailer do
   describe "renvidicate profile notifiction" do
     it "should render successfully" do
-      candidate = double(:email => 'candidato@example.com')
+      candidate = double(:email => 'candidato@example.com', :obfuscated_slug => '1')
 
       Candidate.should_receive(:find).with(1).and_return(candidate) 
 
