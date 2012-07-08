@@ -11,9 +11,9 @@ describe "UrlValidator" do
 
   it "should accept http urls" do
     @mock.should_not_receive('errors')    
-    @validator.validate_each(@mock, "email", "http://www.facebook.com/Candidato.Legal")
-    @validator.validate_each(@mock, "email", "http://www.twitter.com/fulano")
-    @validator.validate_each(@mock, "email", "http://www.fulanodetal.gov.br")
+    @validator.validate_each(@mock, "site", "http://www.facebook.com/Candidato.Legal")
+    @validator.validate_each(@mock, "site", "http://www.twitter.com/fulano")
+    @validator.validate_each(@mock, "site", "http://www.fulanodetal.gov.br")
   end
   
   it "should accept https urls" do
@@ -27,5 +27,6 @@ describe "UrlValidator" do
     @validator.validate_each(@mock, "email", "invalido")
     @validator.validate_each(@mock, "email", "www.fulano.gov")
     @validator.validate_each(@mock, "email", "htttp:/www.fulano.gov")
+    @validator.validate_each(@mock, "site", "http://fulaninho.com/{B5A2}")
   end  
 end
