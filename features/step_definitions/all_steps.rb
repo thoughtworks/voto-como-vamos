@@ -65,8 +65,15 @@ Quando /^eu preencher todos os campos da proposta$/ do
   fill_proposal_form_with(@proposal)
 end
 
-Quando /^eu preencher os campos da proposta com dados inválidos$/ do
-  @proposal = FactoryGirl.build(:invalid_proposal, :candidate => @candidate)
+Quando /^eu não preencho os campos da proposta$/ do
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_all_fields, :candidate => @candidate)
+  fill_proposal_form_with(@proposal)
+end
+
+Quando /^eu não preencho o campo (descrição|titulo|abstract)$/ do |field|
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_description, :candidate => @candidate) if field == 'descrição'
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_abstract, :candidate => @candidate) if field == 'abstract'
+  @proposal = FactoryGirl.build(:invalid_proposal_missing_title, :candidate => @candidate) if field == 'titulo'
   fill_proposal_form_with(@proposal)
 end
 
@@ -78,10 +85,16 @@ Entao /^eu devo ver a página do candidato/ do
   current_path.should == candidate_path(@candidate)
 end
 
-Entao /^eu devo ver os campos que contêm erros$/ do
+Entao /^eu devo ver uma mensagem informando que eu preciso preencher cada um dos três campos$/ do
   page.should have_selector('#proposal_title + .error')
   page.should have_selector('#proposal_abstract + .error')
   page.should have_selector('#proposal_description + .error')
+end
+
+Entao /^eu devo ver uma mensagem informando que o campo (descrição|abstract|titulo) é obriatório$/ do |field|
+  page.should have_selector('#proposal_title + .error') if field == 'titulo'
+  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
+  page.should have_selector('#proposal_description + .error') if field == 'descrição'
 end
 
 Dado /^que eu estou logado na aplicação$/ do
