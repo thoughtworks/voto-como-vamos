@@ -124,6 +124,19 @@ Dado /^que existem alguns candidatos válidos$/ do
  end
 end
 
+Quando /^eu preencho um (titulo|abstract|descrição) com muitos caracteres$/ do |field|
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_description, :candidate => @candidate) if field == 'descrição'
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_abstract, :candidate => @candidate) if field == 'abstract'
+  @proposal = FactoryGirl.build(:invalid_proposal_with_big_title, :candidate => @candidate) if field == 'titulo'
+  fill_proposal_form_with(@proposal)
+end
+
+Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) é inválido$/ do |field|
+  page.should have_selector('#proposal_title + .error') if field == 'titulo'
+  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
+  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+end
+
 Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
   Ownership.send_revindication_to_all_candidates 
 end
