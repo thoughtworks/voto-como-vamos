@@ -17,7 +17,7 @@ class DataImporter
 	end
 
   def candidate_to_s(c)
-    c.name + "," + c.short_name + "," + c.number.to_s + "," + c.party + "," + c.alliance + "," + c.photo
+    c.name + "," + c.short_name + "," + c.number.to_s + "," + c.party + "," + c.alliance + "," + c.photo + ","+ c.site
   end
 
 	private
