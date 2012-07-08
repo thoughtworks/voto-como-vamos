@@ -35,4 +35,25 @@ FactoryGirl.define do
     description 'Descrição'
     candidate
   end
+
+  factory :invalid_proposal_with_big_description, :class => Proposal do
+    title       'Título'
+    abstract    'Resumo'
+    description '0' * 999999
+    candidate
+  end
+
+  factory :invalid_proposal_with_big_title, :class => Proposal do
+    title       '0' * 999999
+    abstract    'Resumo'
+    description 'Descrição'
+    candidate
+  end
+
+  factory :invalid_proposal_with_big_abstract, :class => Proposal do
+    title       'Título'
+    abstract    '0' * 999999
+    description 'Descrição'
+    candidate
+  end
 end
