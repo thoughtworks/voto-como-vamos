@@ -223,6 +223,8 @@ pt-BR:
     attributes:
       candidate:
         name: "Nome"
+        party: "Partido"
+        role: "Cargo"
         about: "Sobre Mim"
         phone: "Telefone"
         email: "Email"

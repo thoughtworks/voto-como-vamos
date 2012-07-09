@@ -1,8 +1,16 @@
-= form_tag candidates_path, method: :get do
+= form_tag candidates_path, :method => :get do
   p
     = text_field_tag :query, params[:query]
-    = submit_tag t('common.search'), name: nil
-  ul
-    - @candidates.each do |c|
-      li
-        = link_to c.name, candidate_path(c)
+    = submit_tag t('common.search'), :name => nil
+  table
+    thead
+      tr
+        th= t('activerecord.models.candidate')
+        th= t('activerecord.attributes.candidate.party')
+        th= t('activerecord.attributes.candidate.role')
+    tbody
+      - @candidates.each do |candidate|
+        tr
+          td= link_to candidate.name, candidate_path(candidate)
+          td= candidate.party
+          td= candidate.role

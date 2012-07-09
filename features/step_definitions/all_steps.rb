@@ -187,6 +187,8 @@ end
 Entao /^eu devo ver tais candidatos$/ do
   @candidates.each do |candidate|
     page.should have_content(candidate.name)
+    page.should have_content(candidate.party)
+    page.should have_content(candidate.role)
   end
 end
 

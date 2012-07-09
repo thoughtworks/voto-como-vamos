@@ -70,27 +70,33 @@ describe CandidatesController do
     end
   end
 
-  describe 'listing' do
+  describe '#index' do
     let(:candidates) { [double('candidate1'), double('candidate2')] }
 
-    it 'should return all candidates when not searching' do
-      Candidate.should_receive(:all).and_return(candidates)
-      get :index
-      should respond_with(:success)
-      should assign_to(:candidates).with(candidates)
-      should render_template('index')
+    context 'when listing' do
+      it 'should order the list of candidates by name' do
+        Candidate.should_receive(:order).with('name ASC').and_return(candidates)
+
+        get :index
+
+        should respond_with(:success)
+        should assign_to(:candidates).with(candidates)
+        should render_template('index')
+      end
     end
 
-    it 'should return a subset of candidates when searching' do
-      Candidate.should_receive(:search).
-        with('test', :load => true).
-        and_return(candidates)
+    context 'when searching' do
+      it 'should query the list of candidates based on the search criteria' do
+        Candidate.should_receive(:search).
+          with('test', :load => true).
+          and_return(candidates)
 
-      get :index, :query => 'test'
+        get :index, :query => 'test'
 
-      should respond_with(:success)
-      should assign_to(:candidates).with(candidates)
-      should render_template('index')
+        should respond_with(:success)
+        should assign_to(:candidates).with(candidates)
+        should render_template('index')
+      end
     end
   end
 end

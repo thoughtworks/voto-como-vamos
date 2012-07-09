@@ -7,7 +7,7 @@ class CandidatesController < ApplicationController
     @candidates = if params[:query].present?
       Candidate.search(params[:query], :load => true)
     else
-      Candidate.all
+      Candidate.order('name ASC')
     end
   end
 
