@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 WELCOME_MESSAGE = "Frase bem queridona"
 
-Dado /^que sou um usuário já cadastrado no Votar Como Vamos$/ do
+Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
   @user = test_users.create(true, Settings.facebook_scopes)
@@ -29,7 +29,7 @@ Então /^devo ser autenticado com sucesso$/ do
   end
 end
 
-Dado /^que sou um usuário não cadastrado no Votar Como Vamos$/ do
+Dado /^que sou um usuário não cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
   @user = test_users.create(false)
