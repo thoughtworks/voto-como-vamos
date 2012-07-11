@@ -75,7 +75,7 @@ describe CandidatesController do
 
     context 'when listing' do
       it 'should order the list of candidates by name' do
-        Candidate.should_receive(:order).with('name ASC').and_return(candidates)
+        Candidate.should_receive(:order).with('short_name ASC').and_return(candidates)
 
         get :index
 

@@ -186,7 +186,7 @@ end
 
 Entao /^eu devo ver tais candidatos$/ do
   @candidates.each do |candidate|
-    page.should have_content(candidate.name)
+    page.should have_content(candidate.short_name)
     page.should have_content(candidate.party)
     page.should have_content(candidate.role)
   end
@@ -194,7 +194,7 @@ end
 
 Quando /^escolho o perfil de um determinado candidato$/ do
   @candidate = @candidates.first
-  click_link @candidate.name
+  click_link @candidate.short_name
 end
 
 Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
@@ -354,13 +354,13 @@ end
 
 Dado /^que existem alguns candidatos que atendem ao criterio de busca$/ do
   @in_search_candidates = 3.times.map do |i|
-    FactoryGirl.create :candidate, :name => "XYZ #{i}"
+    FactoryGirl.create :candidate, :short_name => "XYZ #{i}"
   end
 end
 
 Dado /^que existem alguns candidatos que não atendem ao criterio de busca$/ do
   @out_search_candidates = 3.times.map  do |i|
-    FactoryGirl.create :candidate, :name => "PTW #{i}"
+    FactoryGirl.create :candidate, :short_name => "PTW #{i}"
   end
 end
 
@@ -373,10 +373,10 @@ end
 
 Então /^devo ver apenas os candidados que atendem ao criterio de busca$/ do
   @in_search_candidates.each do |candidate|
-    page.should have_content candidate.name
+    page.should have_content candidate.short_name
   end
   @out_search_candidates.each do |candidate|
-    page.should_not have_content candidate.name
+    page.should_not have_content candidate.short_name
   end
 end
 

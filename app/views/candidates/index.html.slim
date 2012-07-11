@@ -1,7 +1,7 @@
 = form_tag candidates_path, :method => :get do
   p
     = text_field_tag :query, params[:query]
-    = submit_tag t('common.search'), :name => nil
+    = submit_tag t('common.search'), :short_name => nil
   table
     thead
       tr
@@ -11,6 +11,6 @@
     tbody
       - @candidates.each do |candidate|
         tr
-          td= link_to candidate.name, candidate_path(candidate)
+          td= link_to candidate.short_name, candidate_path(candidate)
           td= candidate.party
           td= candidate.role
