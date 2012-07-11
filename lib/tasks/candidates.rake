@@ -7,7 +7,7 @@ namespace :candidates do
     open('lib/data_import/candidates_2012.txt') do |file|
       file.each_line do |line|
         c = Candidate.new
-        c.role, c.name, short_name, c.tse_number, c.party, c.alliance, c.photo, c.site = line.split(",")
+        c.role, c.name, c.short_name, c.tse_number, c.party, c.alliance, c.photo, c.site = line.split(",")
         c.email = "candidate@email.com" # TSE does not provide email, how to import it? 
         begin 
           c.save!
