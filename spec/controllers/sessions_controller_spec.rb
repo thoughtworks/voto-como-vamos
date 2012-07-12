@@ -49,7 +49,7 @@ describe SessionsController do
       end
 
       it "redirect to root path with canvas" do
-        response.should redirect_to(root_path(:canvas => true))
+        response.should redirect_to(Settings.facebook_app_url)
       end
     end
   end

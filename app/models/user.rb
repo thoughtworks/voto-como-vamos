@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :name, :uid, :provider, :email, :presence => true
+  validates :name, :uid, :provider, :presence => true
 
   def self.create_with_auth(auth)
     create! do |user|

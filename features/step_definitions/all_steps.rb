@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-WELCOME_MESSAGE = "Frase bem queridona"
+WELCOME_MESSAGE = "Frase bem queridona (by Silvia)"
 
 Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
@@ -203,7 +203,9 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
 end
 
 Quando /^confirmo a solicitação$/ do
-  click_button 'Confirmar'
+  within_frame "iframe_canvas" do
+    click_button 'Confirmar'
+  end
 end
 
 Então /^devo ver que minha solicitação foi feita$/ do
@@ -304,15 +306,19 @@ end
 
 Dado /^que estou na página de solicitação de administração do meu perfil$/ do
   @candidate = FactoryGirl.create :candidate
-  visit new_candidate_ownership_path(@candidate.obfuscated_slug)
+  visit Settings.facebook_app_url + new_candidate_ownership_path(@candidate.obfuscated_slug)
 end
 
 Quando /^aceito os termos de uso$/ do
-  check "Aceito os Termos e Condições"
+  within_frame "iframe_canvas" do
+    check "Aceito os Termos e Condições"
+  end
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  page.should have_content "Editar Candidato"
+  within_frame "iframe_canvas" do
+    page.should have_content "Editar Candidato"
+  end
 end
 
 Dado /^que outro candidato tenha uma proposta cadastrada$/ do

@@ -7,7 +7,7 @@ class FooController < ApplicationController
 end
 
 describe FooController do
-  context 'not logged in' do
+  context 'not logged in (inside canvas)' do
     let(:fb_canvas_params) do
        {'signed_request' => 'xyz'}
     end
@@ -19,9 +19,26 @@ describe FooController do
       get :index
     end
 
+    it 'should store the path to return to' do
+      session[:return_to].should == '/assets'
+    end
+
     it { should
       redirect_to("/auth/facebook?signed_request=#{fb_canvas_params['signed_request']}") 
     }
+  end
+
+  context 'not logged in (outside canvas)' do
+    before(:each) do
+      session[:user_id] = 1
+      User.should_receive(:find_by_id).with(1).and_return(nil)
+      get :index
+    end
+
+    it 'should store the fb app url plus the path to return to' do
+      session[:return_to].should == Settings.facebook_app_url + '/assets'
+    end
+    it { should redirect_to("/auth/facebook") } 
   end
 
   context 'logged in' do

@@ -3,6 +3,7 @@ common:
   facebook_secret: 14a850bdc51644e279dca141408208ba
   facebook_scopes: "offline_access,read_stream,email"
   facebook_app_url: "http://apps.facebook.com/341926772543413"
+  facebook_permission_request_url: "http://www.facebook.com/connect/uiserver.php"
 
 development:
 

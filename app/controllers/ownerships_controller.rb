@@ -1,6 +1,4 @@
 class OwnershipsController < ApplicationController
-  skip_before_filter :authenticate!
-  before_filter :authenticate_outside_canvas!
   before_filter :load_candidate
 
   def new
@@ -22,12 +20,5 @@ class OwnershipsController < ApplicationController
 
   def load_candidate
     @candidate = Candidate.find_by_obfuscated_slug!(params[:candidate_id])
-  end
-
-  def authenticate_outside_canvas!
-    unless current_user
-      session[:return_to] = request.fullpath
-      redirect_to '/auth/facebook'
-    end
   end
 end
