@@ -6,3 +6,6 @@ p= @proposal.description
   = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
   = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
 br
+#opinion
+  a.agree= t('opinion.agree')
+  a.disagree= t('opinion.disagree')

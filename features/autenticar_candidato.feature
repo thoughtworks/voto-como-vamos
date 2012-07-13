@@ -26,7 +26,6 @@ Funcionalidade: Autenticar usuario
     Quando eu estou visualizando o perfil de outro candidato
     Então eu não posso editar o perfil
 
-  @working
   Cenário: Editar perfil do candidato
     Quando eu estou visualizando o meu perfil
     Então eu posso editar o perfil

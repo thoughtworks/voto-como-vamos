@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+
+  opinion:
+    agree: "Concordar"
+    disagree: "Discordar"

@@ -261,7 +261,7 @@ Dado /^que eu tenha uma proposta cadastrada$/ do
 end
 
 Dado /^que eu estou visualizando uma proposta$/ do
-  visit candidate_proposal_path(@proposal.candidate, @proposal)
+  visit proposal_path @proposal
 end
 
 Quando /^eu tentar excluir a proposta$/ do
@@ -453,3 +453,80 @@ Então /^devo ver as informações da proposta$/ do
     page.should have_content(@proposal.send(attribute))
   end 
 end
+
+Então /^eu tenho a opção de concordar ou discordar de uma proposta$/ do
+  page.should have_selector "#opinion .agree"
+  page.should have_selector "#opinion .disagree"
+end
+
+Dado /^que eu queira concordar com uma proposta$/ do
+end
+
+Quando /^eu seleciono a opção concordar$/ do
+  find("#opinion a.agree").click
+end
+
+Então /^a opção concordar ficará destacada apenas para mim para eu recordar minha opinião$/ do
+  page.should have_selector "#opinion .agree.highlight"
+end
+
+Então /^minha opinião será contabilizada na contagem da opção concordar$/ do
+  page.should have_content "1"
+end
+
+Dado /^que eu queira discordar com uma proposta$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando /^eu seleciono a opção discordar$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^a opção discordar ficará destacada apenas para mim para eu recordar minha opinião$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^minha opinião será contabilizada na contagem da opção discordar$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Dado /^que eu queria concordar com uma proposta que discordei anteriormente$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando /^eu seleciono concordar$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^a opção concordar ficará destacada$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^a opção discordar não ficará mais destacada$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^minha opinião não fará mais parte da contagem de discordar$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Dado /^que eu queria retirar minha opinião de uma proposta$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Quando /^eu seleciono novamente a opinião que eu tinha selecionado$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^a opção não ficará mais destacada$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^a minha opinião não fará mais parte da contagem$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
