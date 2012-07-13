@@ -1,10 +1,10 @@
 Prefeito,ADÃO ROBERTO RODRIGUES VILLAVERDE,VILLA,13,PT,Frente Popular - Governo de Verdade,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000355&codigoMunicipio=88013,
-Prefeito,CARLOS ROBERTO DE SOUZA ROBAINA,ROBERTO ROBAINA,50,PSOL,ALIANÇA DE ESQUERDA,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018590&codigoMunicipio=88013,
+Prefeito,CARLOS ROBERTO DE SOUZA ROBAINA,ROBERTO ROBAINA,50,PSOL,ALIANÇA DE ESQUERDA,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018590&codigoMunicipio=88013,http://www.robertorobaina50.com.br; www.robertorobaina.com.br
 Prefeito,ÉRICO RONI MASLINKIEWICZ CORRÊA,ERICO CORREA,16,PSTU,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032915&codigoMunicipio=88013,
 Prefeito,JOCELIN AZAMBUJA,JOCELIN AZAMBUJA,17,PSL,Renova Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029973&codigoMunicipio=88013,http://WWW.PSL17PORTOALEGRE.COM.BR
 Prefeito,JOSÉ ALBERTO REUS FORTUNATI,FORTUNATI,12,PDT,Por Amor a Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010186&codigoMunicipio=88013,http://www.fortunati.com.br
 Prefeito,MANUELA PINTO VIEIRA D AVILA,MANUELA D AVILA,65,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000258&codigoMunicipio=88013,
-Prefeito,WAMBERT GOMES DI LORENZO,WAMBERT DI LORENZO,45,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017150&codigoMunicipio=88013,http://WWW,WAMBERT.ORG
+Prefeito,WAMBERT GOMES DI LORENZO,WAMBERT DI LORENZO,45,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017150&codigoMunicipio=88013,http://WWWWAMBERT.ORG
 Vereador,ABEL PEDRO FLORES BARRIA,ABEL FLORES,13118,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000357&codigoMunicipio=88013,
 Vereador,ABILIO MOREIRA,ABILIO MOREIRA,45450,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017152&codigoMunicipio=88013,
 Vereador,ADAIR CORREIA VARGAS,VARGUINHAS,45345,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017153&codigoMunicipio=88013,
@@ -16,13 +16,15 @@ Vereador,ADELI SELL,ADELI SELL,13601,PT,COLIGAÇÃO PT - PPL - PTC,http://divulg
 Vereador,ADELINA DE FÁTIMA LEMOS DE FREITAS,ADELINA J. FREITAS,40333,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010593&codigoMunicipio=88013,
 Vereador,ADI PEREIRA DE BRUM,ADVOGADA ADI PEREIRA DE BRUM,45888,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017154&codigoMunicipio=88013,
 Vereador,ADILSO LUÍS PIMENTEL CORLASSOLI,PROFESSOR ADILSO,13333,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000360&codigoMunicipio=88013,http://www.professoradilso.blogspot.com
+Vereador,ADRIAN FRAGA RIBEIRO SLASKI,ADRIAN SLASKI,43111,PV,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000034504&codigoMunicipio=88013,
+Vereador,ADRIENNE PEIXOTO CARDOSO,ADRI,50027,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000035029&codigoMunicipio=88013,
 Vereador,AGNALDO MUNHOZ DE CAMARGO,MANO OXI,40456,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010594&codigoMunicipio=88013,
 Vereador,AGNELO FRANCISCO CHIODO,AGNELO CHIODO,14130,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000431&codigoMunicipio=88013,
 Vereador,AIRTO JOÃO FERRONATO,AIRTO FERRONATO,40540,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010595&codigoMunicipio=88013,http://vereadorferronato.blogspot.com.br/
 Vereador,AIRTON DA SILVA BARBOSA,AIRTON MISSIONEIRO,13064,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000361&codigoMunicipio=88013,
 Vereador,ALBERTO LIEBLING KOPITTKE,ALBERTO KOPITTKE,13021,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000362&codigoMunicipio=88013,http://www.albertokopittke.com.br
 Vereador,ALBERTO MOURA TERRES,ALBERTO TERRES,13100,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000363&codigoMunicipio=88013,
-Vereador,ALCEU OLVEIRA DA ROSA,BRASINHA,14118,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000432&codigoMunicipio=88013,
+Vereador,ALCEU OLIVEIRA DA ROSA,BRASINHA,14118,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000432&codigoMunicipio=88013,http://www.vereadorbrasinha.com.br; www.vereadordeportoalegre.com.br
 Vereador,ALCINO EVELASIO DA ROSA,ALCINO BOKA DI LATA,50543,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018651&codigoMunicipio=88013,
 Vereador,ALEX SANDRO NUNES DA ROSA,ALEX DA CONQUISTA,50721,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018652&codigoMunicipio=88013,
 Vereador,ALEXANDER TEIXEIRA EBERHARDT,ALEX PULGA,22222,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032980&codigoMunicipio=88013,
@@ -103,7 +105,7 @@ Vereador,CAROLINA ROLIM SEGGER,CAROL SEGGER,13131,PT,COLIGAÇÃO PT - PPL - PTC,
 Vereador,CAROLINE PANAZZOLO,CAROL PANAZZOLO,25125,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000028888&codigoMunicipio=88013,
 Vereador,CASSIANO NOIMANN LEAL,PROF. CASSIANO LEAL,15151,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000985&codigoMunicipio=88013,
 Vereador,CÁSSIO DE JESUS TROGILDO,CÁSSIO TROGILDO,14714,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000441&codigoMunicipio=88013,
-Vereador,CASSIO SILVA MOREIRA,PROFESSOR CASSIO MOREIRA,40500,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010603&codigoMunicipio=88013,
+Vereador,CASSIO SILVA MOREIRA,PROFESSOR CASSIO MOREIRA,40500,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010603&codigoMunicipio=88013,http://www.cassiomoreira.com.br
 Vereador,CATARINA DE FÁTIMA OLIVEIRA,KÁTIA,14190,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000439&codigoMunicipio=88013,
 Vereador,CELESTE TERESA DA SILVA DUTRA,TIA DO FUNK,17054,PSL,Renova Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029977&codigoMunicipio=88013,
 Vereador,CELSO WOYCIECHOWSKI,CELSINHO DA CUT,13500,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000372&codigoMunicipio=88013,http://WWW.CELSINHODACUT.COM.BR
@@ -111,7 +113,7 @@ Vereador,CESAR RODRIGUES RIBEIRO,PRESIDENTE RIBEIRO,12001,PDT,Avança Porto Aleg
 Vereador,CHARLES ADRIANO MELO GUEDES,CHARLES GUEDES,22111,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032988&codigoMunicipio=88013,
 Vereador,CHESTER VALACE BATISTA GUIMARAES,CHESTER GUIMARÃES,50687,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018659&codigoMunicipio=88013,
 Vereador,CHRISTIANO DE OLIVEIRA GARCIA,CHRISTIANO,13010,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000373&codigoMunicipio=88013,
-Vereador,CHRISTOPHER BELCHIOR GOULART,CRIS GOULART,12012,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010929&codigoMunicipio=88013,
+Vereador,CHRISTOPHER BELCHIOR GOULART,CHRISTOPHER GOULART,12012,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010929&codigoMunicipio=88013,
 Vereador,CIRILO DUTRA BARBOSA,CIRILO DUTRA,65665,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000303&codigoMunicipio=88013,
 Vereador,CIRILO JOÃO FAE,CIRILO FAE,14979,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000440&codigoMunicipio=88013,
 Vereador,CIRO JOEL LEMOS,CIRO LEMOS,65789,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000304&codigoMunicipio=88013,
@@ -186,7 +188,7 @@ Vereador,FABIANO DA SILVA MACHADO,FABIANO MACHADO,45144,PSDB,Porto Alegre Para T
 Vereador,FABIO AUGUSTO TOSCANI ANDRETTA,FABIO ANDRETTA,23888,PPS,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000028604&codigoMunicipio=88013,
 Vereador,FERNANDA BUCHABQUI SAENGER,FERNANDA SAENGER,23789,PPS,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000028626&codigoMunicipio=88013,
 Vereador,FERNANDA CORREA KLINGNER,FERNANDA KLIN,14700,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000448&codigoMunicipio=88013,
-Vereador,FERNANDA MELCHIONNA E SILVA,FERNANDA MELCHIONNA,50500,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018667&codigoMunicipio=88013,
+Vereador,FERNANDA MELCHIONNA E SILVA,FERNANDA MELCHIONNA,50500,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018667&codigoMunicipio=88013,http://www.fernanda50500.com.br
 Vereador,FERNANDO BRIGIDI DE MELLO,FERNANDO MELLO,15007,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000992&codigoMunicipio=88013,
 Vereador,FERNANDO DORNELES MAGADAN,MAGADAN,55523,PSD,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000312&codigoMunicipio=88013,
 Vereador,FERNANDO MAZZOLA,MAZZOLA,22171,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032993&codigoMunicipio=88013,
@@ -282,7 +284,7 @@ Vereador,JOSÉ AMARO AZEVEDO DE FREITAS,JOSÉ FREITAS,10700,PRB,Avança Porto Al
 Vereador,JOSE ANTONIO DA SILVA BITENCOURT,CHIMIA BITENCOURT,65666,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000319&codigoMunicipio=88013,
 Vereador,JOSÉ BATISTA BRERO,BATISTA BOMBOCADO,14222,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000456&codigoMunicipio=88013,
 Vereador,JOSE CARLOS SERPA PINGO VILAR,PINGO VILAR,14123,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000455&codigoMunicipio=88013,
-Vereador,JOSE CESLAVO SANTOS BARTOCHAK,CESLAVO BARTOCHAK,65999,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000320&codigoMunicipio=88013,
+Vereador,JOSE CESLAVO SANTOS BARTOCHAK,CESLAVO BARTOCHAK,65388,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000320&codigoMunicipio=88013,
 Vereador,JOSÉ CLAUDEMIR MARTINS CARVALHO,BUCHECHA BOM JESUS,12470,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010951&codigoMunicipio=88013,
 Vereador,JOSÉ CLAUDIO FREITAS CONCEIÇÃO,CLAUDIO CONCEIÇÃO,25677,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029758&codigoMunicipio=88013,
 Vereador,JOSÉ DELMAR SILVEIRA DE ARAÚJO,JOSÉ ARAÚJO,43000,PV,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033002&codigoMunicipio=88013,
@@ -310,6 +312,7 @@ Vereador,JULIO CEZAR LEIRIAS FLORES,JULIO FLORES,16600,PSTU,Partido não coligad
 Vereador,JÚLIO LOPES DOS SANTOS,JÚLIO ENGRAXATE,13034,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000388&codigoMunicipio=88013,
 Vereador,JUSSARA ROSA CONY,JUSSARA CONY,65165,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000324&codigoMunicipio=88013,
 Vereador,KATIELLE DE OLIVEIRA FELIX,KATIELLE DE OLIVEIRA,16555,PSTU,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032921&codigoMunicipio=88013,
+Vereador,KELLY GONÇALVES CORREA,KELLY CORREA,50557,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000035052&codigoMunicipio=88013,
 Vereador,KEVIN CHAVES KRIEGER,KEVIN KRIEGER,11011,PP,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010955&codigoMunicipio=88013,
 Vereador,LAERCIO THADEU PEREIRA DA SILVA,LAERCIO THADEU,14333,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000457&codigoMunicipio=88013,
 Vereador,LAURO BARRETO DOS SANTOS,LAURO SANTOS,14193,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000458&codigoMunicipio=88013,
@@ -321,7 +324,7 @@ Vereador,LEILA VALENCIO DA SILVA,LEILA,13888,PT,COLIGAÇÃO PT - PPL - PTC,http:
 Vereador,LENI THOMAZ GOMES,LENI THOMAZ,27217,PSDC,Renova Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029983&codigoMunicipio=88013,
 Vereador,LENIRA BAGESTEIRO QUINTAL DA FONTOURA,LENIRA FONTOURA,45444,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017176&codigoMunicipio=88013,
 Vereador,LENON ANTUNES LEOPOLDO BIER,LENON BIER,43210,PV,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033005&codigoMunicipio=88013,
-Vereador,LEONARDO BARBOSA,PROF LEONARDO BARBOSA,25596,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000030585&codigoMunicipio=88013,
+Vereador,LEONARDO BARBOSA DA SILVA FILHO,PROF LEONARDO BARBOSA,25596,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000030585&codigoMunicipio=88013,
 Vereador,LEONARDO MESQUITA SORIANO,LEONARDO MESQUITA,40080,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010621&codigoMunicipio=88013,
 Vereador,LETICIA GIARDIN DE SOUZA,LETICIA GIARDIN,55660,PSD,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000325&codigoMunicipio=88013,
 Vereador,LIDSON RODRIGUES BASSANI,BASSANI,15001,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001000&codigoMunicipio=88013,
@@ -332,7 +335,7 @@ Vereador,LISE FONTES RIES,LLISE,11600,PP,Avança Porto Alegre,http://divulgacand
 Vereador,LIZIANE PERES BERNARDES,LIZIANE BERNARDES,22333,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033006&codigoMunicipio=88013,http://liziane@bernardesadvocacia.com.br
 Vereador,LOIDEMAR BRIZOLA PIMENTEL,LÉO BRIZOLA,50100,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018681&codigoMunicipio=88013,
 Vereador,LUCAS BONI MARÓSTICA,LUCAS MAROSTICA,50122,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018682&codigoMunicipio=88013,http://www.facebook.com/lucasmarostica
-Vereador,LUCIANA KREBS GENRO,LUCIANA GENRO,50050,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018683&codigoMunicipio=88013,
+Vereador,LUCIANA KREBS GENRO,LUCIANA GENRO,50050,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018683&codigoMunicipio=88013,http://www.lucianagenro.com.br; www.lucianagenro50.com.br
 Vereador,LUCIANE EVA MONTE MAIOR DA SILVA,LU MAIOR,12212,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010959&codigoMunicipio=88013,
 Vereador,LUCIANI MARIA DA SILVEIRA PONTES,LÚ PONTES,13513,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000390&codigoMunicipio=88013,
 Vereador,LUCIANO BRASILIENSE MARCANTONIO,LUCIANO MARCANTÔNIO',12112,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010960&codigoMunicipio=88013,
@@ -342,6 +345,7 @@ Vereador,LUCIANO VIEIRA BATISTA,LUKY VIEIRA,23456,PPS,FRENTE POLITICA CIDADÃ,ht
 Vereador,LÚCIO BORGES BARCELOS,LÚCIO BARCELOS,50001,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018686&codigoMunicipio=88013,
 Vereador,LUIS AMARO PRESTES DE OLIVEIRA,GAUCHINHO DE DEUS,65051,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000326&codigoMunicipio=88013,
 Vereador,LUÍS ANDRÉ BLANCO MACHADO,DA ROSA,13787,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000393&codigoMunicipio=88013,
+Vereador,LUIS CARLOS RIBEIRO DA SILVA,LUCA RISI,25777,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029714&codigoMunicipio=88013,
 Vereador,LUIS FRANCISCO SIQUEIRA BARBOSA,SEU MADRUGA,50999,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018684&codigoMunicipio=88013,
 Vereador,LUIS LUCIANO BUENO DA SILVA,LUCIANO SILVA,10222,PRB,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010961&codigoMunicipio=88013,
 Vereador,LUIZ ALBERTO NEGRINHO DE OLIVEIRA,LUIZ NEGRINHO,22022,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033008&codigoMunicipio=88013,http://LUIZNEGRINHO@GMAIL.COM
@@ -350,7 +354,6 @@ Vereador,LUIZ ALBERTO OLIVEIRA RIBEIRO DE MIRANDA,MIRANDA,50010,PSOL,Partido nã
 Vereador,LUIZ ANTONIO LIMA VALICENTI,LUIZ GORDO,65444,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000327&codigoMunicipio=88013,
 Vereador,LUIZ ANTONIO PROENÇA FERNANDES,TONI PROENÇA,54054,PPL,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000391&codigoMunicipio=88013,http://WWW.TONIPROENCA.CAN.BR
 Vereador,LUIZ ANTONIO TARRAGÔ,TARRAGÔ,23988,PPS,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029543&codigoMunicipio=88013,
-Vereador,LUIZ CARLOS RIBEIRO DA SILVA,LUCA RISI,25777,DEM,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000029714&codigoMunicipio=88013,
 Vereador,LUIZ CARLOS SEVERO DA SILVA,LUIZ SEVERO,15234,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001002&codigoMunicipio=88013,
 Vereador,LUIZ CARLOS WARTH BICHINHO,BICHINHO,15836,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001003&codigoMunicipio=88013,
 Vereador,LUIZ FABIANO DE SOUZA,UH FABIANO,65777,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000328&codigoMunicipio=88013,
@@ -411,7 +414,7 @@ Vereador,MARIA RITA CHANG,RITA CHANG,11511,PP,Avança Porto Alegre,http://divulg
 Vereador,MARIA SALETE ARPINI,SALETE ARPINI,15222,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001007&codigoMunicipio=88013,
 Vereador,MARILIA ALVES FIDELL,MARILIA FIDELL,15679,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001008&codigoMunicipio=88013,
 Vereador,MARIO ANTONIO MANFRO,MARIO MANFRO,45321,PSDB,Porto Alegre Para Todos,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017182&codigoMunicipio=88013,
-Vereador,MARIO BERND NETO,MARIO BERND,23000,PPS,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000028624&codigoMunicipio=88013,http://WWW,MARIOBERND.COM.BR
+Vereador,MARIO BERND NETO,MARIO BERND,23000,PPS,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000028624&codigoMunicipio=88013,http://WWWMARIOBERND.COM.BR
 Vereador,MARIO PINTO DE FRAGA,MARIO FRAGA,12312,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010969&codigoMunicipio=88013,
 Vereador,MARISE DE OLIVEIRA GOMES,PRETINHA,22223,PR,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033015&codigoMunicipio=88013,http://marisedgomes@hotmail.com
 Vereador,MARISTELA MAFFEI,MARISTELA MAFFEI,65680,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000335&codigoMunicipio=88013,
@@ -491,7 +494,7 @@ Vereador,PAULO SÉRGIO DOS SANTOS,ZULU DA TINGA,40640,PSB,Unidos por Porto Alegr
 Vereador,PAULO VINICIUS RODRIGUES SILVA,VINI,50040,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018691&codigoMunicipio=88013,
 Vereador,PEDRO CLAUDIO PANDOLFO,PEDRO CAR,14666,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000471&codigoMunicipio=88013,
 Vereador,PEDRO DORNELES VIEIRA,PEDRO VIEIRA,40888,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010642&codigoMunicipio=88013,
-Vereador,PEDRO LEONARDO DA LUZ LOSS,PEDRO LOSS,13400,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000402&codigoMunicipio=88013,
+Vereador,PEDRO LEONARDO DA LUZ LOSS,PEDRO LOSS,13400,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000402&codigoMunicipio=88013,http://www.pedroloss.com.br
 Vereador,PEDRO LIBONATTI MARCHIORI,PEDRO LIBONATTI,40300,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010643&codigoMunicipio=88013,
 Vereador,PEDRO LUIZ FAGUNDES RUAS,PEDRO RUAS,50000,PSOL,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000018692&codigoMunicipio=88013,
 Vereador,PEDRO OLIVIO PEREIRA VALIN,PEDRO VALIN,65156,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000343&codigoMunicipio=88013,
@@ -518,7 +521,7 @@ Vereador,ROBERTO NACHTIGALL,PROFESSOR ROBERTO,40222,PSB,Unidos por Porto Alegre,
 Vereador,ROBERTO PONTES DIAS DE OLIVEIRA,DR ROBERTO OLIVEIRA,12777,PDT,Avança Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010978&codigoMunicipio=88013,
 Vereador,ROBERTO VILODRE DE SOUZA,ROBERTO WILODRE,33000,PMN,FRENTE POLITICA CIDADÃ,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033999&codigoMunicipio=88013,http://robertowilodre.com
 Vereador,RODRIGO CHAGAS SILVEIRA,RODRIGO CHAGAS SILVEIRA,65678,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000345&codigoMunicipio=88013,
-Vereador,RODRIGO MARTINI MARONI,RODRIGO MARONI,65656,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000346&codigoMunicipio=88013,
+Vereador,RODRIGO MARINI MARONI,RODRIGO MARONI,65656,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000346&codigoMunicipio=88013,
 Vereador,ROGÉRIO AMARAL,ROGÉRIO AMARAL,40400,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010647&codigoMunicipio=88013,http://WWW.ROGERIOAMARAL.COM.BR
 Vereador,ROGERIO FRAGA SCHVARSTZHAUPT,ROGERIO FRAGA,17023,PSL,Renova Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033237&codigoMunicipio=88013,
 Vereador,RONI ANGELO FERRARI,RONI CASA DA SOPA DA TINGA,14100,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000474&codigoMunicipio=88013,
@@ -571,13 +574,13 @@ Vereador,THIAGO PEREIRA DUARTE,DR THIAGO DUARTE,12122,PDT,Avança Porto Alegre,h
 Vereador,THYAGO SOUZA COSTA,THYAGO COSTA,31013,PHS,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010650&codigoMunicipio=88013,
 Vereador,TICIANA DE OLIVEIRA ALVARES,TITI - TICIANA ALVARES,65651,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000351&codigoMunicipio=88013,
 Vereador,UBIRAJARA RIBEIRO DA ROCHA,BIRA,40420,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010651&codigoMunicipio=88013,
-Vereador,VALDEMIR LIMA FERNANDES,PARDAL, VALDEMIR FERNANDES,43043,PV,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033017&codigoMunicipio=88013,
+Vereador,VALDEMIR LIMA FERNANDES,PARDAL VALDEMIR FERNANDES,43043,PV,COLIGAÇÃO PR/PV/PRTB,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000033017&codigoMunicipio=88013,
 Vereador,VALDIR RAUPP RAMOS,VALDIR RAUPP,15155,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001032&codigoMunicipio=88013,
 Vereador,VALNEY LUIZ VARGAS DA SILVA,PROFESSOR VARGAS,31056,PHS,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010652&codigoMunicipio=88013,
 Vereador,VALTER LUIS DA COSTA NAGELSTEIN,VALTER NAGELSTEIN,15200,PMDB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000001033&codigoMunicipio=88013,
 Vereador,VANDELINO LIPERT BEHENCK,VANDO LIPERT,65005,PC do B,Juntos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000352&codigoMunicipio=88013,
 Vereador,VANIUS GUARIGLIA,PROF. VANIUS,14880,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000481&codigoMunicipio=88013,
-Vereador,VERA JUSTINA GUASSO,VERA GUASSO,16123,PSTU,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032925&codigoMunicipio=88013,http://www,pstu.org.br
+Vereador,VERA JUSTINA GUASSO,VERA GUASSO,16123,PSTU,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000032925&codigoMunicipio=88013,http://wwwpstu.org.br
 Vereador,VERA LUCIA DE SOUZA,VERA SOUZA,40062,PSB,Unidos por Porto Alegre,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000010653&codigoMunicipio=88013,
 Vereador,VERA LUCIA ROSA,VIC PERONI,13800,PT,COLIGAÇÃO PT - PPL - PTC,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000406&codigoMunicipio=88013,http://WWW.VICPERONI.WORDPRES.COM
 Vereador,VERA LUCIA TEIXEIRA PEDROZO,VERINHA PEDROZO,14890,PTB,Partido não coligado,http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000000482&codigoMunicipio=88013,

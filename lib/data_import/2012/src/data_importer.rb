@@ -46,7 +46,8 @@ class DataImporter
 	end
 
 	def get_short_name(row)
-		row.children[4].child.text
+		short_name = row.children[4].child.text
+    short_name.gsub(",", "") # found some names with commas, so...removing them
 	end
 
 	def get_number(row)
@@ -78,11 +79,12 @@ class DataImporter
   
   def get_site_link
     a_site = @profile_details_doc.xpath("//a[@style='color: #375F8A;']")
-    return (a_site ? a_site.text.strip : nil)
+    return (a_site ? a_site.text.strip.gsub(",", "") : nil)
   end
 
 	def remove_specials(text)
 		text.gsub! /[\r\n\t]/, ""
+    text.gsub! ",", ""
 		text.strip!
 	end
 end

@@ -10,7 +10,7 @@ File.open('candidates_2012.txt', 'w') do |file|
   end
 
   puts "Loading Vereador Candidates..."
-  pages = 1..59
+  pages = 1..60
   pages.each do |num|
     vereador_list_url = "http://divulgacand2012.tse.jus.br/divulgacand2012/pesquisarCandidato.action?siglaUFSelecionada=RS&codigoMunicipio=88013&d-3573211-p=#{num}&noCandLimpo=&codigoCargo=13" 
   	puts "Loading page #{num} ..."
