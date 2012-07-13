@@ -3,8 +3,8 @@
 FactoryGirl.define do
   factory :opinion do
     id 1
-    user nil
-    proposal nil
-    agree false
+    user
+    proposal
+    value 1
   end
 end

@@ -16,13 +16,13 @@ Funcionalidade: Opinar sobre uma proposta
     Dado que eu estou visualizando uma proposta 
     Então eu tenho a opção de concordar ou discordar de uma proposta
 
-  @working
   Cenário: Concordar com proposta
     Dado que eu queira concordar com uma proposta
     Quando eu seleciono a opção concordar
     Então a opção concordar ficará destacada apenas para mim para eu recordar minha opinião
     E minha opinião será contabilizada na contagem da opção concordar
 
+  @working
   Cenário: Discordar com proposta
     Dado que eu queira discordar com uma proposta
     Quando eu seleciono a opção discordar

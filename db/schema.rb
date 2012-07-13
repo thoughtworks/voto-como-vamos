@@ -44,13 +44,15 @@ ActiveRecord::Schema.define(:version => 20120712235000) do
   create_table "opinions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "proposal_id"
-    t.boolean  "agree"
+    t.integer  "value"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   add_index "opinions", ["proposal_id"], :name => "index_opinions_on_proposal_id"
+  add_index "opinions", ["user_id", "proposal_id"], :name => "index_opinions_on_user_id_and_proposal_id", :unique => true
   add_index "opinions", ["user_id"], :name => "index_opinions_on_user_id"
+  add_index "opinions", ["value"], :name => "index_opinions_on_value"
 
   create_table "ownerships", :force => true do |t|
     t.integer "user_id"

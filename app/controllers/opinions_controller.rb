@@ -1,8 +1,12 @@
-class OpinionController < ApplicationController
+class OpinionsController < ApplicationController
 
   def create
-    Opinion.create params_for_current_user
+    Opinion.create params_for_current_user, :as => :admin
     redirect_to proposal_path params[:opinion][:proposal_id]
+  end
+
+  def new
+    create
   end
 
   private

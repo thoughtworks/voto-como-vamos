@@ -1,4 +1,6 @@
 # encoding: utf-8
+require "components/opinion_widget"
+
 class ProposalsController < ApplicationController
   before_filter :load_candidate, :except => [:index, :show]
 

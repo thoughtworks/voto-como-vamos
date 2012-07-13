@@ -475,19 +475,18 @@ Então /^minha opinião será contabilizada na contagem da opção concordar$/ d
 end
 
 Dado /^que eu queira discordar com uma proposta$/ do
-  pending # express the regexp above with the code you wish you had
 end
 
 Quando /^eu seleciono a opção discordar$/ do
-  pending # express the regexp above with the code you wish you had
+  find("#opinion a.disagree").click
 end
 
 Então /^a opção discordar ficará destacada apenas para mim para eu recordar minha opinião$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_selector "#opinion .disagree.highlight"
 end
 
 Então /^minha opinião será contabilizada na contagem da opção discordar$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content "1"
 end
 
 Dado /^que eu queria concordar com uma proposta que discordei anteriormente$/ do

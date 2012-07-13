@@ -12,6 +12,7 @@ VotoComoVamos::Application.routes.draw do
   end
 
   resources :proposals
+  resources :opinions
 
   root :to => 'welcome#index'
 end
