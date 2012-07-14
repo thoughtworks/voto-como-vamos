@@ -1,5 +1,17 @@
-# -*- encoding : utf-8 -*-
+# -*- encoding : utf-8
 WELCOME_MESSAGE = "Frase bem queridona (by Silvia)"
+
+def login_with(mock_options = nil)
+  OmniAuth.config.test_mode = true
+
+  if mock_options == :invalid_credentials
+    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
+  elsif mock_options
+    OmniAuth.config.add_mock :facebook, mock_options
+  end
+
+  visit "/auth/facebook"
+end
 
 Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
@@ -108,6 +120,22 @@ end
 
 Dado /^que existe um candidato com propostas$/ do
   @candidate = FactoryGirl.create :candidate_with_proposals
+end
+
+Dado /^que existe um candidato sem twitter com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_without_twitter
+end
+
+Dado /^que existe um candidato sem facebook com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_without_facebook
+end
+
+Dado /^que existe um candidato sem blog com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_without_blog
+end
+
+Dado /^que existe um candidato sem site com propostas$/ do
+  @candidate = FactoryGirl.create :candidate_without_site
 end
 
 Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
@@ -236,18 +264,6 @@ end
 
 Então /^ele deve ser uma mensagem informando que seu perfil é gerenciado pelo candidato$/ do
   page.should have_content('Este perfil é gerenciado pelo Candidato')
-end
-
-def login_with(mock_options = nil)
-  OmniAuth.config.test_mode = true
-
-  if mock_options == :invalid_credentials
-    OmniAuth.config.mock_auth[:facebook] = :invalid_credentials
-  elsif mock_options
-    OmniAuth.config.add_mock :facebook, mock_options
-  end
-
-  visit "/auth/facebook"
 end
 
 Dado /^que eu tenha uma proposta cadastrada$/ do
@@ -524,3 +540,7 @@ end
 Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do
 end
 
+Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|
+    page.should have_css("a[href='#{@candidate.send(social)}']") if devo == "devo"
+    page.should_not have_css("a[href='#{@candidate.send(social)}']") if devo == "não devo"
+end
