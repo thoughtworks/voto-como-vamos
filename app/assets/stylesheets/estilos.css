@@ -1,5 +1,5 @@
 @charset "utf-8";
-*{margin:0; padding:0; border:none; list-style:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#999999;}
+*{margin:0; padding:0; list-style:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#999999;}
 BODY{background-image:url('/assets/bg_topo.jpg'); background-repeat:no-repeat; background-position:center top;}
 
 /*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
@@ -17,9 +17,9 @@ BODY{background-image:url('/assets/bg_topo.jpg'); background-repeat:no-repeat; b
 #menu LI A:HOVER{font-size:12px; text-decoration:underline}
 #menu LI A.active{font-size:13px; text-decoration:underline;}
 #menu UL{margin-top:72px; margin-left:125px;}
-#busca{width:210px; float:left; margin-top:30px; height:38px; background-image:url('/assets/bg_busca.png'); background-repeat:no-repeat;}
+#busca{width:210px; float:left; margin-top:30px; height:38px; background-image:url('/assets/bg_busca.png'); background-repeat:no-repeat; }
 #busca INPUT{margin-left:5px; margin-top:3px; height:19px; width:166px; padding:3px;}
-
+input#buscar { border:none; }
 
 /*BAIXO*/
 #baixo{background-image:url('/assets/bg_baixo.jpg'); background-repeat:repeat-y; background-position:center top; display:table;}
