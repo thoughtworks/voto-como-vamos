@@ -157,15 +157,9 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :email, :name, :party, :phone, :role, :tse_number
+    :alliance, :about, :email, :short_name, :party, :phone, :role, :tse_number, :blog, :facebook, :site, :twitter
   ].each do |field|
     page.should have_content(@candidate.send(field))
-  end
-
-  [
-    :blog, :facebook, :site, :twitter
-  ].each do |field|
-    page.should have_css("a[href='#{@candidate.send(field)}']")
   end
 
   page.should have_css("img[src='#{@candidate.photo}']")
