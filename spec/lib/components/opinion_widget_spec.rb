@@ -70,7 +70,7 @@ describe OpinionWidget do
     end
 
     it "should render the delete url" do
-      widget.render.should include opinion_path(agreed.id)
+      widget.render.should include opinion_path(disagreed.id)
       widget.render.should include "data-method=\"delete\""
     end
 
