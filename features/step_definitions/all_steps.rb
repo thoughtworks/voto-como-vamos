@@ -24,7 +24,7 @@ Dado /^que estou logado no facebook$/ do
 end
 
 Então /^devo ser autenticado com sucesso$/ do
-  find_frame "iframe_canvas" do
+  within "iframe_canvas" do
     page.should have_content(WELCOME_MESSAGE)
   end
 end
@@ -40,7 +40,7 @@ Dado /^que existe um macro-tema cadastrado$/ do
 end
 
 Quando /^confirmo o pedido de autorização$/ do
-  find_frame "iframe_canvas" do
+  within "iframe_canvas" do
     find(".platform_dialog a").click
   end
   find('#grant_clicked input').click
@@ -197,7 +197,7 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
 end
 
 Quando /^confirmo a solicitação$/ do
-  find_frame "iframe_canvas" do
+  within "iframe_canvas" do
     click_button 'Confirmar'
   end
 end
@@ -304,13 +304,13 @@ Dado /^que estou na página de solicitação de administração do meu perfil$/ 
 end
 
 Quando /^aceito os termos de uso$/ do
-  find_frame "iframe_canvas" do
+  within "iframe_canvas" do
     check "Aceito os Termos e Condições"
   end
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  find_frame "iframe_canvas" do
+  within "iframe_canvas" do
     page.should have_content "Editar Candidato"
   end
 end
