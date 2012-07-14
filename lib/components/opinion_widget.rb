@@ -12,9 +12,9 @@ class OpinionWidget
 
   def render
     h.content_tag :div, id: :opinion do
-      h.content_tag(:span, @opinion.agreements.size, class: "agreed") <<
+      h.content_tag(:span, @opinion.agreements(@proposal).size, class: "agreed") <<
       link_for(:agree) <<
-      h.content_tag(:span, @opinion.disagreements.size, class: "disagreed") <<
+      h.content_tag(:span, @opinion.disagreements(@proposal).size, class: "disagreed") <<
       link_for(:disagree)
     end
   end

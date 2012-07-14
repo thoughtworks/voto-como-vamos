@@ -17,17 +17,25 @@ describe Opinion do
 
 
   it "should filter by agreements" do
-    Opinion.agreements.should be_empty
+    proposal = FactoryGirl.create :proposal
+    Opinion.agreements(proposal).should be_empty
 
+    FactoryGirl.create :opinion, value: Opinion::AGREE, proposal: proposal
+    Opinion.agreements(proposal).should have(1).item
+    
     FactoryGirl.create :opinion, value: Opinion::AGREE
-    Opinion.agreements.should_not be_empty
+    Opinion.agreements(proposal).should have(1).item
   end
 
   it "should filter by agreements" do
-    Opinion.disagreements.should be_empty
+    proposal = FactoryGirl.create :proposal
+    Opinion.disagreements(proposal).should be_empty
 
+    FactoryGirl.create :opinion, value: Opinion::DISAGREE, proposal: proposal
+    Opinion.disagreements(proposal).should have(1).item
+    
     FactoryGirl.create :opinion, value: Opinion::DISAGREE
-    Opinion.disagreements.should_not be_empty
+    Opinion.disagreements(proposal).should have(1).item
   end
 
   context "#agree?" do

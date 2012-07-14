@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :opinion do
-    id 1
     user
     proposal
     value 1

@@ -11,9 +11,6 @@ class Opinion < ActiveRecord::Base
   validates_uniqueness_of :user_id, :scope => [:proposal_id]
   validates_inclusion_of :value, :in => [AGREE, DISAGREE]
 
-  scope :agreements, where(:value => AGREE)
-  scope :disagreements, where(:value => DISAGREE)
-
   def agree?
     value == AGREE
   end
@@ -24,5 +21,13 @@ class Opinion < ActiveRecord::Base
 
   def self.opinion_for proposal, user
     where(user_id: user, proposal_id: proposal).first
+  end
+
+  def self.agreements proposal
+    where(proposal_id: proposal, value: AGREE)
+  end
+
+  def self.disagreements proposal
+    where(proposal_id: proposal, value: DISAGREE)
   end
 end

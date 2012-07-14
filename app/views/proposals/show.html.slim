@@ -6,4 +6,4 @@ p= @proposal.description
   = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
   = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
 br
-= OpinionWidget.new(@proposal, current_user).render
+= OpinionWidget.new(current_user, @proposal).render
