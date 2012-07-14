@@ -6,7 +6,6 @@ before_install:
   - gem update --system
   - rvm @default,@global do gem uninstall -ax bundler
   - gem install bundler --pre
-  - sudo service elasticsearch start
   - sleep 3 
 
 before_script:
