@@ -52,6 +52,11 @@
       = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
 
 h3.proposta
+  - if current_user.represents? @candidate
+    = link_to "Adicionar proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal"
+    br
+    br  
+
   = "Propostas (#{@candidate.proposals.size})"
 - @candidate.proposals.each do |proposal|
   = render :partial => 'proposal', :locals => { :proposal => proposal }
