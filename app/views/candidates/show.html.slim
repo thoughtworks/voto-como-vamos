@@ -3,7 +3,7 @@ div class="row"
     h3
       = @candidate.role
     h1 class="tab"
-      = "#{@candidate.name} - #{@candidate.tse_number}"
+      = "#{@candidate.short_name} - #{@candidate.tse_number}"
   - if @candidate.press_agent
     p
       = t('candidates.show.press_agent')
