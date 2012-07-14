@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>VotoComoVamos</title>
-  <%= stylesheet_link_tag    "estilos", :media => "all" %>
+  <%= stylesheet_link_tag    "estilos" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -29,7 +29,8 @@
 
   <div id="baixo">
     <div id="esquerda">
-      &nbsp;<%= yield :left %>
+      <%= yield :left %>
+      &nbsp;
     </div> <!--fecha div ESQUERDA -->
 
     <div id="direita">

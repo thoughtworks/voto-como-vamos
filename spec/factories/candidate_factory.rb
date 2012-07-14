@@ -13,7 +13,7 @@ FactoryGirl.define do
     blog       'http://blog.fulano.com'
     facebook   'http://facebook.com/fulano.de.tal'
     twitter    'http://twitter.com/fulaninho'
-    photo      'http://myphoto.fulano.com'
+    photo      'http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=210000017152&codigoMunicipio=88013'
   end
 
   factory :candidate_with_proposals, :parent => :candidate do
