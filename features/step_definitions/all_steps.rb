@@ -510,22 +510,21 @@ Então /^minha opinião não fará mais parte da contagem de discordar$/ do
 end
 
 Dado /^que eu queria retirar minha opinião de uma proposta$/ do
-  pending # express the regexp above with the code you wish you had
+  find("#opinion .agree").click
 end
 
 Quando /^eu seleciono novamente a opinião que eu tinha selecionado$/ do
-  pending # express the regexp above with the code you wish you had
+  find(".highlight").click
 end
 
 Então /^a opção não ficará mais destacada$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should_not have_css("#opinion .highlight")
 end
 
 Então /^a minha opinião não fará mais parte da contagem$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should_not have_content("1")
 end
 
 Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do
-  pending # express the regexp above with the code you wish you had
 end
 

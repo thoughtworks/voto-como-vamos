@@ -22,7 +22,6 @@ Funcionalidade: Opinar sobre uma proposta
     Então a opção concordar ficará destacada apenas para mim para eu recordar minha opinião
     E minha opinião será contabilizada na contagem da opção concordar
 
-  @working
   Cenário: Discordar com proposta
     Dado que eu queira discordar com uma proposta
     Quando eu seleciono a opção discordar
@@ -45,6 +44,7 @@ Funcionalidade: Opinar sobre uma proposta
     E minha opinião não fará mais parte da contagem de discordar
     E minha opinião será contabilizada na contagem da opção concordar
 
+  @working
   Cenário: Retirar opnião
     Dado que eu queria retirar minha opinião de uma proposta
     Quando eu seleciono novamente a opinião que eu tinha selecionado
