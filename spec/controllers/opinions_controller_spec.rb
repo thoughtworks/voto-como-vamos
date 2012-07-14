@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OpinionController do
+describe OpinionsController do
 
   before do
     controller.stub!(:current_user => current_user)
@@ -19,7 +19,7 @@ describe OpinionController do
 
     before do
       Opinion.should_receive(:create)
-      .with(data_params)
+      .with(data_params, :as => :admin)
       .and_return(opinion)
 
       put :create, opinion: { proposal_id: proposal_id, agree: true }
