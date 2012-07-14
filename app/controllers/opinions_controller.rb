@@ -16,11 +16,13 @@ class OpinionsController < ApplicationController
   end
 
   def update
-
+    opinion = Opinion.where(:user_id => current_user.id, :id => params[:id]).first
+    opinion.update_attributes value: params[:opinion][:value]
+    redirect_to proposal_path opinion.proposal_id
   end
 
   def edit
-
+    update
   end
 
   private

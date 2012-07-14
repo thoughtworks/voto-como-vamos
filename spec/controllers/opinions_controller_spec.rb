@@ -6,14 +6,14 @@ describe OpinionsController do
     controller.stub!(:current_user => current_user)
   end
 
-  let(:opinion) {  mock_model(Opinion) } 
+  let(:opinion) {  mock_model(Opinion, value: -1) } 
   let(:current_user) { mock_model(User) }
   let ( :proposal_id ) { 1 }
 
   describe "create" do
     let ( :data_params ) { { 
       "proposal_id" => proposal_id.to_s,
-      "agree"       => true,
+      "value"       => "1",
       "user_id"     => current_user.id
     }}
 
@@ -22,7 +22,7 @@ describe OpinionsController do
       .with(data_params, :as => :admin)
       .and_return(opinion)
 
-      put :create, opinion: { proposal_id: proposal_id, agree: true }
+      put :create, opinion: { proposal_id: proposal_id, value: 1 }
     end
 
     it { should respond_with(:redirect) }
@@ -44,5 +44,24 @@ describe OpinionsController do
     end
 
     it { should respond_with(:redirect) }
+  end
+
+  describe "update" do 
+
+    let(:value) { "-1" }
+
+    before do
+      Opinion.should_receive(:where)
+      .with(user_id: current_user.id, id: opinion.id.to_s)
+      .and_return([opinion])
+
+      opinion.should_receive(:proposal_id).and_return proposal_id
+      opinion.should_receive(:update_attributes).with(value: value).and_return true
+
+      put :update, id: opinion.id,  opinion: { proposal_id: proposal_id, value: value }
+    end
+
+    it { should respond_with(:redirect) }
+
   end
 end

@@ -4,12 +4,12 @@ WELCOME_MESSAGE = "Frase bem queridona (by Silvia)"
 Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
-  @user = test_users.create(true, Settings.facebook_scopes)
-  User.create!(
-    provider: 'facebook',
-    uid: @user['id'],
-    name: 'Test User',
-    email: 'test@test.com')
+    @user = test_users.create(true, Settings.facebook_scopes)
+    User.create!(
+      provider: 'facebook',
+      uid: @user['id'],
+      name: 'Test User',
+      email: 'test@test.com')
 end
 
 Quando /^eu acesso a página principal$/ do
@@ -24,7 +24,7 @@ Dado /^que estou logado no facebook$/ do
 end
 
 Então /^devo ser autenticado com sucesso$/ do
-  within_frame "iframe_canvas" do
+  find_frame "iframe_canvas" do
     page.should have_content(WELCOME_MESSAGE)
   end
 end
@@ -32,7 +32,7 @@ end
 Dado /^que sou um usuário não cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
-  @user = test_users.create(false)
+    @user = test_users.create(false)
 end
 
 Dado /^que existe um macro-tema cadastrado$/ do
@@ -40,7 +40,7 @@ Dado /^que existe um macro-tema cadastrado$/ do
 end
 
 Quando /^confirmo o pedido de autorização$/ do
-  within_frame "iframe_canvas" do
+  find_frame "iframe_canvas" do
     find(".platform_dialog a").click
   end
   find('#grant_clicked input').click
@@ -119,9 +119,9 @@ Quando /^solicitamos envio de reinvindicação de e\-mail$/ do
 end
 
 Dado /^que existem alguns candidatos válidos$/ do
- @candidates = 3.times.map do |i|
-   FactoryGirl.create :candidate, email: "candidato#{i}@tse.gov.br" 
- end
+  @candidates = 3.times.map do |i|
+    FactoryGirl.create :candidate, email: "candidato#{i}@tse.gov.br" 
+  end
 end
 
 Quando /^eu preencho um (titulo|abstract|descrição) com muitos caracteres$/ do |field|
@@ -157,7 +157,7 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :email, :short_name, :party, :phone, :role, :tse_number
+    :alliance, :about, :email, :name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
   end
@@ -203,7 +203,7 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
 end
 
 Quando /^confirmo a solicitação$/ do
-  within_frame "iframe_canvas" do
+  find_frame "iframe_canvas" do
     click_button 'Confirmar'
   end
 end
@@ -217,7 +217,7 @@ Quando /^o candidato editar seu perfil$/ do
 end
 
 Quando /^alterar o campo (.*?) para '(.*?)'$/ do |field_name, about|
- fill_in field_name, :with => about
+  fill_in field_name, :with => about
 end
 
 Quando /^marcar '(.*?)' no campo Assessoria de Imprensa$/ do |option|
@@ -293,11 +293,11 @@ end
 Quando /^entro com minhas credenciais no facebook$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
-  @user = test_users.create(false)
-  fill_in "email", with: @user['email']
-  fill_in "pass", with: @user['password']
-  click_button "Log In"
-  find('#grant_clicked input').click  
+    @user = test_users.create(false)
+    fill_in "email", with: @user['email']
+    fill_in "pass", with: @user['password']
+    click_button "Log In"
+    find('#grant_clicked input').click  
 end
 
 Então /^devo ir para aceitação dos termos de uso$/ do
@@ -310,13 +310,13 @@ Dado /^que estou na página de solicitação de administração do meu perfil$/ 
 end
 
 Quando /^aceito os termos de uso$/ do
-  within_frame "iframe_canvas" do
+  find_frame "iframe_canvas" do
     check "Aceito os Termos e Condições"
   end
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  within_frame "iframe_canvas" do
+  find_frame "iframe_canvas" do
     page.should have_content "Editar Candidato"
   end
 end
@@ -471,7 +471,7 @@ Então /^a opção concordar ficará destacada apenas para mim para eu recordar 
 end
 
 Então /^minha opinião será contabilizada na contagem da opção concordar$/ do
-  page.should have_content "1"
+  find(".agreed").should have_content "1"
 end
 
 Dado /^que eu queira discordar com uma proposta$/ do
@@ -486,27 +486,31 @@ Então /^a opção discordar ficará destacada apenas para mim para eu recordar 
 end
 
 Então /^minha opinião será contabilizada na contagem da opção discordar$/ do
-  page.should have_content "1"
+  find(".disagreed").should have_content "1"
 end
 
 Dado /^que eu queria concordar com uma proposta que discordei anteriormente$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Quando /^eu seleciono concordar$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Então /^a opção concordar ficará destacada$/ do
-  pending # express the regexp above with the code you wish you had
+  step "eu seleciono a opção discordar"
 end
 
 Então /^a opção discordar não ficará mais destacada$/ do
-  pending # express the regexp above with the code you wish you had
+  page.should_not have_selector "#opinion .disagree.highlight"
 end
 
 Então /^minha opinião não fará mais parte da contagem de discordar$/ do
-  pending # express the regexp above with the code you wish you had
+  find(".disagreed").should have_content "0"
+end
+
+Dado /^que eu queria discordar com uma proposta que concordei anteriormente$/ do
+  step "eu seleciono a opção concordar"
+end
+
+Então /^a opção concordar não ficará mais destacada$/ do
+  page.should_not have_selector "#opinion .agree.highlight"
+end
+
+Então /^minha opinião não fará mais parte da contagem de concordar$/ do
+  find(".agreed").should have_content "0"
 end
 
 Dado /^que eu queria retirar minha opinião de uma proposta$/ do
@@ -522,7 +526,7 @@ Então /^a opção não ficará mais destacada$/ do
 end
 
 Então /^a minha opinião não fará mais parte da contagem$/ do
-  page.should_not have_content("1")
+  find(".agreed").should have_content("0")
 end
 
 Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do

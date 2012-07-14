@@ -38,7 +38,7 @@ class OpinionWidget
 
     else
       h.link_to t("opinion.#{opinion}"),
-                edit_opinion_path(current_opinion.id, params_for(invert(value))),
+                edit_opinion_path(current_opinion.id, params_for(value)),
                 class: class_for(opinion)
     end
 
@@ -58,10 +58,6 @@ class OpinionWidget
     @current_opinion = @opinion.opinion_for(@proposal, @user) unless @fetched
     @fetched = true
     @current_opinion
-  end
-
-  def invert value
-    value * -1
   end
 
   def params_for opinion
