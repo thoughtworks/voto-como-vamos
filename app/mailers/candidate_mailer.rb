@@ -6,7 +6,7 @@ class CandidateMailer < ActionMailer::Base
     @candidate = Candidate.find(candidate_id)
     mail(
       :to => @candidate.email, 
-      :subject => "Voto Como Vamos! Reinvindique a administração do seu perfil"
+      :subject => "Voto Como Vamos! Reivindique a administração do seu perfil"
     )
   end
 end

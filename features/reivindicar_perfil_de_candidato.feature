@@ -1,13 +1,13 @@
 #language: pt
-Funcionalidade: Reinvindicar conta de candidato
+Funcionalidade: Reivindicar conta de candidato
   Como candidato
-  Eu desejo reinvindicar uma conta no Voto Como Vamos
+  Eu desejo reivindicar uma conta no Voto Como Vamos
   Para que eu possa compartilhar minhas informações e propostas com os eleitores
 
   NARRATIVA:
   ==========
 
-  Esta Feature implementa a reinvindicação de uma conta de candidato e a submissão da ficha completa
+  Esta Feature implementa a reivindicação de uma conta de candidato e a submissão da ficha completa
   que contem as informações importadas do candidato tse, as informações básicas, os links de redes sociais
   e os termos de uso que da aplicação Voto Como Vamos.
 
@@ -19,7 +19,7 @@ Funcionalidade: Reinvindicar conta de candidato
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
   @javascript
-  Cenario: Recebendo e-mail de reinvidicação de propriedade
+  Cenario: Recebendo e-mail de reivindicação de propriedade
     Dado que o Voto Como Vamos me enviou um e-mail solicitando que eu administre meu peril
     Quando acesso endereço de solicitação fornecido no e-mail
     E entro com minhas credenciais no facebook

@@ -114,7 +114,7 @@ Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
   @candidate.email.should match(/^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i)
 end
 
-Quando /^solicitamos envio de reinvindicação de e\-mail$/ do
+Quando /^solicitamos envio de reivindicação de e\-mail$/ do
   Ownership.send_revindication_to_all_candidates 
 end
 
@@ -137,7 +137,7 @@ Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) 
   page.should have_selector('#proposal_description + .error') if field == 'descrição'
 end
 
-Quando /^solicitamos envio de reinvindicação de perfil em massa$/ do
+Quando /^solicitamos envio de reivindicação de perfil em massa$/ do
   Ownership.send_revindication_to_all_candidates 
 end
 
