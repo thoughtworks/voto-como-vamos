@@ -18,3 +18,4 @@ pickle-email-*.html
 config/application.yml
 *.swp
 .DS_STORE
+solr

@@ -3,4 +3,4 @@ h1 Frase bem queridona (by Silvia)
 ul
   - @categories.each do |c|
     li
-      = link_to c.name, proposals_path(:categories => [c.name])
+      = link_to c.name, proposals_path(:categories => [c.id])

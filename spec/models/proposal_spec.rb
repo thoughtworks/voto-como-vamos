@@ -15,39 +15,19 @@ describe Proposal do
 
   it { should validate_presence_of(:description) }
 
-  let(:search_engine) { double('Search Engine Wrapper') }
-
-  it 'can be found by text criteria' do
-    search_engine.should_receive(:search).with('test', :load => true)
-
-    Proposal.stub!(:tire).and_return(search_engine)
-    Proposal.search('test')
-  end
-
   it 'can be found by text criteria and filtered by categories' do
-    search_engine.should_receive(:search).with(nil, :load => true).and_yield
-    Proposal.should_receive(:filter).with(:terms, :categories => ['category'])
-
-    Proposal.stub!(:tire).and_return(search_engine)
-    Proposal.search(nil, 'category')
+    category = FactoryGirl.create :category
+    proposal = FactoryGirl.create :proposal, :title => 'Test', :categories => [category]
+    Sunspot.commit
+    results = Proposal.search_in_categories('Test', [category.id])
+    results.should include(proposal)
   end
 
-  it 'indexes categories together with proposal' do
-    categories = [
-      mock_model(Category, :name => 'category1'), 
-      mock_model(Category, :name => 'category2')
-    ]
-    proposal = Proposal.new(
-      :title => 'Title',
-      :abstract => 'Abstract',
-      :description => 'Description',
-      :categories => categories
-    )
-    proposal.to_indexed_json.should == {
-      :title => 'Title',
-      :abstract => 'Abstract',
-      :description => 'Description',
-      :categories => ['category1', 'category2']
-    }.to_json
+  it 'should not include another categories than specified in search' do
+    another_category = FactoryGirl.create :category
+    proposal = FactoryGirl.create :proposal, :title => 'Test'
+    Sunspot.commit
+    results = Proposal.search_in_categories('Test', [another_category.id])
+    results.should_not include(proposal)
   end
 end

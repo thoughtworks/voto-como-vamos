@@ -74,21 +74,9 @@ describe CandidatesController do
     let(:candidates) { [double('candidate1'), double('candidate2')] }
 
     context 'when listing' do
-      it 'should order the list of candidates by name' do
-        Candidate.should_receive(:order).with('short_name ASC').and_return(candidates)
-
-        get :index
-
-        should respond_with(:success)
-        should assign_to(:candidates).with(candidates)
-        should render_template('index')
-      end
-    end
-
-    context 'when searching' do
       it 'should query the list of candidates based on the search criteria' do
-        Candidate.should_receive(:search).
-          with('test', :load => true).
+        Candidate.should_receive(:text_search).
+          with('test').
           and_return(candidates)
 
         get :index, :query => 'test'

@@ -5,7 +5,7 @@ class ProposalsController < ApplicationController
   before_filter :load_candidate, :except => [:index, :show]
 
   def index
-    @proposals = Proposal.search(params[:query], params[:categories])
+    @proposals = Proposal.search_in_categories(params[:query], params[:categories])
   end
 
   def show

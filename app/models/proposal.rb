@@ -1,8 +1,5 @@
 # encoding: utf-8
 class Proposal < ActiveRecord::Base
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
-
   has_and_belongs_to_many :categories
 
   belongs_to :candidate
@@ -18,25 +15,17 @@ class Proposal < ActiveRecord::Base
 
   validates :description, :presence => true
 
-  def self.search(query_string, categories = nil)
-    tire.search(query_string, :load => true) do
-      filter :terms, :categories => [categories] if categories
-    end
+  def self.search_in_categories(query_string, categories = [])
+    search do
+      fulltext query_string
+      with(:category_ids, categories)
+    end.results
   end
 
-  mapping do
-    indexes :title, :analyzer => 'snowball', :boost => 3
-    indexes :abtract, :analyzer => 'snowball', :boost => 2
-    indexes :description, :analyzer => 'snowball', :boost => 1
-    indexes :categories, :analyzer => 'keyword' 
-  end
-
-  def to_indexed_json
-    {
-      :title => title,
-      :abstract => abstract,
-      :description => description,
-      :categories => categories.map { |c| c.name }
-    }.to_json
+  searchable do
+    text :title, :boost => 5
+    text :abstract
+    text :description
+    integer :category_ids, :multiple => true, :references => Category
   end
 end

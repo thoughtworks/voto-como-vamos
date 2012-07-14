@@ -365,7 +365,6 @@ Dado /^que existem alguns candidatos que não atendem ao criterio de busca$/ do
 end
 
 Quando /^peço para listar os candidatos de acordo com o critério de busca$/ do
-  Candidate.tire.index.refresh
   visit candidates_path
   fill_in "query", :with => "XYZ" 
   click_button "Buscar"
@@ -413,7 +412,6 @@ Dado /^que estou na página inicial da aplicação$/ do
 end
 
 Quando /^eu escolho determinado macrotema$/ do
-  Proposal.tire.index.refresh
   click_link @in_category.name
 end
 

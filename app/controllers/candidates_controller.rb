@@ -4,11 +4,7 @@ class CandidatesController < ApplicationController
   before_filter :authorize_candidate, :only => [:edit, :update]
 
   def index
-    @candidates = if params[:query].present?
-      Candidate.search(params[:query], :load => true)
-    else
-      Candidate.order('short_name ASC')
-    end
+    @candidates = Candidate.text_search(params[:query])
   end
 
   def show

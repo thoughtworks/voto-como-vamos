@@ -1,8 +1,5 @@
 require 'valid_email'
 class Candidate < ActiveRecord::Base
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
-
   has_many :proposals
 
   before_create :generate_obfuscated_slug
@@ -12,6 +9,19 @@ class Candidate < ActiveRecord::Base
   validates :phone, :length => { :is => 13 }, :allow_nil => true
   validates :email, :presence => true, :email => true
   validates :site, :blog, :facebook, :twitter, :url => true, :allow_nil => true
+
+  searchable do
+    text :name
+    text :short_name
+    string :short_name
+  end
+
+  def self.text_search(query_string)
+    search do
+      fulltext query_string 
+      order_by(:short_name)
+    end.results
+  end
 
   def generate_obfuscated_slug
     self.obfuscated_slug = Digest::SHA1.hexdigest name

@@ -11,8 +11,8 @@ gem 'slim'
 gem 'factory_girl_rails'
 gem 'valid_email'
 gem 'simple_form'
-gem 'tire'
 gem 'will_paginate', '~> 3.0'
+gem 'sunspot_rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -29,6 +29,7 @@ group :test, :development do
   gem 'sqlite3'
   gem 'hitch'
   gem 'spork'
+  gem 'sunspot_solr'
 end
 
 group :test do
