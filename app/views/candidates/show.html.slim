@@ -11,28 +11,40 @@
       = @candidate.alliance
     p.telefone
       = @candidate.phone
-    p.telefone
+    p.email
       a href="mailto:#{@candidate.email}" #{@candidate.email}
-    
+
     - if @candidate.press_agent
       p
         = t('candidates.show.press_agent')
     - unless @candidate.press_agent.nil? || @candidate.press_agent
       p
         = t('candidates.show.candidate')
-
-    ul
-      li.facebook
-        = @candidate.facebook
-      li.twitter
-        = @candidate.twitter
-      li.site
-        = @candidate.site
-      li.blog
-        = @candidate.blog
-    
-    .sobre
-      h4 Sobre o candidato
+    br
+    ol.contact
+      li
+        a href="mailto:#{@candidate.email}" #{@candidate.email}
+      li
+        = @candidate.phone
+    ol.social
+      - if @candidate.blog?
+        li
+          a.blog href="#{@candidate.blog}" title="Blog"
+            span Blog
+      - if @candidate.facebook?
+        li
+          a.facebook href="#{@candidate.facebook}" title="Facebook"
+            span Facebook
+      - if @candidate.site?
+        li
+          a.site href="#{@candidate.site}" title="Site"
+            span Site
+      - if @candidate.twitter != nil
+        li
+          a.twitter href="#{@candidate.twitter}" title="Twitter"
+            span Twitter
+    - if @candidate.about?
+      h3 Sobre o candidato
       p
         = @candidate.about
 

@@ -21,13 +21,6 @@ Funcionalidade: Editar perfil candidato
     E confirmar a alteração
     Entao ele deve ver suas informações atualizadas
 
-  Cenario: Cadastro com todos
-    Dado que eu acesso o perfil do mesmo
-    Entao eu devo ver o twitter
-    Entao eu devo ver o facebook
-    Entao eu devo ver o blog
-    Entao eu devo ver o site
-
   Cenário: Atualização com erro de validação
     Quando o candidato editar seu perfil
     E alterar o campo Telefone para 'invalido'

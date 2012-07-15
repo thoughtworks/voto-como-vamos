@@ -185,7 +185,7 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :email, :short_name, :party, :phone, :role, :tse_number, :blog, :facebook, :site, :twitter
+    :alliance, :about, :email, :short_name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
   end
@@ -331,6 +331,12 @@ Então /^devo poder administrar o meu perfil$/ do
   end
 end
 
+Dado /^que eu queira concordar com uma proposta$/ do
+end
+
+Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do
+end
+
 Dado /^que outro candidato tenha uma proposta cadastrada$/ do
   candidate = FactoryGirl.create :candidate
   @proposal = FactoryGirl.create :proposal, :candidate => candidate
@@ -467,9 +473,6 @@ Então /^eu tenho a opção de concordar ou discordar de uma proposta$/ do
   page.should have_selector "#opinion .disagree"
 end
 
-Dado /^que eu queira concordar com uma proposta$/ do
-end
-
 Quando /^eu seleciono a opção concordar$/ do
   find("#opinion a.agree").click
 end
@@ -535,9 +538,6 @@ end
 
 Então /^a minha opinião não fará mais parte da contagem$/ do
   find(".agreed").should have_content("0")
-end
-
-Então /^eu poderei votar no futuro em qualquer uma das duas opiniões$/ do
 end
 
 Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|

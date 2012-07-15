@@ -21,4 +21,32 @@ FactoryGirl.define do
       candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
     end
   end
+
+  factory :candidate_without_twitter, :parent => :candidate do
+    after(:build) do |candidate|
+      candidate.twitter = nil
+      candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
+    end
+  end
+  
+  factory :candidate_without_facebook, :parent => :candidate do
+    after(:build) do |candidate|
+      candidate.facebook = nil
+      candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
+    end
+  end
+  
+  factory :candidate_without_blog, :parent => :candidate do
+    after(:build) do |candidate|
+      candidate.blog = nil
+      candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
+    end
+  end
+
+  factory :candidate_without_site, :parent => :candidate do
+    after(:build) do |candidate|
+      candidate.site = nil
+      candidate.proposals = 2.times.map { FactoryGirl.build(:proposal, :candidate => candidate) }
+    end
+  end
 end
