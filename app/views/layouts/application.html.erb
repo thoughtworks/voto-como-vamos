@@ -3,8 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>VotoComoVamos</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag  "application", "estilos" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -60,5 +59,7 @@
     </div> <!--fecha div DIREITA -->
   </div> <!--fecha div BAIXO -->
   </div> <!--fecha div GERAL -->
+  <script src='http://connect.facebook.net/en_US/all.js'></script>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

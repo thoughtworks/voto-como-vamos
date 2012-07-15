@@ -7,3 +7,5 @@ p= @proposal.description
   = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
 br
 = OpinionWidget.new(current_user, @proposal).render
+a href="#" class="share" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
+  = t("common.share")
