@@ -10,6 +10,8 @@ describe Candidate do
 
     it { should ensure_length_of(:about).is_at_most(500) }
     it { should ensure_length_of(:phone).is_equal_to(13) }
+    it { should allow_value(nil).for(:phone) }
+    it { should allow_value("").for(:phone) }
        
     it { should_not allow_value("blah").for(:site) }
     it { should allow_value("http://www.blah.com").for(:site) }
