@@ -1,4 +1,5 @@
 h2= @proposal.title
+p= @proposal.categories.map {|category| category.name }.to_sentence
 p= @proposal.abstract
 p= @proposal.description
 
