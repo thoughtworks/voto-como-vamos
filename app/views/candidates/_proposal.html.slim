@@ -1,7 +1,9 @@
 .proposta
-	h4
-		= proposal.title
-	p 
-	  = proposal.abstract
-	.saibamais
-		= link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
+  h4
+    = proposal.title
+  p
+    = proposal.categories.map { |category| category.name }.to_sentence 
+  p
+    = proposal.abstract
+  .saibamais
+    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
