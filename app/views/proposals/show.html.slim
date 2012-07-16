@@ -1,25 +1,3 @@
-javascript:
-  window.fbAsyncInit = function() {
-    FB.init({
-  appId      : '250842391695084', // App ID
-  channelUrl : 'http://voto-como-vamos.herokuapp.com//channel.html', // Channel File
-  status     : true, // check login status
-  cookie     : true, // enable cookies to allow the server to access the session
-  xfbml      : true  // parse XFBML
-  });
-
-  // Additional initialization code here
-  };
-
-  // Load the SDK Asynchronously
-  (function(d){
-  var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement('script'); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js";
-  ref.parentNode.insertBefore(js, ref);
-  }(document));
-
 h2= @proposal.title
 p= @proposal.abstract
 p= @proposal.description
@@ -29,15 +7,6 @@ p= @proposal.description
   = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
 br
 = OpinionWidget.new(current_user, @proposal).render
-a href="#" class="share" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
   = t("common.share")
 div id="fb-root"
 div class="fb-comments" data-href=edit_candidate_proposal_path(@candidate, @proposal) data-num-posts="5" data-width="700"
-javascript:
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=250842391695084";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));

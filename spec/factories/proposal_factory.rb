@@ -28,7 +28,7 @@ FactoryGirl.define do
     description 'Descrição'
     candidate
   end
-  
+
   factory :invalid_proposal_missing_abstract, :class => Proposal do
     title       'Título'
     abstract    ''

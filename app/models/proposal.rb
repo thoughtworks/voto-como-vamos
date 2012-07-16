@@ -5,11 +5,11 @@ class Proposal < ActiveRecord::Base
   belongs_to :candidate
   validates :candidate, :presence => true
 
-  validates :title, 
+  validates :title,
     :presence => true,
     :length => { :maximum => 100 }
 
-  validates :abstract, 
+  validates :abstract,
     :presence => true,
     :length => { :maximum => 300 }
 
