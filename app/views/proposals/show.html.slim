@@ -34,7 +34,7 @@ a href="#" class="share" data-title=@proposal.title data-description=@proposal.d
 div id="fb-root"
 div class="fb-comments" data-href=edit_candidate_proposal_path(@candidate, @proposal) data-num-posts="5" data-width="700"
 javascript:
-  function(d, s, id) {
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;

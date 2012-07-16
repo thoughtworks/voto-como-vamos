@@ -15,13 +15,3 @@
 //= require_tree .
 
 
-$("a.share").click(function(e) {
-  $this = $(this);
-
-  FB.ui($.extend($this.data(), {
-    method: "feed",
-    link: window.location.href
-  }));
-
-  e.preventDefault();
-});
