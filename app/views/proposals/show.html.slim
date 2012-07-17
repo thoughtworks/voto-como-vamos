@@ -1,7 +1,7 @@
 h2= @proposal.title
 p= @proposal.categories.map {|category| category.name }.to_sentence
 p= @proposal.abstract
-p= @proposal.description
+p= @proposal.description.gsub("\n", "<br/>").html_safe
 
 - if current_user.represents? @candidate
   = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
