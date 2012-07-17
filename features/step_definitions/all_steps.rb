@@ -25,8 +25,7 @@ Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
 end
 
 Quando /^eu acesso a página principal$/ do
-  require 'pry'; binding.pry 
-  visit root_url
+  visit root_path
 end
 
 Dado /^que estou logado no facebook$/ do
