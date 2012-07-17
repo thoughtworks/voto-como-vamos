@@ -53,10 +53,9 @@
 
 h3.proposta
   - if current_user.represents? @candidate
-    = link_to "Adicionar proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal"
+    = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "btn primary"
     br
     br  
-
   = "Propostas (#{@candidate.proposals.size})"
 - @candidate.proposals.each do |proposal|
   = render :partial => 'proposal', :locals => { :proposal => proposal }

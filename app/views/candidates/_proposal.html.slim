@@ -5,5 +5,5 @@
     = proposal.categories.map { |category| category.name }.to_sentence 
   p
     = proposal.abstract
-  .saibamais
-    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
+  .saiba_mais
+    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal), :class =>  'btn'
