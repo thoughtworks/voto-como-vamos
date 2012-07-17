@@ -2,7 +2,7 @@ class OwnershipsController < ApplicationController
   before_filter :load_candidate
 
   def new
-    @ownership = Ownership.new 
+    @ownership = Ownership.new
   end
 
   def create
@@ -15,8 +15,8 @@ class OwnershipsController < ApplicationController
       render :new
     end
   end
-  
-  private 
+
+  private
 
   def load_candidate
     @candidate = Candidate.find_by_obfuscated_slug!(params[:candidate_id])

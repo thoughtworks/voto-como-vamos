@@ -27,8 +27,7 @@ Funcionalidade: Reivindicar conta de candidato
 
   @javascript
   Cenario: Me tornando administrador do meu perfil de candidato
-    Dado que sou um usuário já cadastrado no Voto Como Vamos
-    E que estou logado no facebook
+    Dado que eu estou logado na aplicação
     E que estou na página de solicitação de administração do meu perfil
     Quando aceito os termos de uso
     E confirmo a solicitação

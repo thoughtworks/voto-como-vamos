@@ -49,7 +49,7 @@ describe SessionsController do
       end
 
       it "redirect to root path with canvas" do
-        response.should redirect_to(Settings.facebook_app_url)
+        response.should redirect_to(root_path)
       end
     end
   end

@@ -25,7 +25,8 @@ Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
 end
 
 Quando /^eu acesso a página principal$/ do
-  visit Settings.facebook_app_url
+  require 'pry'; binding.pry 
+  visit root_url
 end
 
 Dado /^que estou logado no facebook$/ do
@@ -36,9 +37,7 @@ Dado /^que estou logado no facebook$/ do
 end
 
 Então /^devo ser autenticado com sucesso$/ do
-  within_frame "iframe_canvas" do
-    page.should have_content(WELCOME_MESSAGE)
-  end
+  page.should have_content(WELCOME_MESSAGE)
 end
 
 Dado /^que sou um usuário não cadastrado no Voto Como Vamos$/ do
@@ -52,9 +51,7 @@ Dado /^que existe um macro-tema cadastrado$/ do
 end
 
 Quando /^confirmo o pedido de autorização$/ do
-  within_frame "iframe_canvas" do
-    find(".platform_dialog a").click
-  end
+  find(".platform_dialog a").click
   find('#grant_clicked input').click
 end
 
@@ -143,12 +140,12 @@ Dado /^que o cadastro do candidato possui um e\-mail válido$/ do
 end
 
 Quando /^solicitamos envio de reivindicação de e\-mail$/ do
-  Ownership.send_revindication_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates
 end
 
 Dado /^que existem alguns candidatos válidos$/ do
   @candidates = 3.times.map do |i|
-    FactoryGirl.create :candidate, email: "candidato#{i}@tse.gov.br" 
+    FactoryGirl.create :candidate, email: "candidato#{i}@tse.gov.br"
   end
 end
 
@@ -166,7 +163,7 @@ Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) 
 end
 
 Quando /^solicitamos envio de reivindicação de perfil em massa$/ do
-  Ownership.send_revindication_to_all_candidates 
+  Ownership.send_revindication_to_all_candidates
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
@@ -176,7 +173,7 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
     open_email(candidate.email)
     current_email.should be_delivered_from("admin@votocomovamos.org.br")
     current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate.reload.obfuscated_slug))
-  end  
+  end
 end
 
 Quando /^eu acesso o perfil do mesmo$/ do
@@ -225,9 +222,7 @@ Dado /^que estou na minha página de candidato ou do candidato que acessoro$/ do
 end
 
 Quando /^confirmo a solicitação$/ do
-  within_frame "iframe_canvas" do
-    click_button 'Confirmar'
-  end
+  click_button 'Confirmar'
 end
 
 Então /^devo ver que minha solicitação foi feita$/ do
@@ -307,28 +302,24 @@ Quando /^entro com minhas credenciais no facebook$/ do
     fill_in "email", with: @user['email']
     fill_in "pass", with: @user['password']
     click_button "Log In"
-    find('#grant_clicked input').click  
+    find('#grant_clicked input').click
 end
 
 Então /^devo ir para aceitação dos termos de uso$/ do
-  current_url.should =~ Regexp.new(Settings.facebook_app_url + new_candidate_ownership_path(@candidate.obfuscated_slug))
+  current_path.should == new_candidate_ownership_path(@candidate.obfuscated_slug)
 end
 
 Dado /^que estou na página de solicitação de administração do meu perfil$/ do
   @candidate = FactoryGirl.create :candidate
-  visit Settings.facebook_app_url + new_candidate_ownership_path(@candidate.obfuscated_slug)
+  visit new_candidate_ownership_path(@candidate.obfuscated_slug)
 end
 
 Quando /^aceito os termos de uso$/ do
-  within_frame "iframe_canvas" do
-    check "Aceito os Termos e Condições"
-  end
+  check "Aceito os Termos e Condições"
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  within_frame "iframe_canvas" do
-    page.should have_content "Editar Candidato"
-  end
+  page.should have_content "Editar Candidato"
 end
 
 Dado /^que eu queira concordar com uma proposta$/ do
@@ -388,7 +379,7 @@ end
 
 Quando /^peço para listar os candidatos de acordo com o critério de busca$/ do
   visit candidates_path
-  fill_in "query", :with => "XYZ" 
+  fill_in "query", :with => "XYZ"
   click_button "Buscar"
 end
 
@@ -420,7 +411,7 @@ end
 Dado /^que existem algumas propostas para cada macrotema$/ do
   @in_category = @categories.shift
 
-  @in_category_proposals = 2.times.map do |i| 
+  @in_category_proposals = 2.times.map do |i|
     FactoryGirl.create :proposal, :title => "In Proposal #{i}", :categories => [@in_category]
   end
 
@@ -448,8 +439,8 @@ end
 
 Dado /^que tenho permissão para administrar meu perfil$/ do
   Ownership.create!(
-    :user => @user, 
-    :candidate => @candidate, 
+    :user => @user,
+    :candidate => @candidate,
     :terms_and_conditions => '1'
   )
 end
@@ -465,7 +456,7 @@ end
 Então /^devo ver as informações da proposta$/ do
   [:title, :abstract, :description].each do |attribute|
     page.should have_content(@proposal.send(attribute))
-  end 
+  end
 end
 
 Então /^eu tenho a opção de concordar ou discordar de uma proposta$/ do
@@ -541,6 +532,6 @@ Então /^a minha opinião não fará mais parte da contagem$/ do
 end
 
 Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|
-    page.should have_css("a[href='#{@candidate.send(social)}']") if devo == "devo"
-    page.should_not have_css("a[href='#{@candidate.send(social)}']") if devo == "não devo"
+  page.should have_css("a[href='#{@candidate.send(social)}']") if devo == "devo"
+  page.should_not have_css("a[href='#{@candidate.send(social)}']") if devo == "não devo"
 end
