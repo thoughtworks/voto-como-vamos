@@ -1,6 +1,11 @@
-= simple_form_for([@candidate, @proposal]) do |f|
-  = f.input :title
-  = f.input :abstract
-  = f.input :description
-  = f.association :categories, :as => :check_boxes
-  = f.submit
+.span12
+	= simple_form_for([@candidate, @proposal]) do |f|
+		fieldset
+			legend
+				| Nova Proposta
+				= f.input :title
+				= f.input :abstract
+				= f.input :description
+				= f.association :categories, :as => :check_boxes, :wrapper => "options"
+				.actions
+					= f.submit t('common.save'), :class => 'btn primary'

@@ -1,5 +1,4 @@
-div
-  div.span12
+.span12
 	= simple_form_for ([@candidate, @proposal]) do |f|
 	  - if @proposal.errors.any?
 	    div.alert-message.error
@@ -8,22 +7,10 @@ div
 	  fieldset
 	    legend 
 	      | Editar Proposta
-        div.clearfix
-          = f.label :title
-          div.input
-            = f.text_field :title
-        div.clearfix
-          = f.label :abstract
-          div.input
-            = f.text_area :abstract
-        div.clearfix
-          = f.label :description
-          div.input
-            = f.text_area :description
-        div.clearfix
-          = f.label :categories
-          div.input
-            = f.association :categories, :as => :check_boxes
-        div.actions
+        = f.input :title
+        = f.input :abstract
+        = f.input :description
+        = f.association :categories, :as => :check_boxes, :wrapper => :options
+        .actions
           = f.submit t('common.save'), :class => 'btn primary'
           = link_to t('common.cancel'), candidate_proposal_path(@candidate,@proposal), :class => 'btn'
