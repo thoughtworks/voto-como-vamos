@@ -299,7 +299,7 @@ Quando /^entro com minhas credenciais no facebook$/ do
     @user = test_users.create(false)
     fill_in "email", with: @user['email']
     fill_in "pass", with: @user['password']
-    click_button "Log In"
+    find("#loginbutton input").click
     find('#grant_clicked input').click
 end
 
