@@ -94,15 +94,13 @@ Entao /^eu devo ver a página do candidato/ do
 end
 
 Entao /^eu devo ver uma mensagem informando que eu preciso preencher cada um dos três campos$/ do
-  page.should have_selector('#proposal_title + .error')
-  page.should have_selector('#proposal_abstract + .error')
-  page.should have_selector('#proposal_description + .error')
+  page.should have_selector('.error', :count => 3) 
 end
 
 Entao /^eu devo ver uma mensagem informando que o campo (descrição|abstract|titulo) é obriatório$/ do |field|
-  page.should have_selector('#proposal_title + .error') if field == 'titulo'
-  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
-  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+  page.should have_selector('.error') if field == 'titulo'
+  page.should have_selector('.error') if field == 'abstract'
+  page.should have_selector('.error') if field == 'descrição'
 end
 
 Dado /^que eu estou logado na aplicação$/ do
@@ -156,9 +154,9 @@ Quando /^eu preencho um (titulo|abstract|descrição) com muitos caracteres$/ do
 end
 
 Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) é inválido$/ do |field|
-  page.should have_selector('#proposal_title + .error') if field == 'titulo'
-  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
-  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+  page.should have_selector('.error') if field == 'titulo'
+  page.should have_selector('.error') if field == 'abstract'
+  page.should have_selector('.error') if field == 'descrição'
 end
 
 Quando /^solicitamos envio de reivindicação de perfil em massa$/ do
