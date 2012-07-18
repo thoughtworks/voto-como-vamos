@@ -1,3 +1,6 @@
+- content_for(:title) { @proposal.title }
+- content_for(:url) { candidate_proposal_url(@candidate, @proposal) }
+
 h2= @proposal.title
 p= @proposal.categories.map {|category| category.name }.to_sentence
 p= @proposal.abstract
