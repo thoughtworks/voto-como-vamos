@@ -32,7 +32,7 @@ Dado /^que estou logado no facebook$/ do
   visit "http://www.facebook.com"
   fill_in "email", with: @user['email']
   fill_in "pass", with: @user['password']
-  click_button "Log In"
+  find("#loginbutton input").click
 end
 
 Então /^devo ser autenticado com sucesso$/ do
@@ -51,6 +51,7 @@ end
 
 Quando /^confirmo o pedido de autorização$/ do
   find(".platform_dialog a").click
+  visit root_path
   find('#grant_clicked input').click
 end
 
