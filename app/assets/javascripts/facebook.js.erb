@@ -1,6 +1,6 @@
 $(function(d) {
   FB.init({
-    appId      : '250842391695084', // App ID
+    appId      : '<%= Settings.facebook_app_id %>', // App ID
     channelUrl : 'http://voto-como-vamos.herokuapp.com/channel.html', // Channel File
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
@@ -9,12 +9,10 @@ $(function(d) {
 
   $("a.share").click(function(e) {
     $this = $(this);
-
     FB.ui($.extend($this.data(), {
       method: "feed",
       link: window.location.href
     }));
-
-    e.preventDefault();
+    return false
   });
 }(document));
