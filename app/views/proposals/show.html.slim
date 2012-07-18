@@ -11,4 +11,4 @@ br
 a href="#" class="share" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
   = t("common.share")
 div id="fb-root"
-div class="fb-comments" data-href="http://apps.facebook.com/250842391695084#{edit_candidate_proposal_path(@candidate, @proposal)}" data-num-posts="5" data-width="700"
+div class="fb-comments" data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5" data-width="700"
