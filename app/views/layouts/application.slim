@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    title VotoComoVamos
+
+    link href="http://fonts.googleapis.com/css?family=Share" rel="stylesheet" type="text/css"
+    link href="http://fonts.googleapis.com/css?family=Vibur" rel="stylesheet" type="text/css"
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+    = render 'shared/facebook_meta_tags'
+
+  body class="fundoazul"
+
+    div id="topo"
+
+    div id="header"
+
+      div id="logo"
+        a href="/"
+          = image_tag "logo.png", :alt => "Voto Como Vamos"
+
+        div id="menu"
+          ul
+            li class="propostas"
+              = link_to "Propostas", proposals_path
+            li class="partidos"
+              = link_to "Partidos", "/partidos"
+            li class="candidatos"
+              = link_to "Candidatos", candidates_path
+
+        div id="busca"
+          input name="buscar" type="text" id="buscar" placeholder="Buscar"
+
+    div id="conceitual"
+
+      div id="video"
+        iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+
+
+    / futuramente fazer um merge entre #geral e #baixo
+    div id="geral"
+      div id="baixo"
+
+        div id="esquerda"
+          div id="conteudo"
+            div class="propostasmaisdiscutidas"
+              h3 class="propostasmaisdiscutidas"
+                | Propostas Mais Discutidas
+
+              p class="numero"
+                | 2.
+              p class="nomedaproposta"
+                | Churrasco como merenda
+              div class="capa"
+                div class="acao_curtir"
+                  = image_tag "bt_curtir.jpg", :alt => "curtir a proposta"
+                  p class="counter"
+                    | 8
+                div class="acao_naocurtir"
+                  = image_tag "bt_naocurtir.jpg", :alt => "não curtir a proposta"
+                  p class="counter"
+                    | 8
+
+
+
+        div id="direita"
+          div id="propostas_areas"
+            ul
+              - @categories.each do |c|
+                li
+                  = link_to c.name, proposals_path(:categories => [c.id])
+          - image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
+
+        div id="rodape"
+          div class="loguinho"
+            = image_tag "logo_poacomovamos.jpg", :alt => "Voto Como Vamos"
+
+          address
+            | &copy; Powered by Porto Alegre Como Vamos | Mantido por Porto Alegre Como Vamos
+
