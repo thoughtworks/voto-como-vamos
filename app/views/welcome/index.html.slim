@@ -1,11 +1,46 @@
-h1 Frase bem queridona (by Silvia)
+div id="conceitual"
+  div id="video"
+    div
+      iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
 
-ul
-  - @categories.each do |c|
-    li
-      = link_to c.name, proposals_path(:categories => [c.id])
+div id="geral" class="fundoazul"
+  div id="baixo"
 
-ul.proposals
-  - @proposals.each do |proposal|
-    li.proposal
-     = link_to proposal.title, proposal_path(proposal)
+    div id="esquerda"
+      div id="conteudo"
+        div class="propostasmaisdiscutidas"
+          h3 class="propostasmaisdiscutidas"
+            | Propostas Mais Discutidas
+
+	  
+
+          p class="numero"
+            | 2.
+          p class="nomedaproposta"
+            | Churrasco como merenda
+          div class="capa"
+            div class="acao_curtir"
+              = image_tag "bt_curtir.jpg", :alt => "curtir a proposta"
+              p class="counter"
+                | 8
+            div class="acao_naocurtir"
+              = image_tag "bt_naocurtir.jpg", :alt => "não curtir a proposta"
+              p class="counter"
+                | 8
+
+	ul.proposals
+          - @proposals.each do |proposal|
+	    li.proposal
+	    = link_to proposal.title, proposal_path(proposal)
+
+
+    div id="direita"
+      div id="propostas_areas"
+        ul
+          - @categories.each do |c|
+            li
+              = link_to c.name, proposals_path(:categories => [c.id])
+      = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
+
+    = render 'shared/footer'
+
