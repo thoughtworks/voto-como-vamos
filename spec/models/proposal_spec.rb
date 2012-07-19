@@ -30,4 +30,17 @@ describe Proposal do
     results = Proposal.search_in_categories('Test', [another_category.id])
     results.should_not include(proposal)
   end
+
+
+  it "should order the proposals by votes" do
+    proposal_with_more_votes = FactoryGirl.create :proposal
+    proposal_with_less_votes = FactoryGirl.create :proposal
+
+    give_votes_to_proposal(proposal_with_less_votes, 2)
+    give_votes_to_proposal(proposal_with_more_votes, 5)
+
+    expected = [proposal_with_more_votes, proposal_with_less_votes]
+    Proposal.ordered_by_votes.to_a.should be == expected
+
+  end
 end

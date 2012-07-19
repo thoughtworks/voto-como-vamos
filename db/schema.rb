@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712235000) do
+ActiveRecord::Schema.define(:version => 20120719232859) do
 
   create_table "candidates", :force => true do |t|
     t.string  "name"
@@ -60,10 +60,19 @@ ActiveRecord::Schema.define(:version => 20120712235000) do
   end
 
   create_table "proposals", :force => true do |t|
-    t.string  "title",        :null => false
-    t.integer "candidate_id", :null => false
-    t.text    "abstract",     :null => false
-    t.text    "description",  :null => false
+    t.string  "title",                         :null => false
+    t.integer "candidate_id",                  :null => false
+    t.text    "abstract",                      :null => false
+    t.text    "description",                   :null => false
+    t.integer "opinions_count", :default => 0
+  end
+
+  add_index "proposals", ["opinions_count"], :name => "index_proposals_on_opinions_count"
+
+  create_table "revindications", :force => true do |t|
+    t.integer "candidate_id"
+    t.string  "user_id"
+    t.boolean "accepted"
   end
 
   create_table "users", :force => true do |t|

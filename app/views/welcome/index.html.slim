@@ -4,3 +4,8 @@ ul
   - @categories.each do |c|
     li
       = link_to c.name, proposals_path(:categories => [c.id])
+
+ul.proposals
+  - @proposals.each do |proposal|
+    li.proposal
+     = link_to proposal.title, proposal_path(proposal)

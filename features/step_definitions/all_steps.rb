@@ -533,3 +533,18 @@ Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|
   page.should have_css("a[href='#{@candidate.send(social)}']") if devo == "devo"
   page.should_not have_css("a[href='#{@candidate.send(social)}']") if devo == "não devo"
 end
+
+Dado /^que haja uma proposta "(.*?)" com (\d+) votos$/ do |nome, qty_votos|
+  proposal = FactoryGirl.create :proposal, title: nome
+  qty_votos.to_i.times do 
+    FactoryGirl.create :opinion, proposal: proposal
+  end
+end
+
+Quando /^eu for para a pagina inicial$/ do
+  visit root_path
+end
+
+Então /^eu devo ver "(.*?)"$/ do |arg1|
+  page.should have_content(arg1)
+end
