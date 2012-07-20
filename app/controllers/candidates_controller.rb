@@ -1,5 +1,7 @@
 # encoding: utf-8
 class CandidatesController < ApplicationController
+  layout "verde"
+
   before_filter :load_candidate, :except => [:index]
   before_filter :authorize_candidate, :only => [:edit, :update]
 
@@ -8,6 +10,7 @@ class CandidatesController < ApplicationController
   end
 
   def show
+    render :layout => "cinza"
   end
 
   def edit

@@ -1,0 +1,19 @@
+= render 'shared/headers'
+
+body class="fundocinza"
+
+= render 'shared/top'
+
+div#geral style="margin-top: 30px;"
+  div#baixo
+    div#esquerda
+
+      = yield :left
+
+      div#conteudo
+
+        = yield
+
+  = render 'shared/footer'
+
+

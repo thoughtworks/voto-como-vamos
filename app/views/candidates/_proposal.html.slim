@@ -7,3 +7,18 @@
     = proposal.abstract
   .saiba_mais
     = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal), :class =>  'btn'
+
+.acoes
+  .acao_sharefacebook
+    = image_tag "bt_share", :alt => "compartilhar a proposta no Facebook"
+    p.counter 8
+  .acao_curtir
+    = image_tag "bt_curtir", :alt => "curtir a proposta"
+    p.counter 8
+  .acao_naocurtir
+    = image_tag "bt_naocurtir", :alt => "não curtir a proposta"
+    p.counter 8
+  .acao_perguntar
+    = image_tag "bt_perguntar", :alt => "fazer uma pergunta sobre a proposta"
+    p.counter 8
+

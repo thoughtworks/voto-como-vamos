@@ -1,0 +1,19 @@
+div id="topo"
+
+  div id="header"
+
+    div id="logo"
+      a href="/"
+        = image_tag "logo.png", :alt => "Voto Como Vamos"
+
+    div id="menu"
+      ul
+        li class="propostas"
+          = link_to "Propostas", proposals_path
+        li class="partidos"
+          = link_to "Partidos", "/partidos"
+        li class="candidatos"
+          = link_to "Candidatos", candidates_path
+
+    div id="busca"
+      input name="buscar" type="text" id="buscar" placeholder="Buscar"

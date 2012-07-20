@@ -1,0 +1,16 @@
+= render 'shared/headers'
+
+body class="fundoverde"
+
+= render 'shared/top'
+
+div#geral style="margin-top: 30px;"
+  div#baixo
+    div#esquerda
+      div#conteudo
+
+        = yield
+
+  = render 'shared/footer'
+
+

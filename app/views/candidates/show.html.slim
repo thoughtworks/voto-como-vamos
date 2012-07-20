@@ -20,7 +20,9 @@
     - unless @candidate.press_agent.nil? || @candidate.press_agent
       p
         = t('candidates.show.candidate')
+
     br
+
     ol.contact
       li
         a href="mailto:#{@candidate.email}" #{@candidate.email}
@@ -44,12 +46,14 @@
           a.twitter href="#{@candidate.twitter}" title="Twitter"
             span Twitter
     - if @candidate.about?
-      h3 Sobre o candidato
-      p
-        = @candidate.about
+      div.sobre
+        h4 Sobre o candidato
+        p= @candidate.about
 
     - if current_user.represents? @candidate
       = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
+
+
 
 h3.proposta
   - if current_user.represents? @candidate
@@ -57,6 +61,7 @@ h3.proposta
     br
     br  
   = "Propostas (#{@candidate.proposals.size})"
+
 - @candidate.proposals.each do |proposal|
   = render :partial => 'proposal', :locals => { :proposal => proposal }
 end
