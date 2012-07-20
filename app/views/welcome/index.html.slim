@@ -15,7 +15,7 @@ div id="geral" class="fundoazul"
           h3 class="propostasmaisdiscutidas"
             | Propostas Mais Discutidas
 
-	  
+          
 
           p class="numero"
             | 2.
@@ -31,10 +31,10 @@ div id="geral" class="fundoazul"
               p class="counter"
                 | 8
 
-	ul.proposals
+        ul.proposals
           - @proposals.each do |proposal|
-	    li.proposal
-	    = link_to proposal.title, proposal_path(proposal)
+            li.proposal
+            = link_to proposal.title, proposal_path(proposal)
 
     div id="direita"
       div id="propostas_areas"
