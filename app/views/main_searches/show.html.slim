@@ -7,7 +7,7 @@ div id="geral" style="margin-top:10px;"
             |  Resultados para 
             span class="termobuscado"
               |  "o que eu busquei"
-          - unless @main_search.candidate_results
+          - unless @main_search.candidate_results.empty?
             h3 class="candidatos"
               | Candidatos
             - @main_search.candidate_results.each do |c|
@@ -46,7 +46,8 @@ div id="geral" style="margin-top:10px;"
                 li
                   a href="#"
                     | >>
-          - unless @main_search.proposal_results
+          - binding.pry
+          - unless @main_search.proposal_results.empty?
             h3 class="propostas"
               | Propostas
             - @main_search.proposal_results.each do |p|
