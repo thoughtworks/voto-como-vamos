@@ -5,3 +5,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 VotoComoVamos::Application.load_tasks
+
+Rake::Task[:default].clear_prerequisites
+task :default => ['solr:check', :spec, :cucumber]
