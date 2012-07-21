@@ -33,8 +33,8 @@ class Proposal < ActiveRecord::Base
   end
 
   searchable do
-    string :title
-    text :title, :boost => 5
+    string :title, :stored => true
+    text :title, :boost => 5, :stored => true
     text :abstract
     text :description
     integer :category_ids, :multiple => true, :references => Category
