@@ -11,6 +11,7 @@ class ProposalsController < ApplicationController
   def show
     @proposal = Proposal.find(params[:id])
     @candidate = @proposal.candidate
+    @question = Question.new
   end
 
   def new

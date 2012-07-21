@@ -535,3 +535,32 @@ Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|
   page.should have_css("a[href='#{@candidate.send(social)}']") if devo == "devo"
   page.should_not have_css("a[href='#{@candidate.send(social)}']") if devo == "não devo"
 end
+
+Dado /^que há um candidato cadastrado$/ do
+  @candidate = FactoryGirl.create :candidate
+end
+
+Dado /^que este candidato registrou uma proposta$/ do
+  @proposal = FactoryGirl.create :proposal, :candidate => @candidate
+end
+
+Dado /^que eu estou visualizando os detalhes da proposta$/ do
+  visit candidate_proposal_path(@candidate, @proposal)
+end
+
+Dado /^escrevo a pergunta "(.*?)"$/ do |question|
+  @question_description = question
+  within "form#question" do
+    fill_in "question_description", with: @question_description
+  end
+end
+
+Quando /^clico no botão "Fazer Pergunta"$/ do
+  find("input#do_question").click
+end
+
+Então /^visualizo minha pergunta no topo da lista de perguntas$/ do
+  within "#questions_list" do
+    page.should have_content(@question_description)
+  end
+end

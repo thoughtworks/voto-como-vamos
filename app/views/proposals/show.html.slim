@@ -7,6 +7,21 @@ p= @proposal.description.gsub("\n", "<br/>").html_safe
   = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
   = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
 br
+= simple_form_for [@proposal, @question], :html => {:id => "question"} do |f|
+  - if @question.errors.any?
+    div.alert-message.error
+      - @question.error.full_messages.each do |msg|
+        p =msg
+  = f.input :description, :id => "description"
+  = f.submit t('question.send'), :id => "do_question" 
+
+br
+div id="questions_list"
+  - @proposal.questions.each do |q|
+    div class="question"
+      span class="description" =q.description
+
+br
 = OpinionWidget.new(current_user, @proposal).render
 a= t("common.share")
 div id="fb-root"

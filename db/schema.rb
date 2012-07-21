@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712235000) do
+ActiveRecord::Schema.define(:version => 20120719232859) do
 
   create_table "candidates", :force => true do |t|
     t.string  "name"
@@ -60,11 +60,26 @@ ActiveRecord::Schema.define(:version => 20120712235000) do
   end
 
   create_table "proposals", :force => true do |t|
-    t.string  "title",        :null => false
-    t.integer "candidate_id", :null => false
-    t.text    "abstract",     :null => false
-    t.text    "description",  :null => false
+    t.string  "title",                         :null => false
+    t.integer "candidate_id",                  :null => false
+    t.text    "abstract",                      :null => false
+    t.text    "description",                   :null => false
+    t.integer "opinions_count", :default => 0
   end
+
+  add_index "proposals", ["opinions_count"], :name => "index_proposals_on_opinions_count"
+
+  create_table "questions", :force => true do |t|
+    t.text     "description"
+    t.integer  "proposal_id"
+    t.integer  "user_id"
+    t.text     "answer"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "questions", ["proposal_id"], :name => "index_questions_on_proposal_id"
+  add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string "provider"

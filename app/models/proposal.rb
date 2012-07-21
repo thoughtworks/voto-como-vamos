@@ -1,6 +1,7 @@
 # encoding: utf-8
 class Proposal < ActiveRecord::Base
   has_and_belongs_to_many :categories
+  has_many :questions
 
   belongs_to :candidate
   validates :candidate, :presence => true
