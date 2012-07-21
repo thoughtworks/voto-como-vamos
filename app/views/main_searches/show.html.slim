@@ -7,15 +7,17 @@ div id="geral" style="margin-top:10px;"
             |  Resultados para 
             span class="termobuscado"
               |  "o que eu busquei"
-          h2 class="candidatos"
+          h3 class="candidatos"
             | Candidatos
           - @main_search.candidate_results.each do |c|
             div class="resultado"
               div class="titulo"
-                a href="candidatos/#{c.id}"
-                  = c.name
+                a href=candidate_path(c)
+                  = c.short_name
                   span class="termobuscado"
                     |  "Aqui virá o termo buscado"
+              p
+                =c.name
               p class="resumo"
                 =c.about 
                 span class="termobuscado"
@@ -43,7 +45,7 @@ div id="geral" style="margin-top:10px;"
               li
                 a href="#"
                   | >>
-          h2 class="propostas"
+          h3 class="propostas"
             | Propostas
           - @main_search.proposal_results.each do |p|
             div class="resultado"
