@@ -1,7 +1,6 @@
 VotoComoVamos::Application.routes.draw do
   match '/auth/facebook/callback' => 'sessions#create'
   match '/logout' => 'sessions#destroy'
-  match '/search_mockup' => 'mockups#search' 
 
   scope :scope_paths => { :new => "novo", :edit => "editar" } do
     resources :candidates, :path => "candidatos" do
