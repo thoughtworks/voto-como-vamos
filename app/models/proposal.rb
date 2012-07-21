@@ -16,6 +16,8 @@ class Proposal < ActiveRecord::Base
 
   validates :description, :presence => true
 
+  scope :ordered_by_votes, order("opinions_count DESC")
+
   def self.search_in_categories(query_string, categories = [])
     search do
       fulltext query_string

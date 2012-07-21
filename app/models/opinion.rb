@@ -3,7 +3,7 @@ class Opinion < ActiveRecord::Base
   DISAGREE = -1
 
   belongs_to :user
-  belongs_to :proposal
+  belongs_to :proposal, counter_cache: true
   attr_accessible :value, :id
   attr_accessible :user_id, :proposal_id, :value, :id, :as => :admin
 

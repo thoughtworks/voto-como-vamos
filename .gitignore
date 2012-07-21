@@ -20,3 +20,4 @@ config/application.yml
 *.swp
 .DS_STORE
 solr
+public/assets

@@ -92,3 +92,6 @@ Spork.each_run do
 
 end
 
+def give_votes_to_proposal(p, votes)
+    votes.times { FactoryGirl.create :opinion, proposal: p }
+end

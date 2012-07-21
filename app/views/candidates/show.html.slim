@@ -5,14 +5,14 @@
       = @candidate.role
     h3.nome
       = "#{@candidate.short_name} - #{@candidate.tse_number}"
+    h4.nome
+      = @candidate.name
     p.partido
       = @candidate.party
     p.coligacao
       = @candidate.alliance
     p.telefone
       = @candidate.phone
-    p.email
-      a href="mailto:#{@candidate.email}" #{@candidate.email}
 
     - if @candidate.press_agent
       p

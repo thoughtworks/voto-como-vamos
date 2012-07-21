@@ -9,7 +9,11 @@ describe Candidate do
     it { should validate_presence_of :name }
 
     it { should ensure_length_of(:about).is_at_most(500) }
-    it { should ensure_length_of(:phone).is_equal_to(13) }
+    it { should 
+          ensure_length_of(:phone).
+            is_at_least(7).
+            is_at_most(14) 
+      }
     it { should allow_value(nil).for(:phone) }
     it { should allow_value("").for(:phone) }
        

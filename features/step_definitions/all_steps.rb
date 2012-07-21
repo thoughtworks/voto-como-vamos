@@ -25,15 +25,14 @@ Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
 end
 
 Quando /^eu acesso a página principal$/ do
-  require 'pry'; binding.pry 
-  visit root_url
+  visit root_path
 end
 
 Dado /^que estou logado no facebook$/ do
   visit "http://www.facebook.com"
   fill_in "email", with: @user['email']
   fill_in "pass", with: @user['password']
-  click_button "Log In"
+  find("#loginbutton input").click
 end
 
 Então /^devo ser autenticado com sucesso$/ do
@@ -52,6 +51,7 @@ end
 
 Quando /^confirmo o pedido de autorização$/ do
   find(".platform_dialog a").click
+  visit root_path
   find('#grant_clicked input').click
 end
 
@@ -95,15 +95,13 @@ Entao /^eu devo ver a página do candidato/ do
 end
 
 Entao /^eu devo ver uma mensagem informando que eu preciso preencher cada um dos três campos$/ do
-  page.should have_selector('#proposal_title + .error')
-  page.should have_selector('#proposal_abstract + .error')
-  page.should have_selector('#proposal_description + .error')
+  page.should have_selector('.error', :count => 3) 
 end
 
 Entao /^eu devo ver uma mensagem informando que o campo (descrição|abstract|titulo) é obriatório$/ do |field|
-  page.should have_selector('#proposal_title + .error') if field == 'titulo'
-  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
-  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+  page.should have_selector('.error') if field == 'titulo'
+  page.should have_selector('.error') if field == 'abstract'
+  page.should have_selector('.error') if field == 'descrição'
 end
 
 Dado /^que eu estou logado na aplicação$/ do
@@ -157,9 +155,9 @@ Quando /^eu preencho um (titulo|abstract|descrição) com muitos caracteres$/ do
 end
 
 Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) é inválido$/ do |field|
-  page.should have_selector('#proposal_title + .error') if field == 'titulo'
-  page.should have_selector('#proposal_abstract + .error') if field == 'abstract'
-  page.should have_selector('#proposal_description + .error') if field == 'descrição'
+  page.should have_selector('.error') if field == 'titulo'
+  page.should have_selector('.error') if field == 'abstract'
+  page.should have_selector('.error') if field == 'descrição'
 end
 
 Quando /^solicitamos envio de reivindicação de perfil em massa$/ do
@@ -182,7 +180,7 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :email, :short_name, :party, :phone, :role, :tse_number
+    :alliance, :about, :email, :name, :short_name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
   end
@@ -301,7 +299,7 @@ Quando /^entro com minhas credenciais no facebook$/ do
     @user = test_users.create(false)
     fill_in "email", with: @user['email']
     fill_in "pass", with: @user['password']
-    click_button "Log In"
+    find("#loginbutton input").click
     find('#grant_clicked input').click
 end
 
@@ -563,4 +561,19 @@ Então /^visualizo minha pergunta no topo da lista de perguntas$/ do
   within "#questions_list" do
     page.should have_content(@question_description)
   end
+end
+
+Dado /^que haja uma proposta "(.*?)" com (\d+) votos$/ do |nome, qty_votos|
+  proposal = FactoryGirl.create :proposal, title: nome
+  qty_votos.to_i.times do 
+    FactoryGirl.create :opinion, proposal: proposal
+  end
+end
+
+Quando /^eu for para a pagina inicial$/ do
+  visit root_path
+end
+
+Então /^eu devo ver "(.*?)"$/ do |arg1|
+  page.should have_content(arg1)
 end

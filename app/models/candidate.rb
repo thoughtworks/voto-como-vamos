@@ -6,7 +6,8 @@ class Candidate < ActiveRecord::Base
 
   validates :name, presence: true
   validates :about, :length => { :maximum => 500 }, :allow_nil => true
-  validates :phone, :length => { :is => 13 }, :allow_nil => true, :allow_blank => true
+  validates :phone, :length => { :in => 8..14 }, :allow_nil => true, :allow_blank => true
+  validates_format_of :phone, :with => /[(]?\d+[)]?[-]?/, :allow_nil =>true, :allow_blank => true
   validates :email, :presence => true, :email => true
   validates :site, :blog, :facebook, :twitter, :url => true, :allow_nil => true
 
