@@ -10,7 +10,8 @@ namespace :db do
       :candidate => amaralina,
       :title => 'Churrasco como Merenda',
       :abstract => 'Picanha, Costela, Vazio',
-      :description => 'Descrição Exemplo')
+      :description => 'Descrição Exemplo',
+      :categories => [Category.first])
 
     gabriela = FactoryGirl.create(:candidate,
       :name => 'Gabriela Paz',
@@ -20,6 +21,9 @@ namespace :db do
       :candidate => gabriela,
       :title => 'Fruki nos bebedouros',
       :abstract => 'Guaraná incolor com muito açucar',
-      :description => 'Descrição Exemplo')
+      :description => 'Descrição Exemplo',
+      :categories => [Category.last])
+
+    Sunspot.commit
   end
 end
