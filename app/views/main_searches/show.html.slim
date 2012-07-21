@@ -1,35 +1,32 @@
-div id="geral" style="margin-top:10px;"
-  div id="baixo"
-    div id="esquerda"
-      div id="conteudo"
-        div class="resultadosdabusca"
-          - if @main_search.candidate_results.empty? && @main_search.proposal_results.empty?
-            p class="h2"
+#geral style="margin-top:10px;"
+  #baixo
+    #esquerda
+      #conteudo
+        .resultadosdabusca
+          - if @main_search.empty?
+            p.h2
               |  Não foram encontrados resultados de busca para
-              span class="termobuscado"
-                |  "o que eu busquei"
+              span.termobuscado
+                | "o que eu busquei"
           - else
-            p class="h2"
-              |  Resultados para 
-              span class="termobuscado"
-                |  "o que eu busquei"
+            p.h2
+              |  Resultados para
+              span.termobuscado
+                | "o que eu busquei"
             - unless @main_search.candidate_results.empty?
-              h3 class="candidatos"
-                | Candidatos
+              h3.candidatos Candidatos
               - @main_search.candidate_results.each do |c|
-                div class="resultado"
-                  div class="titulo"
+                div.resultado
+                  div.titulo
                     a href=candidate_path(c)
                       = c.short_name
-                      span class="termobuscado"
-                        |  "Aqui virá o termo buscado"
-                  p
-                    =c.name
-                  p class="resumo"
-                    =c.about 
-                    span class="termobuscado"
-                      |  "Aqui virá o termo buscado"
-              div class="paginacao"
+                      span.termobuscado "Aqui virá o termo buscado"
+                  p= c.name
+                  p.resumo
+                    = c.about
+                    span.termobuscado
+                      | "Aqui virá o termo buscado"
+              .paginacao
                 ul
                   li
                     a href="#"
@@ -53,21 +50,18 @@ div id="geral" style="margin-top:10px;"
                     a href="#"
                       | >>
             - unless @main_search.proposal_results.empty?
-              h3 class="propostas"
-                | Propostas
+              h3.propostas Propostas
               - @main_search.proposal_results.each do |p|
-                div class="resultado"
-                  div class="titulo"
-                    a href="candidatos/#{p.candidate.id}/#{p.id}"
+                .resultado
+                  .titulo
+                    a href=proposal_path(p)
                       = p.title
-                      span class="termobuscado"
-                        | que eu busquei
-                      p class="resumo"
+                      span.termobuscado o que eu busquei
+                      p.resumo
                         = p.abstract
-                        span class="termobuscado"
-                          | que eu busquei
-                        |  bonita da cidade
-              div class="paginacao"
+                        span.termobuscado o que eu busquei
+
+              .paginacao
                 ul
                   li
                     a href="#"
