@@ -3,84 +3,90 @@ div id="geral" style="margin-top:10px;"
     div id="esquerda"
       div id="conteudo"
         div class="resultadosdabusca"
-          p class="h2"
-            |  Resultados para 
-            span class="termobuscado"
-              |  "o que eu busquei"
-          - unless @main_search.candidate_results.empty?
-            h3 class="candidatos"
-              | Candidatos
-            - @main_search.candidate_results.each do |c|
-              div class="resultado"
-                div class="titulo"
-                  a href=candidate_path(c)
-                    = c.short_name
+          - if @main_search.candidate_results.empty? && @main_search.proposal_results.empty?
+            p class="h2"
+              |  Não foram encontrados resultados de busca para
+              span class="termobuscado"
+                |  "o que eu busquei"
+          - else
+            p class="h2"
+              |  Resultados para 
+              span class="termobuscado"
+                |  "o que eu busquei"
+            - unless @main_search.candidate_results.empty?
+              h3 class="candidatos"
+                | Candidatos
+              - @main_search.candidate_results.each do |c|
+                div class="resultado"
+                  div class="titulo"
+                    a href=candidate_path(c)
+                      = c.short_name
+                      span class="termobuscado"
+                        |  "Aqui virá o termo buscado"
+                  p
+                    =c.name
+                  p class="resumo"
+                    =c.about 
                     span class="termobuscado"
                       |  "Aqui virá o termo buscado"
-                p
-                  =c.name
-                p class="resumo"
-                  =c.about 
-                  span class="termobuscado"
-                    |  "Aqui virá o termo buscado"
-            div class="paginacao"
-              ul
-                li
-                  a href="#"
-                    |  1
-                li
-                  a href="#"
-                    |  2
-                li
-                  a href="#"
-                    | 3
-                li
-                  a href="#"
-                    | 4
-                li
-                  a href="#"
-                    | 5
-                li
-                  a href="#"
-                    | >
-                li
-                  a href="#"
-                    | >>
-          - unless @main_search.proposal_results.empty?
-            h3 class="propostas"
-              | Propostas
-            - @main_search.proposal_results.each do |p|
-              div class="resultado"
-                div class="titulo"
-                  a href="candidatos/#{p.candidate.id}/#{p.id}"
-                    = p.title
-                    span class="termobuscado"
-                      | que eu busquei
-                    p class="resumo"
-                      = p.abstract
+              div class="paginacao"
+                ul
+                  li
+                    a href="#"
+                      |  1
+                  li
+                    a href="#"
+                      |  2
+                  li
+                    a href="#"
+                      | 3
+                  li
+                    a href="#"
+                      | 4
+                  li
+                    a href="#"
+                      | 5
+                  li
+                    a href="#"
+                      | >
+                  li
+                    a href="#"
+                      | >>
+            - unless @main_search.proposal_results.empty?
+              h3 class="propostas"
+                | Propostas
+              - @main_search.proposal_results.each do |p|
+                div class="resultado"
+                  div class="titulo"
+                    a href="candidatos/#{p.candidate.id}/#{p.id}"
+                      = p.title
                       span class="termobuscado"
                         | que eu busquei
-                      |  bonita da cidade
-            div class="paginacao"
-              ul
-                li
-                  a href="#"
-                    | 1
-                li
-                  a href="#"
-                    | 2
-                li
-                  a href="#"
-                    | 3
-                li
-                  a href="#"
-                    | 4
-                li
-                  a href="#"
-                    | 5
-                li
-                  a href="#"
-                    | >
-                li
-                  a href="#"
-                    | >>
+                      p class="resumo"
+                        = p.abstract
+                        span class="termobuscado"
+                          | que eu busquei
+                        |  bonita da cidade
+              div class="paginacao"
+                ul
+                  li
+                    a href="#"
+                      | 1
+                  li
+                    a href="#"
+                      | 2
+                  li
+                    a href="#"
+                      | 3
+                  li
+                    a href="#"
+                      | 4
+                  li
+                    a href="#"
+                      | 5
+                  li
+                    a href="#"
+                      | >
+                  li
+                    a href="#"
+                      | >>
