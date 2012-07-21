@@ -18,7 +18,7 @@ Funcionalidade: Reivindicar conta de candidato
   ---------------
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
-  @javascript
+  @javascript @facebook
   Cenario: Recebendo e-mail de reivindicação de propriedade
     Dado que o Voto Como Vamos me enviou um e-mail solicitando que eu administre meu peril
     Quando acesso endereço de solicitação fornecido no e-mail

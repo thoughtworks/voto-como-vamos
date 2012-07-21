@@ -63,8 +63,15 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-Capybara.app_host = "localhost:4000"
-Capybara.server_port = 4000
+Before('@facebook') do
+  Capybara.app_host = "localhost:4000"
+  Capybara.server_port = 4000
+end
+
+After('@facebook') do
+  Capybara.app_host = nil
+  Capybara.server_port = nil
+end
 
 require 'email_spec' # add this line if you use spork
 require 'email_spec/cucumber'
