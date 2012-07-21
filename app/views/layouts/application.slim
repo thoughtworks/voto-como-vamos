@@ -3,63 +3,61 @@ html
   head
     title VotoComoVamos
 
-    link href="http://fonts.googleapis.com/css?family=Share" rel="stylesheet" type="text/css"
-    link href="http://fonts.googleapis.com/css?family=Vibur" rel="stylesheet" type="text/css"
+    link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Vibur' rel='stylesheet' type='text/css'
+
     = stylesheet_link_tag "application"
     = csrf_meta_tags
     = render 'shared/facebook_meta_tags'
 
-  body class="#{body_class}"
-
-    div id="topo"
-
-      div id="header"
-
-        div id="logo"
+  body class=body_class
+    #topo
+      #header
+        #logo
           a href="/"
             = image_tag "logo.png", :alt => "Voto Como Vamos"
-
-        div id="menu"
+        #menu
           ul
-            li class="propostas"
+            li.propostas
               = link_to "Propostas", proposals_path
-            li class="partidos"
+            li.partidos
               = link_to "Partidos", "/partidos"
-            li class="candidatos"
+            li.candidatos
               = link_to "Candidatos", candidates_path
 
-        div id="busca"
+        #busca
           = simple_form_for @main_search, :url => main_search_path, :method => :get do |f|
             = f.input :query, :label => false, :class => 'buscar', :id => 'buscar', :placeholder => 'Buscar'
             = f.button :submit, t('common.search'), :id => 'submit_main_search'
 
-    div id="conceitual"
-
-      div id="video"
-        iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
-
-
-    div id="geral"
-      div id="baixo"
-
-        div id="esquerda"
-          div id="conteudo"
-
+    #conceitual
+      #video
+        div
+          iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+    #geral
+      #baixo
+        #esquerda
+          #conteudo
             - if flash[:notice]
-                div class="alert-message success"
+                .alert-message.success
                   = h flash[:notice]
 
             - if flash[:error]
-                div class="alert-message error"
+                .alert-message.error
                   = h flash[:error]
 
-          = yield
+            = yield
 
-        div id="direita"
-          = yield :right
+        #direita
+          #propostas_areas
+            ul
+              - @categories.each do |c|
+                li
+                  = link_to c.name, proposals_path(:categories => [c.id])
 
-        div id="rodape"
-          div class="loguinho"
+          = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
+        #rodape
+          .loguinho
             = image_tag "logo_poacomovamos.jpg", :alt => "Voto Como Vamos"
 
           address

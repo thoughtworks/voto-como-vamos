@@ -33,21 +33,21 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 #menu LI.partidos, #menu LI.propostas, #menu LI.candidatos{width:80px; height:34px;}
 
 #menu LI.partidos {
-  background:url("/assets/bt_partidos.jpg");
+  background:url(/assets/bt_partidos.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
 }
 
 #menu LI.propostas {
-  background:url("/assets/bt_propostas.jpg");
+  background:url(/assets/bt_propostas.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
 }
 
 #menu LI.candidatos {
-  background:url("/assets/bt_candidatos.jpg");
+  background:url(/assets/bt_candidatos.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -71,7 +71,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 -webkit-border-radius: 15px; /* Implementação para browsers que renderizam via webkit */
 behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */ padding-top:10px; padding-bottom:10px;}
 #propostas_areas LI{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
-#propostas_areas LI A{font-family:Share; color:#419EBB; font-size:26px;}
+#propostas_areas LI A{font-family:Squada One; color:#419EBB; font-size:26px;}
 
 /*PERFIL DO CANDIDATO*/
 #perfilcandidato{margin-top:35px;}
@@ -120,9 +120,9 @@ DIV.sobre H4{margin-bottom:5px;}
 #conteudo.interface2{padding-left:0px;}
 
 #conteudo P{
-text-align:justify;
-line-height:20px;
-margin-bottom:10px;
+	text-align:justify;
+	line-height:20px;
+	margin-bottom:10px;
 }
 #conteudo H2{font-size:18px;}
 #conteudo H3{font-size:16px;}
@@ -139,10 +139,10 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 .capa DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
 #conteudo .capa P.counter{text-align:center; width:68; display:block;}
 .capa DIV P,.capa DIV IMG{float:left;}
-.capa P{width:34px; text-align:center}
+.capa P{width:34px; text-align:center} 
 
 h3.propostasmaisdiscutidas {
-  background:url("/assets/titulo_propostasmaisdiscutidas.jpg");
+  background:url(/assets/titulo_propostasmaisdiscutidas.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -152,7 +152,7 @@ h3.propostasmaisdiscutidas {
 }
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas P.nomedaproposta{font-family:Share; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas P.nomedaproposta{font-family:Squada One; font-size:24px; color:#419EBB;}
 
 .propostasmaisdiscutidas P.numero{font-family:Vibur; font-size:40px; color:#DB499B; text-align:center; padding-top:10px;}
 
@@ -163,7 +163,7 @@ DIV.propostasmaisdiscutidas{margin-left:80px;}
 .resultadosdabusca .h2 SPAN{font-weight:bold}
 
 h3.propostas {
-  background:url("/assets/titulo_propostas.jpg");
+  background:url(/assets/titulo_propostas.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -174,7 +174,7 @@ h3.propostas {
 }
 
 h3.candidatos {
-  background:url("/assets/titulo_candidatos.jpg");
+  background:url(/assets/titulo_candidatos.jpg);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -212,11 +212,9 @@ h3.candidatos {
 .siglas{text-decoration:underline; margin-right:20px; width:55px; float:left; font-weight:bold;}
 .nomedopartido{float:left; width:325px; text-decoration:none}
 
-.abc {width:870px; margin-bottom:5px; margin-left:20px; padding-left:15px; padding-right:15px; padding-top:2px; background-image:url('/assets/bg_abc.jpg'); height:48px; color:#fff; font-size:20px;}
-.abc .current, .abc .disabled { color:#ccc; }
-.abc A, .abc .gap { color:#fff;}
-.abc .next_page, .abc .previous_page { font-size: 16px; }
-
+.abc{width:870px; margin-bottom:5px; margin-left:20px; padding-left:15px; padding-right:15px; padding-top:2px; background-image:url('/assets/bg_abc.jpg'); height:48px; letter-spacing:2px; color:#fff; font-size:26px;}
+.abc_ativo{font-weight:bold; color:#ccc; font-size:26px}
+.abc A{font-size:26px; letter-spacing:2px; color:#fff;}
 .filtro_candidatos UL{width:290px; margin:auto}
 .filtro_candidatos LI{display: inline; padding-right:15px;}
 .filtro_candidatos LI.selecionado{font-size:16px; color:#000;}
@@ -261,7 +259,7 @@ H4 A{text-decoration: underline; font-size:16px;}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
 #conteudo P.counter{text-align:center; width:68; display:block;}
 .acoes DIV P, .acoes DIV IMG{float:left;}
-.acoes P{width:34px; text-align:center}
+.acoes P{width:34px; text-align:center} 
 .acoes DIV.acao_sharefacebook{width:108px;}
 
 
