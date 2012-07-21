@@ -6,7 +6,7 @@ class CandidatesController < ApplicationController
   before_filter :authorize_candidate, :only => [:edit, :update]
 
   def index
-    @candidates = Candidate.text_search(params[:query])
+    @candidates = Candidate.text_search(params[:query], params[:page])
   end
 
   def show

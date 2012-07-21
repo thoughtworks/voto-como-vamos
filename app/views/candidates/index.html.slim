@@ -2,6 +2,7 @@
   p
     = text_field_tag :query, params[:query]
     = submit_tag t('common.search'), :short_name => nil
+    = will_paginate @candidates
   table
     thead
       tr

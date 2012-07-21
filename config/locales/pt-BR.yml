@@ -272,3 +272,8 @@ pt-BR:
   opinion:
     agree: "Concordar"
     disagree: "Discordar"
+
+  will_paginate:
+    previous_label: "Anterior"
+    next_label: "Próximo"
+    page_gap: "&hellip;"
