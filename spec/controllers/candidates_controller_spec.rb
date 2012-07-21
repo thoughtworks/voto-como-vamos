@@ -46,13 +46,13 @@ describe CandidatesController do
       it { should assign_to(:candidate).with(candidate) }
       it { should redirect_to candidate_path(candidate_id) }
     end
-   
+
     describe "editing without authentication" do
       let(:current_user) { double(:current_user, :represents? => false) }
-      
+
       before(:each) do
         controller.stub :current_user => current_user
-        get :edit, {:id => candidate_id } 
+        get :edit, {:id => candidate_id }
       end
 
       it { should respond_with(:redirect) }
@@ -65,7 +65,7 @@ describe CandidatesController do
         candidate.should_receive(:update_attributes).with(params).and_return(false)
         post :update, :id => candidate_id, :candidate => params
       end
-      
+
       it { should render_template('edit') }
     end
   end
@@ -75,9 +75,7 @@ describe CandidatesController do
 
     context 'when listing' do
       it 'should query the list of candidates based on the search criteria' do
-        Candidate.should_receive(:text_search).
-          with('test', '1').
-          and_return(candidates)
+        Candidate.stub_chain(:text_search, :results).and_return(candidates)
 
         get :index, :query => 'test', :page => '1'
 

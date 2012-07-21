@@ -12,8 +12,8 @@ class Candidate < ActiveRecord::Base
   validates :site, :blog, :facebook, :twitter, :url => true, :allow_nil => true
 
   searchable do
-    text :name
-    text :short_name
+    text :name, :stored => true
+    text :short_name, :stored => true
     string :short_name
   end
 

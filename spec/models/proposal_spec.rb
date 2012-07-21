@@ -19,7 +19,7 @@ describe Proposal do
     category = FactoryGirl.create :category
     proposal = FactoryGirl.create :proposal, :title => 'Test', :categories => [category]
     Sunspot.commit
-    results = Proposal.search_in_categories('Test', [category.id])
+    results = Proposal.search_in_categories('Test', [category.id]).results
     results.should include(proposal)
   end
 
@@ -27,7 +27,7 @@ describe Proposal do
     another_category = FactoryGirl.create :category
     proposal = FactoryGirl.create :proposal, :title => 'Test'
     Sunspot.commit
-    results = Proposal.search_in_categories('Test', [another_category.id])
+    results = Proposal.search_in_categories('Test', [another_category.id]).results
     results.should_not include(proposal)
   end
 
