@@ -14,7 +14,11 @@ task 'solr:check' do
     rescue => e
       puts "DOWN"
       puts 'INFO: Looks like Solr is down. Starting it up...'
-      Rake::Task['sunspot:solr:start'].invoke
+      begin
+        Rake::Task['sunspot:solr:start'].invoke
+      rescue
+        puts 'There was an issue starting up Solr. Maybe it\'s already running?'
+      end
     end
   end
 end
