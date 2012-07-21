@@ -29,19 +29,19 @@
     ol.social
       - if @candidate.blog?
         li
-          a.blog href="#{@candidate.blog}" title="Blog"
+          a.blog href="#{@candidate.blog}" title="Blog" target="_blank"  
             span Blog
       - if @candidate.facebook?
         li
-          a.facebook href="#{@candidate.facebook}" title="Facebook"
+          a.facebook href="#{@candidate.facebook}" title="Facebook" target="_blank"  
             span Facebook
       - if @candidate.site?
         li
-          a.site href="#{@candidate.site}" title="Site"
+          a.site href="#{@candidate.site}" title="Site" target="_blank"  
             span Site
       - if @candidate.twitter != nil
         li
-          a.twitter href="#{@candidate.twitter}" title="Twitter"
+          a.twitter href="#{@candidate.twitter}" title="Twitter" target="_blank"
             span Twitter
     - if @candidate.about?
       h3 Sobre o candidato
