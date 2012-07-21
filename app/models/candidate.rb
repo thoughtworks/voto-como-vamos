@@ -17,7 +17,7 @@ class Candidate < ActiveRecord::Base
     string :short_name
   end
 
-  def self.text_search(query_string, page)
+  def self.text_search(query_string, page = 1)
     search do
       fulltext query_string
       paginate :page => page

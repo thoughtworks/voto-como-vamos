@@ -76,10 +76,10 @@ describe CandidatesController do
     context 'when listing' do
       it 'should query the list of candidates based on the search criteria' do
         Candidate.should_receive(:text_search).
-          with('test').
+          with('test', '1').
           and_return(candidates)
 
-        get :index, :query => 'test'
+        get :index, :query => 'test', :page => '1'
 
         should respond_with(:success)
         should assign_to(:candidates).with(candidates)

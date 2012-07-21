@@ -15,7 +15,7 @@ class CandidatesController < ApplicationController
 
   def update
     if @candidate.update_attributes(params[:candidate])
-      redirect_to candidate_path(@candidate.id), 
+      redirect_to candidate_path(@candidate.id),
         :notice => I18n.t('candidates.edit.success')
     else
       render :edit
