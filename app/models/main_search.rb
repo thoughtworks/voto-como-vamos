@@ -17,4 +17,8 @@ class MainSearch
     @proposal_results = Proposal.text_search(@query)
     self
   end
+
+  def empty?
+    candidate_results.empty? && proposal_results.empty?
+  end
 end
