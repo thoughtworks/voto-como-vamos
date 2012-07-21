@@ -2,7 +2,7 @@
   p
     = text_field_tag :query, params[:query]
     = submit_tag t('common.search'), :short_name => nil
-    = will_paginate @candidates
+  = will_paginate @candidates, { :class => "abc", :link_separator => " - " }
   table
     thead
       tr
@@ -15,3 +15,4 @@
           td= link_to candidate.short_name, candidate_path(candidate)
           td= candidate.party
           td= candidate.role
+  = will_paginate @candidates, { :class => "abc", :link_separator => " - " }
