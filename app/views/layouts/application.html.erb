@@ -24,7 +24,10 @@
     </div> <!--fecha div MENU -->
 
     <div id="busca">
-      <input name="buscar" type="text" id="buscar" placeholder="Buscar" />
+      <%= simple_form_for @main_search, :url => main_search_path, :method => :get do |f| %>
+        <%= f.input :query, :label => false %>
+        <%= f.button :submit, t('common.search'), :id => 'submit_main_search' %>
+      <% end %>
     </div> <!--fecha div BUSCA -->
   </div>  <!--fecha div TOPO -->
 

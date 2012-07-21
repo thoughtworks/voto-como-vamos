@@ -15,5 +15,7 @@ VotoComoVamos::Application.routes.draw do
     resources :proposals, :path => "propostas"
     resources :opinions, :path => "opinioes"
   end
+
+  resource :main_search
   root :to => 'welcome#index'
 end

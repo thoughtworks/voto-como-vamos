@@ -548,3 +548,51 @@ end
 Então /^eu devo ver "(.*?)"$/ do |arg1|
   page.should have_content(arg1)
 end
+
+Dado /^que tenho um candidato com nome João$/ do
+  @joao = FactoryGirl.create :candidate, :name => 'João'
+end
+
+Dado /^que tenho uma proposta relacionada às festividades de São João$/ do
+  @proposal_joao = FactoryGirl.create :proposal, :title => 'João'
+end
+
+Dado /^que tenho um candidato com nome José$/ do
+  @jose = FactoryGirl.create :candidate, :name => 'José'
+end
+
+Dado /^que tenho uma proposta relacionada às festividades de São Pedro$/ do
+  @proposal_jose = FactoryGirl.create :proposal, :title => 'José'
+end
+
+Quando /^eu pesquiso por João$/ do
+  visit root_path
+  within '#busca' do
+    fill_in 'main_search_query', :with => 'João'
+    click_button 'submit_main_search'
+  end
+end
+
+Então /^devo ver tal candidato com nome João$/ do
+  within '#candidates' do
+    page.should have_content @joao.name
+  end
+end
+
+Então /^devo ver a proposta relacionada às festividades de São João$/ do
+  within '#proposals' do
+    page.should have_content @proposal_joao.title
+  end
+end
+
+Então /^não devo ver o candidato com nome José$/ do
+  within '#candidates' do
+    page.should_not have_content @jose.name
+  end
+end
+
+Então /^não devo ver a proposta relacionada às festividades de São Pedro$/ do
+  within '#proposals' do
+    page.should_not have_content @proposal_jose.title
+  end
+end

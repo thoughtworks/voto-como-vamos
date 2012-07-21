@@ -9,14 +9,14 @@ describe Candidate do
     it { should validate_presence_of :name }
 
     it { should ensure_length_of(:about).is_at_most(500) }
-    it { should 
+    it { should
           ensure_length_of(:phone).
             is_at_least(7).
-            is_at_most(14) 
+            is_at_most(14)
       }
     it { should allow_value(nil).for(:phone) }
     it { should allow_value("").for(:phone) }
-       
+
     it { should_not allow_value("blah").for(:site) }
     it { should allow_value("http://www.blah.com").for(:site) }
 
@@ -28,8 +28,8 @@ describe Candidate do
 
     it { should_not allow_value("bl{ah").for(:twitter) }
     it { should allow_value("http://www.blah.com").for(:twitter) }
-    
-    it { should allow_value(nil).for(:press_agent) }  
+
+    it { should allow_value(nil).for(:press_agent) }
     it { should allow_value(true).for(:press_agent) }
     it { should allow_value(false).for(:press_agent) }
 

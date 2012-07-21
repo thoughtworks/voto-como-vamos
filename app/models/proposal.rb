@@ -24,7 +24,15 @@ class Proposal < ActiveRecord::Base
     end.results
   end
 
+  def self.text_search(query_string)
+    search do
+      fulltext query_string
+      order_by(:title)
+    end.results
+  end
+
   searchable do
+    string :title
     text :title, :boost => 5
     text :abstract
     text :description

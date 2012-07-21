@@ -30,6 +30,7 @@ group :test, :development do
   gem 'hitch'
   gem 'spork'
   gem 'sunspot_solr'
+  gem 'progress_bar'
 end
 
 group :test do
