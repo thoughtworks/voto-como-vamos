@@ -1,11 +1,16 @@
-= content_for :right do
-  div#propostas_areas
+- content_for(:conceptual) do
+  #conceitual
+    #video
+      div
+        iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+
+- content_for(:right) do
+  #propostas_areas
     ul
       - @categories.each do |c|
         li
           = link_to c.name, proposals_path(:categories => [c.id])
-  - image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
-
+  = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
 div class="propostasmaisdiscutidas"
   h3 class="propostasmaisdiscutidas"
     | Propostas Mais Discutidas

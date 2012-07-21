@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+#submit_main_search {
+  display: none;
+}

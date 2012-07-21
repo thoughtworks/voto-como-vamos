@@ -1,5 +1,5 @@
 # -*- encoding : utf-8
-WELCOME_MESSAGE = "Frase bem queridona (by Silvia)"
+WELCOME_MESSAGE = "Página Principal"
 
 def login_with(mock_options = nil)
   OmniAuth.config.test_mode = true

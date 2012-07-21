@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title VotoComoVamos
+    title Voto Como Vamos - #{yield(:title).presence || 'Página Principal'}
 
     link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'
     link href='http://fonts.googleapis.com/css?family=Vibur' rel='stylesheet' type='text/css'
@@ -20,7 +20,7 @@ html
           ul
             li.propostas
               = link_to "Propostas", proposals_path
-            li.partidos
+            /li.partidos
               = link_to "Partidos", "/partidos"
             li.candidatos
               = link_to "Candidatos", candidates_path
@@ -30,10 +30,9 @@ html
             = f.input :query, :label => false, :class => 'buscar', :id => 'buscar', :placeholder => 'Buscar'
             = f.button :submit, t('common.search'), :id => 'submit_main_search'
 
-    #conceitual
-      #video
-        div
-          iframe src="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+
+    = yield :conceptual
+
     #geral
       #baixo
         #esquerda
@@ -49,13 +48,7 @@ html
             = yield
 
         #direita
-          #propostas_areas
-            ul
-              - @categories.each do |c|
-                li
-                  = link_to c.name, proposals_path(:categories => [c.id])
-
-          = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
+          = yield :right
         #rodape
           .loguinho
             = image_tag "logo_poacomovamos.jpg", :alt => "Voto Como Vamos"
