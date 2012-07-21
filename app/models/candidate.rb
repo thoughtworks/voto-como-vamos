@@ -19,10 +19,10 @@ class Candidate < ActiveRecord::Base
 
   def self.text_search(query_string, page = 1)
     search do
-      fulltext query_string
+      fulltext query_string, :highlight => true
       paginate :page => page
       order_by(:short_name)
-    end.results
+    end
   end
 
   def generate_obfuscated_slug

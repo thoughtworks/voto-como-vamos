@@ -22,14 +22,14 @@ class Proposal < ActiveRecord::Base
     search do
       fulltext query_string
       with(:category_ids, categories)
-    end.results
+    end
   end
 
   def self.text_search(query_string)
     search do
-      fulltext query_string
+      fulltext query_string, :highlight => true
       order_by(:title)
-    end.results
+    end
   end
 
   searchable do
