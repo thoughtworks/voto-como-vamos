@@ -20,6 +20,7 @@ class OpinionWidget
   end
 
   private
+
   def link_for opinion
 
     value = (opinion == :agree) ? Opinion::AGREE : Opinion::DISAGREE
