@@ -1,0 +1,6 @@
+ul#candidates
+  - @main_search.candidate_results.each do |c|
+    li= c.name
+ul#proposals
+  - @main_search.proposal_results.each do |p|
+    li= p.title

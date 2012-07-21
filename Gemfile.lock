@@ -83,6 +83,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.1)
       multipart-post (~> 1.1)
+    fattr (2.2.1)
     ffi (1.0.11)
     gherkin (2.10.0)
       json (>= 1.4.6)
@@ -135,9 +136,14 @@ GEM
     omniauth-oauth2 (1.0.2)
       oauth2 (~> 0.6.0)
       omniauth (~> 1.0)
+    options (2.3.0)
+      fattr
     pg (0.13.2)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
+    progress_bar (0.4.0)
+      highline (~> 1.6.1)
+      options (~> 2.3.0)
     pry (0.9.9.6)
       coderay (~> 1.0.5)
       method_source (~> 0.7.1)
@@ -261,6 +267,7 @@ DEPENDENCIES
   launchy
   omniauth-facebook
   pg
+  progress_bar
   pry
   rails (= 3.2.5)
   rspec-rails (~> 2.0)

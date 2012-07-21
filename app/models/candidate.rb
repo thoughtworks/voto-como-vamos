@@ -19,7 +19,7 @@ class Candidate < ActiveRecord::Base
 
   def self.text_search(query_string)
     search do
-      fulltext query_string 
+      fulltext query_string
       order_by(:short_name)
     end.results
   end

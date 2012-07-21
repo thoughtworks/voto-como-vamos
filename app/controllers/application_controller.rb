@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   before_filter :authenticate!
+  before_filter :load_search
 
   private
 
@@ -19,5 +20,9 @@ class ApplicationController < ActionController::Base
 
   def auth_url
     "/auth/facebook"
+  end
+
+  def load_search
+    @main_search = MainSearch.new
   end
 end

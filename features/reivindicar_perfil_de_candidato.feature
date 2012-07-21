@@ -18,14 +18,14 @@ Funcionalidade: Reivindicar conta de candidato
   ---------------
   * Cadastros secundários, bem como qualquer cadastro que venha após a Aprovação do candidato.
 
-  @javascript
+  @javascript @pending
   Cenario: Recebendo e-mail de reivindicação de propriedade
     Dado que o Voto Como Vamos me enviou um e-mail solicitando que eu administre meu peril
     Quando acesso endereço de solicitação fornecido no e-mail
     E entro com minhas credenciais no facebook
     Então devo ir para aceitação dos termos de uso
 
-  @javascript
+  @javascript @pending
   Cenario: Me tornando administrador do meu perfil de candidato
     Dado que eu estou logado na aplicação
     E que estou na página de solicitação de administração do meu perfil
