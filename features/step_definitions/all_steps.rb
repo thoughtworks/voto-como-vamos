@@ -604,25 +604,25 @@ Quando /^eu pesquiso por João$/ do
 end
 
 Então /^devo ver tal candidato com nome João$/ do
-  within '#candidates' do
+  within '.resultado' do
     page.should have_content @joao.name
   end
 end
 
 Então /^devo ver a proposta relacionada às festividades de São João$/ do
-  within '#proposals' do
+  within '.resultado' do
     page.should have_content @proposal_joao.title
   end
 end
 
 Então /^não devo ver o candidato com nome José$/ do
-  within '#candidates' do
+  within '.resultado' do
     page.should_not have_content @jose.name
   end
 end
 
 Então /^não devo ver a proposta relacionada às festividades de São Pedro$/ do
-  within '#proposals' do
+  within '.resultado' do
     page.should_not have_content @proposal_jose.title
   end
 end
