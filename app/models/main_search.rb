@@ -2,7 +2,7 @@ class MainSearch
   extend ActiveModel::Naming
   include ActiveModel::Conversion
 
-  attr_accessor :query, :candidate_results, :proposal_results
+  attr_accessor :query, :candidates, :proposals
 
   def initialize(options = {})
     @query = options[:query]
@@ -13,12 +13,12 @@ class MainSearch
   end
 
   def execute
-    @candidate_results = Candidate.text_search(@query)
-    @proposal_results = Proposal.text_search(@query)
+    @candidates = Candidate.text_search(@query)
+    @proposals = Proposal.text_search(@query)
     self
   end
 
   def empty?
-    candidate_results.empty? && proposal_results.empty?
+    candidates.results.empty? && proposals.results.empty?
   end
 end
