@@ -378,6 +378,7 @@ end
 Quando /^peço para listar os candidatos de acordo com o critério de busca$/ do
   visit candidates_path
   fill_in "query", :with => "XYZ"
+  Sunspot.commit
   click_button "Buscar"
 end
 
@@ -536,7 +537,7 @@ end
 
 Dado /^que haja uma proposta "(.*?)" com (\d+) votos$/ do |nome, qty_votos|
   proposal = FactoryGirl.create :proposal, title: nome
-  qty_votos.to_i.times do 
+  qty_votos.to_i.times do
     FactoryGirl.create :opinion, proposal: proposal
   end
 end

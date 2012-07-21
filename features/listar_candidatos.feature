@@ -10,6 +10,7 @@ Funcionalidade: Listar Candidatos
     Quando eu acesso a listagem de candidatos
     Entao eu devo ver tais candidatos
 
+  @pending
   Cenario: Listar Candidatos de acordo com um determinado criterio de busca
     Dado que eu estou logado na aplicação
     E que existem alguns candidatos que atendem ao criterio de busca
