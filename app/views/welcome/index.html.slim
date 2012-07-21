@@ -1,9 +1,30 @@
+= content_for :right do
+  div#propostas_areas
+    ul
+      - @categories.each do |c|
+        li
+          = link_to c.name, proposals_path(:categories => [c.id])
+  - image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
+
 h1 Frase bem queridona (by Silvia)
 
-ul
-  - @categories.each do |c|
-    li
-      = link_to c.name, proposals_path(:categories => [c.id])
+div class="propostasmaisdiscutidas"
+  h3 class="propostasmaisdiscutidas"
+    | Propostas Mais Discutidas
+
+  p class="numero"
+    | 2.
+  p class="nomedaproposta"
+    | Churrasco como merenda
+  div class="capa"
+    div class="acao_curtir"
+      = image_tag "bt_curtir.jpg", :alt => "curtir a proposta"
+      p class="counter"
+        | 8
+    div class="acao_naocurtir"
+      = image_tag "bt_naocurtir.jpg", :alt => "não curtir a proposta"
+      p class="counter"
+        | 8
 
 ul.proposals
   - @proposals.each do |proposal|
