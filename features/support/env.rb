@@ -63,5 +63,8 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+Capybara.app_host = "localhost:4000"
+Capybara.server_port = 4000
+
 require 'email_spec' # add this line if you use spork
 require 'email_spec/cucumber'

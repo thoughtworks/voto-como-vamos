@@ -4,14 +4,14 @@ Funcionalidade: Autenticar Usuário
   Eu desejo me autenticar no Voto Como Vamos
   Para que eu possa dar minha opinião a respeito de propostas e candidatos
 
-  @javascript @pending
+  @javascript
   Cenario: Usuário existente
     Dado que sou um usuário já cadastrado no Voto Como Vamos
     E que estou logado no facebook
     Quando eu acesso a página principal
     Então devo ser autenticado com sucesso
 
-  @javascript @pending
+  @javascript
   Cenario: Novo usuário
     Dado que sou um usuário não cadastrado no Voto Como Vamos
     E que estou logado no facebook

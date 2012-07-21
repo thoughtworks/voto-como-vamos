@@ -25,17 +25,17 @@ Funcionalidade: Cadastrar Proposta
   Cenário: Campo descrição não preenchido
     Dado que eu estou cadastrando uma proposta
     Quando eu não preencho o campo descrição
-    Entao eu devo ver uma mensagem informando que o campo descrição é obriatório 
+    Entao eu devo ver uma mensagem informando que o campo descrição é obriatório
 
   Cenário: Campo titulo não preenchido
     Dado que eu estou cadastrando uma proposta
     Quando eu não preencho o campo titulo
-    Entao eu devo ver uma mensagem informando que o campo titulo é obriatório 
+    Entao eu devo ver uma mensagem informando que o campo titulo é obriatório
 
   Cenário: Campo abstract não preenchido
     Dado que eu estou cadastrando uma proposta
     Quando eu não preencho o campo abstract
-    Entao eu devo ver uma mensagem informando que o campo abstract é obriatório 
+    Entao eu devo ver uma mensagem informando que o campo abstract é obriatório
 
   @pending
   Cenario: Tamanho do titulo muito grande
