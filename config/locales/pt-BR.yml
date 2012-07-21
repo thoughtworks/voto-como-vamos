@@ -274,3 +274,8 @@ pt-BR:
     disagree: "Discordar"
   question:
     send: 'Enviar pergunta' 
+
+  will_paginate:
+    previous_label: "Anterior"
+    next_label: "Próximo"
+    page_gap: "&hellip;"

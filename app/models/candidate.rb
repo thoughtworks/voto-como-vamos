@@ -17,9 +17,10 @@ class Candidate < ActiveRecord::Base
     string :short_name
   end
 
-  def self.text_search(query_string)
+  def self.text_search(query_string, page)
     search do
       fulltext query_string
+      paginate :page => page
       order_by(:short_name)
     end.results
   end
