@@ -1,9 +1,6 @@
-= content_for :geral_css do
-  | internas
-= content_for :esquerda_css do
-  | interface2
-= content_for :direita_css do
-  | interface2
+- content_for(:geral_css) { 'internas' }
+- content_for(:esquerda_css) { 'interface2' }
+- content_for(:direita_css) { 'interface2' }
 
 = content_for :left do
   #perfilcandidato
