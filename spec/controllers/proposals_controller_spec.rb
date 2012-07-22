@@ -35,7 +35,7 @@ describe ProposalsController do
     let(:proposals) { [double('proposal1'), double('proposal2')] }
 
     it 'search by category when specified' do
-      Proposal.should_receive(:search_in_categories).with(nil, ['Test']).and_return(proposals)
+      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       get :index, :categories => ['Test']
 
       should respond_with(:success)
@@ -44,7 +44,7 @@ describe ProposalsController do
     end
 
     it 'search by text criteria when specified' do
-      Proposal.should_receive(:search_in_categories).with('test', nil).and_return(proposals)
+      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       get :index, :query => 'test'
 
       should respond_with(:success)
