@@ -32,14 +32,11 @@
             span class="description" =q.description
       br
       = OpinionWidget.new(current_user, @proposal).render
-      a.share href="#" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
-        = t("common.share")
-      #fb-root
-        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
-
+      
     .acoes
       .acao_sharefacebook
-        img src="/assets/bt_share.jpg"
+        a.share href="#" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
+          img src="/assets/bt_share.jpg"
         p.counter=0
       .acao_curtir
         img src="/assets/bt_curtir.jpg"
@@ -50,6 +47,8 @@
       .acao_perguntar
         img src="/assets/bt_perguntar.jpg"
         p.counter=0
+    #fb-root
+        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
   = render :partial => 'candidates/candidate'
