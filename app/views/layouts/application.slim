@@ -33,7 +33,7 @@ html
 
     = yield :conceptual
 
-    #geral class="#{yield :geral_css}"
+    #geral class="#{content_for?(:geral_css) ? yield(:geral_css) : 'internas'}"
       #baixo
         #esquerda class="#{yield :esquerda_css}"
           - if content_for?(:left)
