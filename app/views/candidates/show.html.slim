@@ -1,61 +1,68 @@
-div#perfilcandidato
-  img.foto src="#{@candidate.photo}" alt="Foto de #{@candidate.name} #{@candidate.tse_number}"
-  p.cargo
-    = @candidate.role
-  h3.nome
-    = "#{@candidate.short_name} - #{@candidate.tse_number}"
-  h4.nome
-    = @candidate.name
-  p.partido
-    = @candidate.party
-  p.coligacao
-    = @candidate.alliance
-  p.telefone
-    = @candidate.phone
+= content_for :geral_css do
+  | internas
+= content_for :esquerda_css do
+  | interface2
+= content_for :direita_css do
+  | interface2
 
-  - if @candidate.press_agent
-    p
-      = t('candidates.show.press_agent')
-  - unless @candidate.press_agent.nil? || @candidate.press_agent
-    p
-      = t('candidates.show.candidate')
-  br
-  ol.contact
-    li
-      a href="mailto:#{@candidate.email}" #{@candidate.email}
-    li
+= content_for :left do
+  #perfilcandidato
+    img.foto src="#{@candidate.photo}" alt="Foto de #{@candidate.name} #{@candidate.tse_number}"
+    p.cargo
+      = @candidate.role
+    h3.nome
+      = "#{@candidate.short_name} - #{@candidate.tse_number}"
+    h4.nome
+      = @candidate.name
+    p.partido
+      = @candidate.party
+    p.coligacao
+      = @candidate.alliance
+    p.telefone
       = @candidate.phone
-  ol.social
-    - if @candidate.blog?
-      li
-        a.blog href="#{@candidate.blog}" title="Blog" target="_blank"  
-          span Blog
-    - if @candidate.facebook?
-      li
-        a.facebook href="#{@candidate.facebook}" title="Facebook" target="_blank"  
-          span Facebook
-    - if @candidate.site?
-      li
-        a.site href="#{@candidate.site}" title="Site" target="_blank"  
-          span Site
-    - if @candidate.twitter != nil
-      li
-        a.twitter href="#{@candidate.twitter}" title="Twitter" target="_blank"
-          span Twitter
-  - if @candidate.about?
-    h3 Sobre o candidato
     p
-      = @candidate.about
-
-- if current_user.represents? @candidate
-  = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
-
-h3.proposta
-  - if current_user.represents? @candidate
-    = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "btn primary"
+      a href="mailto:#{@candidate.email}"
+        = @candidate.email
+    - if @candidate.press_agent
+      p
+        = t('candidates.show.press_agent')
+    - unless @candidate.press_agent.nil? || @candidate.press_agent
+      p
+        = t('candidates.show.candidate')
     br
-    br  
-  = "Propostas (#{@candidate.proposals.size})"
-- @candidate.proposals.each do |proposal|
-  = render :partial => 'proposal', :locals => { :proposal => proposal }
-end
+    ol.social
+      - if @candidate.blog?
+        li
+          a.blog href="#{@candidate.blog}" title="Blog" target="_blank"  
+            span Blog
+      - if @candidate.facebook?
+        li
+          a.facebook href="#{@candidate.facebook}" title="Facebook" target="_blank"  
+            span Facebook
+      - if @candidate.site?
+        li
+          a.site href="#{@candidate.site}" title="Site" target="_blank"  
+            span Site
+      - if @candidate.twitter != nil
+        li
+          a.twitter href="#{@candidate.twitter}" title="Twitter" target="_blank"
+            span Twitter
+    - if @candidate.about?
+      h3 Sobre o candidato
+      p
+        = @candidate.about
+
+  - if current_user.represents? @candidate
+    = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
+
+= content_for :right do
+  #conteudo.interface2
+    h3.proposta
+      - if current_user.represents? @candidate
+        = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "btn primary"
+        br
+        br  
+      = "Propostas (#{@candidate.proposals.size})"
+    - @candidate.proposals.each do |proposal|
+      = render :partial => 'proposal', :locals => { :proposal => proposal }
+    end

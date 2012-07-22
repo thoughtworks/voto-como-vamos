@@ -33,21 +33,24 @@ html
 
     = yield :conceptual
 
-    #geral
+    #geral class="#{yield :geral_css}"
       #baixo
-        #esquerda
-          #conteudo
-            - if flash[:notice]
-                .alert-message.success
-                  = h flash[:notice]
+        #esquerda class="#{yield :esquerda_css}"
+          - if content_for?(:left)
+            = yield(:left)
+          - else
+            #conteudo
+              - if flash[:notice]
+                  .alert-message.success
+                    = h flash[:notice]
 
-            - if flash[:error]
-                .alert-message.error
-                  = h flash[:error]
+              - if flash[:error]
+                  .alert-message.error
+                    = h flash[:error]
 
-            = yield
+              = yield
 
-        #direita
+        #direita class="#{yield :direita_css}"
           = yield :right
         #rodape
           .loguinho

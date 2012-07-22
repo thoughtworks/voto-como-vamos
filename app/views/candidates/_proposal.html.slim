@@ -1,9 +1,9 @@
 .proposta
   h4
-    = proposal.title
+    = link_to proposal.title, candidate_proposal_path(@candidate, proposal)
   p
     = proposal.categories.map { |category| category.name }.to_sentence 
   p
     = proposal.abstract
-  .saiba_mais
-    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal), :class =>  'btn'
+  .saibamais
+    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
