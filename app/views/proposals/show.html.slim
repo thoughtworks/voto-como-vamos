@@ -8,7 +8,7 @@
     p.voltaraspropostas
       = link_to "Voltar às Propostas", candidate_path(@candidate)
 
-    div.proposta
+    .proposta
       h4= @proposal.title
       p= @proposal.categories.map {|category| category.name }.to_sentence
       p= @proposal.abstract
@@ -26,17 +26,30 @@
         = f.input :description, :id => "description"
         = f.submit t('question.send'), :id => "do_question" 
       br
-      div id="questions_list"
+      #questions_list
         - @proposal.questions.each do |q|
           div class="question"
             span class="description" =q.description
-
       br
       = OpinionWidget.new(current_user, @proposal).render
-      a href="#" class="share" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
+      a.share href="#" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
         = t("common.share")
-      div id="fb-root"
-      div class="fb-comments" data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5" data-width="700"
+      #fb-root
+        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
+
+    .acoes
+      .acao_sharefacebook
+        img src="/assets/bt_share.jpg"
+        p.counter=0
+      .acao_curtir
+        img src="/assets/bt_curtir.jpg"
+        p.counter=0
+      .acao_naocurtir
+        img src="/assets/bt_naocurtir.jpg"
+        p.counter=0
+      .acao_perguntar
+        img src="/assets/bt_perguntar.jpg"
+        p.counter=0
 
 = content_for :left do
   = render :partial => 'candidates/candidate'
