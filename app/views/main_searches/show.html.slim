@@ -5,16 +5,17 @@
         .resultadosdabusca
           - if @main_search.empty?
             p.h2
-              |  Não foram encontrados resultados de busca para
+              |  Não foram encontrados resultados de busca para 
               span.termobuscado
-                | "o que eu busquei"
+                = "\"#{@main_search.query}\""
           - else
             p.h2
-              |  Resultados para
+              |  Resultados para 
               span.termobuscado
-                | "o que eu busquei"
+                = "\"#{@main_search.query}\""
             - unless @main_search.candidates.results.empty?
               h3.candidatos Candidatos
+              = will_paginate @main_search.candidates.results, { :class => "abc", :link_separator => " - ", :param_name => "candidates_page" }
               - @main_search.candidates.each_hit_with_result do |hit, c|
                 div.resultado
                   div.titulo
@@ -23,33 +24,10 @@
                   p= c.name
                   p.resumo
                     = c.about
-                    span.termobuscado
-                      | "Aqui virá o termo buscado"
-              .paginacao
-                ul
-                  li
-                    a href="#"
-                      |  1
-                  li
-                    a href="#"
-                      |  2
-                  li
-                    a href="#"
-                      | 3
-                  li
-                    a href="#"
-                      | 4
-                  li
-                    a href="#"
-                      | 5
-                  li
-                    a href="#"
-                      | >
-                  li
-                    a href="#"
-                      | >>
+
             - unless @main_search.proposals.results.empty?
               h3.propostas Propostas
+              = will_paginate @main_search.proposals.results, { :class => "abc", :link_separator => " - ", :param_name => "proposals_page" }
               - @main_search.proposals.each_hit_with_result do |hit, p|
                 .resultado
                   .titulo
@@ -57,28 +35,3 @@
                       = formatted_highlight hit, :title
                       p.resumo
                         = p.abstract
-                        span.termobuscado o que eu busquei
-
-              .paginacao
-                ul
-                  li
-                    a href="#"
-                      | 1
-                  li
-                    a href="#"
-                      | 2
-                  li
-                    a href="#"
-                      | 3
-                  li
-                    a href="#"
-                      | 4
-                  li
-                    a href="#"
-                      | 5
-                  li
-                    a href="#"
-                      | >
-                  li
-                    a href="#"
-                      | >>

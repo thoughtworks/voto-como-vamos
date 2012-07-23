@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MainSearchesController do
   describe 'showing results' do
     it 'should search based on a query' do
-      fake_params = { :main_search => { :query => 'test' } }
+      fake_params = { :main_search => { :query => 'test' , :candidates_page => nil, :proposals_page => nil } }
 
       main_search = double('Main Search')
       main_search.should_receive(:execute)

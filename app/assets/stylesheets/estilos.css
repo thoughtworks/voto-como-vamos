@@ -212,9 +212,11 @@ h3.candidatos {
 .siglas{text-decoration:underline; margin-right:20px; width:55px; float:left; font-weight:bold;}
 .nomedopartido{float:left; width:325px; text-decoration:none}
 
-.abc{width:870px; margin-bottom:5px; margin-left:20px; padding-left:15px; padding-right:15px; padding-top:2px; background-image:url('/assets/bg_abc.jpg'); height:48px; letter-spacing:2px; color:#fff; font-size:26px;}
-.abc_ativo{font-weight:bold; color:#ccc; font-size:26px}
-.abc A{font-size:26px; letter-spacing:2px; color:#fff;}
+.abc{width:870px; margin-bottom:5px; margin-left:20px; padding-left:15px; padding-right:15px; padding-top:2px; background-image:url('/assets/bg_abc.jpg'); height:48px; color:#fff; font-size:26px;}
+.abc A{font-size:26px; color:#fff;}
+A.previous_page, A.next_page, .gap {font-size:16px}
+.current { color:#ccc; font-size:26px;}
+.disabled, .gap { color:#ccc;}
 .filtro_candidatos UL{width:290px; margin:auto}
 .filtro_candidatos LI{display: inline; padding-right:15px;}
 .filtro_candidatos LI.selecionado{font-size:16px; color:#000;}

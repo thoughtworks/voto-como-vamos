@@ -25,9 +25,10 @@ class Proposal < ActiveRecord::Base
     end
   end
 
-  def self.text_search(query_string)
+  def self.text_search(query_string, page)
     search do
       fulltext query_string, :highlight => true
+      paginate :page => page
       order_by(:title)
     end
   end

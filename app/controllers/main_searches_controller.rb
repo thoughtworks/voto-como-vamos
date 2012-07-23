@@ -3,6 +3,8 @@ class MainSearchesController < ApplicationController
 
   def show
     search_params = params[:main_search].symbolize_keys
+    search_params[:candidates_page] = params[:candidates_page]
+    search_params[:proposals_page] = params[:proposals_page]
     @main_search = MainSearch.new(search_params).execute
   end
 end
