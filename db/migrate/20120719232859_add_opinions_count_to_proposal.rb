@@ -6,7 +6,7 @@ class AddOpinionsCountToProposal < ActiveRecord::Migration
 
   def up
     Proposal.all.each do |p|
-      Proposal.update_counters p.id, :opinions_count => p.opinions_count.count
+      Proposal.update_counters p.id, :opinions_count => p.opinions.count
     end
   end
 end

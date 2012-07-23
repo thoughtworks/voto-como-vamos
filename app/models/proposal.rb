@@ -2,6 +2,7 @@
 class Proposal < ActiveRecord::Base
   has_and_belongs_to_many :categories
   has_many :questions
+  has_many :opinions
 
   belongs_to :candidate
   validates :candidate, :presence => true

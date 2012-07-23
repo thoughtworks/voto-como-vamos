@@ -13,6 +13,8 @@ describe Proposal do
   it { should validate_presence_of(:abstract) }
   it { should ensure_length_of(:abstract).is_at_most(300) }
 
+  it { should have_many(:opinions) }
+
   it { should validate_presence_of(:description) }
 
   it 'can be found by text criteria and filtered by categories' do
