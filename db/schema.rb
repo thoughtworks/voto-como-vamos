@@ -81,6 +81,12 @@ ActiveRecord::Schema.define(:version => 20120719232859) do
   add_index "questions", ["proposal_id"], :name => "index_questions_on_proposal_id"
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
+  create_table "revindications", :force => true do |t|
+    t.integer "candidate_id"
+    t.string  "user_id"
+    t.boolean "accepted"
+  end
+
   create_table "users", :force => true do |t|
     t.string "provider"
     t.string "uid"
