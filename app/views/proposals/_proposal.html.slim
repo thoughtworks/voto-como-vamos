@@ -1,0 +1,12 @@
+li
+  = link_to proposal.title, proposal, :class => 'nomedaproposta'
+  .capa
+    .acao_curtir
+      = image_tag "bt_curtir.jpg", :alt => "curtir a proposta"
+      p.counter
+        | 8
+
+    .acao_naocurtir
+      = image_tag "bt_naocurtir.jpg", :alt => "não curtir a proposta"
+      p.counter
+        | 8

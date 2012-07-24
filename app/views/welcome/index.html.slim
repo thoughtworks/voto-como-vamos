@@ -12,22 +12,9 @@
         li
           = link_to c.name, proposals_path(:categories => [c.id])
   = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
-div class="propostasmaisdiscutidas"
-  h3 class="propostasmaisdiscutidas"
+.propostasmaisdiscutidas
+  h3.propostasmaisdiscutidas
     | Propostas Mais Discutidas
 
-  .proposals
-  - @proposals.each_with_index do |proposal, i|
-    .proposal
-       p.numero
-         = i + 1
-       = link_to proposal.title, proposal_path(proposal), :class => 'nomedaproposta'
-       /.capa
-          .acao_curtir
-            = image_tag "bt_curtir.jpg", :alt => "curtir a proposta"
-            p.counter
-              | 8
-          .acao_naocurtir
-            = image_tag "bt_naocurtir.jpg", :alt => "não curtir a proposta"
-            p.counter
-              | 8
+  ol
+    = render @proposals
