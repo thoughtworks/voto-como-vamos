@@ -35,19 +35,19 @@ html
 
     #geral class="#{content_for?(:geral_css) ? yield(:geral_css) : 'internas'}"
       #baixo
+        - if flash[:notice]
+          .alert-message.success
+            = h flash[:notice]
+
+        - if flash[:error]
+          .alert-message.error
+            = h flash[:error]
+
         #esquerda class="#{yield :esquerda_css}"
           - if content_for?(:left)
             = yield(:left)
           - else
             #conteudo
-              - if flash[:notice]
-                  .alert-message.success
-                    = h flash[:notice]
-
-              - if flash[:error]
-                  .alert-message.error
-                    = h flash[:error]
-
               = yield
 
         #direita class="#{yield :direita_css}"
