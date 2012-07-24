@@ -55,6 +55,10 @@ class ProposalsController < ApplicationController
 
   private
 
+  def body_class
+    "fundocinza"
+  end
+
   def load_candidate
     @candidate = Candidate.find(params[:candidate_id])
   end

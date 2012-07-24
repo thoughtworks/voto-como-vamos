@@ -2,6 +2,8 @@
 class CandidatesController < ApplicationController
   before_filter :load_candidate, :except => [:index]
   before_filter :authorize_candidate, :only => [:edit, :update]
+  before_filter :fundo_verde, :except => [:show]
+  before_filter :fundo_cinza, :only => [:show]
 
   def index
     @candidates = Candidate.text_search(params[:query], params[:page]).results
@@ -23,6 +25,18 @@ class CandidatesController < ApplicationController
   end
 
   private
+
+  def fundo_verde
+    @body_class = "fundoverde"
+  end
+
+  def fundo_cinza
+    @body_class = "fundocinza"
+  end
+
+  def body_class
+    @body_class
+  end
 
   def authorize_candidate
     unless current_user.represents? @candidate
