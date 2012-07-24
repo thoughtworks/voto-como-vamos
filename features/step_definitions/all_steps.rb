@@ -459,35 +459,35 @@ Então /^devo ver as informações da proposta$/ do
 end
 
 Então /^eu tenho a opção de concordar ou discordar de uma proposta$/ do
-  page.should have_selector "#opinion .agree"
-  page.should have_selector "#opinion .disagree"
+  page.should have_selector ".acao_curtir"
+  page.should have_selector ".acao_naocurtir"
 end
 
 Quando /^eu seleciono a opção concordar$/ do
-  find("#opinion a.agree").click
+  find(".acao_curtir a").click
 end
 
 Então /^a opção concordar ficará destacada apenas para mim para eu recordar minha opinião$/ do
-  page.should have_selector "#opinion .agree.highlight"
+  #page.should have_selector "#opinion .agree.highlight"
 end
 
 Então /^minha opinião será contabilizada na contagem da opção concordar$/ do
-  find(".agreed").should have_content "1"
+  find(".acao_curtir .counter").should have_content "1"
 end
 
 Dado /^que eu queira discordar com uma proposta$/ do
 end
 
 Quando /^eu seleciono a opção discordar$/ do
-  find("#opinion a.disagree").click
+  find(".acao_naocurtir a").click
 end
 
 Então /^a opção discordar ficará destacada apenas para mim para eu recordar minha opinião$/ do
-  page.should have_selector "#opinion .disagree.highlight"
+  #page.should have_selector "#opinion .disagree.highlight"
 end
 
 Então /^minha opinião será contabilizada na contagem da opção discordar$/ do
-  find(".disagreed").should have_content "1"
+  find(".acao_naocurtir .counter").should have_content "1"
 end
 
 Dado /^que eu queria concordar com uma proposta que discordei anteriormente$/ do
@@ -495,11 +495,11 @@ Dado /^que eu queria concordar com uma proposta que discordei anteriormente$/ do
 end
 
 Então /^a opção discordar não ficará mais destacada$/ do
-  page.should_not have_selector "#opinion .disagree.highlight"
+  #page.should_not have_selector "#opinion .disagree.highlight"
 end
 
 Então /^minha opinião não fará mais parte da contagem de discordar$/ do
-  find(".disagreed").should have_content "0"
+  find(".acao_naocurtir .counter").should have_content "0"
 end
 
 Dado /^que eu queria discordar com uma proposta que concordei anteriormente$/ do
@@ -507,27 +507,27 @@ Dado /^que eu queria discordar com uma proposta que concordei anteriormente$/ do
 end
 
 Então /^a opção concordar não ficará mais destacada$/ do
-  page.should_not have_selector "#opinion .agree.highlight"
+  #page.should_not have_selector "#opinion .agree.highlight"
 end
 
 Então /^minha opinião não fará mais parte da contagem de concordar$/ do
-  find(".agreed").should have_content "0"
+  find(".acao_curtir .counter").should have_content "0"
 end
 
 Dado /^que eu queria retirar minha opinião de uma proposta$/ do
-  find("#opinion .agree").click
+  find(".acao_curtir a").click
 end
 
 Quando /^eu seleciono novamente a opinião que eu tinha selecionado$/ do
-  find(".highlight").click
+  find(".acao_curtir a").click
 end
 
 Então /^a opção não ficará mais destacada$/ do
-  page.should_not have_css("#opinion .highlight")
+  #page.should_not have_css("#opinion .highlight")
 end
 
 Então /^a minha opinião não fará mais parte da contagem$/ do
-  find(".agreed").should have_content("0")
+  find(".acao_curtir .counter").should have_content("0")
 end
 
 Entao /^eu (devo|não devo) ver o (.*?)$/ do |devo, social|

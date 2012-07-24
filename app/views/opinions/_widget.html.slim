@@ -1,0 +1,10 @@
+.capa
+  .acao_curtir
+    = widget.link_for :agree, image_tag("bt_curtir.jpg", :alt => "curtir a proposta")
+    p.counter
+      = widget.agreements
+
+  .acao_naocurtir
+    = widget.link_for :disagree, image_tag("bt_naocurtir.jpg", :alt => "não curtir a proposta")
+    p.counter
+      = widget.disagreements

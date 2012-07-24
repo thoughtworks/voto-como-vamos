@@ -4,6 +4,7 @@ describe OpinionsController do
 
   before do
     controller.stub!(:current_user => current_user)
+    request.env["HTTP_REFERER"] = 'back'
   end
 
   let(:opinion) {  mock_model(Opinion, value: -1) } 
@@ -38,7 +39,6 @@ describe OpinionsController do
       .and_return([opinion])
 
       opinion.should_receive(:destroy).and_return true
-      opinion.should_receive(:proposal_id).and_return proposal_id
 
       delete :destroy, { id: opinion.id }
     end
@@ -55,7 +55,6 @@ describe OpinionsController do
       .with(user_id: current_user.id, id: opinion.id.to_s)
       .and_return([opinion])
 
-      opinion.should_receive(:proposal_id).and_return proposal_id
       opinion.should_receive(:update_attributes).with(value: value).and_return true
 
       put :update, id: opinion.id,  opinion: { proposal_id: proposal_id, value: value }

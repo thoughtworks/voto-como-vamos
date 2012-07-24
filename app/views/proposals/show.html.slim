@@ -31,7 +31,8 @@
           div class="question"
             span class="description" =q.description
       br
-      = OpinionWidget.new(current_user, @proposal).render
+
+      = opinion_widget current_user, @proposal
       
     .acoes
       .acao_sharefacebook

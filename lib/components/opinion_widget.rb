@@ -1,53 +1,29 @@
 class OpinionWidget
 
-  include ActionView::Helpers::TagHelper
-  include Rails.application.routes.url_helpers
+  attr_accessor :agreements, :disagreements
 
-  def initialize user, proposal, opinion = Opinion
+  def initialize user, proposal, context
     @user = user
     @proposal = proposal
-    @opinion = opinion
+    @context = context
+    @agreements = Opinion.agreements(@proposal).size
+    @disagreements = Opinion.disagreements(@proposal).size
   end
 
-
-  def render
-    h.content_tag :div, id: :opinion do
-      h.content_tag(:span, @opinion.agreements(@proposal).size, class: "agreed") <<
-      link_for(:agree) <<
-      h.content_tag(:span, @opinion.disagreements(@proposal).size, class: "disagreed") <<
-      link_for(:disagree)
-    end
-  end
-
-  private
-
-  def link_for opinion
-
+  def link_for opinion, image
     value = (opinion == :agree) ? Opinion::AGREE : Opinion::DISAGREE
     opinion_state = opinion_matches? opinion
 
     if opinion_state.nil?
-      h.link_to t("opinion.#{opinion}"),
-                new_opinion_path(params_for(value)),
-                class: class_for(opinion)
-
+      @context.link_to image, @context.new_opinion_path(params_for(value))
     elsif opinion_state
-      h.link_to t("opinion.#{opinion}"),
-                opinion_path(current_opinion.id),
-                class: class_for(opinion),
-                method: :delete
-
+      @context.link_to image, @context.opinion_path(current_opinion.id), method: :delete
     else
-      h.link_to t("opinion.#{opinion}"),
-                edit_opinion_path(current_opinion.id, params_for(value)),
-                class: class_for(opinion)
+      @context.link_to image, @context.edit_opinion_path(current_opinion.id, params_for(value))
     end
-
   end
 
-  def class_for opinion
-    opinion_matches?(opinion) ? "#{opinion} highlight" : opinion.to_s
-  end
+  private
 
   def opinion_matches? opinion
     return nil unless current_opinion
@@ -56,23 +32,15 @@ class OpinionWidget
   end
 
   def current_opinion
-    @current_opinion = @opinion.opinion_for(@proposal, @user) unless @fetched
+    @current_opinion = Opinion.opinion_for(@proposal, @user) unless @fetched
     @fetched = true
     @current_opinion
   end
 
   def params_for opinion
     { opinion: {
-     proposal_id: @proposal.id,
-     value: opinion
+      proposal_id: @proposal.id,
+      value: opinion
     }}
-  end
-
-  def h
-    ApplicationController.helpers
-  end
-
-  def t text
-    h.t text
   end
 end
