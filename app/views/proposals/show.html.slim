@@ -31,20 +31,13 @@
           div class="question"
             span class="description" =q.description
       br
-
-      = opinion_widget current_user, @proposal
       
     .acoes
       .acao_sharefacebook
         a.share href="#" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
           img src="/assets/bt_share.jpg"
         p.counter=0
-      .acao_curtir
-        img src="/assets/bt_curtir.jpg"
-        p.counter=0
-      .acao_naocurtir
-        img src="/assets/bt_naocurtir.jpg"
-        p.counter=0
+      = opinion_widget current_user, @proposal
       .acao_perguntar
         img src="/assets/bt_perguntar.jpg"
         p.counter=0

@@ -265,7 +265,7 @@ H4 A{text-decoration: underline; font-size:16px;}
 .saibamais A{text-decoration:underline; font-size:11px;}
 .saibamais A:HOVER{text-decoration:none}
 
-.acoes{width:385px; margin-top:5px; margin-bottom:40px; height:30px; margin-left:280px;}
+.acoes{width:385px; margin-top:5px; margin-bottom:40px; height:30px;}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
 #conteudo P.counter{text-align:center; width:68; display:block;}
 .acoes DIV P, .acoes DIV IMG{float:left;}
