@@ -21,9 +21,10 @@
                   div.titulo
                     a href=candidate_path(c)
                       = formatted_highlight hit, :short_name
-                  p= c.name
-                  p.resumo
-                    = c.about
+                      |&nbsp;(
+                      = formatted_highlight hit, :name
+                      |)
+                  p.resumo= [c.tse_number, c.role, c.party, c.alliance].join(", ")
 
             - unless @main_search.proposals.results.empty?
               h3.propostas Propostas
