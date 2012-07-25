@@ -17,22 +17,22 @@
       - if @candidate.represented_by? current_user
         = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
         = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
-      /br
-      /= simple_form_for [@proposal, @question], :html => {:id => "question"} do |f|
-        - if @question.errors.any?
-          div.alert-message.error
-            - @question.error.full_messages.each do |msg|
-              p =msg
-        = f.input :description, :id => "description"
-        = f.submit t('question.send'), :id => "do_question" 
-      /br
-      /#questions_list
-        - @proposal.questions.each do |q|
-          div class="question"
-            span class="description" =q.description
-      /br
     .interact  
       = render :partial => 'interact', :locals => { :proposal => @proposal }
+
+      .perguntas
+        img.perguntas src="/assets/bt_perguntar.jpg"
+        h3.nome Perguntas
+
+      = simple_form_for [@proposal, @question], :html => {:id => "question"} do |f|
+        = f.input :description, :id => "description", :label => false, :input_html => { :class => "small"}
+        = f.submit t('question.send'), :id => "do_question" 
+
+      #questions_list
+        - @proposal.questions.each do |q|
+          p.question
+            =q.description
+      br
 
       #fb-root
         .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"

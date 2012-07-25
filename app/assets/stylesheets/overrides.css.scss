@@ -73,3 +73,24 @@ div.check_boxes input {margin: 0 10px}
 #fb-root {
   text-align:right;
 }
+
+.perguntas {
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.perguntas h3 {
+  display:inline;
+  margin-left:10px;
+}
+
+#questions_list {
+  float:left;
+  margin: 20px 0 40px 30px;
+}
+
+.question {
+  margin-bottom:10px;
+}
