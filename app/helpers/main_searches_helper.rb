@@ -8,7 +8,8 @@ module MainSearchesHelper
         content_tag :span, fragment, :class => 'termobuscado'
       end.html_safe
     else
-      hit.stored(field).join("")
+      value = hit.stored(field)
+      value.kind_of?(Array) ? value.join("") : value
     end
   end
 
