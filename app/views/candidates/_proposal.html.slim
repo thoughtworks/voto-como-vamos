@@ -7,3 +7,5 @@
     = proposal.abstract
   .saibamais
     = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
+
+  = render :partial => 'proposals/interact', :locals => { :proposal => proposal }

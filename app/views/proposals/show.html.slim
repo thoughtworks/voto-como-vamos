@@ -17,31 +17,24 @@
       - if @candidate.represented_by? current_user
         = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
         = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
-      br
-      = simple_form_for [@proposal, @question], :html => {:id => "question"} do |f|
+      /br
+      /= simple_form_for [@proposal, @question], :html => {:id => "question"} do |f|
         - if @question.errors.any?
           div.alert-message.error
             - @question.error.full_messages.each do |msg|
               p =msg
         = f.input :description, :id => "description"
         = f.submit t('question.send'), :id => "do_question" 
-      br
-      #questions_list
+      /br
+      /#questions_list
         - @proposal.questions.each do |q|
           div class="question"
             span class="description" =q.description
-      br
-      
-    .acoes
-      .acao_sharefacebook
-        a.share href="#" data-title=@proposal.title data-description=@proposal.description data-caption=@candidate.name data-photo=@candidate.photo
-          img src="/assets/bt_share.jpg"
-        p.counter=0
-      = opinion_widget current_user, @proposal
-      .acao_perguntar
-        img src="/assets/bt_perguntar.jpg"
-        p.counter=0
-    #fb-root
+      /br
+    .interact  
+      = render :partial => 'interact', :locals => { :proposal => @proposal }
+
+      #fb-root
         .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do

@@ -323,7 +323,7 @@ Quando /^aceito os termos de uso$/ do
 end
 
 Então /^devo poder administrar o meu perfil$/ do
-  page.should have_content "edit_content"
+  page.should have_content "Editar Perfil"
 end
 
 Dado /^que eu queira concordar com uma proposta$/ do

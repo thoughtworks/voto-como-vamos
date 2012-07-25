@@ -24,7 +24,7 @@
 }
 
 #esquerda input, #esquerda textarea {
-  width:200px;
+  max-width:200px;
 }
 
 #baixo textarea.small {
@@ -64,3 +64,12 @@ div.check_boxes {
 div.check_boxes label.check_boxes {display:none}
 
 div.check_boxes input {margin: 0 10px}
+
+.interact {
+  text-align: right;
+  margin-right: 15px;
+}
+
+#fb-root {
+  text-align:right;
+}
