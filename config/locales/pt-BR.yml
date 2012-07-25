@@ -268,7 +268,7 @@ pt-BR:
     show:
       press_agent: 'Este perfil é gerenciado pela Assessoria de Imprensa'
       candidate: 'Este perfil é gerenciado pelo Candidato'
-      edit_profile: 'Editar perfil'
+      edit_profile: 'Editar'
   opinion:
     agree: "Concordar"
     disagree: "Discordar"

@@ -1,16 +1,1 @@
-.span12
-	= simple_form_for ([@candidate, @proposal]) do |f|
-	  - if @proposal.errors.any?
-	    div.alert-message.error
-	      - @proposal.errors.full_messages.each do |msg| 
-            p = msg
-	  fieldset
-	    legend 
-	      | Editar Proposta
-        = f.input :title, :input_html => { :maxlength => "100"}
-        = f.input :abstract, :input_html => { :maxlength => "300"}
-        = f.input :description, :input_html => { :maxlength => "8000"}
-        = f.association :categories, :as => :check_boxes, :wrapper => :options
-        .actions
-          = f.submit t('common.save'), :class => 'btn primary'
-          = link_to t('common.cancel'), candidate_proposal_path(@candidate,@proposal), :class => 'btn'
+= render :partial => 'form', :locals => {:form_title => 'Nova Proposta'}

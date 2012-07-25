@@ -1,11 +1,1 @@
-.span12
-  = simple_form_for([@candidate, @proposal]) do |f|
-    fieldset
-      legend
-        | Nova Proposta
-      = f.input :title, :input_html => { :maxlength => "100"}
-      = f.input :abstract, :input_html => { :maxlength => "300"}
-      = f.input :description, :input_html => { :maxlength => "8000"}
-      = f.association :categories, :as => :check_boxes, :wrapper => "options"
-      .actions
-        = f.submit t('common.save'), :class => 'btn primary'
+= render :partial => 'form', :locals => {:form_title => 'Nova Proposta'}

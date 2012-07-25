@@ -3,16 +3,17 @@
 - content_for(:direita_css) { 'interface2' }
 
 = content_for :left do
-  = render :partial => 'candidate'
+  = render @candidate
 
 = content_for :right do
   #conteudo.interface2
     h3.proposta
-      - if @candidate.represented_by? current_user
-        = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "btn primary"
-        br
-        br  
       = "Propostas (#{@candidate.proposals.size})"
-    - @candidate.proposals.each do |proposal|
-      = render :partial => 'proposal', :locals => { :proposal => proposal }
-    end
+      - if @candidate.represented_by? current_user
+        br
+        = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "partido"
+      br
+      br
+      br  
+
+    = render :partial => 'proposal', :collection => @candidate.proposals

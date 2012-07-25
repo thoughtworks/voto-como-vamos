@@ -1,33 +1,61 @@
-div.row
-  div.span12
+- content_for(:title) { @candidate.name }
+- content_for(:esquerda_css) { 'interface2' }
+- content_for(:direita_css) { 'interface2' }
+
+= content_for :left do
+  #perfilcandidato
+    h3.nome
+      |Meu Perfil
+
+    br
+    br
     = simple_form_for @candidate do |f|
       - if @candidate.errors.any?
         div.alert-message.error
           - @candidate.errors.full_messages.each do |msg|
             p = msg
-      fieldset
-        legend
-          | Editar Candidato
-        = f.input :about
-        = f.input :phone, :placeholder => '(xx)xxxx-xxxx'
-        = f.input :email
-        = f.input :site
-        = f.input :blog
-        = f.input :facebook
-        = f.input :twitter
+      = f.input :phone, :placeholder => '(xx)xxxx-xxxx'
+      br
+      = f.input :email
+      br
+      = f.input :site
+      br
+      = f.input :blog
+      br
+      = f.input :facebook
+      br
+      = f.input :twitter
+      br
+      = f.input :about, :input_html => {:class => 'small'}
 
-        .clearfix
-          = f.label :press_agent
-          div.input
-            ul.inputs-list
-              li
-                label
-                  = f.radio_button :press_agent, "true"
-                  span= t('common.yes_option')
-              li
-                label
-                  = f.radio_button :press_agent, "false"
-                  = t('common.no_option')
+      br
+      br
+      .clearfix
+        = f.label 'Este perfil é gerenciado pela acessoria de imprensa?'
+        div.input
+          ul.inputs-list
+            li
+              label
+                = f.radio_button :press_agent, "true"
+                span= t('common.yes_option')
+            li
+              label
+                = f.radio_button :press_agent, "false"
+                = t('common.no_option')
 
-        div.actions
-          = f.submit 'Salvar', :class => 'btn primary'
+      br
+      br
+      = f.submit t('common.save'), :class => 'save_button'
+
+= content_for :right do
+  #conteudo.interface2
+    h3.proposta
+      = "Propostas (#{@candidate.proposals.size})"
+      - if current_user.represents? @candidate
+        br
+        = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "partido"
+      br
+      br
+      br  
+
+    = render :partial => 'proposal', :collection => @candidate.proposals

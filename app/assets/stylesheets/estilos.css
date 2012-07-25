@@ -79,7 +79,7 @@ behavior: url(PIE.htc); /* Comportamento adicionado para renderização das prop
 #perfilcandidato .foto{margin-bottom:20px;}
 #perfilcandidato .cargo{font-size:10px; margin-bottom:5px; color:#FF9966}
 #perfilcandidato .nome{font-size:14px; margin-bottom:5px; color:#FF9966}
-#perfilcandidato .partido{font-size:10px; text-decoration:underline; padding-bottom:5px; color:#FF9966}
+.partido{font-size:10px; text-decoration:underline; padding-bottom:5px; color:#FF9966}
 #perfilcandidato .coligacao{font-size:10px; text-decoration:underline; color:#FF9966}
 #perfilcandidato .telefone{margin-top:25px; margin-bottom:25px;}
 

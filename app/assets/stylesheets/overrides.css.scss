@@ -11,3 +11,56 @@
   position: relative;
   top: -15px;
 }
+
+#baixo input, #baixo textarea {
+  border: 2px solid #ccc;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding:5px;
+}
+
+#baixo textarea {
+  width:610px;
+}
+
+#esquerda input, #esquerda textarea {
+  width:200px;
+}
+
+#baixo textarea.small {
+  height:5em;
+}
+
+#baixo textarea.big {
+  height:10em;
+}
+
+#conteudo .simple_form {
+  margin-left: 30px;
+}
+
+#baixo .simple_form label, label abbr, .save_button {
+  font-size:10px;
+  color:black;
+}
+
+#baixo input.save_button {
+  background:none;
+  border:0;
+  text-decoration:underline;
+}
+
+#conteudo input.save_button {
+  margin-left:300px;
+}
+
+div.check_boxes {
+  width:300px;
+  margin-top:5px;
+  float:right;
+  margin-right:25px;
+}
+
+div.check_boxes label.check_boxes {display:none}
+
+div.check_boxes input {margin: 0 10px}
