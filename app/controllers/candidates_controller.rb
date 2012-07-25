@@ -1,6 +1,7 @@
 # encoding: utf-8
 class CandidatesController < ApplicationController
   before_filter :load_candidate, :except => [:index]
+  before_filter :authenticate!, :only => [:edit, :update]
   before_filter :authorize_candidate, :only => [:edit, :update]
   before_filter :fundo_verde, :except => [:show]
   before_filter :fundo_cinza, :only => [:show]
@@ -39,7 +40,7 @@ class CandidatesController < ApplicationController
   end
 
   def authorize_candidate
-    unless current_user.represents? @candidate
+    unless @candidate.represented_by? current_user
       redirect_to root_path
     end
   end

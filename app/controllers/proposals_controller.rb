@@ -1,5 +1,6 @@
 # encoding: utf-8
 class ProposalsController < ApplicationController
+  before_filter :authenticate!, :except => [:index, :show]
   before_filter :load_candidate, :except => [:index, :show]
 
   def index

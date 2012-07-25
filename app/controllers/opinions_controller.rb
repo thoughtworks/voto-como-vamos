@@ -1,4 +1,5 @@
 class OpinionsController < ApplicationController
+  before_filter :authenticate!, :only => [:edit, :update, :destroy]
 
   def create
     Opinion.create params_for_current_user, :as => :admin

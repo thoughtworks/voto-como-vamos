@@ -28,4 +28,8 @@ class Candidate < ActiveRecord::Base
   def generate_obfuscated_slug
     self.obfuscated_slug = Digest::SHA1.hexdigest name
   end
+
+  def represented_by? user
+    Ownership.where(:candidate_id => self.id, :user_id => user.id).exists? if user
+  end
 end

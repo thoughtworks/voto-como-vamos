@@ -16,5 +16,6 @@ Funcionalidade: Autenticar Usuário
     Dado que sou um usuário não cadastrado no Voto Como Vamos
     E que estou logado no facebook
     Quando eu acesso a página principal
+    E clico no botão de login
     E confirmo o pedido de autorização
     Então devo ser autenticado com sucesso

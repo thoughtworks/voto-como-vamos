@@ -3,6 +3,7 @@ require "components/opinion_widget"
 
 class QuestionsController < ApplicationController
 
+  before_filter :authenticate!, :except => [:index, :show]
   def create
     @proposal = Proposal.find params[:proposal_id]
     @question = Question.new params[:question]

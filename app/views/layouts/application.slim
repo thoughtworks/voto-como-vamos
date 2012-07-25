@@ -25,10 +25,14 @@ html
             li.candidatos
               = link_to "Candidatos", candidates_path
 
+        .fb-login-button data-autologoutlink="true" data-show-faces="false" data-width="75" data-max-rows="1"
+
         #busca
           = simple_form_for @main_search, :url => main_search_path, :method => :get do |f|
             = f.input :query, :label => false, :class => 'buscar', :id => 'buscar', :placeholder => 'Buscar'
             = f.button :submit, t('common.search'), :id => 'submit_main_search'
+
+
 
 
     = yield :conceptual

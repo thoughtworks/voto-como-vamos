@@ -16,7 +16,4 @@ class User < ActiveRecord::Base
     where(provider: provider, uid: uid).first 
   end
 
-  def represents? candidate
-    Ownership.where(:candidate_id => candidate.id, :user_id => self.id).exists?
-  end
 end

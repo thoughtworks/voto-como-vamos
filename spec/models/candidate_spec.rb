@@ -43,4 +43,24 @@ describe Candidate do
     candidate = Candidate.create!(:name => 'Test', :email => 'test@test.com')
     candidate.obfuscated_slug.should == 'obfuscated'
   end
+
+  describe "Representation" do
+
+    let(:user) { FactoryGirl.create :user }
+    let(:candidate) { FactoryGirl.create :candidate } 
+
+    it 'should check the ownership of a candidate' do
+      Ownership.create! :user => user, :candidate => candidate
+
+      candidate.represented_by?(user).should be_true
+    end
+
+    it 'should check the ownership of a candidate' do
+      candidate.represented_by?(user).should be_false
+    end
+
+    it 'should check the ownership of a candidate' do
+      candidate.represented_by?(nil).should be_false
+    end
+  end
 end

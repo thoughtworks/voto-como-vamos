@@ -49,10 +49,16 @@ Dado /^que existe um macro-tema cadastrado$/ do
   @category = FactoryGirl.create(:category)
 end
 
+Quando /^clico no botão de login$/ do
+  within_frame(find(".fb-login-button iframe")["id"]) do
+    find(".pluginLoginButton").click
+  end
+end
+
 Quando /^confirmo o pedido de autorização$/ do
-  find(".platform_dialog a").click
-  visit root_path
-  find('#grant_clicked input').click
+  page.driver.browser.window_handles.last do
+    find('#grant_clicked input').click
+  end
 end
 
 Dado /^que eu sou um candidato cadastrado$/ do

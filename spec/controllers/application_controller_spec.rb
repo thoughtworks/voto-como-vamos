@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 class FooController < ApplicationController
+  before_filter :authenticate!
   def index
     render :text => 'Hello world'
   end

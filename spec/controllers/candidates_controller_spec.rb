@@ -3,8 +3,8 @@ require 'spec_helper'
 
 describe CandidatesController do
   let(:candidate_id) { '1' }
-  let(:candidate) { double('candidate', :id => candidate_id) }
-  let(:current_user) { double("user", :represents? => true) }
+  let(:candidate) { double('candidate', :id => candidate_id, :represented_by? => true) }
+  let(:current_user) { double("user") }
 
   before :each do
     controller.stub!(current_user: current_user)
@@ -48,7 +48,7 @@ describe CandidatesController do
     end
 
     describe "editing without authentication" do
-      let(:current_user) { double(:current_user, :represents? => false) }
+      let(:candidate) { double('candidate', :id => candidate_id, :represented_by? => false) }
 
       before(:each) do
         controller.stub :current_user => current_user

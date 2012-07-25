@@ -27,7 +27,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 
 /*MENU*/
 
-#menu{width:470px; margin-left:60px; float:left; margin-top:15px; text-align:center}
+#menu{width:390px; margin-left:60px; float:left; margin-top:15px; text-align:center}
 #menu LI{float:left; height:34px; text-align:center; width:80px; margin-left:40px;}
 #menu LI A{display:block; width:120px; height:34px;}
 
@@ -309,3 +309,6 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 #rodape .loguinho{width:180px; padding-left:20px; float:left;}
 #rodape .loguinho IMG{width:60px; float:left}
 ADDRESS{font-size:10px; width:480px; border-top:1px solid #ccc; padding-top:5px; float:right;}
+
+/* login button */
+.fb-login-button { float: left; margin-top: 1.5em; margin-right: 0.3em; width: 75px; }

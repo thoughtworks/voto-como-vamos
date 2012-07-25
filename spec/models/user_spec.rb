@@ -30,19 +30,4 @@ describe User do
   end
 
 
-  describe "Representation" do
-
-    let(:user) { FactoryGirl.create :user }
-    let(:candidate) { FactoryGirl.create :candidate } 
-
-    it 'should check the ownership of a candidate' do
-      Ownership.create! :user => user, :candidate => candidate
-
-      user.represents?(candidate).should be_true
-    end
-
-    it 'should check the ownership of a candidate' do
-      user.represents?(candidate).should be_false
-    end
-  end
 end

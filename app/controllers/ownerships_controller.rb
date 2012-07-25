@@ -1,4 +1,5 @@
 class OwnershipsController < ApplicationController
+  before_filter :authenticate!
   before_filter :load_candidate
 
   def new

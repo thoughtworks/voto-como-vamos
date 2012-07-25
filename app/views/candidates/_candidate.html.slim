@@ -38,5 +38,5 @@
     p
       = @candidate.about
 
-- if current_user.represents? @candidate
+- if @candidate.represented_by? current_user
   = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile"
