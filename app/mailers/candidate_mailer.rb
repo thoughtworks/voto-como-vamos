@@ -1,6 +1,6 @@
 # encoding: utf-8
 class CandidateMailer < ActionMailer::Base
-  default from: "admin@votocomovamos.org.br"
+  default from: "sistema@votocomovamos.com.br"
   
   def revindication(candidate_id)
     @candidate = Candidate.find(candidate_id)
