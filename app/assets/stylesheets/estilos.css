@@ -16,7 +16,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 .negrito{font-weight:bold; color:#000}
 
 /*TOPO*/
-#topo{height:55px; width:100%; background:#fff}
+#topo{height:60px; width:100%; background:#fff}
 #header{width:1000px; margin:auto; position:relative}
 #logo{width:185px; float:left; margin-top:7px; text-align:center}
 #logo IMG{width:185px;}
@@ -79,10 +79,10 @@ behavior: url(PIE.htc); /* Comportamento adicionado para renderização das prop
 #perfilcandidato .foto{margin-bottom:20px;}
 #perfilcandidato .cargo{font-size:10px; margin-bottom:5px; color:#FF9966}
 #perfilcandidato .nome{font-size:14px; margin-bottom:5px; color:#FF9966}
-.partido{font-size:10px; text-decoration:underline; padding-bottom:5px; color:#FF9966}
-#perfilcandidato .coligacao{font-size:10px; text-decoration:underline; color:#FF9966}
+#perfilcandidato .partido{font-size:10px; padding-bottom:5px; color:#FF9966}
+#perfilcandidato .coligacao{font-size:10px; color:#FF9966}
 #perfilcandidato .telefone{margin-top:25px; margin-bottom:25px;}
-
+#perfilcandidato p a:hover { text-decoration: underline; }
 #perfilcandidato UL{margin-bottom:10px; height:20px;}
 #perfilcandidato LI{line-height:16px; width:15px; font-size:10px; padding-right:10px; background-repeat:no-repeat; margin-bottom:5px; float:left}
 
@@ -94,7 +94,7 @@ behavior: url(PIE.htc); /* Comportamento adicionado para renderização das prop
 #meuperfil .foto{margin-bottom:20px;}
 #meuperfil .cargo{font-size:10px; margin-bottom:5px; color:#FF9966}
 #meuperfil .nome{font-size:14px; margin-bottom:5px; color:#FF9966}
-#meuperfil .partido{font-size:10px; text-decoration:underline; padding-bottom:5px; color:#FF9966}
+#meuperfil .partido{font-size:10px; padding-bottom:5px; color:#FF9966}
 #meuperfil .coligacao{font-size:10px; text-decoration:underline; color:#FF9966}
 #meuperfil .telefone{margin-top:25px; margin-bottom:25px;}
 #meuperfil UL{margin-bottom:10px; height:20px;}
@@ -249,9 +249,9 @@ H3.proposta{margin-bottom:5px; margin-left:30px; color:#FF9966}
 .proposta H3 A:HOVER{text-decoration:none;}
 
 P.maispropostas{padding-bottom:20px;}
-P.maispropostas A, P.voltaraspropostas A{text-decoration:underline; color:#FF9966}
-P.maispropostas A:HOVER, P.voltaraspropostas A:HOVER{text-decoration:none}
-P.voltaraspropostas {padding-bottom:8px; padding-left:30px;}
+P.maispropostas A, P.voltaraspropostas A{ color:#FF9966; }
+P.maispropostas A:HOVER, P.voltaraspropostas A:HOVER { text-decoration:underline; }
+P.voltaraspropostas { float: right; padding-left:30px; }
 
 #conteudo P.acesse{margin-bottom:3px; width:400px;}
 
