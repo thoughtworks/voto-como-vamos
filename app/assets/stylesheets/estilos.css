@@ -17,7 +17,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 
 /*TOPO*/
 #topo{height:55px; width:100%; background:#fff}
-#header{width:1000px; margin:auto}
+#header{width:1000px; margin:auto; position:relative}
 #logo{width:185px; float:left; margin-top:7px; text-align:center}
 #logo IMG{width:185px;}
 
@@ -27,8 +27,8 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 
 /*MENU*/
 
-#menu{width:390px; margin-left:60px; float:left; margin-top:15px; text-align:center}
-#menu LI{float:left; height:34px; text-align:center; width:80px; margin-left:40px;}
+#menu{margin-left:40px; float:left; margin-top:15px; text-align:center}
+#menu LI{float:left; height:34px; text-align:center; width:80px; margin-left:20px;}
 #menu LI A{display:block; width:120px; height:34px;}
 
 #menu LI.partidos, #menu LI.propostas, #menu LI.candidatos{width:80px; height:34px;}
@@ -56,7 +56,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 
 
 
-#busca{width:285px; float:left; margin-top:13px; height:33px; background-image:url('/assets/bg_busca.png'); background-repeat:no-repeat;}
+#busca{width:285px; float:left; margin-top:13px; height:33px; background-image:url('/assets/bg_busca.png'); background-repeat:no-repeat; margin-left:60px;}
 #busca INPUT{margin-left:5px; margin-top:5px; height:15px; width:245px; padding:3px;}
 
 
@@ -147,7 +147,7 @@ h3.propostasmaisdiscutidas {
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
-  width:311px;
+  width:315px;
   height:55px;
   margin-bottom:30px;
 }
@@ -175,7 +175,7 @@ h3.propostas {
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
-  width:145px;
+  width:192px;
   height:54px;
   margin-bottom:20px;
   clear:both;
@@ -186,7 +186,7 @@ h3.candidatos {
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
-  width:145px;
+  width:192px;
   height:54px;
   margin-bottom:20px;
   clear:both;
@@ -309,5 +309,3 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 #rodape .loguinho IMG{width:60px; float:left}
 ADDRESS{font-size:10px; width:480px; border-top:1px solid #ccc; padding-top:5px; float:right;}
 
-/* login button */
-.fb-login-button { float: left; margin-top: 1.5em; margin-right: 0.3em; width: 75px; }

@@ -1,4 +1,5 @@
 li
-  = link_to proposal.title, proposal, :class => 'nomedaproposta'
-  .capa 
-  	= opinion_widget current_user, proposal
+  div
+    = link_to proposal.title, proposal, :class => 'nomedaproposta'
+    .capa 
+  	  = opinion_widget current_user, proposal

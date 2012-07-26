@@ -17,7 +17,7 @@ class OpinionWidget
     if opinion_state.nil?
       @context.link_to image, @context.new_opinion_path(params_for(value))
     elsif opinion_state
-      @context.link_to image, @context.opinion_path(current_opinion.id), method: :delete
+      @context.link_to image, @context.opinion_path(current_opinion.id), method: :delete, class: "selected"
     else
       @context.link_to image, @context.edit_opinion_path(current_opinion.id, params_for(value))
     end

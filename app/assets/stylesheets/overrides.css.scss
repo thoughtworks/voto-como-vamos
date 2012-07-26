@@ -74,6 +74,8 @@ div.check_boxes input {margin: 0 10px}
   text-align:right;
 }
 
+#login_button { margin-top: 1.5em; position:absolute; right:0 }
+
 .perguntas {
   float: left;
   clear: both;
@@ -94,3 +96,8 @@ div.check_boxes input {margin: 0 10px}
 .question {
   margin-bottom:10px;
 }
+
+.acao_curtir img, .acao_naocurtir img {opacity:0.4}
+.acao_curtir a.selected img, .acao_naocurtir a.selected img {opacity:1}
+.acao_curtir a:hover img, .acao_naocurtir a:hover img {opacity:1}
+.acao_curtir a.selected:hover img, .acao_naocurtir a.selected:hover img {opacity:0.4}

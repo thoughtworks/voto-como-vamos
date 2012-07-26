@@ -63,7 +63,7 @@ describe OpinionWidget do
     it "should link to the delete url" do
       Opinion.should_receive(:opinion_for).and_return(agreed)
       template_context.should_receive(:opinion_path).with(1).and_return('path')
-      template_context.should_receive(:link_to).with('name', 'path', method: :delete)
+      template_context.should_receive(:link_to).with('name', 'path', method: :delete, class: "selected")
 
       widget.link_for :agree, 'name'
     end
@@ -85,7 +85,7 @@ describe OpinionWidget do
     it "should render the delete url" do
       Opinion.should_receive(:opinion_for).and_return(disagreed)
       template_context.should_receive(:opinion_path).with(1).and_return('path')
-      template_context.should_receive(:link_to).with('name', 'path', method: :delete)
+      template_context.should_receive(:link_to).with('name', 'path', method: :delete, class: "selected")
 
       widget.link_for :disagree, 'name'
     end

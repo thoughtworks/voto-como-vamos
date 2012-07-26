@@ -7,6 +7,11 @@
   #conteudo.interface2
     p.voltaraspropostas
       = link_to "Voltar às Propostas", candidate_path(@candidate)
+      - if @candidate.represented_by? current_user
+        br
+        = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
+        ||
+        = link_to 'Excluir', candidate_proposal_delete_path(@candidate, @proposal)
 
     .proposta
       h4= @proposal.title
@@ -14,9 +19,6 @@
       p= @proposal.abstract
       p= @proposal.description.gsub("\n", "<br/>").html_safe
 
-      - if @candidate.represented_by? current_user
-        = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
-        = link_to t('proposals.delete.title'), candidate_proposal_delete_path(@candidate, @proposal)
     .interact  
       = render :partial => 'interact', :locals => { :proposal => @proposal }
 

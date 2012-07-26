@@ -274,7 +274,7 @@ Dado /^que eu estou visualizando uma proposta$/ do
 end
 
 Quando /^eu tentar excluir a proposta$/ do
-  click_on I18n.t('proposals.delete.title')
+  click_on 'Excluir'
 end
 
 Quando /^eu confirmar a exclusão da proposta$/ do
