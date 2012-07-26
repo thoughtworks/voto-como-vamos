@@ -24,6 +24,12 @@ $(function(d) {
         window.location = "/logout";
       });
 
+      $.getJSON("/auth/logged_in", function(status) {
+        if (!status.logged_in) {
+          window.location = "/auth/facebook/";
+        }
+      });
+
     }
     else {
 

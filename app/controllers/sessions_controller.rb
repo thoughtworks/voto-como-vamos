@@ -10,6 +10,10 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  def logged_in
+    render :json => { logged_in: !session[:user_id].nil? }
+  end
+
   def destroy
     reset_session
     redirect_to root_path

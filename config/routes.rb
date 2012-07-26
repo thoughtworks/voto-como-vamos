@@ -1,5 +1,6 @@
 VotoComoVamos::Application.routes.draw do
   match '/auth/facebook/callback' => 'sessions#create'
+  match '/auth/logged_in' => 'sessions#logged_in'
   match '/logout' => 'sessions#destroy'
 
   scope :scope_paths => { :new => "novo", :edit => "editar" } do
