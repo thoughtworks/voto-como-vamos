@@ -175,7 +175,7 @@ Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
 
   @candidates.each do |candidate|
     open_email(candidate.email)
-    current_email.should be_delivered_from("admin@votocomovamos.org.br")
+    current_email.should be_delivered_from("sistema@votocomovamos.com.br")
     current_email.body.should =~ Regexp.new(new_candidate_ownership_path(candidate.reload.obfuscated_slug))
   end
 end
