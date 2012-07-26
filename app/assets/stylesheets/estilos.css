@@ -153,7 +153,7 @@ DIV.sobre H4{margin-bottom:5px;}
 #conteudo{margin-bottom:30px; padding-top:35px; padding-left:25px; padding-right:20px;}
 #conteudo.interface2{padding-left:0px;}
 
-#conteudo P {
+#conteudo P{
 	text-align:justify;
 	line-height:20px;
 	margin-bottom:10px;
@@ -173,7 +173,7 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 .capa DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
 #conteudo .capa P.counter{text-align:center; width:68; display:block;}
 .capa DIV P,.capa DIV IMG{float:left;}
-.capa P{width:34px; text-align:center}
+.capa P{width:34px; text-align:center} 
 
 h3.propostasmaisdiscutidas {
   background:url(/assets/titulo_propostasmaisdiscutidas.png);
@@ -186,11 +186,10 @@ h3.propostasmaisdiscutidas {
 }
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas a.nomedaproposta{font-family: Calibri, Helvetica; font-size:24px; color:#419EBB;}
-.propostasmaisdiscutidas a.nomedaproposta:hover {color:#266b81}
+.propostasmaisdiscutidas a.nomedaproposta{font-family:Squada One; font-size:24px; color:#419EBB;}
 
 .propostasmaisdiscutidas li {
-  font-family: Calibri, Helvetica;
+  font-family:Vibur;
   font-size:40px;
   color:#DB499B;
   margin-left:60px;
@@ -198,7 +197,7 @@ DIV.propostasmaisdiscutidas{margin-left:80px;}
   clear:both
 }
 
-.propostasmaisdiscutidas a.nomedaproposta.propostasmaisdiscutidas a.nomedaproposta
+
 /*RESULTADOS DA BUSCA*/
 
 .resultadosdabusca .h2, .resultadosdabusca .h2 SPAN{color:#DB499B; font-size:20px; padding-bottom:30px;}
@@ -303,7 +302,7 @@ H4 A{text-decoration: underline; font-size:16px;}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
 #conteudo P.counter{text-align:center; width:68; display:block;}
 .acoes DIV P, .acoes DIV IMG, .acoes A.acao_sharefacebook{float:left;}
-.acoes P{width:34px; text-align:center}
+.acoes P{width:34px; text-align:center} 
 
 
 /*CONTEUDO - proposta - ACESSO RESTRITO*/
