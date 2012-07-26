@@ -143,7 +143,7 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 .capa P{width:34px; text-align:center} 
 
 h3.propostasmaisdiscutidas {
-  background:url(/assets/titulo_propostasmaisdiscutidas.jpg);
+  background:url(/assets/titulo_propostasmaisdiscutidas.png);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -171,7 +171,7 @@ DIV.propostasmaisdiscutidas{margin-left:80px;}
 .resultadosdabusca .h2 SPAN{font-weight:bold}
 
 h3.propostas {
-  background:url(/assets/titulo_propostas.jpg);
+  background:url(/assets/titulo_propostas.png);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
@@ -182,7 +182,7 @@ h3.propostas {
 }
 
 h3.candidatos {
-  background:url(/assets/titulo_candidatos.jpg);
+  background:url(/assets/titulo_candidatos.png);
   text-indent:100%;
   white-space:nowrap;
   overflow:hidden;
