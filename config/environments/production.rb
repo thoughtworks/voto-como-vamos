@@ -67,14 +67,13 @@ VotoComoVamos::Application.configure do
   config.action_mailer.default_url_options = {
     :host => "teste.votocomovamos.com.br"
   }
-  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address              => "smtp.gmail.com",  
-    :port                 => 587,                 
-    :domain               => 'votocomovamos.com.br',  
-    :user_name            => ENV['mailer_user'],      
-    :password             => ENV['mailer_pass'],      
-    :authentication       => 'plain',             
-    :enable_starttls_auto => true
-  }  
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'teste.votocomovamos.com.br',
+    :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
 end
