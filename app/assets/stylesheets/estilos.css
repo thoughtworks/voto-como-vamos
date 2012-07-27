@@ -102,6 +102,7 @@ BODY.fundocinza {
 behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */ padding-top:10px; padding-bottom:10px;}
 #propostas_areas LI{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
 #propostas_areas LI A{font-family: Calibri; color:#419EBB; font-size:26px;}
+#propostas_areas LI A:hover {color:#266b81}
 
 /*PERFIL DO CANDIDATO*/
 #perfilcandidato{margin-top:35px;}
@@ -183,6 +184,7 @@ h3.propostasmaisdiscutidas {
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
 .propostasmaisdiscutidas a.nomedaproposta{font-family: Calibri, Helvetica; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas a.nomedaproposta:hover {color:#266b81}
 
 .propostasmaisdiscutidas li {
   font-family: Calibri, Helvetica;
@@ -193,7 +195,7 @@ DIV.propostasmaisdiscutidas{margin-left:80px;}
   clear:both
 }
 
-
+.propostasmaisdiscutidas a.nomedaproposta.propostasmaisdiscutidas a.nomedaproposta
 /*RESULTADOS DA BUSCA*/
 
 .resultadosdabusca .h2, .resultadosdabusca .h2 SPAN{color:#DB499B; font-size:20px; padding-bottom:30px;}
