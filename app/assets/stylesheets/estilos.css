@@ -2,20 +2,49 @@
 *{margin:0; padding:0; border:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#999999;}
 ul {list-style:none;}
 
-BODY.fundoazul{background-image:url('/assets/bg_body.jpg'); background-color:#000; background-repeat:no-repeat; background-attachment:fixed; background-position:center top;}
-BODY.fundoverde{background-image:url('/assets/bg_body_verde.jpg'); background-color:#000; background-repeat:no-repeat; background-attachment:fixed; background-position:center top;}
-BODY.fundovermelho{background-image:url('/assets/bg_body_vermelho.jpg'); background-color:#000; background-repeat:no-repeat; background-attachment:fixed; background-position:center top;}
-BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-color:#000; background-repeat:no-repeat; background-attachment:fixed; background-position:center top;}
+BODY.fundoazul{
+  background-image:url('/assets/bg_body.jpg');
+  background-color:#000;
+  background-repeat:no-repeat; 
+  background-attachment:fixed; 
+  background-position:center top;
+}
+BODY.fundoverde {
+  background-image:url('/assets/bg_body_verde.jpg'); 
+  background-color:#000; 
+  background-repeat:no-repeat; 
+  background-attachment:fixed; 
+  background-position:center top;
+}
+BODY.fundovermelho {
+  background-image:url('/assets/bg_body_vermelho.jpg'); 
+  background-color:#000; 
+  background-repeat:no-repeat; 
+  background-attachment:fixed; 
+  background-position:center top;
+}
+BODY.fundocinza {
+  background-image:url('/assets/bg_body_cinza.jpg'); 
+  background-color: #000; 
+  background-repeat: no-repeat; 
+  background-attachment:fixed; 
+  background-position:center top;
+}
 
 /*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
-#geral{width:1000px; margin:auto; display:table; background-color:#FFF}
-#geral.internas{margin-top:10px;}
+#geral {
+  width:1000px; 
+  margin:auto; 
+  display:table;
+  background-color:#FFF;
+}
 
-/*CLASSES GERAIS*/
-.ativo{font-weight:bold; text-decoration:underline;}
+#geral.internas { margin-top:10px; }
+
+.ativo {font-weight:bold; text-decoration:underline;}
 .negrito{font-weight:bold; color:#000}
 
-/*TOPO*/
+
 #topo{height:60px; width:100%; background:#fff}
 #header{width:1000px; margin:auto; position:relative}
 #logo{width:185px; float:left; margin-top:7px; text-align:center}
@@ -72,7 +101,7 @@ BODY.fundocinza{background-image:url('/assets/bg_body_cinza.jpg'); background-co
 -webkit-border-radius: 15px; /* Implementação para browsers que renderizam via webkit */
 behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */ padding-top:10px; padding-bottom:10px;}
 #propostas_areas LI{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
-#propostas_areas LI A{font-family:Squada One; color:#419EBB; font-size:26px;}
+#propostas_areas LI A{font-family: Calibri; color:#419EBB; font-size:26px;}
 
 /*PERFIL DO CANDIDATO*/
 #perfilcandidato{margin-top:35px;}
@@ -120,7 +149,7 @@ DIV.sobre H4{margin-bottom:5px;}
 #conteudo{margin-bottom:30px; padding-top:35px; padding-left:25px; padding-right:20px;}
 #conteudo.interface2{padding-left:0px;}
 
-#conteudo P{
+#conteudo P {
 	text-align:justify;
 	line-height:20px;
 	margin-bottom:10px;
@@ -153,10 +182,10 @@ h3.propostasmaisdiscutidas {
 }
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas a.nomedaproposta{font-family:Squada One; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas a.nomedaproposta{font-family: Calibri, Helvetica; font-size:24px; color:#419EBB;}
 
 .propostasmaisdiscutidas li {
-  font-family:Vibur;
+  font-family: Calibri, Helvetica;
   font-size:40px;
   color:#DB499B;
   margin-left:60px;
