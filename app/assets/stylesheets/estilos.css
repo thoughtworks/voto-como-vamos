@@ -173,7 +173,7 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 .capa DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
 #conteudo .capa P.counter{text-align:center; width:68; display:block;}
 .capa DIV P,.capa DIV IMG{float:left;}
-.capa P{width:34px; text-align:center} 
+.capa P{width:34px; text-align:center}
 
 h3.propostasmaisdiscutidas {
   background:url(/assets/titulo_propostasmaisdiscutidas.png);
@@ -302,7 +302,7 @@ H4 A{text-decoration: underline; font-size:16px;}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
 #conteudo P.counter{text-align:center; width:68; display:block;}
 .acoes DIV P, .acoes DIV IMG, .acoes A.acao_sharefacebook{float:left;}
-.acoes P{width:34px; text-align:center} 
+.acoes P{width:34px; text-align:center}
 
 
 /*CONTEUDO - proposta - ACESSO RESTRITO*/
