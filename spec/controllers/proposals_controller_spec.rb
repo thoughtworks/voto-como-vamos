@@ -31,7 +31,7 @@ describe ProposalsController do
     it { should render_template(:show) }
   end
 
-  describe 'listing' do
+  describe 'filtered listing' do
     let(:proposals) { [double('proposal1'), double('proposal2')] }
 
     it 'search by category when specified' do
@@ -50,6 +50,19 @@ describe ProposalsController do
       should respond_with(:success)
       should assign_to(:proposals).with(proposals)
       should render_template('index')
+    end
+  end
+  
+  context 'for the proposals page' do
+    let(:proposals) { [double('proposal1'), double('proposal2')] }
+    
+    before do
+      Proposal.should_receive(:all).and_return(proposals)
+    end
+
+    it 'shows proposals sorted randomly' do
+      proposals.should_receive(:shuffle!)
+      get :random_listing
     end
   end
 

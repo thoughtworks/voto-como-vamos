@@ -1,10 +1,15 @@
 # encoding: utf-8
 class ProposalsController < ApplicationController
-  before_filter :authenticate!, :except => [:index, :show]
-  before_filter :load_candidate, :except => [:index, :show]
+  before_filter :authenticate!, :except => [:index, :show, :random_listing]
+  before_filter :load_candidate, :except => [:index, :show, :random_listing]
 
   def index
     @proposals = Proposal.search_in_categories(params[:query], params[:categories]).results
+  end
+  
+  def random_listing
+    @proposals = Proposal.all
+    @proposals.shuffle!
   end
 
   def show
