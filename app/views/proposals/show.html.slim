@@ -31,10 +31,11 @@
         = f.input :description, :id => "description", :label => false, :input_html => { :class => "small"}
         = f.submit t('question.send'), :id => "do_question" 
 
-      #questions_list
+      ul#questions_list
         - @proposal.questions.each do |q|
-          p.question
-            =q.description
+          li.question
+            p= q.user.name
+            p= q.description
       br
 
       .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"

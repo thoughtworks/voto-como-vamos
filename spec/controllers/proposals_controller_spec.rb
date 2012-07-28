@@ -9,6 +9,7 @@ describe ProposalsController do
   let(:proposal)     { mock_model(Proposal)}
   let(:candidate_id) { '1' }
   let(:candidate)    { stub('candidate', :id => candidate_id) }
+  let(:arguments) { {include: {questions: :user}} }
 
   describe '#show' do
     let(:proposal_id) { '1' }
@@ -20,7 +21,7 @@ describe ProposalsController do
     end
 
     before do
-      Proposal.should_receive(:find).with(proposal_id).and_return(proposal)
+      Proposal.should_receive(:find).with(proposal_id, arguments).and_return(proposal)
       proposal.should_receive(:candidate).and_return(candidate)
       get :show, fake_params
     end

@@ -632,3 +632,10 @@ Então /^não devo ver a proposta relacionada às festividades de São Pedro$/ d
     page.should_not have_content @proposal_jose.title
   end
 end
+
+Então /^visualizo meu nome na pergunta$/ do
+  within ".question" do
+    should have_content @user.name
+  end
+end
+

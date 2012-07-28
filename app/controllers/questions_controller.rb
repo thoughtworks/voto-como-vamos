@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
     @proposal = Proposal.find params[:proposal_id]
     @question = Question.new params[:question]
     @question.proposal = @proposal
+    @question.user = current_user
     if @question.save
       redirect_to proposal_path(@proposal)
     else

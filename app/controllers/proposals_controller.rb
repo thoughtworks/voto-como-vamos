@@ -13,7 +13,7 @@ class ProposalsController < ApplicationController
   end
 
   def show
-    @proposal = Proposal.find(params[:id])
+    @proposal = Proposal.find(params[:id], :include => {:questions => :user})
     @candidate = @proposal.candidate
     @question = Question.new
   end
