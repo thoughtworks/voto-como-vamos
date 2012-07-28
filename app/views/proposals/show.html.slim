@@ -16,7 +16,8 @@
     .proposta
       h4= @proposal.title
       p= @proposal.categories.map {|category| category.name }.to_sentence
-      p= @proposal.abstract
+      #fb-root
+        p= @proposal.abstract
       p= @proposal.description.gsub("\n", "<br/>").html_safe
 
     .interact  
@@ -36,8 +37,7 @@
             =q.description
       br
 
-      #fb-root
-        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
+      .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5" title="#{@proposal.title}"
 
 = content_for :left do
   = render :partial => 'candidates/candidate'
