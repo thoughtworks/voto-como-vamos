@@ -15,7 +15,7 @@ html
       #header
         #logo
           a href="/"
-            = image_tag "logo.png", :alt => "Voto Como Vamos"
+            = image_tag "logo.png", :alt => "Voto Como Vamos", :id => "logo"
 
         #busca
           = simple_form_for @main_search, :url => main_search_path, :method => :get do |f|

@@ -14,11 +14,10 @@
         = link_to 'Excluir', candidate_proposal_delete_path(@candidate, @proposal)
 
     .proposta
-      h4= @proposal.title
+      h4 id="title"= @proposal.title
       p= @proposal.categories.map {|category| category.name }.to_sentence
-      #fb-root
-        p= @proposal.abstract
-      p= @proposal.description.gsub("\n", "<br/>").html_safe
+      p id="resumo" = @proposal.abstract
+      p id="descricao" = @proposal.description.gsub("\n", "<br/>").html_safe
 
     .interact  
       = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
@@ -38,6 +37,10 @@
             p= q.description
       br
 
+      #fb-root
+      meta property="og:title" content="title" 
+      meta property="og:description" content="abstract" 
+      meta property="og:image" content="logo" 
       .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
