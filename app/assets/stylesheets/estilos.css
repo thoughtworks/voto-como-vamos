@@ -39,6 +39,7 @@ BODY.fundocinza {
   background-color:#FFF;
 }
 
+
 #geral.internas { margin-top:10px; }
 
 .ativo {font-weight:bold; text-decoration:underline;}
@@ -51,8 +52,11 @@ BODY.fundocinza {
 #logo IMG{width:185px;}
 
 #conceitual{height:380px; background-image:url('/assets/imagem_portoalegre.jpg'); background-position:center top;}
-#video{width:1000px; margin:auto; padding-top:50px;}
-#video DIV{background:#FFF; padding:10px; width:285px; float:right}
+#video{width:1000px; margin:auto; padding-top:50px;} 
+.videos {background:rgba(50,50,150,.9); padding:5px; width:285px; float:right;}
+.videos a {opacity:1;}
+#video a{float:right; margin-left:10px; clear:both; color:#FFF; font-weight:bold; font-family: Calibri, Helvetica;;display:block;}
+#video a:hover{ font-weight:bold; color:#f8b;}
 
 /*MENU*/
 
