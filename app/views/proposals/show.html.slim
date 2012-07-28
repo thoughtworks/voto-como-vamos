@@ -38,10 +38,10 @@
       br
 
       #fb-root
-      meta property="og:title" content="title" 
-      meta property="og:description" content="abstract" 
-      meta property="og:image" content="logo" 
-      .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
+        meta property="og:title" content="title" 
+        meta property="og:description" content="abstract" 
+        meta property="og:image" content="logo" 
+        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
   = render :partial => 'candidates/candidate'
