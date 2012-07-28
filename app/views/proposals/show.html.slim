@@ -35,6 +35,9 @@
           li.question
             p= q.user.name
             p= q.description
+            a.share href="#" data-title=@proposal.title data-description=q.description data-caption=@candidate.name data-photo=@candidate.photo
+              img src="/assets/bt_share.jpg"
+
       br
 
       #fb-root

@@ -86,11 +86,18 @@ div.check_boxes input {margin: 0 10px}
 
 #questions_list {
   float:left;
+  width: 100%;
   margin: 20px 0 40px 30px;
 }
 
 .question {
+  position: relative;
   margin-bottom:10px;
+  .share {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .acao_curtir img, .acao_naocurtir img {opacity:0.4}
