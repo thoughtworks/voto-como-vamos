@@ -1,7 +1,7 @@
 script function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
 style html .fb_share_link { padding:2px 0 0 20px; height:16px; background:url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top left; }</style>
 .acoes
-  a.share.acao_sharefacebook href="#" data-title=proposal.title data-description=proposal.abstract data-caption=@candidate.name data-photo=@candidate.photo
+  a.share.acao_sharefacebook href="#" data-title=proposal.title data-description=proposal.abstract data-caption=candidate.name data-photo=candidate.photo
     img src="/assets/bt_share.jpg"
     /p.counter=0
   = opinion_widget current_user, proposal

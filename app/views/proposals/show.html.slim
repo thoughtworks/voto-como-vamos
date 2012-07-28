@@ -21,7 +21,7 @@
       p= @proposal.description.gsub("\n", "<br/>").html_safe
 
     .interact  
-      = render :partial => 'interact', :locals => { :proposal => @proposal }
+      = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
 
       .perguntas
         img.perguntas src="/assets/bt_perguntar.jpg"

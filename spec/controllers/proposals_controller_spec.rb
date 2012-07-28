@@ -33,18 +33,22 @@ describe ProposalsController do
 
   describe 'filtered listing' do
     let(:proposals) { [double('proposal1'), double('proposal2')] }
+    let(:category) {[double('Category')]}
 
     it 'search by category when specified' do
       Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
+      Category.should_receive(:find).with(['Test']).and_return(category)
       get :index, :categories => ['Test']
 
       should respond_with(:success)
       should assign_to(:proposals).with(proposals)
+      should assign_to(:categories).with(category)
       should render_template('index')
     end
 
     it 'search by text criteria when specified' do
       Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
+      Category.should_receive(:find).with(nil).and_return(nil)
       get :index, :query => 'test'
 
       should respond_with(:success)
@@ -54,14 +58,11 @@ describe ProposalsController do
   end
   
   context 'for the proposals page' do
-    let(:proposals) { [double('proposal1'), double('proposal2')] }
-    
     before do
-      Proposal.should_receive(:all).and_return(proposals)
+      Proposal.should_receive(:all, :order => "random()", :limit => 5)
     end
 
     it 'shows proposals sorted randomly' do
-      proposals.should_receive(:shuffle!)
       get :random_listing
     end
   end

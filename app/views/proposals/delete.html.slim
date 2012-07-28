@@ -2,6 +2,6 @@
   p
     = t('proposals.delete.confirmation', :title => @proposal.title)
   p
-    = f.submit t('yes')
+    = f.submit "Sim"
     = " #{t('or')} "
     = link_to t('cancel'), candidate_proposal_path(@candidate, @proposal)

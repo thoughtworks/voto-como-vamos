@@ -1,2 +1,7 @@
-ol
-  = render @proposals
+h2.proposta
+  |Propostas Aleatórias
+p.maispropostas
+  = link_to "Mais Propostas", propostas_aleatorias_path
+
+- @proposals.each do |proposal|
+  = render :partial => 'candidates/proposal', :locals => {:proposal => proposal, :candidate => proposal.candidate}

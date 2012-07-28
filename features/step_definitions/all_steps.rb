@@ -278,7 +278,7 @@ Quando /^eu tentar excluir a proposta$/ do
 end
 
 Quando /^eu confirmar a exclusão da proposta$/ do
-  click_on I18n.t('yes')
+  click_on 'Sim'
 end
 
 Quando /^eu cancelar a exclusão da proposta$/ do

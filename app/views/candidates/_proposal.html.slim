@@ -1,11 +1,11 @@
 .proposta
   h4
-    = link_to proposal.title, candidate_proposal_path(@candidate, proposal)
+    = link_to proposal.title, candidate_proposal_path(candidate, proposal)
   p
     = proposal.categories.map { |category| category.name }.to_sentence 
   p
     = proposal.abstract
   .saibamais
-    = link_to t('proposals.more'), candidate_proposal_path(@candidate, proposal)
+    = link_to t('proposals.more'), candidate_proposal_path(candidate, proposal)
 
-  = render :partial => 'proposals/interact', :locals => { :proposal => proposal }
+  = render :partial => 'proposals/interact', :locals => { :proposal => proposal, :candidate => candidate }

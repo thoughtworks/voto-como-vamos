@@ -4,12 +4,12 @@ class ProposalsController < ApplicationController
   before_filter :load_candidate, :except => [:index, :show, :random_listing]
 
   def index
+    @categories = Category.find(params[:categories])
     @proposals = Proposal.search_in_categories(params[:query], params[:categories]).results
   end
   
   def random_listing
-    @proposals = Proposal.all
-    @proposals.shuffle!
+    @proposals = Proposal.all(:order => 'random()', :limit => 5)
   end
 
   def show

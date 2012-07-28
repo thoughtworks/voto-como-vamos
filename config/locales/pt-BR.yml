@@ -256,7 +256,7 @@ pt-BR:
       success: 'Proposta criada com sucesso!'
     delete:
       title: 'Excluir Proposta'
-      confirmation: 'Tem certeza que deseja excluir a proposta %{title}?'
+      confirmation: 'Tem certeza que deseja excluir a proposta "%{title}"?'
     destroy:
       success: 'Proposta excluída com sucesso!'
     more: 'Saiba Mais'

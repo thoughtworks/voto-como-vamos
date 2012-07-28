@@ -16,4 +16,4 @@
       br
       br  
 
-    = render :partial => 'proposal', :collection => @candidate.proposals
+    = render :partial => 'proposal', :collection => @candidate.proposals, :locals => {:candidate => @candidate}

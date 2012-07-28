@@ -2,7 +2,7 @@ VotoComoVamos::Application.routes.draw do
   match '/auth/facebook/callback' => 'sessions#create'
   match '/auth/logged_in' => 'sessions#logged_in'
   match '/logout' => 'sessions#destroy'
-  match '/propostas_al' => 'proposals#random_listing'
+  match '/propostas/aleatorias' => 'proposals#random_listing'
 
   scope :scope_paths => { :new => "novo", :edit => "editar" } do
     resources :candidates, :path => "candidatos" do

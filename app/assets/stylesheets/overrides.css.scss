@@ -101,3 +101,15 @@ div.check_boxes input {margin: 0 10px}
 .acao_curtir a.selected img, .acao_naocurtir a.selected img {opacity:1}
 .acao_curtir a:hover img, .acao_naocurtir a:hover img {opacity:1}
 .acao_curtir a.selected:hover img, .acao_naocurtir a.selected:hover img {opacity:0.4}
+
+.pointer {
+  cursor:pointer;
+}
+
+.alert-message {
+  text-align: center;
+  padding: 5px 0;
+  width: 1000px;
+  color: green;
+  background-color: lightGreen;
+}
