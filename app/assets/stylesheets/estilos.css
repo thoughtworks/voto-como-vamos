@@ -39,7 +39,6 @@ BODY.fundocinza {
   background-color:#FFF;
 }
 
-
 #geral.internas { margin-top:10px; }
 
 .ativo {font-weight:bold; text-decoration:underline;}
@@ -153,7 +152,7 @@ DIV.sobre H4{margin-bottom:5px;}
 #conteudo{margin-bottom:30px; padding-top:35px; padding-left:25px; padding-right:20px;}
 #conteudo.interface2{padding-left:0px;}
 
-#conteudo P{
+#conteudo P {
 	text-align:justify;
 	line-height:20px;
 	margin-bottom:10px;
@@ -186,10 +185,11 @@ h3.propostasmaisdiscutidas {
 }
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas a.nomedaproposta{font-family:Squada One; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas a.nomedaproposta{font-family: Calibri, Helvetica; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas a.nomedaproposta:hover {color:#266b81}
 
 .propostasmaisdiscutidas li {
-  font-family:Vibur;
+  font-family: Calibri, Helvetica;
   font-size:40px;
   color:#DB499B;
   margin-left:60px;
@@ -197,7 +197,7 @@ DIV.propostasmaisdiscutidas{margin-left:80px;}
   clear:both
 }
 
-
+.propostasmaisdiscutidas a.nomedaproposta.propostasmaisdiscutidas a.nomedaproposta
 /*RESULTADOS DA BUSCA*/
 
 .resultadosdabusca .h2, .resultadosdabusca .h2 SPAN{color:#DB499B; font-size:20px; padding-bottom:30px;}
