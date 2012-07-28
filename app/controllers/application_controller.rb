@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate!
     unless current_user
-      session[:return_to] = request.path
+      session[:return_to] = request.fullpath
       redirect_to auth_url
     end
   end

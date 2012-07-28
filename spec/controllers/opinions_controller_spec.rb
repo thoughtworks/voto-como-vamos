@@ -63,4 +63,22 @@ describe OpinionsController do
     it { should respond_with(:redirect) }
 
   end
+
+  context "No HTTP Referrer" do
+    before do
+      request.env["HTTP_REFERER"] = nil
+
+      Opinion.should_receive(:where)
+      .with(user_id: current_user.id, id: opinion.id.to_s)
+      .and_return([opinion])
+
+      opinion.should_receive(:destroy).and_return true
+      opinion.should_receive(:proposal).and_return mock(Proposal)
+
+      delete :destroy, { id: opinion.id }
+    end
+
+    it { should respond_with(:redirect) }
+  end
+
 end
