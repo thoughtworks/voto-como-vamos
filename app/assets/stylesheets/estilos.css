@@ -87,8 +87,10 @@ BODY.fundocinza {
 
 
 
-#busca{width:285px; float:left; margin-top:13px; height:33px; background-image:url('/assets/bg_busca.png'); background-repeat:no-repeat; margin-left:60px;}
-#busca INPUT{margin-left:5px; margin-top:5px; height:15px; width:245px; padding:3px;}
+#busca{ float: left; margin-top: 13px; margin-left: 60px; background-image: url('/assets/bg_busca.png'); background-repeat: no-repeat; }
+#busca .required, #busca .input { display: inline }
+#busca input[type=text] { margin:5px 0 0 5px; width:253px; padding-top:3px; display: inline; }
+#busca input[type=image] { float: right; }
 
 
 /*BAIXO*/

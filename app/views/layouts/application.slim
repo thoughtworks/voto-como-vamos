@@ -19,15 +19,15 @@ html
 
         #busca
           = simple_form_for @main_search, :url => main_search_path, :method => :get do |f|
-            = f.input :query, :label => false, :class => 'buscar', :id => 'buscar', :placeholder => 'Buscar'
-            = f.button :submit, t('common.search'), :id => 'submit_main_search'
+            = f.input :query, :label => false, :placeholder => 'Buscar'
+            = f.button :submit, t('common.search'), :type => :image, :src => '/assets/bg_busca_btn.png', :id => 'submit_main_search'
 
         #menu
           ul
             li.propostas
               = link_to "Propostas", propostas_aleatorias_path
             li.partidos
-              /= link_to "Partidos", "/partidos"
+              = link_to "Partidos", "/partidos"
             li.candidatos
               = link_to "Candidatos", candidates_path
 
