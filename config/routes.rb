@@ -1,4 +1,5 @@
 VotoComoVamos::Application.routes.draw do
+
   match '/auth/facebook/callback' => 'sessions#create'
   match '/auth/logged_in' => 'sessions#logged_in'
   match '/logout' => 'sessions#destroy'
@@ -23,4 +24,6 @@ VotoComoVamos::Application.routes.draw do
 
   resource :main_search
   root :to => 'welcome#index'
+    match '*not_found', to: 'errors#error_404'
 end
+
