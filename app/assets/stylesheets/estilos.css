@@ -297,8 +297,8 @@ DIV.proposta{margin-bottom:5px; margin-left:30px; width:620px; padding-bottom:10
 H4 A{text-decoration: underline; font-size:16px;}
 
 .proposta .saibamais{margin-top:10px;}
-.saibamais A{text-decoration:underline; font-size:11px;}
-.saibamais A:HOVER{text-decoration:none}
+.saibamais A{text-decoration:none; font-size:11px;}
+.saibamais A:HOVER{text-decoration:underline}
 
 .acoes{width:245px; margin-top:5px; margin-bottom:40px; height:30px; float:right}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
