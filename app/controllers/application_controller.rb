@@ -4,13 +4,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :body_class
   before_filter :load_search
 
-  unless Rails.application.config.consider_all_requests_local
-    rescue_from Exception, with: :render_500
-    rescue_from ActionController::RoutingError, with: :render_404
-    rescue_from ActionController::UnknownController, with: :render_404
-    rescue_from ActionController::UnknownAction, with: :render_404
-    rescue_from ActiveRecord::RecordNotFound, with: :render_404
-  end
+#  unless Rails.application.config.consider_all_requests_local
+#    rescue_from Exception, with: :render_500
+#    rescue_from ActionController::RoutingError, with: :render_404
+#    rescue_from ActionController::UnknownController, with: :render_404
+#    rescue_from ActionController::UnknownAction, with: :render_404
+#    rescue_from ActiveRecord::RecordNotFound, with: :render_404
+#  end
 
   private
   def render_404(exception)
