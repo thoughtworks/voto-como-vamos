@@ -41,9 +41,10 @@
       br
 
       #fb-root
-        meta property="og:title" content="title" 
-        meta property="og:description" content="abstract" 
-        meta property="og:image" content="logo" 
+        meta property="og:title" content="#{@proposal.title}" 
+        meta property="og:site_name" content="Voto Como Vamos" 
+        meta property="og:description" content="#{@proposal.abstract}" 
+        meta property="og:image" content="#{asset_path('logo.png')}" 
         .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
