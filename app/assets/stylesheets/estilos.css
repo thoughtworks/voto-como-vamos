@@ -282,6 +282,7 @@ H3.proposta{margin-bottom:5px; margin-left:30px; color:#FF9966}
 .proposta H3{padding-bottom:5px; margin-bottom:15px;}
 .proposta H3 A{text-decoration:underline; font-size:16px;}
 .proposta H3 A:HOVER{text-decoration:none;}
+.proposta p, .proposta h4 { word-wrap: break-word; }
 
 P.maispropostas{padding-bottom:20px;}
 P.maispropostas A, P.voltaraspropostas A{ color:#FF9966; }

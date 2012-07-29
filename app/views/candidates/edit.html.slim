@@ -10,10 +10,6 @@
     br
     br
     = simple_form_for @candidate do |f|
-      - if @candidate.errors.any?
-        div.alert-message.error
-          - @candidate.errors.full_messages.each do |msg|
-            p = msg
       = f.input :phone, :placeholder => '(xx)xxxx-xxxx'
       br
       = f.input :email
