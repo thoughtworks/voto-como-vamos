@@ -2,14 +2,6 @@
 - content_for(:url) { candidate_proposal_url(@candidate, @proposal) }
 - content_for(:esquerda_css) { 'interface2' }
 - content_for(:direita_css) { 'interface2' }
-
-meta property="og:title" content="#{@proposal.title}"
-meta property="og:type" content="activity" />
-meta property="og:url" content="http://#{request.host}:#{request.port.to_s + request.fullpath}"
-meta property="og:image" content="#{asset_path('logo.png')}" 
-meta property="og:description" content="#{@proposal.abstract}" 
-meta property="og:site_name" content="Voto Como Vamos"
-meta property="fb:admins" content="1342219259"
  
 = content_for :right do
   #conteudo.interface2
