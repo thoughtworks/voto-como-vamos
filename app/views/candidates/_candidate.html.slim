@@ -12,9 +12,6 @@
   p.partido= @candidate.party
   p.coligacao= @candidate.alliance
   p.telefone= @candidate.phone
-  p
-    a href="mailto:#{@candidate.email}"
-      = @candidate.email
   - if @candidate.press_agent
     p
       = t('candidates.show.press_agent')
