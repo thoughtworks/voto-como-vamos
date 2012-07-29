@@ -186,7 +186,7 @@ end
 
 Entao /^eu devo ver as suas informações$/ do
   [
-    :alliance, :about, :email, :name, :short_name, :party, :phone, :role, :tse_number
+    :alliance, :about, :name, :short_name, :party, :phone, :role, :tse_number
   ].each do |field|
     page.should have_content(@candidate.send(field))
   end
