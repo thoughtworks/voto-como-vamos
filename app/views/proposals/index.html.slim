@@ -1,7 +1,7 @@
 h2.proposta
   |Propostas relacionadas a #{@categories.map { |c| c.name }.to_sentence}
-br
-br
+p.maispropostas
+  = link_to "Mais Propostas", proposals_path(:categories => @categories)
 
 - @proposals.each do |proposal|
   = render :partial => 'candidates/proposal', :locals => {:proposal => proposal, :candidate => proposal.candidate}

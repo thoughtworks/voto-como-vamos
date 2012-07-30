@@ -39,6 +39,7 @@ describe ProposalsController do
     it 'search by category when specified' do
       Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       Category.should_receive(:find).with(['Test']).and_return(category)
+      proposals.should_receive(:shuffle).and_return(proposals)
       get :index, :categories => ['Test']
 
       should respond_with(:success)
@@ -50,6 +51,7 @@ describe ProposalsController do
     it 'search by text criteria when specified' do
       Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       Category.should_receive(:find).with(nil).and_return(nil)
+      proposals.should_receive(:shuffle).and_return(proposals)
       get :index, :query => 'test'
 
       should respond_with(:success)
