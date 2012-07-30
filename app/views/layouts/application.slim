@@ -61,7 +61,9 @@ html
             = image_tag "logo_poacomovamos.jpg", :alt => "Voto Como Vamos"
 
           address
-            | &copy; 2012 Porto Alegre Como Vamos |
+            | &copy; 
+            = link_to '2012 Porto Alegre Como Vamos', 'http://blog.poacomovamos.org'
+            |&nbsp;|&nbsp;
             = link_to 'contato@votocomovamos.com.br', 'mailto:contato@votocomovamos.com.br'
             |&nbsp;|&nbsp;
             = link_to 'Termos e Condições', '/termsAndConditions.html', :target => :_blank
