@@ -135,12 +135,12 @@ behavior: url(PIE.htc); /* Comportamento adicionado para renderização das prop
 #meuperfil LI{line-height:16px; width:15px; font-size:10px; padding-right:10px; background-repeat:no-repeat; margin-bottom:5px; float:left}
 
 .maispropostas{margin-bottom:30px;}
-.maispropostas A{color:#FF9966; text-decoration:underline; margin-left:30px;}
-.maispropostas A:HOVER{text-decoration:none}
+.maispropostas A{color:#FF9966; text-decoration:none; margin-left:30px;}
+.maispropostas A:HOVER{text-decoration:underline;}
 
 .editar{padding-bottom:5px;}
-.editar A{text-decoration:underline}
-.editar a:HOVER{text-decoration:none}
+.editar A{text-decoration:none}
+.editar a:HOVER{text-decoration:underline}
 
 DIV.sobre{margin-top:25px; clear:both;}
 DIV.sobre H4{margin-bottom:5px;}
@@ -231,16 +231,16 @@ h3.candidatos {
 
 .resultadosdabusca .titulo A{font-size:16px;text-decoration:underline; color:#419EBB}
 .resultadosdabusca .titulo SPAN{font-size:16px; color:#419EBB; font-weight:bold}
-.resultadosdabusca .titulo A:HOVER{text-decoration:none}
+.resultadosdabusca .titulo A:HOVER{text-decoration:underline}
 
 .resultadosdabusca .resumo, .resultadosdabusca .resumo SPAN{color:#419EBB}
 .resultadosdabusca .resumo SPAN{font-weight:bold}
-.resultadosdabusca .resumo A:HOVER{text-decoration:none}
+.resultadosdabusca .resumo A:HOVER{text-decoration:underline}
 
 .paginacao{margin-bottom:30px; height:30px;}
 .resultadosdabusca .paginacao LI{float:left; width:25px;}
-.resultadosdabusca .paginacao LI A{color:#419EBB; text-decoration:underline;}
-.resultadosdabusca .paginacao LI A:HOVER{text-decoration:none;}
+.resultadosdabusca .paginacao LI A{color:#419EBB; text-decoration:none;}
+.resultadosdabusca .paginacao LI A:HOVER{text-decoration:underline;}
 
 
 /*CONTEUDO - listagens*/
@@ -248,8 +248,8 @@ h3.candidatos {
 .listadecandidatos UL{margin-left:120px; margin-right:80px;}
 .listadecandidatos LI{width:225px; float:left; padding-right:10px; line-height:30px;}
 .listadepartidos LI{width:400px; margin-left:50px; float:left; padding-right:10px; line-height:30px;}
-.listadecandidatos LI A {text-decoration:underline; color:#578A0D}
-.listadecandidatos LI A:HOVER, .listadepartidos LI A:HOVER{text-decoration:none}
+.listadecandidatos LI A {text-decoration:none; color:#578A0D}
+.listadecandidatos LI A:HOVER, .listadepartidos LI A:HOVER{text-decoration:underline}
 .listadepartidos LI A{color:#BE0610}
 
 .siglas{text-decoration:underline; margin-right:20px; width:55px; float:left; font-weight:bold;}
@@ -270,8 +270,8 @@ A.previous_page, A.next_page, .gap {font-size:16px}
 .checkboxes .tagstexto{margin-top:-1px; padding-left:3px; font-size:11px; color:#000;}
 .checkboxes INPUT{border:1px solid #000; width:12px; height:12px; background:none;}
 .checkboxes DIV.filtrar{width:98%; margin:auto; text-align:center; margin-top:5px;}
-.checkboxes DIV.filtrar A{font-size:16px; color:#000; text-decoration:underline}
-.checkboxes DIV.filtrar A:HOVER{text-decoration:none;}
+.checkboxes DIV.filtrar A{font-size:16px; color:#000; text-decoration:none}
+.checkboxes DIV.filtrar A:HOVER{text-decoration:underline;}
 
 
 /*CONTEUDO - proposta*/
@@ -280,8 +280,8 @@ H2.proposta{padding-bottom:5px; margin-bottom:0px; color:#FF9966}
 H3.proposta{margin-bottom:5px; margin-left:30px; color:#FF9966}
 
 .proposta H3{padding-bottom:5px; margin-bottom:15px;}
-.proposta H3 A{text-decoration:underline; font-size:16px;}
-.proposta H3 A:HOVER{text-decoration:none;}
+.proposta H3 A{text-decoration:none; font-size:16px;}
+.proposta H3 A:HOVER{text-decoration:underline;}
 .proposta p, .proposta h4 { word-wrap: break-word; }
 
 P.maispropostas{padding-bottom:20px;}
@@ -314,8 +314,8 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 
 .novaproposta .enviar{width:100%; text-align:center; margin-bottom:20px;}
 .novaproposta .enviar LI{display:inline; padding:10px;}
-.novaproposta .enviar A{text-decoration:underline;}
-.novaproposta .enviar A:HOVER{text-decoration:none; color:#000}
+.novaproposta .enviar A{text-decoration:none;}
+.novaproposta .enviar A:HOVER{text-decoration:underline; color:#000}
 
 .novaproposta .titulo, .novaproposta .tags, .novaproposta .resumo{float:left;}
 .novaproposta .titulo{width:170px;}
