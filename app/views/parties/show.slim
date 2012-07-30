@@ -1,0 +1,14 @@
+.listadepartidos
+  h2
+    |Lista de Candidatos do Partido #{@party}
+
+  .resultadosdabusca
+    - @candidates.each do |c|
+      div.resultado
+        div.titulo
+          a href=candidate_path(c)
+            = c.short_name
+            |&nbsp;(
+            = c.name
+            |)
+        p.resumo= [c.tse_number, c.role, c.party, c.alliance].join(", ")

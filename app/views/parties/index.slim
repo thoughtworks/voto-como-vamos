@@ -1,0 +1,9 @@
+.listadepartidos
+  h2
+    |Lista de Partidos Políticos no Brasil
+
+  ul
+    - @parties.each do |party|
+      li
+        .siglas
+          = link_to party, party_path(party)

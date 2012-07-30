@@ -24,6 +24,8 @@ VotoComoVamos::Application.routes.draw do
     resources :opinions, :path => "opinioes"
   end
 
+  resources :parties, :path => "partidos", :only => [:index, :show]
+
   resource :main_search
   root :to => 'welcome#index'
   unless Rails.application.config.consider_all_requests_local
