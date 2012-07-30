@@ -15,8 +15,10 @@ VotoComoVamos::Application.routes.draw do
         :only => [:new, :create, :show]
     end
   
-    resources :proposals, :path => "propostas" do
-      resources :questions
+    resources :proposals, :path => "propostas", :only => [:index, :show] do
+      resources :questions, :only => [] do
+        get :create, :on => :collection
+      end
     end
     
     resources :opinions, :path => "opinioes"
@@ -28,4 +30,3 @@ VotoComoVamos::Application.routes.draw do
     match '*not_found', to: 'errors#error_404'
   end
 end
-
