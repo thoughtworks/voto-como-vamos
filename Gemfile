@@ -8,7 +8,6 @@ gem 'heroku'
 gem 'omniauth-facebook'
 gem 'koala'
 gem 'slim'
-gem 'factory_girl_rails'
 gem 'valid_email'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
@@ -32,6 +31,7 @@ group :test, :development do
   gem 'spork'
   gem 'sunspot_solr'
   gem 'progress_bar'
+  gem 'factory_girl_rails'
 end
 
 group :test do
