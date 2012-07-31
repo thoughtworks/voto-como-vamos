@@ -167,7 +167,7 @@ Entao /^eu devo ver uma mensagem informando que o (titulo|descrição|abstract) 
 end
 
 Quando /^solicitamos envio de reivindicação de perfil em massa$/ do
-  Ownership.send_revindication_to_all_candidates
+  Ownership.send_revindication_to_some_candidates(0,2)
 end
 
 Entao /^todos os candidatos devem receber um e\-mail com a solicitação$/ do
@@ -291,12 +291,12 @@ end
 
 Dado /^que o Voto Como Vamos me enviou um e\-mail solicitando que eu administre meu peril$/ do
   @candidate = FactoryGirl.create :candidate
-  Ownership.send_revindication_to_all_candidates
+  Ownership.send_revindication_to_some_candidates(0,1)
 end
 
 Quando /^acesso endereço de solicitação fornecido no e\-mail$/ do
   open_last_email
-  visit_in_email('aqui')
+  visit_in_email('AQUI')
 end
 
 Quando /^entro com minhas credenciais no facebook$/ do

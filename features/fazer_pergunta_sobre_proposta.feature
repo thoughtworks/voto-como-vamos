@@ -12,7 +12,7 @@ Funcionalidade: Fazer uma pergunta sobre uma proposta
     E que este candidato registrou uma proposta
     E que eu estou logado na aplicação
     
-    @bla
+    @pending
   Cenário: Acessar o formulário para pergunta de uma proposta
     Dado que eu estou visualizando os detalhes da proposta 
     E escrevo a pergunta "A realização dessa proposta custará quanto?"
