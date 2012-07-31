@@ -22,15 +22,15 @@
     .interact  
       = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
 
-      .perguntas
+      /.perguntas
         img.perguntas src="/assets/bt_perguntar.jpg"
         h3.nome Perguntas
 
-      = simple_form_for [@proposal, @question], :html => {:id => "question", :method => :get} do |f|
+      /= simple_form_for [@proposal, @question], :html => {:id => "question", :method => :get} do |f|
         = f.input :description, :id => "description", :label => false, :input_html => { :class => "small"}
         = f.submit t('question.send'), :id => "do_question" 
 
-      ul#questions_list
+      /ul#questions_list
         - @proposal.questions.each do |q|
           li.question
             p= q.user.name
