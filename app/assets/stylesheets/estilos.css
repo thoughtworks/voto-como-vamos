@@ -256,7 +256,7 @@ h3.candidatos {
 .listadepartidos LI{width:400px; margin-left:50px; float:left; padding-right:10px; line-height:30px;}
 .listadecandidatos LI A {text-decoration:none; color:#578A0D}
 .listadecandidatos LI A:HOVER, .listadepartidos LI A:HOVER{text-decoration:underline}
-.listadepartidos LI A{color:#BE0610}
+.listadepartidos LI A{color:#999999}
 
 .siglas{text-decoration:underline; margin-right:20px; width:55px; float:left; font-weight:bold;}
 .nomedopartido{float:left; width:325px; text-decoration:none}
