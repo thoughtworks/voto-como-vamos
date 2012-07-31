@@ -19,4 +19,4 @@ staging:
 
 production:
   facebook_app_id: <%= ENV['FACEBOOK_APP_ID'] %>
-  facebook_app_url: "http://apps.facebook.com/<%= ENV['FACEBOOK_APP_URL'] %>"
+  facebook_app_url: "http://apps.facebook.com/<%= ENV['FACEBOOK_APP_ID'] %>"
