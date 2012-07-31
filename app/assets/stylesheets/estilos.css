@@ -112,7 +112,7 @@ BODY.fundocinza {
   padding-bottom:10px;
 }
 #propostas_areas LI{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
-#propostas_areas LI A{font-family: Droid-Sans, Verdana, Tahoma; color:#419EBB; font-size:26px;}
+#propostas_areas LI A{font-family: Droid Sans, Verdana, Tahoma; color:#419EBB; font-size:20px;}
 #propostas_areas LI A:hover {color:#266b81}
 
 /*PERFIL DO CANDIDATO*/
