@@ -6,8 +6,7 @@ describe PartiesController do
     let(:parties) {["PT", "PV", "PC do B"]}
 
     before do
-      Candidate.should_receive(:select).with('distinct party').and_return(parties)
-      parties.should_receive(:map).and_return(parties)
+      Candidate.stub_chain(:order, :uniq, :pluck).and_return(parties)
       get :index
     end
 

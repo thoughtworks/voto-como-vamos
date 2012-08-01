@@ -2,7 +2,7 @@
 class PartiesController < ApplicationController
 
   def index
-    @parties = Candidate.select('distinct party').map { |c| c.party }
+    @parties = Candidate.order(:party).uniq.pluck(:party)
   end
 
   def show
