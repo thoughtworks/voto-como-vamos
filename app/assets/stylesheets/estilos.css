@@ -181,7 +181,7 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 .capa DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
 #conteudo .capa P.counter{text-align:center; width:68; display:block;}
 .capa DIV P,.capa DIV IMG{float:left;}
-.capa P{width:34px; text-align:center}
+.capa P {width:34px; text-align:center}
 
 h3.propostasmaisdiscutidas {
   background:url(/assets/titulo_propostasmaisdiscutidas.png);
@@ -194,12 +194,12 @@ h3.propostasmaisdiscutidas {
 }
 
 DIV.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas a.nomedaproposta{font-family: Droid Sans, Verdana; font-size:24px; color:#419EBB;}
+.propostasmaisdiscutidas a.nomedaproposta{font-family: Droid Sans, Verdana; font-size:20px; color:#419EBB;}
 .propostasmaisdiscutidas a.nomedaproposta:hover {color:#266b81}
 
 .propostasmaisdiscutidas li {
   font-family: Droid Sans, Verdana;
-  font-size:40px;
+  font-size:35px;
   color:#DB499B;
   margin-left:60px;
   vertical-align:top;
@@ -275,7 +275,7 @@ A.previous_page, A.next_page, .gap {font-size:16px}
 .checkboxes DIV{float:left; width:95px; line-height:25px;}
 .checkboxes .tagstexto{margin-top:-1px; padding-left:3px; font-size:11px; color:#000;}
 .checkboxes INPUT{border:1px solid #000; width:12px; height:12px; background:none;}
-.checkboxes DIV.filtrar{width:98%; margin:auto; text-align:center; margin-top:5px;}
+.checkboxes DIV.filtrar {width:98%; margin:auto; text-align:center; margin-top:5px;}
 .checkboxes DIV.filtrar A{font-size:16px; color:#000; text-decoration:none}
 .checkboxes DIV.filtrar A:HOVER{text-decoration:underline;}
 
