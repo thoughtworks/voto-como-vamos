@@ -77,4 +77,8 @@ VotoComoVamos::Application.configure do
     :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
+
+  config.middleware.use ExceptionNotifier,
+    sender_address: 'noreply@votocomovamos.com.br',
+    exception_recipients: 'votocomovamos@thoughtworks.com'
 end

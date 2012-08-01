@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
 gem 'sunspot_rails'
 gem 'newrelic_rpm'
+gem 'exception_notification'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

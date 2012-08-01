@@ -73,6 +73,8 @@ GEM
       rspec (~> 2.0)
     erubis (2.7.0)
     eventmachine (0.12.10)
+    exception_notification (2.6.1)
+      actionmailer (>= 3.0.4)
     excon (0.14.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -260,6 +262,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   email_spec
+  exception_notification
   factory_girl_rails
   heroku
   hitch
