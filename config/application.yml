@@ -15,7 +15,7 @@ test:
 
 staging:
   facebook_app_id: 250842391695084
-  facebook_app_url: "http://apps.facebook.com/250842391695084/"
+  facebook_app_url: "http://apps.facebook.com/250842391695084"
 
 production:
   facebook_app_id: 502204129793230

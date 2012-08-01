@@ -34,7 +34,7 @@ class Proposal < ActiveRecord::Base
     end
   end
 
-  searchable do
+  searchable :auto_index => true, :auto_remove => true do
     string :title, :stored => true
     text :title, :boost => 5, :stored => true
     text :abstract

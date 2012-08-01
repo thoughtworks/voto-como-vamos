@@ -11,7 +11,7 @@ class Candidate < ActiveRecord::Base
   validates :email, :presence => true, :email => true
   validates :site, :blog, :facebook, :twitter, :url => true, :allow_nil => true
 
-  searchable do
+  searchable :auto_index => true, :auto_remove => true do
     text :name, :stored => true
     text :short_name, :stored => true
     string :short_name
