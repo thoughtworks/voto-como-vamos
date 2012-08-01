@@ -8,13 +8,8 @@ Nele você vai saber tudo sobre as propostas e candidatos das próximas eleiçõ
 
 Idealizadores:
 -------------
-Vinicius Russo   - http://www.facebook.com/vinirusso
 
 Gabriela Guerra   - http://www.facebook.com/gabrielaludwigguerra
-
-Felipe Denz       - http://www.facebook.com/felipe.denz
-
-Daniela Goya      - http://www.facebook.com/danielagoyatocchetto
 
 Igor Czermainski  - http://www.facebook.com/mrigoroliveira
 
@@ -27,6 +22,8 @@ Carlos Hoffmann   - http://www.facebook.com/polistecnologia
 Michel Coelho     - http://www.facebook.com/polistecnologia
 
 Amaralina Machado - http://www.facebook.com/Amaralina.xavier
+
+Daniel Mattos     - http://www.facebook.com/danielcmattos
 
 
 Para mais acesse:
