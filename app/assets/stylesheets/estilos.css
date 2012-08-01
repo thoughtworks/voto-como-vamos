@@ -344,12 +344,23 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 .novaproposta .resumo{width:250px;}
 .novaproposta .descricao{clear:both; padding-top:10px; width:715px;}
 
-
+/*CREDITOS*/
+.credits {width: 955px;}
+.credits h2{ font-size: 18px; color: #DB499B; margin-bottom: 10px; }
+.credits #donators { margin-bottom: 20px; }
+.credits #donators p { margin-bottom: 0px;}
+.credits #developers .twbr {width: 450px; float: left; margin: 10px 10px 10px 10px;}
+.credits #developers .twbr img {max-width: 100%; }
+.credits #developers .ebra_animake {width: 450px; float: left; margin: 10px 10px 10px 10px;}
+.credits #developers .ebra_animake .ebra {float:left; padding-left: 80px; padding-top: 60px;}
+.credits #developers .ebra_animake .animake {float:right; padding-right: 80px; padding-top: 60px;}
+.credits #developers .legends { clear: both };
+    
 /*RODAPE*/
 #rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
 #rodape .loguinho{width:180px; padding-left:20px; float:left;}
 #rodape .loguinho IMG{width:150px; float:left}
-ADDRESS{font-size:10px; width:480px; border-top:1px solid #ccc; padding-top:5px; float:right;}
+ADDRESS{font-size:10px; width:550px; border-top:1px solid #ccc; padding-top:5px; float:right;}
 ADDRESS A {font-size:10px}
 
 #rodape a.footer_link {color:#d94b9d}

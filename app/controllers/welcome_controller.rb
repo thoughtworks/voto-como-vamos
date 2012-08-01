@@ -7,6 +7,9 @@ class WelcomeController < ApplicationController
     @categories = Category.all
     @proposals = Proposal.ordered_by_votes.limit(LIMIT)
   end
+  
+  def credits
+  end
 
   private
 
