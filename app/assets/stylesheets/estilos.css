@@ -94,7 +94,7 @@ BODY.fundocinza {
 
 
 /*BAIXO*/
-#baixo{background-color:#FFF; display:table;}
+#baixo{background-color:#FFF; display:table; padding-bottom: 20px; }
 
 /*DIREITA*/
 #direita{width:305px; float:left; display:table}
