@@ -348,7 +348,7 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 /*RODAPE*/
 #rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
 #rodape .loguinho{width:180px; padding-left:20px; float:left;}
-#rodape .loguinho IMG{width:60px; float:left}
+#rodape .loguinho IMG{width:150px; float:left}
 ADDRESS{font-size:10px; width:480px; border-top:1px solid #ccc; padding-top:5px; float:right;}
 ADDRESS A {font-size:10px}
 
