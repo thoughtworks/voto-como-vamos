@@ -10,9 +10,13 @@ $(function(d) {
 
   $("a.share").click(function(e) {
     $this = $(this);
+    var link = window.location.href;
+    if ($this.attr('data-url') != undefined) {
+      link = $this.attr('data-url')
+    }
     FB.ui($.extend($this.data(), {
       method: "feed",
-      link: window.location.href
+      link: link
     }));
     return false
   });
