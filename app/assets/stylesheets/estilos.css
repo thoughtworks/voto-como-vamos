@@ -347,14 +347,12 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 /*CREDITOS*/
 .credits {width: 955px;}
 .credits h2{ font-size: 18px; color: #DB499B; margin-bottom: 10px; }
-.credits #donators { margin-bottom: 20px; }
+.credits #donators { margin-bottom: 20px; padding-top: 20px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
 .credits #donators p { margin-bottom: 0px;}
-.credits #developers .twbr {width: 450px; float: left; margin: 10px 10px 10px 10px;}
-.credits #developers .twbr img {max-width: 100%; }
-.credits #developers .ebra_animake {width: 450px; float: left; margin: 10px 10px 10px 10px;}
-.credits #developers .ebra_animake .ebra {float:left; padding-left: 80px; padding-top: 60px;}
-.credits #developers .ebra_animake .animake {float:right; padding-right: 80px; padding-top: 60px;}
-.credits #developers .legends { clear: both }
+.credits #developers .twbr {margin: 10px; text-align:center;}
+.credits #developers .twbr img { max-width: 100%; margin: 30px 10px 0px 0px;}
+.credits #developers .ebra_animake { max-width: 100%; margin: 40px 10px 0px 0px; padding-top: 30px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
+.credits #developers .ebra_animake_legenda {padding-top: 20px; margin-bottom: 20px; }
     
 /*RODAPE*/
 #rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
