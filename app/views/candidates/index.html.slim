@@ -1,11 +1,15 @@
 = form_tag candidates_path, :method => :get do
   center
     = will_paginate @candidates, { :class => "abc" }
-  - @candidates.each do |candidate|
     table
-      tr
-        td= link_to candidate.short_name, candidate_path(candidate)
-        td= candidate.party
-        td= candidate.role
-  center
+      - @candidates.in_groups_of(2).each do |row|
+        tr
+          - row.each do |candidate|
+            td width="300px"
+              = link_to candidate.short_name, candidate_path(candidate)
+            td width='60px' 
+              = candidate.party
+            td width='50px' 
+              = candidate.role
+            td width='80px' 
     = will_paginate @candidates, { :class => "abc" }
