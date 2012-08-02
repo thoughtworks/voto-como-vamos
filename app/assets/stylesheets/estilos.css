@@ -352,7 +352,7 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 .credits #developers .twbr {margin: 10px; text-align:center;}
 .credits #developers .twbr img { max-width: 100%; margin: 30px 10px 0px 0px;}
 .credits #developers .ebra_animake { max-width: 100%; margin: 40px 10px 0px 0px; padding-top: 30px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
-.credits #developers .ebra_animake_legenda {padding-top: 20px; margin-bottom: 20px; }
+.credits #developers .ebra_animake_legenda {padding-top: 20px; margin-bottom: 21px;}
     
 /*RODAPE*/
 #rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
