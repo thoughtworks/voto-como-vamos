@@ -6,7 +6,7 @@
 = content_for :right do
   #conteudo.interface2
     p.voltaraspropostas
-      = link_to "Voltar às Propostas", candidate_path(@candidate)
+      = link_to "Mais propostas do candidato", candidate_path(@candidate)
       - if @candidate.represented_by? current_user
         br
         = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"

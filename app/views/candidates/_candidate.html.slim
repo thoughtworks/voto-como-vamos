@@ -5,11 +5,16 @@
     = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile", :class => 'partido'
     br
     br
-  img.foto src="#{@candidate.photo}" alt="Foto de #{@candidate.name} #{@candidate.tse_number}"
+  a href="#{candidate_path(@candidate)}"
+    img.foto src="#{@candidate.photo}" alt="Foto de #{@candidate.name} #{@candidate.tse_number}"
   p.cargo= @candidate.role
+  a href="#{candidate_path(@candidate)}"
+    h3.nome= "#{@candidate.short_name} - #{@candidate.tse_number}"
+  a href="#{candidate_path(@candidate)}"
+    h4.nome= @candidate.name
   h3.nome= "#{@candidate.short_name} - #{@candidate.tse_number}"
-  h4.nome= @candidate.name
-  p.partido= @candidate.party
+  a href="/partidos/#{@candidate.party}"
+    p.partido= @candidate.party
   p.coligacao= @candidate.alliance
   p.telefone= @candidate.phone
   - if @candidate.press_agent
