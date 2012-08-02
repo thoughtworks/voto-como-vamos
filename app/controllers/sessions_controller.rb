@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SessionsController < ApplicationController
   skip_before_filter :authenticate!
 
@@ -12,6 +14,10 @@ class SessionsController < ApplicationController
 
   def logged_in
     render :json => { logged_in: !session[:user_id].nil? }
+  end
+
+  def failure
+    redirect_to :root, :notice => 'Para interagir é preciso fazer login com o facebook'
   end
 
   def destroy

@@ -1,6 +1,7 @@
 VotoComoVamos::Application.routes.draw do
 
   match '/auth/facebook/callback' => 'sessions#create'
+  match '/auth/failure'  => 'sessions#failure'
   match '/auth/logged_in' => 'sessions#logged_in'
   match '/logout' => 'sessions#destroy'
   match '/propostas/aleatorias' => 'proposals#random_listing'
