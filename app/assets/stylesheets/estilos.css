@@ -309,7 +309,7 @@ H4 A{text-decoration: underline; font-size:16px;}
 
 .acoes{width:295px; margin-top:5px; margin-bottom:40px; height:30px; float:right}
 .acoes DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
-#conteudo P.counter{text-align:center; width:68; display:block;}
+#conteudo P.counter{text-align: right; width:68; display:block; }
 .acoes DIV P, .acoes DIV IMG, .acoes A.acao_sharefacebook{float:left;}
 .acoes P{width:34px; text-align:center}
 
