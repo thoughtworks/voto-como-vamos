@@ -6,3 +6,6 @@ meta property="og:url" content="#{raw(request.url)}"
 - if !@proposal.nil?
   meta property="og:title" content="#{@proposal.title}"
   meta property="og:description" content="#{@proposal.abstract}"
+- else
+  meta property="og:title" content="Voto Como Vamos"
+  meta property="og:description" content="Conheça, interaja e acompanhe as propostas e os candidatos das eleições 2012."
