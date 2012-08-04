@@ -36,7 +36,7 @@
       li
         a.site href="#{@candidate.site}" title="Site" target="_blank"  
           span Site
-    - if @candidate.twitter != nil
+    - if @candidate.twitter?
       li
         a.twitter href="#{@candidate.twitter}" title="Twitter" target="_blank"
           span Twitter
