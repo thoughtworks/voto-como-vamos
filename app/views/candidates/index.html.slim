@@ -2,7 +2,7 @@
   center
     = will_paginate @candidates, { :class => "abc" }
     table
-      - @candidates.in_groups_of(2).each do |row|
+      - @candidates.in_groups_of(2, false).each do |row|
         tr
           - row.each do |candidate|
             td width="300px"
