@@ -179,7 +179,6 @@ DIV.video{margin-top:30px; margin-bottom:30px;}
 /*CAPA*/
 .capa{width:168px; margin-top:5px; margin-bottom:30px; height:30px; margin-left:0px;}
 .capa DIV{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
-#conteudo .capa P.counter{text-align:center; width:68; display:block;}
 .capa DIV P,.capa DIV IMG{float:left;}
 .capa P {width:34px; text-align:center}
 
