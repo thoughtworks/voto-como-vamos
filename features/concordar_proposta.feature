@@ -28,7 +28,7 @@ Funcionalidade: Opinar sobre uma proposta
     Então a opção discordar ficará destacada apenas para mim para eu recordar minha opinião
     E minha opinião será contabilizada na contagem da opção discordar
 
-  Cenário: Mudar de opnião discordar para concordar
+  Cenário: Mudar de opinião discordar para concordar
     Dado que eu queria concordar com uma proposta que discordei anteriormente
     Quando eu seleciono a opção concordar
     Então a opção concordar ficará destacada apenas para mim para eu recordar minha opinião
@@ -36,7 +36,7 @@ Funcionalidade: Opinar sobre uma proposta
     E minha opinião não fará mais parte da contagem de discordar
     E minha opinião será contabilizada na contagem da opção concordar
 
-  Cenário: Mudar de opnião concordar para discordar
+  Cenário: Mudar de opinião concordar para discordar
     Dado que eu queria discordar com uma proposta que concordei anteriormente
     Quando eu seleciono a opção discordar
     Então a opção discordar ficará destacada apenas para mim para eu recordar minha opinião
