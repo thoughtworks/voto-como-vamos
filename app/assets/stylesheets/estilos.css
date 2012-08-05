@@ -1,5 +1,5 @@
 @charset "utf-8";
-*{margin:0; padding:0; border:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#999999;}
+*{margin:0; padding:0; border:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#999999; -webkit-transition: 0.2s linear all; -moz-transition: 0.2s linear all; }
 ul {list-style:none;}
 
 BODY.fundoazul{
