@@ -14,6 +14,6 @@
         = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "partido"
       br
       br
-      br  
+      br
 
     = render :partial => 'proposal', :collection => @candidate.proposals, :locals => {:candidate => @candidate}

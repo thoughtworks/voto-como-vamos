@@ -9,8 +9,8 @@ describe DataImporter do
 			@importer = DataImporter.new MAYOR_LIST_URL
 			@adenilso = @importer.candidates.last
 		end
-		
-		it "extracts candidates from document" do 
+
+		it "extracts candidates from document" do
 			@importer.candidates.size.should == 10
 		end
 
@@ -34,15 +34,15 @@ describe DataImporter do
 			@adenilso.number.should == 13333
 		end
 
-    it "maps candidate profile details page "do 
+    it "maps candidate profile details page "do
       @adenilso.profile_link.should == "adenilso.html"
     end
 
     it "maps candidate sequence number" do
       @adenilso.sequence_number.should == "210000000360"
     end
-    
-    it "maps candidate site" do 
+
+    it "maps candidate site" do
       @adenilso.site.should == "http://www.professoradilso.blogspot.com"
     end
 

@@ -21,7 +21,7 @@ SimpleForm.setup do |config|
       ba.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
     end
   end
-  
+
   config.default_wrapper = :bootstrap
 
   # Define the way to render check boxes / radio buttons with labels.

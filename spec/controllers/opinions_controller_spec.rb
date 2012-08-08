@@ -7,12 +7,12 @@ describe OpinionsController do
     request.env["HTTP_REFERER"] = 'back'
   end
 
-  let(:opinion) {  mock_model(Opinion, value: -1) } 
+  let(:opinion) {  mock_model(Opinion, value: -1) }
   let(:current_user) { mock_model(User) }
   let ( :proposal_id ) { 1 }
 
   describe "create" do
-    let ( :data_params ) { { 
+    let ( :data_params ) { {
       "proposal_id" => proposal_id.to_s,
       "value"       => "1",
       "user_id"     => current_user.id
@@ -46,7 +46,7 @@ describe OpinionsController do
     it { should respond_with(:redirect) }
   end
 
-  describe "update" do 
+  describe "update" do
 
     let(:value) { "-1" }
 

@@ -5,12 +5,12 @@
         .resultadosdabusca
           - if @main_search.empty?
             p.h2
-              |  Não foram encontrados resultados de busca para 
+              |  Não foram encontrados resultados de busca para
               span.termobuscado
                 = "\"#{@main_search.query}\""
           - else
             p.h2
-              |  Resultados para 
+              |  Resultados para
               span.termobuscado
                 = "\"#{@main_search.query}\""
             - unless @main_search.candidates.results.empty?

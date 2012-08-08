@@ -59,7 +59,7 @@ describe ProposalsController do
       should render_template('index')
     end
   end
-  
+
   context 'for the proposals page' do
     before do
       Proposal.should_receive(:all, :order => "random()", :limit => 5)
@@ -99,7 +99,7 @@ describe ProposalsController do
       end
 
       context 'when input is valid' do
-        before do 
+        before do
           Proposal.should_receive(:new).with(fake_params['proposal']).and_return(proposal)
           proposal.should_receive(:candidate=).with(candidate)
           proposal.should_receive(:save).and_return(true)
@@ -164,8 +164,8 @@ describe ProposalsController do
           and_return(valid?)
 
         put :update, {
-          :candidate_id => candidate_id, 
-          :id => proposal_id, 
+          :candidate_id => candidate_id,
+          :id => proposal_id,
           :proposal => proposal_params
         }
       end

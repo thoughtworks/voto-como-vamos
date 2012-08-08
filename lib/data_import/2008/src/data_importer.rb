@@ -60,7 +60,7 @@ class DataImporter
 
   def get_profile_link(row)
     profile_link = row.children[0].children[1]['href']
-    if profile_link.include? "\.\." 
+    if profile_link.include? "\.\."
       TSE_URL + "/sadEleicaoDivulgaCand2008" + (profile_link.gsub "\.\.", '')
     else
       profile_link

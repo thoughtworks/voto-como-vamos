@@ -101,7 +101,7 @@ Entao /^eu devo ver a página do candidato/ do
 end
 
 Entao /^eu devo ver uma mensagem informando que eu preciso preencher cada um dos três campos$/ do
-  page.should have_selector('.error', :count => 3) 
+  page.should have_selector('.error', :count => 3)
 end
 
 Entao /^eu devo ver uma mensagem informando que o campo (descrição|abstract|titulo) é obriatório$/ do |field|

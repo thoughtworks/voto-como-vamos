@@ -5,7 +5,7 @@ describe CandidateMailer do
     it "should render successfully" do
       candidate = double(:email => 'candidato@example.com', :obfuscated_slug => '1')
 
-      Candidate.should_receive(:find).with(1).and_return(candidate) 
+      Candidate.should_receive(:find).with(1).and_return(candidate)
 
       expect { CandidateMailer.revindication(1) }.
         to_not raise_error

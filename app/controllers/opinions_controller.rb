@@ -3,7 +3,7 @@ class OpinionsController < ApplicationController
 
   def create
     @opinion = Opinion.create params_for_current_user, :as => :admin
-    redirect_to :back 
+    redirect_to :back
   rescue ActionController::RedirectBackError
     redirect_to proposal_path(@opinion.proposal)
   end

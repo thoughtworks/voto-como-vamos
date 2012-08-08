@@ -5,36 +5,36 @@ ul {list-style:none;}
 BODY.fundoazul{
   background-image:url('/assets/bg_body.jpg');
   background-color:#000;
-  background-repeat:no-repeat; 
-  background-attachment:fixed; 
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   background-position:center top;
 }
 BODY.fundoverde {
-  background-image:url('/assets/bg_body_verde.jpg'); 
-  background-color:#000; 
-  background-repeat:no-repeat; 
-  background-attachment:fixed; 
+  background-image:url('/assets/bg_body_verde.jpg');
+  background-color:#000;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   background-position:center top;
 }
 BODY.fundovermelho {
-  background-image:url('/assets/bg_body_vermelho.jpg'); 
-  background-color:#000; 
-  background-repeat:no-repeat; 
-  background-attachment:fixed; 
+  background-image:url('/assets/bg_body_vermelho.jpg');
+  background-color:#000;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   background-position:center top;
 }
 BODY.fundocinza {
-  background-image:url('/assets/bg_body_cinza.jpg'); 
-  background-color: #000; 
-  background-repeat: no-repeat; 
-  background-attachment:fixed; 
+  background-image:url('/assets/bg_body_cinza.jpg');
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
   background-position:center top;
 }
 
 /*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
 #geral {
-  width:1000px; 
-  margin:auto; 
+  width:1000px;
+  margin:auto;
   display:table;
   background-color:#FFF;
 }
@@ -51,7 +51,7 @@ BODY.fundocinza {
 #logo IMG{width:185px;}
 
 #conceitual{height:380px; background-image:url('/assets/imagem_portoalegre.jpg'); background-position:center top;}
-#video{width:1000px; margin:auto; padding-top:50px;} 
+#video{width:1000px; margin:auto; padding-top:50px;}
 .videos {background:rgba(50,50,50,.8); padding:5px; width:285px; float:right;}
 #video a{float:right; margin-left:10px; clear:both; color:#fafafa; font-weight:bold; font-size:12px; font-family:arial, Calibri, Helvetica; display:block;}
 #video a:hover{ font-weight:bold; text-decoration:underline;}
@@ -101,14 +101,14 @@ BODY.fundocinza {
 #direita.interface2{width:700px; float:left; display:table}
 
 #propostas_areas{
-  margin-top:35px; 
-  width:245px; 
-  background-color:#CDE6ED; 
+  margin-top:35px;
+  width:245px;
+  background-color:#CDE6ED;
   border-radius: 15px;
   -moz-border-radius: 15px; /* Implementação Mozilla */
   -webkit-border-radius: 15px; /* Implementação para browsers que renderizam via webkit */
-  behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */ 
-  padding-top:10px; 
+  behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+  padding-top:10px;
   padding-bottom:10px;
 }
 #propostas_areas LI{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
@@ -352,7 +352,7 @@ H4.editarproposta{width:670px; float:left; height:30px;}
 .credits #developers .twbr img { max-width: 100%; margin: 30px 10px 0px 0px;}
 .credits #developers .ebra_animake { max-width: 100%; margin: 40px 10px 0px 0px; padding-top: 30px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
 .credits #developers .ebra_animake_legenda {padding-top: 20px; margin-bottom: 21px;}
-    
+
 /*RODAPE*/
 #rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
 #rodape .loguinho{width:180px; padding-left:20px; float:left;}

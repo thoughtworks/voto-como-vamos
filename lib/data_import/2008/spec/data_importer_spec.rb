@@ -9,8 +9,8 @@ describe DataImporter do
 			@importer = DataImporter.new MAYOR_LIST_URL
 			@vera = @importer.candidates.last
 		end
-		
-		it "extracts candidates from document" do 
+
+		it "extracts candidates from document" do
 			@importer.candidates.size.should == 8
 		end
 
@@ -34,7 +34,7 @@ describe DataImporter do
 			@vera.number.should == 16
 		end
 
-    it "maps candidate profile details page "do 
+    it "maps candidate profile details page "do
       @vera.profile_link.should == "vera_guasso.html"
     end
 

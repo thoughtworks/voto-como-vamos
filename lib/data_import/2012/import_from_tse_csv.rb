@@ -6,7 +6,7 @@ open('tse_data/consulta_cand_2012_RS.txt', 'r:iso-8859-1') do |file|
   data = file.read
   data.encode!("UTF-8")
   data.each_line do |c_line|
-    c_line.gsub!("\"", "") 
+    c_line.gsub!("\"", "")
     fields = c_line.split ";"
     candidate = OpenStruct.new
     candidate.city = fields[7]
@@ -19,7 +19,7 @@ open('tse_data/consulta_cand_2012_RS.txt', 'r:iso-8859-1') do |file|
     candidate.party = fields[18]
     candidate.alliance_parties = fields[21]
     candidate.alliance_name = fields[22]
-    
+
     if candidate.city == "PORTO ALEGRE"
       @candidates << candidate
       puts candidate

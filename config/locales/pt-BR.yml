@@ -19,7 +19,7 @@ pt-BR:
     - Sex
     - Sáb
     abbr_month_names:
-    - 
+    -
     - Jan
     - Fev
     - Mar
@@ -45,7 +45,7 @@ pt-BR:
       long: ! '%d de %B de %Y'
       short: ! '%d de %B'
     month_names:
-    - 
+    -
     - Janeiro
     - Fevereiro
     - Março
@@ -273,7 +273,7 @@ pt-BR:
     agree: "Concordar"
     disagree: "Discordar"
   question:
-    send: 'Enviar pergunta' 
+    send: 'Enviar pergunta'
 
   will_paginate:
     previous_label: "Anterior"

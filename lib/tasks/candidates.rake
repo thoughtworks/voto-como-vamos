@@ -8,8 +8,8 @@ namespace :candidates do
       file.each_line do |line|
         c = Candidate.new
         c.role, c.name, c.short_name, c.tse_number, c.party, c.alliance, c.photo, c.site = line.split(",")
-        c.email = "candidate@email.com" # TSE does not provide email, how to import it? 
-        begin 
+        c.email = "candidate@email.com" # TSE does not provide email, how to import it?
+        begin
           c.save!
         rescue # lots of invalid emails provided by candidates, bypassing it
           c.site = nil

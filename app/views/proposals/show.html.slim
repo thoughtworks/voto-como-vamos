@@ -2,7 +2,7 @@
 - content_for(:url) { candidate_proposal_url(@candidate, @proposal) }
 - content_for(:esquerda_css) { 'interface2' }
 - content_for(:direita_css) { 'interface2' }
- 
+
 = content_for :right do
   #conteudo.interface2
     p.voltaraspropostas
@@ -19,7 +19,7 @@
       p id="resumo" = @proposal.abstract
       p id="descricao" = @proposal.description.gsub("\n", "<br/>").html_safe
 
-    .interact  
+    .interact
       = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
 
       /.perguntas
@@ -28,7 +28,7 @@
 
       /= simple_form_for [@proposal, @question], :html => {:id => "question", :method => :get} do |f|
         = f.input :description, :id => "description", :label => false, :input_html => { :class => "small"}
-        = f.submit t('question.send'), :id => "do_question" 
+        = f.submit t('question.send'), :id => "do_question"
 
       /ul#questions_list
         - @proposal.questions.each do |q|

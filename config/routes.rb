@@ -16,13 +16,13 @@ VotoComoVamos::Application.routes.draw do
       resources :revindications, :shallow => true,
         :only => [:new, :create, :show]
     end
-  
+
     resources :proposals, :path => "propostas", :only => [:index, :show] do
       resources :questions, :only => [] do
         get :create, :on => :collection
       end
     end
-    
+
     resources :opinions, :path => "opinioes"
   end
 

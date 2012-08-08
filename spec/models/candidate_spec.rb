@@ -47,7 +47,7 @@ describe Candidate do
   describe "Representation" do
 
     let(:user) { FactoryGirl.create :user }
-    let(:candidate) { FactoryGirl.create :candidate } 
+    let(:candidate) { FactoryGirl.create :candidate }
 
     it 'should check the ownership of a candidate' do
       Ownership.create! :user => user, :candidate => candidate

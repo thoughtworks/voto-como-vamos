@@ -74,9 +74,9 @@ class DataImporter
   end
 
   def get_photo_link(row)
-   "http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=#{get_sequence_number(row)}&codigoMunicipio=#{CITY_CODE}" 
+   "http://divulgacand2012.tse.jus.br/divulgacand2012/mostrarFotoCandidato.action?sqCand=#{get_sequence_number(row)}&codigoMunicipio=#{CITY_CODE}"
   end
-  
+
   def get_site_link
     a_site = @profile_details_doc.xpath("//a[@style='color: #375F8A;']")
     return (a_site ? a_site.text.strip.gsub(",", "") : nil)
