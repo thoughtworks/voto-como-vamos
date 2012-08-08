@@ -14,9 +14,9 @@ File.open('candidates_2008.txt', 'w') do |file|
   pages = 1..59
   pages.each do |num|
     vereador_list_url = "http://www.tse.jus.br/sadEleicaoDivulgaCand2008/gerenciarregistrocandidatura/manterCandidato!listarCandidatosPorMunicipio.action?codigoCargoEletivoSelec=13&page=#{num}&codigoUESelec=88013&codigoSituacaoRegistro=12"
-  	puts "Loading page #{num} ..."
-  	vereador_importer = DataImporter.new vereador_list_url
-  	vereador_importer.candidates.each do |v|
+    puts "Loading page #{num} ..."
+    vereador_importer = DataImporter.new vereador_list_url
+    vereador_importer.candidates.each do |v|
       file.puts "Vereador," + vereador_importer.candidate_to_s(v)
     end
   end

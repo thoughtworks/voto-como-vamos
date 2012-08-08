@@ -5,30 +5,30 @@ require 'ostruct'
 CITY_CODE = "88013" #FIXME: hardcode it for now to Porto Alegre (88013)
 
 class DataImporter
-	def initialize(url)
-		@candidates = []
-		@url = url
-		@doc = Nokogiri::HTML(open url)
-		load_candidates
-	end
+  def initialize(url)
+    @candidates = []
+    @url = url
+    @doc = Nokogiri::HTML(open url)
+    load_candidates
+  end
 
-	def candidates
-		@candidates
-	end
+  def candidates
+    @candidates
+  end
 
   def candidate_to_s(c)
     c.name + "," + c.short_name + "," + c.number.to_s + "," + c.party + "," + c.alliance + "," + c.photo + ","+ c.site
   end
 
-	private
-	def load_candidates
-	  @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
-	  	candidate = OpenStruct.new
-	 	  candidate.name = get_name row
-	 	  candidate.short_name = get_short_name row
-	 	  candidate.number = get_number row
-	 	  candidate.party = get_party row
-	 	  candidate.alliance = get_alliance row
+  private
+  def load_candidates
+    @doc.xpath("//tr[@class='odd'] | //tr[@class='even']").each do |row|
+      candidate = OpenStruct.new
+      candidate.name = get_name row
+      candidate.short_name = get_short_name row
+      candidate.number = get_number row
+      candidate.party = get_party row
+      candidate.alliance = get_alliance row
       candidate.profile_link = get_profile_link row
       candidate.sequence_number = get_sequence_number row
 
@@ -37,30 +37,30 @@ class DataImporter
       candidate.photo = get_photo_link(row)
       candidate.site = get_site_link
 
-	 	  @candidates << candidate
-	  end
-	end
+      @candidates << candidate
+    end
+  end
 
-	def get_name(row)
-		remove_specials row.children[2].child.text
-	end
+  def get_name(row)
+    remove_specials row.children[2].child.text
+  end
 
-	def get_short_name(row)
-		short_name = row.children[4].child.text
+  def get_short_name(row)
+    short_name = row.children[4].child.text
     short_name.gsub(",", "") # found some names with commas, so...removing them
-	end
+  end
 
-	def get_number(row)
-		(row.children[6].child.text).to_i
-	end
+  def get_number(row)
+    (row.children[6].child.text).to_i
+  end
 
-	def get_party(row)
-		row.children[10].child.text
-	end
+  def get_party(row)
+    row.children[10].child.text
+  end
 
-	def get_alliance(row)
-		row.children[12].child.text
-	end
+  def get_alliance(row)
+    row.children[12].child.text
+  end
 
   def get_sequence_number(row)
     row.child.children[1][:value]
@@ -82,9 +82,9 @@ class DataImporter
     return (a_site ? a_site.text.strip.gsub(",", "") : nil)
   end
 
-	def remove_specials(text)
-		text.gsub! /[\r\n\t]/, ""
+  def remove_specials(text)
+    text.gsub! /[\r\n\t]/, ""
     text.gsub! ",", ""
-		text.strip!
-	end
+    text.strip!
+  end
 end
