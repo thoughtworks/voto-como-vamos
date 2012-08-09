@@ -13,6 +13,10 @@ def login_with(mock_options = nil)
   visit "/auth/facebook"
 end
 
+Dado /^que estou na página do painel estatístico$/ do
+  visit painel_path
+end
+
 Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
