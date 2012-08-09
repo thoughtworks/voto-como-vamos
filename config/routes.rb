@@ -6,6 +6,7 @@ VotoComoVamos::Application.routes.draw do
   match '/logout' => 'sessions#destroy'
   match '/propostas/aleatorias' => 'proposals#random_listing'
   match '/credits' => 'welcome#credits'
+  match 'panel' => 'panel#show'
 
   scope :scope_paths => { :new => "novo", :edit => "editar" } do
     resources :candidates, :path => "candidatos" do
@@ -27,6 +28,7 @@ VotoComoVamos::Application.routes.draw do
   end
 
   resources :parties, :path => "partidos", :only => [:index, :show]
+
 
   resource :main_search
   root :to => 'welcome#index'
