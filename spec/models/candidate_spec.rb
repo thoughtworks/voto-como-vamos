@@ -40,7 +40,10 @@ describe Candidate do
 
   it 'should generate a unique slug for candidate' do
     Digest::SHA1.should_receive(:hexdigest).with('Test').and_return('obfuscated')
-    candidate = Candidate.create!(:name => 'Test', :email => 'test@test.com')
+    candidate = Candidate.new
+    candidate.name = 'Test'
+    candidate.email = 'test@test.com'
+    candidate.save!
     candidate.obfuscated_slug.should == 'obfuscated'
   end
 
@@ -50,7 +53,10 @@ describe Candidate do
     let(:candidate) { FactoryGirl.create :candidate }
 
     it 'should check the ownership of a candidate' do
-      Ownership.create! :user => user, :candidate => candidate
+      ownership = Ownership.new
+      ownership.user = user
+      ownership.candidate = candidate
+      ownership.save!
 
       candidate.represented_by?(user).should be_true
     end

@@ -19,6 +19,8 @@ class Proposal < ActiveRecord::Base
 
   scope :ordered_by_votes, order("opinions_count DESC")
 
+  attr_accessible :title, :abstract, :description
+
   def self.search_in_categories(query_string, categories = [])
     search do
       fulltext query_string

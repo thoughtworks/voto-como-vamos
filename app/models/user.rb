@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   validates :name, :uid, :provider, :presence => true
 
+  attr_accessible # none
+
   def self.create_with_auth(auth)
     create! do |user|
       user.provider = auth['provider']
@@ -15,5 +17,4 @@ class User < ActiveRecord::Base
   def self.find_by_provider_and_uid(provider, uid)
     where(provider: provider, uid: uid).first
   end
-
 end

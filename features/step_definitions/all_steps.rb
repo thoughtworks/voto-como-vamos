@@ -21,11 +21,13 @@ Dado /^que sou um usuário já cadastrado no Voto Como Vamos$/ do
   test_users = Koala::Facebook::TestUsers.new(
     :app_id => Settings.facebook_app_id, :secret => Settings.facebook_secret)
     @user = test_users.create(true, Settings.facebook_scopes)
-    User.create!(
-      provider: 'facebook',
-      uid: @user['id'],
-      name: 'Test User',
-      email: 'test@test.com')
+    auth = {'provider' => 'facebook',
+      'uid' => @user['id'],
+      'info' => {
+        'name' => 'Test User',
+        'email' => 'test@test.com' }
+    }
+    User.create_with_auth(auth)
 end
 
 Quando /^eu acesso a página principal$/ do
@@ -70,7 +72,10 @@ Dado /^que eu sou um candidato cadastrado$/ do
 end
 
 Dado /^que eu represento o candidato$/ do
-  @ownership = Ownership.create! :candidate => @candidate, :user => @user
+  @ownership = Ownership.new
+  @ownership.candidate = @candidate
+  @ownership.user = @user
+  @ownership.save!
 end
 
 Dado /^que eu estou cadastrando uma proposta$/ do
@@ -78,9 +83,9 @@ Dado /^que eu estou cadastrando uma proposta$/ do
 end
 
 Quando /^eu preencher todos os campos da proposta$/ do
-  @proposal = FactoryGirl.build(:proposal,
-                                :candidate => @candidate,
-                                :categories => [@category])
+  @proposal = FactoryGirl.build(:proposal)
+  @proposal.candidate = @candidate,
+  @proposal.categories = [@category]
   fill_proposal_form_with(@proposal)
 end
 
@@ -338,7 +343,9 @@ end
 
 Dado /^que outro candidato tenha uma proposta cadastrada$/ do
   candidate = FactoryGirl.create :candidate
-  @proposal = FactoryGirl.create :proposal, :candidate => candidate
+  @proposal = FactoryGirl.build :proposal
+  @proposal.candidate = candidate
+  @proposal.save!
 end
 
 Então /^eu não posso editar a proposta do outro candidato$/ do
@@ -425,7 +432,10 @@ Dado /^que existem algumas propostas para cada macrotema$/ do
   end
 
   @out_category_proposals = @categories.each_with_index.map do |out_category, i|
-    FactoryGirl.create :proposal, :title => "Out Proposal #{i}", :categories => [out_category]
+    proposal = FactoryGirl.create :proposal, :title => "Out Proposal #{i}"
+    proposal.categories = [out_category]
+    proposal.save!
+    proposal
   end
 end
 
@@ -447,11 +457,11 @@ Entao /^devo ver apenas propostas naquele macrotema$/ do
 end
 
 Dado /^que tenho permissão para administrar meu perfil$/ do
-  Ownership.create!(
-    :user => @user,
-    :candidate => @candidate,
-    :terms_and_conditions => '1'
-  )
+  ownership = Ownership.new
+  ownership.user = @user
+  ownership.candidate = @candidate
+  ownership.terms_and_conditions = '1'
+  ownership.save!
 end
 
 Dado /^que existe uma proposta cadastrada$/ do

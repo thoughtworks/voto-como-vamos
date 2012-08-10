@@ -1,5 +1,6 @@
 class Ownership < ActiveRecord::Base
   attr_accessor :terms_and_conditions
+  attr_accessible :terms_and_conditions
 
   belongs_to :user
   belongs_to :candidate
