@@ -166,6 +166,8 @@ GEM
       activesupport (= 3.2.5)
       bundler (~> 1.0)
       railties (= 3.2.5)
+    rails_autolink (1.0.9)
+      rails (~> 3.1)
     railties (3.2.5)
       actionpack (= 3.2.5)
       activesupport (= 3.2.5)
@@ -275,6 +277,7 @@ DEPENDENCIES
   progress_bar
   pry
   rails (= 3.2.5)
+  rails_autolink
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   shoulda-matchers

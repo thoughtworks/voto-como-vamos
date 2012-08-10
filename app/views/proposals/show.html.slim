@@ -17,7 +17,7 @@
       h4 id="title"= @proposal.title
       p= @proposal.categories.map {|category| category.name }.to_sentence
       p id="resumo" = @proposal.abstract
-      p id="descricao" = @proposal.description.gsub("\n", "<br/>").html_safe
+      p id="descricao" = auto_link(@proposal.description.gsub("\n", "<br/>")).html_safe
 
     .interact
       = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
