@@ -73,6 +73,7 @@ describe ProposalsController do
   context 'for a specified candidate' do
     before :each do
       Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
+      candidate.should_receive(:represented_by?).with(true).and_return(true)
     end
     describe '#new' do
       before do
@@ -226,5 +227,55 @@ describe ProposalsController do
       it { should respond_with(:redirect) }
       it { should redirect_to(candidate_path(candidate)) }
     end
+  end
+
+  context 'for a candidate that is not owned by the user' do
+    let(:proposal_id) { "1" }
+    let(:fake_params) do
+      {
+        :candidate_id => candidate_id,
+        :proposal_id  => proposal_id
+      }
+    end
+
+    before :each do
+      Candidate.should_receive(:find).with(candidate_id).and_return(candidate)
+      candidate.should_receive(:represented_by?).with(true).and_return(false)
+    end
+
+    it 'should redirect on new' do
+      get :new, {:candidate_id => candidate_id}
+      should respond_with(:redirect)
+    end
+
+    it 'should redirect on edit' do
+      get :edit, {:candidate_id => candidate_id, :id => proposal_id}
+      should respond_with(:redirect)
+    end
+
+    it 'should redirect on create' do
+      post :create, {:candidate_id => candidate_id}
+      should respond_with(:redirect)
+    end
+
+    it 'should redirect on update' do
+      put :update, {
+        :candidate_id => candidate_id,
+        :id => proposal_id,
+        :proposal => {}
+      }
+      should respond_with(:redirect)
+    end
+
+    it 'should redirect on delete' do
+      get :delete, fake_params
+      should respond_with(:redirect)
+    end
+
+    it 'should redirect on destroy' do
+      delete :destroy, fake_params
+      should respond_with(:redirect)
+    end
+
   end
 end

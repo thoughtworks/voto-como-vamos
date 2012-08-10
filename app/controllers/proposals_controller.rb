@@ -2,6 +2,7 @@
 class ProposalsController < ApplicationController
   before_filter :authenticate!, :except => [:index, :show, :random_listing]
   before_filter :load_candidate, :except => [:index, :show, :random_listing]
+  before_filter :authorize_candidate, :except => [:index, :show, :random_listing]
 
   def index
     @categories = Category.find(params[:categories])
@@ -61,6 +62,12 @@ class ProposalsController < ApplicationController
 
   def body_class
     "fundocinza"
+  end
+
+  def authorize_candidate
+    unless @candidate.represented_by? current_user
+      redirect_to root_path
+    end
   end
 
   def load_candidate
