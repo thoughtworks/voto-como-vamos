@@ -84,8 +84,8 @@ end
 
 Quando /^eu preencher todos os campos da proposta$/ do
   @proposal = FactoryGirl.build(:proposal)
-  @proposal.candidate = @candidate,
-  @proposal.categories = [@category]
+  @proposal.candidate = @candidate
+  @proposal.categories << @category
   fill_proposal_form_with(@proposal)
 end
 
