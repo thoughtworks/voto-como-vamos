@@ -3,6 +3,8 @@
     h3.nome
       |Meu Perfil
     = link_to t('candidates.show.edit_profile'), edit_candidate_path(@candidate), :id => "edit_profile", :class => 'partido'
+    br
+    br
   a href="#{candidate_path(@candidate)}"
     img.foto src="#{@candidate.photo}" alt="Foto de #{@candidate.name} #{@candidate.tse_number}"
   p.cargo= @candidate.role
@@ -20,6 +22,7 @@
   - unless @candidate.press_agent.nil? || @candidate.press_agent
     p
       = t('candidates.show.candidate')
+  br
   ol.social
     - if @candidate.blog?
       li
@@ -38,6 +41,7 @@
         a.twitter href="#{@candidate.twitter}" title="Twitter" target="_blank"
           span Twitter
   - if @candidate.about?
+    br
     h3 Sobre o candidato
     p#candidate_about
       = @candidate.about
