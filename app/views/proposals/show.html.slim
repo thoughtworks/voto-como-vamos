@@ -8,6 +8,7 @@
     p.voltaraspropostas
       = link_to "Mais propostas do candidato", candidate_path(@candidate)
       - if @candidate.represented_by? current_user
+        br
         = link_to t('common.edit'), edit_candidate_proposal_path(@candidate, @proposal), :id => "edit_proposal"
         ||
         = link_to 'Excluir', candidate_proposal_delete_path(@candidate, @proposal)
@@ -36,6 +37,8 @@
             p= q.description
             a.share href="#" data-title=@proposal.title data-description=q.description data-caption=@candidate.name data-photo=@candidate.photo
               img src="/assets/bt_share.jpg"
+
+      br
 
       #fb-root
         .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"

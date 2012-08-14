@@ -9,10 +9,18 @@
   #conteudo.interface2
     h3.proposta
       = form_title
+      br
+      br
+      br
 
     = simple_form_for([@candidate, @proposal]) do |f|
       = f.association :categories, :as => :check_boxes
       = f.input :title, :input_html => { :maxlength => "100", :size => 45}
+      br
+      br
       = f.input :abstract, :input_html => { :maxlength => "300", :class => "small"}
+      br
+      br
       = f.input :description, :input_html => { :maxlength => "8000", :class => "big"}
+      br
       = f.submit t('common.save'), :class => "save_button pointer"
