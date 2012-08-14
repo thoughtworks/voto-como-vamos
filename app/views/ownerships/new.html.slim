@@ -1,3 +1,4 @@
 = simple_form_for [@candidate, @ownership], :url => candidate_ownerships_path(@candidate.obfuscated_slug) do |f|
   = f.input :terms_and_conditions, :wrapper_html => { :class => 'inline' }, :as => :boolean, :label => "Aceito os #{link_to 'Termos e Condições', '/termsAndConditions.html', :target => :_blank}"
+  br
   = f.submit t('common.confirm')
