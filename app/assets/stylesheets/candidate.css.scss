@@ -1,0 +1,41 @@
+h3 {
+  clear: both
+}
+
+ol{
+  &.contact, &.social {
+    list-style: none;
+  }
+  &.social {
+    a {
+      background-repeat: no-repeat;
+      display: block;
+      float: left;
+      height: 32px;
+      margin-right: 5px;
+      width: 32px;
+    }
+    span {
+      text-indent: -9999px;
+      display: block;
+    }
+  }
+}
+
+a {
+  &.blog {
+    background: url('blog.png');
+  }
+
+  &.facebook {
+    background: url('facebook.png');
+  }
+
+  &.site {
+    background: url('site.png');
+  }
+
+  &.twitter {
+    background: url('twitter.png');
+  }
+}
