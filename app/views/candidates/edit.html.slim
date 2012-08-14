@@ -7,25 +7,15 @@
     h3.nome
       |Editar Perfil
 
-    br
-    br
     = simple_form_for @candidate do |f|
       = f.input :phone, :placeholder => '(xx)xxxx-xxxx'
-      br
       = f.input :email
-      br
       = f.input :site
-      br
       = f.input :blog
-      br
       = f.input :facebook
-      br
       = f.input :twitter
-      br
       = f.input :about, :input_html => {:class => 'small'}
 
-      br
-      br
       .clearfix
         = f.label 'Este perfil é gerenciado pela assessoria de imprensa?'
         div.input
@@ -39,8 +29,6 @@
                 = f.radio_button :press_agent, "false"
                 = t('common.no_option')
 
-      br
-      br
       = f.submit t('common.save'), :class => 'save_button pointer'
 
 = content_for :right do
@@ -48,10 +36,6 @@
     h3.proposta
       = "Propostas (#{@candidate.proposals.size})"
       - if @candidate.represented_by? current_user
-        br
         = link_to "Adicionar Proposta", new_candidate_proposal_path(@candidate), :id => "add_proposal", :class => "partido"
-      br
-      br
-      br
 
     = render :partial => 'proposal', :collection => @candidate.proposals, :locals => {:candidate => @candidate}
