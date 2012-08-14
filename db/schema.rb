@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719232859) do
+ActiveRecord::Schema.define(:version => 20120814233012) do
 
   create_table "candidates", :force => true do |t|
     t.string  "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120719232859) do
     t.string  "photo"
     t.string  "obfuscated_slug"
     t.string  "short_name"
+    t.integer "proposals_count", :default => 0
   end
 
   create_table "categories", :force => true do |t|

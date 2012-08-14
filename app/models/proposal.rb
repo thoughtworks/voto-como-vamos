@@ -4,7 +4,7 @@ class Proposal < ActiveRecord::Base
   has_many :questions
   has_many :opinions
 
-  belongs_to :candidate
+  belongs_to :candidate, counter_cache: true
   validates :candidate, :presence => true
 
   validates :title,
