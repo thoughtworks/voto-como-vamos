@@ -1,16 +1,30 @@
-= form_tag candidates_path, :method => :get do
-  center
-    = will_paginate @candidates, { :class => "abc" }
-    table
-      - @candidates.in_groups_of(2, false).each do |row|
-        tr
-          - row.each do |candidate|
-            td width="300px" class=(candidate.ownerships.exists? ? "active" : "")
-              = link_to candidate.short_name, candidate_path(candidate)
-              - if candidate.proposals.size > 0
-                = content_tag :span, " (#{candidate.proposals.size})"
-            td width='60px'
-              = candidate.party
-            td width='50px'
-              = candidate.role
-            td width='80px'
+section#prefeitos
+  h2
+    |Prefeitos
+  table
+    - @prefeitos.in_groups_of(2, false).each do |row|
+      tr
+        - row.each do |candidate|
+          td width="300px" class=(candidate.ownerships.exists? ? "active" : "")
+            = link_to candidate.short_name, candidate_path(candidate)
+            - if candidate.proposals.size > 0
+              = content_tag :span, " (#{candidate.proposals.size})"
+          td width='60px'
+            = candidate.party
+          td width='80px'
+
+section#vereadores
+  h2
+    |Vereadores
+  = will_paginate @vereadores, { :class => "abc" }
+  table
+    - @vereadores.in_groups_of(2, false).each do |row|
+      tr
+        - row.each do |candidate|
+          td width="300px" class=(candidate.ownerships.exists? ? "active" : "")
+            = link_to candidate.short_name, candidate_path(candidate)
+            - if candidate.proposals.size > 0
+              = content_tag :span, " (#{candidate.proposals.size})"
+          td width='60px'
+            = candidate.party
+          td width='80px'

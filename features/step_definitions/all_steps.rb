@@ -208,15 +208,19 @@ Entao /^eu devo ver as suas informações$/ do
   end
 end
 
-Dado /^que existem alguns candidatos$/ do
+Dado /^que existem alguns vereadores$/ do
   @candidates = 3.times.map { |i| FactoryGirl.create(:candidate) }
+end
+
+Dado /^que existem alguns prefeitos$/ do
+  @candidates += 3.times.map { |i| FactoryGirl.create(:candidate, { role: 'Prefeito' }) }
 end
 
 Quando /^eu acesso a listagem de candidatos$/ do
   visit candidates_path
 end
 
-Entao /^eu devo ver tais candidatos$/ do
+Entao /^eu devo ver tais candidatos ordenados por cargo e nome$/ do
   @candidates.each do |candidate|
     page.should have_content(candidate.short_name)
     page.should have_content(candidate.party)

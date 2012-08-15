@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :candidate do
     name       'Candidato Fulano de Tal'
     short_name 'Fulano Legal'
-    role       'F_ROLE'
+    role       'Vereador'
     party      'F_PARTY'
     alliance   'F_ALLIANCE'
     tse_number 'F_TSE_NUMBER'
