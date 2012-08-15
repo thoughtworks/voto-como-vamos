@@ -40,6 +40,14 @@ a {
   }
 }
 
+section {
+  &.candidates {
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid rgb(100, 152, 21);
+  }
+}
+
 #prefeitos {
   margin-bottom: 20px;
 

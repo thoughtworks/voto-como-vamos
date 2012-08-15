@@ -1,4 +1,4 @@
-section#prefeitos
+section.candidates#prefeitos
   h2
     |Prefeitos
   table
@@ -13,7 +13,7 @@ section#prefeitos
             = candidate.party
           td width='80px'
 
-section#vereadores
+section.candidates#vereadores
   h2
     |Vereadores
   = will_paginate @vereadores, { :class => "abc" }
