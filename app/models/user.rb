@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :ownerships
+  
   validates :name, :uid, :provider, :presence => true
 
   attr_accessible # none

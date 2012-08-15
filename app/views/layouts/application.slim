@@ -32,6 +32,12 @@ html
               = link_to "Candidatos", candidates_path, :class => "candidatos button"
 
         .fb-login-button#login_button data-autologoutlink="true" data-show-faces="false" data-width="75" data-max-rows="1"
+        - if current_user
+          span = "Bem-vindo #{current_user.name}"
+          span = 
+          ul.profiles
+            - current_user.ownerships.each do |o|
+              li = link_to o.candidate.name, o.candidate
 
 
     = yield :conceptual
