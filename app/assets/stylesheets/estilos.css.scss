@@ -45,7 +45,12 @@ body.fundocinza {
 .negrito{font-weight:bold; color:#000}
 
 
-#topo{height:60px; width:100%; background:#fff}
+#topo {
+  height: 60px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid gray;
+}
 #header{width:1000px; margin:auto; position:relative}
 #logo{width:185px; float:left; margin-top:7px; text-align:center}
 #logo img{width:185px;}
