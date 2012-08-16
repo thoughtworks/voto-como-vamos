@@ -75,11 +75,36 @@ body.fundocinza {
   }
 }
 
-#busca{ float: left; margin-top: 13px; margin-left: 60px; background-image: url('/assets/bg_busca.png'); background-repeat: no-repeat; }
-#busca .required, #busca .input { display: inline }
-#busca input[type=text] { margin:5px 0 0 5px; width:253px; padding-top:3px; display: inline; }
-#busca input[type=image] { float: right; }
-
+#busca {
+  float: left;
+  margin: {
+    top: 15px;
+    left: 60px;
+  }
+  width: 260px;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.6) inset;
+  background: whiteSmoke;
+  .required, .input {
+    display: inline
+  }
+  input[type=text] {
+    width: 220px;
+    background: whitesmoke;
+    display: inline;
+    margin: 3px 0 2px 2px;
+    padding: 8px 5px 7px 4px;
+  }
+  input[type=image] {
+    float: right;
+    width: 20px;
+    opacity: 0.5;
+    margin: {
+      top: 8px;
+      right: 4px;
+    }
+  }
+}
 
 /*BAIXO*/
 #baixo{background-color:#FFF; display:table; padding-bottom: 20px; }

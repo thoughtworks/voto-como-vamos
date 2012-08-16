@@ -22,7 +22,7 @@ html
         #busca
           = simple_form_for @main_search, :url => main_search_path, :method => :get do |f|
             = f.input :query, :label => false, :placeholder => 'Buscar'
-            = f.button :submit, t('common.search'), :type => :image, :src => '/assets/bg_busca_btn.png', :id => 'submit_main_search'
+            = f.button :submit, t('common.search'), :type => :image, :src => "/assets/search.png", :id => 'submit_main_search'
 
         #menu
           ul
