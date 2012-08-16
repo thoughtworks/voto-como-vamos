@@ -1,0 +1,37 @@
+@import "colors.css.scss";
+@import "mixins.css.scss";
+
+a {
+  &.button {
+    display: block;
+    position: relative;
+    color: $white;
+    font-size: 12px;
+    padding: 4px;
+    padding-top: 6px;
+    margin: 0px auto;
+    text: {
+      align: center;
+      decoration: none;
+      transform: uppercase;
+    }
+    @include sized(80px, 17px);
+    @include border(2px);
+    @include transition(all .05s ease);
+    &.propostas {
+      @include button($grey, $dark-grey);
+    }
+    &.partidos {
+      @include button($red, $dark-red);
+    }
+    &.candidatos {
+      @include button($green, $dark-green);
+    }
+    &:active {
+      @include pressed-button;
+    }
+    &.current {
+      @include stuck-button;
+    }
+  }
+}

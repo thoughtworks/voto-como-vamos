@@ -58,34 +58,17 @@ body.fundocinza {
 
 /*MENU*/
 
-#menu{margin-left:40px; float:left; margin-top:15px; text-align:center}
-#menu li{float:left; height:34px; text-align:center; width:80px; margin-left:20px;}
-#menu li a{display:block; width:120px; height:34px;}
-
-#menu li.partidos, #menu li.propostas, #menu li.candidatos{width:80px; height:34px;}
-
-#menu li.partidos {
-  background:url(/assets/bt_partidos.jpg);
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
+#menu {
+  float: left;
+  margin-left: 40px;
+  margin-top: 15px;
+  text-align: center;
+  li {
+    float: left;
+    width: 80px;
+    margin-left: 20px;
+  }
 }
-
-#menu li.propostas {
-  background:url(/assets/bt_propostas.jpg);
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
-}
-
-#menu li.candidatos {
-  background:url(/assets/bt_candidatos.jpg);
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
-}
-
-
 
 #busca{ float: left; margin-top: 13px; margin-left: 60px; background-image: url('/assets/bg_busca.png'); background-repeat: no-repeat; }
 #busca .required, #busca .input { display: inline }

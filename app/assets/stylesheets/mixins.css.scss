@@ -1,0 +1,52 @@
+@mixin transition($params) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -ms-transition: $params;
+  -o-transition: $params;
+  transition: $params;
+}
+
+@mixin border($params) {
+  -webkit-border-radius: $params;
+  -moz-border-radius: $params;
+  border-radius: $params;
+}
+
+@mixin normal-button($top-color, $side-color) {
+  background-color: $top-color;
+  -webkit-box-shadow: 0px 5px 0px $side-color, 0px 5px 10px rgba(0,0,0,.7);
+  -moz-box-shadow: 0px 5px 0px $side-color, 0px 5px 10px rgba(0,0,0,.7);
+  box-shadow: 0px 5px 0px $side-color, 0px 5px 10px rgba(0,0,0,.7);
+  text-shadow: 0px -1px 0px $side-color, 0px 1px 10px rgba(0, 0, 0, .7);
+}
+
+@mixin active-button($side-color) {
+  -webkit-box-shadow: 0px 2px 0px $side-color, 0px 2px 6px rgba(0,0,0,.9);
+  -moz-box-shadow: 0px 2px 0px $side-color, 0px 2px 6px rgba(0,0,0,.9);
+  box-shadow: 0px 2px 0px $side-color, 0px 2px 6px rgba(0,0,0,.9);
+}
+
+@mixin button($top-color, $side-color) {
+  @include normal-button($top-color, $side-color);
+  &:active {
+    @include active-button($side-color);
+  }
+  &:hover {
+    background-color: lighten($top-color, 4%);
+  }
+}
+
+@mixin pressed-button {
+  position: relative;
+  top: 3px;
+}
+
+@mixin stuck-button {
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.9), 0 2px 4px rgba(0, 0, 0, 0.6) inset;
+  top: 5px;
+}
+
+@mixin sized($width, $height) {
+  width: $width;
+  height: $height;
+}

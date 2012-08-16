@@ -26,12 +26,12 @@ html
 
         #menu
           ul
-            li.propostas
-              = link_to "Propostas", propostas_aleatorias_path
-            li.partidos
-              = link_to "Partidos", parties_path
-            li.candidatos
-              = link_to "Candidatos", candidates_path
+            li
+              = link_to "Propostas", propostas_aleatorias_path, :class => "propostas button"
+            li
+              = link_to "Partidos", parties_path, :class => "partidos button"
+            li
+              = link_to "Candidatos", candidates_path, :class => "candidatos button"
 
         .fb-login-button#login_button data-autologoutlink="true" data-show-faces="false" data-width="75" data-max-rows="1"
 
