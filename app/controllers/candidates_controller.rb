@@ -7,7 +7,8 @@ class CandidatesController < ApplicationController
   before_filter :fundo_cinza, :only => [:show]
 
   def index
-    @candidates = Candidate.text_search(params[:query], params[:page]).results
+    @prefeitos = Candidate.where(:role => 'Prefeito').order(:short_name)
+    @vereadores = Candidate.where(:role => 'Vereador').page(params[:page]).order(:short_name)
   end
 
   def show

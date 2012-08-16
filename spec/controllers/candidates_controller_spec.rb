@@ -71,16 +71,19 @@ describe CandidatesController do
   end
 
   describe '#index' do
-    let(:candidates) { [double('candidate1'), double('candidate2')] }
+    let(:prefeitos) { [double('candidate1'), double('candidate2')] }
+    let(:vereadores) { [double('candidate3'), double('candidate4')] }
 
     context 'when listing' do
       it 'should query the list of candidates based on the search criteria' do
-        Candidate.stub_chain(:text_search, :results).and_return(candidates)
+        Candidate.stub_chain(:where, :order).and_return(prefeitos)
+        Candidate.stub_chain(:where, :page, :order).and_return(vereadores)
 
-        get :index, :query => 'test', :page => '1'
+        get :index
 
         should respond_with(:success)
-        should assign_to(:candidates).with(candidates)
+        should assign_to(:prefeitos).with(prefeitos)
+        should assign_to(:vereadores).with(vereadores)
         should render_template('index')
       end
     end

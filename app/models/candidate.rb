@@ -1,6 +1,7 @@
 require 'valid_email'
 class Candidate < ActiveRecord::Base
   has_many :proposals
+  has_many :ownerships
 
   before_create :generate_obfuscated_slug
 

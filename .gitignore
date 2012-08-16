@@ -21,3 +21,4 @@ config/application.yml
 .DS_STORE
 solr
 public/assets
+.rbenv-version
