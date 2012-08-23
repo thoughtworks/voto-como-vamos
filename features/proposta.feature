@@ -15,6 +15,7 @@ Funcionalidade: Cadastrar Proposta
     Dado que eu estou cadastrando uma proposta
     Quando eu preencher todos os campos da proposta
     Então eu devo ver uma mensagem de sucesso
+    E a proposta deve conter as categorias
     E eu devo ver a página do candidato
 
   Cenário: Dados inválidos

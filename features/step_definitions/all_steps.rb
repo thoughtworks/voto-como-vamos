@@ -105,6 +105,10 @@ Entao /^eu devo ver uma mensagem de sucesso$/ do
   page.should have_selector('.alert-message.success')
 end
 
+Entao /^a proposta deve conter as categorias$/ do
+  Proposal.last.categories.first.should eql @category
+end
+
 Entao /^eu devo ver a página do candidato/ do
   current_path.should == candidate_path(@candidate)
 end

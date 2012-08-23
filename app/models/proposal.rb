@@ -19,7 +19,7 @@ class Proposal < ActiveRecord::Base
 
   scope :ordered_by_votes, order("opinions_count DESC")
 
-  attr_accessible :title, :abstract, :description
+  attr_accessible :title, :abstract, :description, :category_ids
 
   def self.search_in_categories(query_string, categories = [])
     search do
