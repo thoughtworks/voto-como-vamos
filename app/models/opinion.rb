@@ -11,6 +11,8 @@ class Opinion < ActiveRecord::Base
   validates_uniqueness_of :user_id, :scope => [:proposal_id]
   validates_inclusion_of :value, :in => [AGREE, DISAGREE]
 
+  scope :last_week, lambda { where('updated_at > ?', 7.days.ago) }
+
   def agree?
     value == AGREE
   end

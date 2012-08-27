@@ -50,4 +50,12 @@ describe Opinion do
       opinion.disagree?.should be_true
     end
   end
+
+  it "filter opinions that were updated in the last week" do
+    old_opinion = FactoryGirl.create :opinion, updated_at: 10.days.ago
+    new_opinion = FactoryGirl.create :opinion, updated_at: 2.days.ago
+
+    described_class.last_week.should have_exactly(1).items
+    described_class.last_week.should include(new_opinion)
+  end
 end

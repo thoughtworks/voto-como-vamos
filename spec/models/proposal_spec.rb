@@ -45,4 +45,33 @@ describe Proposal do
     Proposal.ordered_by_votes.to_a.should be == expected
 
   end
+
+  it "should order the proposals by opinions that happened last week" do
+    very_old_proposal = FactoryGirl.create :proposal
+    old_proposal = FactoryGirl.create :proposal
+    not_so_new_proposal = FactoryGirl.create :proposal
+    new_proposal = FactoryGirl.create :proposal
+
+    3.times { FactoryGirl.create :opinion, proposal: very_old_proposal, updated_at: 10.days.ago }
+
+    5.times { FactoryGirl.create :opinion, proposal: old_proposal, updated_at: 10.days.ago }
+    2.times { FactoryGirl.create :opinion, proposal: old_proposal, updated_at: Date.today }
+
+    3.times { FactoryGirl.create :opinion, proposal: not_so_new_proposal, updated_at: 2.days.ago}
+
+    4.times { FactoryGirl.create :opinion, proposal: new_proposal, updated_at: Date.today }
+
+    10.times do
+      p = FactoryGirl.create :proposal
+      FactoryGirl.create :opinion, proposal: p, updated_at: Date.today
+    end
+
+    ordered = described_class.ordered_by_votes_in_the_last_week
+
+    ordered.should have_exactly(10).items
+    ordered[0].should == new_proposal
+    ordered[1].should == not_so_new_proposal
+    ordered[2].should == old_proposal
+    ordered.should_not include(very_old_proposal)
+  end
 end
