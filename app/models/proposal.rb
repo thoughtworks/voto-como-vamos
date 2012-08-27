@@ -36,6 +36,11 @@ class Proposal < ActiveRecord::Base
     end
   end
 
+  def self.ordered_by_votes_in_the_last_week
+    sorted_opinions = Opinion.last_week.group_by(&:proposal_id).each_pair.sort_by { |proposal_id, opinions_array| opinions_array.size }
+    sorted_opinions.reverse[0..9].map { |array| Proposal.find(array[0]) }
+  end
+
   searchable :auto_index => true, :auto_remove => true do
     string :title, :stored => true
     text :title, :boost => 5, :stored => true
