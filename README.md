@@ -47,7 +47,6 @@ Development
 2. Install [RVM](https://rvm.io/rvm/install/) and then Ruby 1.9.3 with bundler 1.2.0:
 
         $ rvm install 1.9.3
-        $ rvm gemset use global
         $ gem uninstall -ax bundler
         $ gem install bundler --pre
         $ bundle --version
