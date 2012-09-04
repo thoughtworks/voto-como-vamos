@@ -11,26 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814233012) do
+ActiveRecord::Schema.define(:version => 20120904231052) do
 
   create_table "candidates", :force => true do |t|
-    t.string  "name"
-    t.string  "role"
-    t.string  "party"
-    t.string  "alliance"
-    t.string  "tse_number"
-    t.string  "email"
-    t.text    "about"
-    t.string  "phone"
-    t.string  "site"
-    t.string  "blog"
-    t.string  "facebook"
-    t.string  "twitter"
-    t.boolean "press_agent"
-    t.string  "photo"
-    t.string  "obfuscated_slug"
-    t.string  "short_name"
-    t.integer "proposals_count", :default => 0
+    t.string   "name"
+    t.string   "role"
+    t.string   "party"
+    t.string   "alliance"
+    t.string   "tse_number"
+    t.string   "email"
+    t.text     "about"
+    t.string   "phone"
+    t.string   "site"
+    t.string   "blog"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.boolean  "press_agent"
+    t.string   "photo"
+    t.string   "obfuscated_slug"
+    t.string   "short_name"
+    t.integer  "proposals_count", :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
@@ -56,16 +58,20 @@ ActiveRecord::Schema.define(:version => 20120814233012) do
   add_index "opinions", ["value"], :name => "index_opinions_on_value"
 
   create_table "ownerships", :force => true do |t|
-    t.integer "user_id"
-    t.integer "candidate_id"
+    t.integer  "user_id"
+    t.integer  "candidate_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "proposals", :force => true do |t|
-    t.string  "title",                         :null => false
-    t.integer "candidate_id",                  :null => false
-    t.text    "abstract",                      :null => false
-    t.text    "description",                   :null => false
-    t.integer "opinions_count", :default => 0
+    t.string   "title",                         :null => false
+    t.integer  "candidate_id",                  :null => false
+    t.text     "abstract",                      :null => false
+    t.text     "description",                   :null => false
+    t.integer  "opinions_count", :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "proposals", ["opinions_count"], :name => "index_proposals_on_opinions_count"
@@ -82,11 +88,19 @@ ActiveRecord::Schema.define(:version => 20120814233012) do
   add_index "questions", ["proposal_id"], :name => "index_questions_on_proposal_id"
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
+  create_table "revindications", :force => true do |t|
+    t.integer "candidate_id"
+    t.string  "user_id"
+    t.boolean "accepted"
+  end
+
   create_table "users", :force => true do |t|
-    t.string "provider"
-    t.string "uid"
-    t.string "name"
-    t.string "email"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
