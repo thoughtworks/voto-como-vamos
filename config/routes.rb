@@ -32,7 +32,4 @@ VotoComoVamos::Application.routes.draw do
 
   resource :main_search
   root :to => 'welcome#index'
-  unless Rails.application.config.consider_all_requests_local
-    match '*not_found', to: 'errors#error_404'
-  end
 end
