@@ -309,6 +309,9 @@ h3.proposta{margin-bottom:5px; margin-left:30px; color:#FF9966}
 .proposta p, .proposta h4 { word-wrap: break-word; }
 .proposta p#resumo { border-width:1px;border-style:solid;border-color:#cdcdcd; padding: 15px;}
 
+.proposta p#resumo a {color: #FF9966}
+.proposta p#resumo a:hover{text-decoration:underline;}
+
 p.maispropostas{padding-bottom:20px;}
 p.maispropostas a, p.voltaraspropostas a{ color:#FF9966; }
 p.maispropostas a:hover, p.voltaraspropostas a:hover { text-decoration:underline; }
@@ -320,6 +323,8 @@ a.linkbold{font-weight:bold}
 a:hover.linkbold{text-decoration:underline}
 
 div.proposta{margin-bottom:5px; margin-left:30px; width:620px; padding-bottom:10px; padding-top:10px; clear:both}
+div.proposta p#descricao a {color: #FF9966}
+div.proposta p#descricao a:hover{text-decoration:underline;}
 h4 a{text-decoration: underline; font-size:16px;}
 
 .proposta .saibamais{margin-top:10px;}
