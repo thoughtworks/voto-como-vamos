@@ -1,0 +1,39 @@
+@import "colors.css.scss";
+@import "mixins.css.scss";
+
+#propostas_areas {
+  margin-top: 35px;
+  width: 245px;
+  background-color: #CDE6ED;
+  @include border(15px);
+  behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  li {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 15px;
+    line-height: 35px;
+    a{
+      font-family: Droid Sans, Verdana, Tahoma;
+      color: #419EBB;
+      font-size: 20px;
+      &:hover {
+        color: #266b81;
+      }
+    }
+  }
+}
+
+#proposta {
+  p {
+    a {
+      color: #FF9966;
+      text-decoration: none;
+      &:hover {
+        color: #FF9966;
+        text-decoration: underline;
+      }
+    }
+  }
+}

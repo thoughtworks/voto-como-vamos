@@ -82,23 +82,6 @@
 #direita{width:305px; float:left; display:table}
 #direita.interface2{width:700px; float:left; display:table}
 
-#propostas_areas{
-  margin-top:35px;
-  width:245px;
-  background-color:#CDE6ED;
-  border-radius: 15px;
-  -moz-border-radius: 15px; /* Implementação Mozilla */
-  -webkit-border-radius: 15px; /* Implementação para browsers que renderizam via webkit */
-  behavior: url(PIE.htc); /* Comportamento adicionado para renderização das propriedades acima no IE 7 e IE 8 */
-  padding-top:10px;
-  padding-bottom:10px;
-}
-#propostas_areas li{text-transform:uppercase; font-weight:bold; padding-left:15px; line-height:35px;}
-#propostas_areas li a{font-family: Droid Sans, Verdana, Tahoma; color:#419EBB; font-size:20px;}
-#propostas_areas li a:hover {color:#266b81}
-
-#proposta p a {color:#FF9966; text-decoration: none}
-#proposta p a:hover {color:#FF9966; text-decoration: underline;}
 
 
 /*PERFIL DO CANDIDATO*/
