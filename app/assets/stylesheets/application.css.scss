@@ -92,6 +92,18 @@ body {
   display: table;
   padding-bottom: 20px;
 }
+/*ESQUERDA*/
+#esquerda {
+  float: left;
+  width: 695px;
+  display: table;
+  &.interface2 {
+    width: 240px;
+    margin-left: 50px;
+    float: left;
+    display: table;
+  }
+}
 
 /*DIREITA*/
 #direita {
@@ -104,3 +116,4 @@ body {
     display: table;
   }
 }
+
