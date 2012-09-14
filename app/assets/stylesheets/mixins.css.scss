@@ -51,3 +51,11 @@
   width: $width;
   height: $height;
 }
+
+@mixin background($image) {
+  background-image: $image;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:  center top;
+}

@@ -11,4 +11,24 @@
  *= require_self
  *= require_tree .
  */
+@charset "utf-8";
+@import "colors.css.scss";
+@import "mixins.css.scss";
 
+*{margin:0; padding:0; border:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#373737; }
+ul {list-style:none;}
+
+body {
+  &.fundoazul{
+    @include background(url('/assets/bg_body.jpg'));
+  }
+  &.fundoverde {
+    @include background(url('/assets/bg_body_verde.jpg'));
+  }
+  &.fundovermelho {
+    @include background(url('/assets/bg_body_vermelho.jpg'));
+  }
+  &.fundocinza {
+    @include background(url('/assets/bg_body_cinza.jpg'));
+  }
+}

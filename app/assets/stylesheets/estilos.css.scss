@@ -1,35 +1,4 @@
 @charset "utf-8";
-*{margin:0; padding:0; border:none; text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#373737; }
-ul {list-style:none;}
-
-body.fundoazul{
-  background-image:url('/assets/bg_body.jpg');
-  background-color:#000;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center top;
-}
-body.fundoverde {
-  background-image:url('/assets/bg_body_verde.jpg');
-  background-color:#000;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center top;
-}
-body.fundovermelho {
-  background-image:url('/assets/bg_body_vermelho.jpg');
-  background-color:#000;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center top;
-}
-body.fundocinza {
-  background-image:url('/assets/bg_body_cinza.jpg');
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-position:center top;
-}
 
 /*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
 #geral {
