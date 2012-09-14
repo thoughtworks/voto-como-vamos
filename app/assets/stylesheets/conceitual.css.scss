@@ -1,0 +1,34 @@
+@import "colors.css.scss";
+@import "mixins.css.scss";
+
+#conceitual {
+  height: 280px;
+  background-image: url('/assets/imagem_portoalegre.jpg');
+  background-position: center top;
+}
+#video {
+  width: 1000px;
+  margin: auto;
+  padding-top: 35px;
+  a {
+    float: right;
+    margin-left: 10px;
+    clear: both;
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial, Calibri, Helvetica;
+    display: block;
+    &:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+.videos  {
+  background: rgba(50,50,50,.8);
+  padding: 5px;
+  width: 285px;
+  float: right;
+}
