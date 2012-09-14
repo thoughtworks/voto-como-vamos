@@ -44,41 +44,9 @@
   }
 }
 
-
 .maispropostas{margin-bottom:30px;}
 .maispropostas a{color:#FF9966; text-decoration:none; margin-left:30px;}
 .maispropostas a:hover{text-decoration:underline;}
-
-.editar{padding-bottom:5px;}
-.editar a{text-decoration:none}
-.editar a:hover{text-decoration:underline}
-
-div.sobre{margin-top:25px; clear:both;}
-div.sobre h4{margin-bottom:5px;}
-
-
-/*CONTEUDO*/
-#conteudo{margin-bottom:30px; padding-top:35px; padding-left:25px; padding-right:20px;}
-#conteudo.interface2{padding-left:0px;}
-
-#conteudo p {
-  text-align:justify;
-  line-height:20px;
-  margin-bottom:10px;
-}
-#conteudo h2{font-size:18px;}
-#conteudo h3{font-size:16px;}
-
-#conteudo h4{font-size:14px; margin-bottom:5px;}
-
-
-
-
-/*CAPA*/
-.capa{width:168px; margin-top:5px; margin-bottom:30px; height:30px; margin-left:0px;}
-.capa div{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-right:15px;}
-.capa div p,.capa div img{float:left;}
-.capa p {width:34px; text-align:center}
 
 h3.propostasmaisdiscutidas {
   background:url(/assets/titulo_propostasmaisdiscutidas.png);
@@ -158,25 +126,12 @@ h3.candidatos {
 .siglas{text-decoration:underline; margin-right:20px; width:55px; float:left; font-weight:bold;}
 .nomedopartido{float:left; width:325px; text-decoration:none}
 
-.abc{width:870px; margin-bottom:5px; padding-left:10px; padding-right:10px; padding-top:2px; height:48px; color:#fff; font-size:16px;}
-.abc a{font-size:16px; color:#679b15;}
 a.previous_page, a.next_page, .gap {font-size:16px}
-td.active {font-weight: bold;}
-.current { color:#487ab0; font-size:20px;}
-.disabled, .gap { color:#666;}
 .filtro_candidatos ul{width:290px; margin:auto}
 .filtro_candidatos li{display: inline; padding-right:15px;}
 .filtro_candidatos li.selecionado{font-size:16px; color:#000;}
 .filtro_candidatos a{font-size:16px;}
 .filtro_candidatos a:hover{text-decoration:underline}
-.checkboxes{width:385px; padding-left:10px; height:110px; margin:auto; background-image:url('/assets/bg_checkboxes.jpg'); padding-top:15px; margin-bottom:20px;}
-.checkboxes div{float:left; width:95px; line-height:25px;}
-.checkboxes .tagstexto{margin-top:-1px; padding-left:3px; font-size:11px; color:#000;}
-.checkboxes input{border:1px solid #000; width:12px; height:12px; background:none;}
-.checkboxes div.filtrar {width:98%; margin:auto; text-align:center; margin-top:5px;}
-.checkboxes div.filtrar a{font-size:16px; color:#000; text-decoration:none}
-.checkboxes div.filtrar a:hover{text-decoration:underline;}
-
 
 /*CONTEUDO - proposta*/
 
@@ -199,24 +154,13 @@ p.voltaraspropostas { float: right; padding-left:30px; }
 
 #conteudo p.acesse{margin-bottom:3px; width:400px;}
 
-a.linkbold{font-weight:bold}
-a:hover.linkbold{text-decoration:underline}
-
 div.proposta{margin-bottom:5px; margin-left:30px; width:620px; padding-bottom:10px; padding-top:10px; clear:both}
 div.proposta p#descricao a {color: #FF9966}
 div.proposta p#descricao a:hover{text-decoration:underline;}
-h4 a{text-decoration: underline; font-size:16px;}
 
 .proposta .saibamais{margin-top:10px;}
-.saibamais a{text-decoration:none; font-size:11px;}
-.saibamais a:hover{text-decoration:underline}
 
-.acoes{width:295px; margin-top:5px; margin-bottom:40px; height:30px; float:right}
-.acoes div{height:28px; background-image:url('/assets/balaozinho.jpg'); background-repeat:no-repeat; background-position:right center; min-width:68px; padding-top:2px; float:left; margin-left:15px;}
 #conteudo p.counter{text-align: right; width:68; display:block; }
-.acoes div p, .acoes div img, .acoes a.acao_sharefacebook{float:left;}
-.acoes p{width:34px; text-align:center}
-
 
 /*CONTEUDO - proposta - ACESSO RESTRITO*/
 h4.editarproposta{width:670px; float:left; height:30px;}
@@ -247,23 +191,3 @@ h4.editarproposta{width:670px; float:left; height:30px;}
 .novaproposta p{margin-bottom:10px;}
 .novaproposta .resumo{width:250px;}
 .novaproposta .descricao{clear:both; padding-top:10px; width:715px;}
-
-/*CREDITOS*/
-.credits {width: 955px;}
-.credits h2{ font-size: 18px; color: #DB499B; margin-bottom: 10px; }
-.credits #donators { margin-bottom: 20px; padding-top: 20px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
-.credits #donators p { margin-bottom: 0px;}
-.credits #developers .twbr {margin: 10px; text-align:center;}
-.credits #developers .twbr img { max-width: 100%; margin: 30px 10px 0px 0px;}
-.credits #developers .ebra_animake { max-width: 100%; margin: 40px 10px 0px 0px; padding-top: 30px; border-top-style:solid; border-width:1px; border-color:#cacaca;}
-.credits #developers .ebra_animake_legenda {padding-top: 20px; margin-bottom: 21px;}
-
-/*RODAPE*/
-#rodape{clear:both; padding-top:80px; padding-bottom:60px; text-align:right; padding-left:20px; padding-right:20px;}
-#rodape .loguinho{width:180px; padding-left:20px; float:left;}
-#rodape .loguinho img{width:150px; float:left}
-address{font-size:10px; padding-left: 20px; border-top:1px solid #ccc; padding-top:5px; float:right;}
-address a {font-size:10px}
-
-#rodape a.footer_link {color:#d94b9d}
-

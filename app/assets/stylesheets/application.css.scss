@@ -24,8 +24,14 @@
   font-size: 12px;
   color: #373737;
 }
+
 ul {
   list-style: none;
+}
+
+h4 a {
+  text-decoration: underline;
+  font-size: 16px;
 }
 
 body {
@@ -43,18 +49,103 @@ body {
   }
 }
 
+.linkbold {
+  font-weight: bold;
+  &:hover.linkbold {
+    text-decoration: underline;
+  }
+}
+
+.checkboxes {
+  width: 385px;
+  padding-left: 10px;
+  height: 110px;
+  margin: auto;
+  background-image: url('/assets/bg_checkboxes.jpg');
+  padding-top: 15px;
+  margin-bottom: 20px;
+  div {
+    float: left;
+    width: 95px;
+    line-height: 25px;
+    &.filtrar {
+      width: 98%;
+      margin: auto;
+      text-align: center;
+      margin-top: 5px;
+      a {
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .tagstexto {
+    margin-top: -1px;
+    padding-left: 3px;
+    font-size: 11px;
+    color: #000;
+  }
+  input {
+    border: 1px solid #000;
+    width: 12px;
+    height: 12px;
+    background: none;
+  }
+}
+
+td.active {
+  font-weight: bold;
+}
+.current {
+  color: #487ab0;
+  font-size: 20px;
+}
+.disabled, .gap {
+  color: #666;
+}
+
+.abc {
+  width: 870px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  height: 48px;
+  color: #fff;
+  font-size: 16px;
+}
+.abc a {
+  font-size: 16px;
+  color: #679b15;
+
+}
+
+.editar {
+  padding-bottom: 5px;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 /*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
 #geral {
   width: 1000px;
   margin: auto;
   display: table;
   background-color: #FFF;
-  &.internas  {
+  &.internas {
     margin-top: 10px;
   }
 }
 
-.ativo  {
+.ativo {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -85,6 +176,57 @@ body {
     width: 185px;
   }
 }
+/*CAPA*/
+.capa {
+  width: 168px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  height: 30px;
+  margin-left: 0px;
+  div {
+    height: 28px;
+    background-image: url('/assets/balaozinho.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    min-width: 68px;
+    padding-top: 2px;
+    float: left;
+    margin-right: 15px;
+    p, img {
+      float: left;
+    }
+  }
+  p {
+    width: 34px;
+    text-align: center;
+  }
+}
+
+/*CONTEUDO*/
+#conteudo {
+  margin-bottom: 30px;
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-right: 20px;
+  &.interface2 {
+    padding-left: 0px;
+  }
+  p {
+    text-align: justify;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
 
 /*BAIXO*/
 #baixo {
@@ -92,6 +234,7 @@ body {
   display: table;
   padding-bottom: 20px;
 }
+
 /*ESQUERDA*/
 #esquerda {
   float: left;
@@ -117,3 +260,124 @@ body {
   }
 }
 
+/*CREDITOS*/
+.credits {
+  width: 955px;
+  h2 {
+    font-size: 18px;
+    color: #DB499B;
+    margin-bottom: 10px;
+  }
+  #donators {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #cacaca;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  #developers {
+    .twbr {
+      margin: 10px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        margin: 30px 10px 0px 0px;
+      }
+    }
+    .ebra_animake {
+      max-width: 100%;
+      margin: 40px 10px 0px 0px;
+      padding-top: 30px;
+      border-top-style: solid;
+      border-width: 1px;
+      border-color: #cacaca;
+    }
+    .ebra_animake_legenda {
+      padding-top: 20px;
+      margin-bottom: 21px;
+    }
+  }
+}
+
+div.sobre {
+  margin-top: 25px;
+  clear: both;
+  h4 {
+    margin-bottom: 5px;
+  }
+}
+
+/*RODAPE*/
+#rodape {
+  clear: both;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  .loguinho {
+    width: 180px;
+    padding-left: 20px;
+    float: left;
+    img {
+      width: 150px;
+      float: left;
+    }
+  }
+  a.footer_link {
+    color: #d94b9d;
+  }
+}
+
+address {
+  font-size: 10px;
+  padding-left: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+  float: right;
+  a {
+    font-size: 10px
+  }
+}
+
+.saibamais {
+  a {
+    text-decoration: none;
+    font-size: 11px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.acoes {
+  width: 295px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  height: 30px;
+  float: right;
+  div {
+    height: 28px;
+    background-image: url('/assets/balaozinho.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    min-width: 68px;
+    padding-top: 2px;
+    float: left;
+    margin-left: 15px;
+    p,  img {
+      float: left;
+    }
+  }
+  a.acao_sharefacebook {
+    float: left;
+  }
+  p {
+    width: 34px;
+    text-align: center;
+  }
+}
