@@ -1,29 +1,5 @@
 @charset "utf-8";
 
-/*GERAL - atribui 1000 pixels a interface e a centraliza no browser*/
-#geral {
-  width:1000px;
-  margin:auto;
-  display:table;
-  background-color:#FFF;
-}
-
-#geral.internas { margin-top:10px; }
-
-.ativo {font-weight:bold; text-decoration:underline;}
-.negrito{font-weight:bold; color:#000}
-
-
-#topo {
-  height: 60px;
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid gray;
-}
-#header{width:1000px; margin:auto; position:relative}
-#logo{width:185px; float:left; margin-top:7px; text-align:center}
-#logo img{width:185px;}
-
 #conceitual{height:280px; background-image:url('/assets/imagem_portoalegre.jpg'); background-position:center top;}
 #video{width:1000px; margin:auto; padding-top:35px;}
 .videos {background:rgba(50,50,50,.8); padding:5px; width:285px; float:right;}
@@ -31,7 +7,6 @@
 #video a:hover{ font-weight:bold; text-decoration:underline;}
 
 /*MENU*/
-
 #menu {
   float: left;
   margin-left: 40px;
@@ -75,12 +50,6 @@
   }
 }
 
-/*BAIXO*/
-#baixo{background-color:#FFF; display:table; padding-bottom: 20px; }
-
-/*DIREITA*/
-#direita{width:305px; float:left; display:table}
-#direita.interface2{width:700px; float:left; display:table}
 
 .maispropostas{margin-bottom:30px;}
 .maispropostas a{color:#FF9966; text-decoration:none; margin-left:30px;}
