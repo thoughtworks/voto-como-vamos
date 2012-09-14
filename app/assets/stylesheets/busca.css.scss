@@ -1,0 +1,93 @@
+@import "colors.css.scss";
+@import "mixins.css.scss";
+
+#busca {
+  float: left;
+  margin: {
+    top: 15px;
+    left: 60px;
+  }
+  width: 260px;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.6) inset;
+  background: whiteSmoke;
+  .required, .input {
+    display: inline
+  }
+  input[type=text] {
+    width: 220px;
+    background: whitesmoke;
+    display: inline;
+    margin: 3px 0 2px 2px;
+    padding: 8px 5px 7px 4px;
+  }
+  input[type=image] {
+    float: right;
+    width: 20px;
+    opacity: 0.5;
+    margin: {
+      top: 8px;
+      right: 4px;
+    }
+  }
+}
+
+.resultadosdabusca {
+  .h2 {
+    color:#DB499B;
+    font-size:20px;
+    padding-bottom:30px;
+    span {
+      color:#DB499B;
+      font-size:20px;
+      padding-bottom:30px;
+      font-weight:bold;
+    }
+  }
+  .resumo {
+    color:#419EBB;
+    span {
+      color:#419EBB;
+      font-weight:bold;
+    }
+    a {
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+  .titulo {
+    span {
+      font-size:16px;
+      color:#419EBB;
+      font-weight:bold;
+    }
+    a {
+      font-size:16px;
+      text-decoration:underline;
+      color:#419EBB;
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+  .paginacao li {
+    float:left;
+    width:25px;
+    a {
+      color:#419EBB;
+      text-decoration:none;
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+}
+
+.resultado {
+  margin-bottom:25px;
+}
+
+.paginacao {
+  margin-bottom:30px; height:30px;
+}

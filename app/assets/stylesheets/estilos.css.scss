@@ -13,37 +13,6 @@
   }
 }
 
-#busca {
-  float: left;
-  margin: {
-    top: 15px;
-    left: 60px;
-  }
-  width: 260px;
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 3px rgba(0, 0, 0, 0.6) inset;
-  background: whiteSmoke;
-  .required, .input {
-    display: inline
-  }
-  input[type=text] {
-    width: 220px;
-    background: whitesmoke;
-    display: inline;
-    margin: 3px 0 2px 2px;
-    padding: 8px 5px 7px 4px;
-  }
-  input[type=image] {
-    float: right;
-    width: 20px;
-    opacity: 0.5;
-    margin: {
-      top: 8px;
-      right: 4px;
-    }
-  }
-}
-
 .maispropostas{margin-bottom:30px;}
 .maispropostas a{color:#FF9966; text-decoration:none; margin-left:30px;}
 .maispropostas a:hover{text-decoration:underline;}
@@ -71,10 +40,6 @@ div.propostasmaisdiscutidas{margin-left:80px;}
   clear:both
 }
 
-/*RESULTADOS DA BUSCA*/
-
-.resultadosdabusca .h2, .resultadosdabusca .h2 span{color:#DB499B; font-size:20px; padding-bottom:30px;}
-.resultadosdabusca .h2 span{font-weight:bold}
 
 h3.propostas {
   background:url(/assets/titulo_propostas.png);
@@ -97,21 +62,6 @@ h3.candidatos {
   margin-bottom:20px;
   clear:both;
 }
-
-.resultado{margin-bottom:25px;}
-
-.resultadosdabusca .titulo a{font-size:16px;text-decoration:underline; color:#419EBB}
-.resultadosdabusca .titulo span{font-size:16px; color:#419EBB; font-weight:bold}
-.resultadosdabusca .titulo a:hover{text-decoration:underline}
-
-.resultadosdabusca .resumo, .resultadosdabusca .resumo span{color:#419EBB}
-.resultadosdabusca .resumo span{font-weight:bold}
-.resultadosdabusca .resumo a:hover{text-decoration:underline}
-
-.paginacao{margin-bottom:30px; height:30px;}
-.resultadosdabusca .paginacao li{float:left; width:25px;}
-.resultadosdabusca .paginacao li a{color:#419EBB; text-decoration:none;}
-.resultadosdabusca .paginacao li a:hover{text-decoration:underline;}
 
 
 /*CONTEUDO - listagens*/
