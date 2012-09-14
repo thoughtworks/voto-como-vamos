@@ -5,3 +5,6 @@ p.maispropostas
 
 - @proposals.each do |proposal|
   = render :partial => 'candidates/proposal', :locals => {:proposal => proposal, :candidate => proposal.candidate}
+
+p.maispropostas
+  = link_to "Veja outras propostas", propostas_aleatorias_path
