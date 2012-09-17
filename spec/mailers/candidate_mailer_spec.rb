@@ -7,7 +7,7 @@ describe CandidateMailer do
 
       Candidate.should_receive(:find).with(1).and_return(candidate)
 
-      expect { CandidateMailer.revindication(1) }.
+      expect { CandidateMailer.claim(1) }.
         to_not raise_error
     end
   end

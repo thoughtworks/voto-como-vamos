@@ -14,7 +14,7 @@ VotoComoVamos::Application.routes.draw do
         get :delete
       end
       resources :ownerships
-      resources :revindications, :shallow => true,
+      resources :claims, :shallow => true,
         :only => [:new, :create, :show]
     end
 

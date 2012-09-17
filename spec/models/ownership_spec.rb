@@ -20,11 +20,11 @@ describe Ownership do
       message2 = double('Message 2', :deliver => true)
       message3 = double('Message 3', :deliver => true)
 
-      CandidateMailer.should_receive(:revindication).with(1).and_return(message1)
-      CandidateMailer.should_receive(:revindication).with(2).and_return(message2)
-      CandidateMailer.should_receive(:revindication).with(3).and_return(message3)
+      CandidateMailer.should_receive(:claim).with(1).and_return(message1)
+      CandidateMailer.should_receive(:claim).with(2).and_return(message2)
+      CandidateMailer.should_receive(:claim).with(3).and_return(message3)
 
-      Ownership.send_revindication_to_some_candidates(0, 2)
+      Ownership.send_claim_to_some_candidates(0, 2)
     end
   end
 end
