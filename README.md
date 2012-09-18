@@ -56,7 +56,7 @@ Development
 3. Run `bundle` to download all of the dependencies for the project.
 
 4. Run `rake db:migrate` to create the database schemas
-and `rake db:seed` to feed your database with some basic data.
+then run `rake db:seed` and `rake db:sample_data` to feed your database with some basic data.
 
 5. Start Solr (the search engine we use) with `rake sunspot:solr:start`
 
