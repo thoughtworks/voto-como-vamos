@@ -202,6 +202,19 @@ td.active {
   }
 }
 
+/*MENU*/
+#menu {
+  float: left;
+  margin-left: 40px;
+  margin-top: 15px;
+  text-align: center;
+  li {
+    float: left;
+    width: 80px;
+    margin-left: 20px;
+  }
+}
+
 /*CONTEUDO*/
 #conteudo {
   margin-bottom: 30px;
