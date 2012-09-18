@@ -19,10 +19,10 @@
       - @categories.each do |c|
         li
           = link_to c.name, proposals_path(:categories => [c.id])
-  = image_tag "bottom_propostas_areas.jpg", :style => "margin-top: -15px;"
 .propostasmaisdiscutidas
-  h3.propostasmaisdiscutidas
+  h3
     | Propostas Mais Discutidas
+    .arrow
 
   ol
     = render @proposals
