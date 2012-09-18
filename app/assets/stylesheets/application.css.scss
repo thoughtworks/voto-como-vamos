@@ -142,6 +142,10 @@ td.active {
   background-color: #FFF;
   &.internas {
     margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
   }
 }
 
@@ -158,7 +162,8 @@ td.active {
   height: 60px;
   width: 100%;
   background: #fff;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #header {
