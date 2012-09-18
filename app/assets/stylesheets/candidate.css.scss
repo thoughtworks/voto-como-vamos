@@ -58,8 +58,101 @@ section {
 
 #vereadores {
   margin-top: 40px;
-
   .abc {
     text-align: center;
+  }
+}
+
+h3.candidatos {
+  background: url(/assets/titulo_candidatos.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 192px;
+  height: 54px;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+.listadepartidos {
+  h2 {
+    color: #660099;
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+  }
+  li {
+    width: 400px;
+    margin-left: 50px;
+    float: left;
+    padding-right: 10px;
+    line-height: 30px;
+    a {
+      color: #373737;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.listadecandidatos {
+  ul {
+    margin-left: 120px;
+    margin-right: 80px;
+  }
+  li {
+    width: 225px;
+    float: left;
+    padding-right: 10px;
+    line-height: 30px;
+    a {
+      text-decoration: none;
+      color: #578A0D;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.siglas {
+  text-decoration: underline;
+  margin-right: 20px;
+  width: 55px;
+  float: left;
+  font-weight: bold;
+}
+
+.nomedopartido {
+  float: left;
+  width: 325px;
+  text-decoration: none;
+}
+
+a.previous_page,
+a.next_page,
+.gap {
+  font-size: 16px;
+}
+
+.filtro_candidatos {
+  ul {
+    width: 290px;
+    margin: auto
+  }
+  li {
+    display: inline;
+    padding-right: 15px;
+    &.selecionado {
+      font-size: 16px;
+      color: #000;
+    }
+  }
+  a {
+    font-size: 16px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
