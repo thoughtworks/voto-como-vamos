@@ -37,3 +37,261 @@
     }
   }
 }
+
+.maispropostas {
+  margin-bottom: 30px;
+  a {
+    color: #FF9966;
+    text-decoration: none;
+    margin-left: 30px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+h3.propostasmaisdiscutidas {
+  background: url(/assets/titulo_propostasmaisdiscutidas.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 315px;
+  height: 55px;
+  margin-bottom: 30px;
+}
+
+div.propostasmaisdiscutidas {
+  margin-left: 80px;
+}
+.propostasmaisdiscutidas {
+  a.nomedaproposta {
+    font-family: Droid Sans, Verdana;
+    font-size: 20px;
+    color: #419EBB;
+    &:hover {
+      color: #266b81
+    }
+  }
+  li {
+    font-family: Droid Sans, Verdana;
+    font-size: 35px;
+    color: #DB499B;
+    margin-left: 60px;
+    vertical-align: top;
+    clear: both;
+  }
+}
+
+h3.propostas {
+  background: url(/assets/titulo_propostas.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 192px;
+  height: 54px;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+h2.proposta {
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  color: #FF9966;
+}
+h3.proposta {
+  margin-bottom: 5px;
+  margin-left: 30px;
+  color: #FF9966;
+}
+
+.proposta h3 {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.proposta p, .proposta h4 {
+  word-wrap: break-word;
+}
+
+.proposta p#resumo {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cdcdcd;
+  padding: 15px;
+  a {
+    color: #FF9966;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+p.maispropostas {
+  padding-bottom: 20px;
+  a {
+    color: #FF9966;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+p.voltaraspropostas {
+  float: right;
+  padding-left: 30px;
+  a {
+    color: #FF9966;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+p.maispropostasrodape {
+  padding-top: 50px;
+}
+
+div.proposta {
+  margin-bottom: 5px;
+  margin-left: 30px;
+  width: 620px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  clear: both;
+  p#descricao a {
+    color: #FF9966;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.proposta .saibamais {
+  margin-top: 10px;
+}
+
+h4.editarproposta {
+  width: 670px;
+  float: left;
+  height: 30px;
+}
+
+.excluirproposta {
+  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.novaproposta .enviar {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  li {
+    display: inline;
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+}
+
+.novaproposta {
+  .titulo {
+    float: left;
+    width: 170px;
+    div {
+      background-image: url('/assets/form_titulo.jpg');
+      background-repeat: no-repeat;
+      width: 170px;
+      height: 40px;
+    }
+    input {
+      height: 30px;
+      padding: 5px;
+      padding-left: 10px;
+      width: 160px;
+      background: none;
+    }
+  }
+  .resumo {
+    float: left;
+    width: 250px;
+    div {
+      background-image: url('/assets/form_resumo.jpg');
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 40px;
+    }
+    input {
+      height: 30px;
+      padding: 5px;
+      padding-left: 10px;
+      width: 240px;
+      background: none;
+    }
+  }
+  .descricao {
+    clear: both;
+    padding-top: 10px;
+    width: 715px;
+    div {
+      background-image: url('/assets/form_colunainteira.jpg');
+      background-repeat: no-repeat;
+      width: 715px;
+      height: 90px;
+    }
+    textarea {
+      height: 65px;
+      min-height: 65px;
+      max-height: 65px;
+      padding: 10px;
+      padding-left: 10px;
+      width: 700px;
+      max-width: 700px;
+      min-width: 700px;
+      background: none;
+    }
+  }
+  .tags {
+    float: left;
+    width: 280px;
+    margin-left: 10px;
+    margin-right: 5px;
+    div {
+      width: 25%;
+      float: left;
+      line-height: 14px;
+      .tagstexto {
+        margin-bottom: 5px;
+        font-size: 9px;
+        line-height: 14px;
+      }
+    }
+  }
+  input {
+    clear: both;
+    float: left;
+    width: 15px;
+    padding-right: 4px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+#conteudo.novaproposta h4 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}

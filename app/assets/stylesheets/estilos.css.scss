@@ -1,45 +1,5 @@
 @charset "utf-8";
 
-
-.maispropostas{margin-bottom:30px;}
-.maispropostas a{color:#FF9966; text-decoration:none; margin-left:30px;}
-.maispropostas a:hover{text-decoration:underline;}
-
-h3.propostasmaisdiscutidas {
-  background:url(/assets/titulo_propostasmaisdiscutidas.png);
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
-  width:315px;
-  height:55px;
-  margin-bottom:30px;
-}
-
-div.propostasmaisdiscutidas{margin-left:80px;}
-.propostasmaisdiscutidas a.nomedaproposta{font-family: Droid Sans, Verdana; font-size:20px; color:#419EBB;}
-.propostasmaisdiscutidas a.nomedaproposta:hover {color:#266b81}
-
-.propostasmaisdiscutidas li {
-  font-family: Droid Sans, Verdana;
-  font-size:35px;
-  color:#DB499B;
-  margin-left:60px;
-  vertical-align:top;
-  clear:both
-}
-
-
-h3.propostas {
-  background:url(/assets/titulo_propostas.png);
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
-  width:192px;
-  height:54px;
-  margin-bottom:20px;
-  clear:both;
-}
-
 h3.candidatos {
   background:url(/assets/titulo_candidatos.png);
   text-indent:100%;
@@ -50,7 +10,6 @@ h3.candidatos {
   margin-bottom:20px;
   clear:both;
 }
-
 
 /*CONTEUDO - listagens*/
 .listadepartidos h2{color:#660099; font-size:16px; margin-bottom:30px; margin-left:10px;}
@@ -71,62 +30,6 @@ a.previous_page, a.next_page, .gap {font-size:16px}
 .filtro_candidatos a{font-size:16px;}
 .filtro_candidatos a:hover{text-decoration:underline}
 
-/*CONTEUDO - proposta*/
-
-h2.proposta{padding-bottom:5px; margin-bottom:0px; color:#FF9966}
-h3.proposta{margin-bottom:5px; margin-left:30px; color:#FF9966}
-
-.proposta h3{padding-bottom:5px; margin-bottom:15px;}
-.proposta h3 a{text-decoration:none; font-size:16px;}
-.proposta h3 a:hover{text-decoration:underline;}
-.proposta p, .proposta h4 { word-wrap: break-word; }
-.proposta p#resumo { border-width:1px;border-style:solid;border-color:#cdcdcd; padding: 15px;}
-
-.proposta p#resumo a {color: #FF9966}
-.proposta p#resumo a:hover{text-decoration:underline;}
-
-p.maispropostas{padding-bottom:20px;}
-p.maispropostas a, p.voltaraspropostas a{ color:#FF9966; }
-p.maispropostas a:hover, p.voltaraspropostas a:hover { text-decoration:underline; }
-p.voltaraspropostas { float: right; padding-left:30px; }
-p.maispropostasrodape{padding-top:50px;}
-
 #conteudo p.acesse{margin-bottom:3px; width:400px;}
 
-div.proposta{margin-bottom:5px; margin-left:30px; width:620px; padding-bottom:10px; padding-top:10px; clear:both}
-div.proposta p#descricao a {color: #FF9966}
-div.proposta p#descricao a:hover{text-decoration:underline;}
-
-.proposta .saibamais{margin-top:10px;}
-
 #conteudo p.counter{text-align: right; width:68; display:block; }
-
-/*CONTEUDO - proposta - ACESSO RESTRITO*/
-h4.editarproposta{width:670px; float:left; height:30px;}
-.excluirproposta{padding-left:10px; width:30px; height:30px; float:right;}
-
-.novaproposta .enviar{width:100%; text-align:center; margin-bottom:20px;}
-.novaproposta .enviar li{display:inline; padding:10px;}
-.novaproposta .enviar a{text-decoration:none;}
-.novaproposta .enviar a:hover{text-decoration:underline; color:#000}
-
-.novaproposta .titulo, .novaproposta .tags, .novaproposta .resumo{float:left;}
-.novaproposta .titulo{width:170px;}
-
-.novaproposta .titulo div{background-image:url('/assets/form_titulo.jpg'); background-repeat:no-repeat; width:170px; height:40px;}
-.novaproposta .resumo div{background-image:url('/assets/form_resumo.jpg'); background-repeat:no-repeat; width:250px; height:40px;}
-.novaproposta .descricao div{background-image:url('/assets/form_colunainteira.jpg'); background-repeat:no-repeat; width:715px; height:90px;}
-
-.novaproposta .titulo input{height:30px; padding:5px; padding-left:10px; width:160px; background:none}
-.novaproposta .resumo input{height:30px; padding:5px; padding-left:10px; width:240px; background:none}
-.novaproposta .descricao textarea{height:65px; min-height:65px; max-height:65px; padding:10px; padding-left:10px; width:700px; max-width:700px; min-width:700px; background:none;}
-
-.novaproposta .tags{width:280px; margin-left:10px; margin-right:5px;}
-.novaproposta .tags div{width:25%; float:left; line-height:14px;}
-.novaproposta input{clear:both; float:left; width:15px; padding-right:4px; margin-bottom:10px;}
-.novaproposta .tags div .tagstexto{margin-bottom:5px; font-size:9px; line-height:14px;}
-
-#conteudo.novaproposta h4{margin-bottom:10px; margin-top:20px;}
-.novaproposta p{margin-bottom:10px;}
-.novaproposta .resumo{width:250px;}
-.novaproposta .descricao{clear:both; padding-top:10px; width:715px;}
