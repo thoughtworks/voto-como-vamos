@@ -25,7 +25,7 @@
       br
 
       #fb-root
-        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
+        .fb-comments data-notify="true" data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
   = render :partial => 'candidates/candidate'

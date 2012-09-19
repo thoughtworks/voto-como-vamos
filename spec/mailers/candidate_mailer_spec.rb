@@ -11,4 +11,15 @@ describe CandidateMailer do
         to_not raise_error
     end
   end
+  describe "comment notifiction" do
+    it "should render successfully" do
+      candidate = double(:name => 'Candidate Name', :email => 'candidate@email.com')
+      proposal = double(:candidate => candidate)
+
+      Proposal.should_receive(:find).with(1).and_return(proposal)
+
+      expect { CandidateMailer.notify_comment(1) }.
+        to_not raise_error
+    end
+  end
 end
