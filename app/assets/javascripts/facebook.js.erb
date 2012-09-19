@@ -44,4 +44,19 @@ $(function(d) {
     }
   });
 
+  $.ajaxSetup({
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+    }
+  });
+
+  FB.Event.subscribe('comment.create', function(fbResponse) {
+    $.post(
+      fbResponse.href + '/comments',
+      { fb_comment_id: fbResponse.commentID },
+      function(response) {
+        console.log(response);
+      }
+    );
+  });
 }(document));
