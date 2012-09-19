@@ -1,13 +1,3 @@
-.capa {
-  margin-top:-5px;
-  margin-bottom:10px;
-}
-
-.capa, a.nomedaproposta {
-  position: relative;
-  top: -15px;
-}
-
 #baixo input, #baixo textarea {
   border: 2px solid #ccc;
   -moz-border-radius: 5px;
@@ -124,6 +114,7 @@ div.check_boxes input {margin: 0 10px}
 
 .listadepartidos {
   width: 955px;
+  margin-left: -150px;
 }
 
 #candidate_about {

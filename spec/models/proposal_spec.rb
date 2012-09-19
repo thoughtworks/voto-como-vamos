@@ -33,7 +33,6 @@ describe Proposal do
     results.should_not include(proposal)
   end
 
-
   it "should order the proposals by votes" do
     proposal_with_more_votes = FactoryGirl.create :proposal
     proposal_with_less_votes = FactoryGirl.create :proposal
@@ -74,4 +73,19 @@ describe Proposal do
     ordered[2].should == old_proposal
     ordered.should_not include(very_old_proposal)
   end
+
+  it "should order the proposals by creation date" do
+    10.times { FactoryGirl.create :proposal, created_at: 10.days.ago }
+    very_old_proposal = FactoryGirl.create :proposal, created_at: 4.days.ago
+    old_proposal = FactoryGirl.create :proposal, created_at: 2.days.ago
+    new_proposal = FactoryGirl.create :proposal, created_at: Date.today
+
+    ordered = described_class.ordered_by_creation_date
+
+    ordered[0].should == new_proposal
+    ordered[1].should == old_proposal
+    ordered[2].should == very_old_proposal
+    ordered.should have_exactly(10).items
+  end
+
 end

@@ -41,6 +41,10 @@ class Proposal < ActiveRecord::Base
     sorted_opinions.reverse[0..9].map { |array| Proposal.find(array[0]) }
   end
 
+  def self.ordered_by_creation_date
+    Proposal.order("created_at DESC").limit(10)
+  end
+
   searchable :auto_index => true, :auto_remove => true do
     string :title, :stored => true
     text :title, :boost => 5, :stored => true

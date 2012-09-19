@@ -22,26 +22,10 @@
     .interact
       = render :partial => 'interact', :locals => { :proposal => @proposal, :candidate => @candidate }
 
-      /.perguntas
-        img.perguntas src="/assets/bt_perguntar.jpg"
-        h3.nome Perguntas
-
-      /= simple_form_for [@proposal, @question], :html => {:id => "question", :method => :get} do |f|
-        = f.input :description, :id => "description", :label => false, :input_html => { :class => "small"}
-        = f.submit t('question.send'), :id => "do_question"
-
-      /ul#questions_list
-        - @proposal.questions.each do |q|
-          li.question
-            p= q.user.name
-            p= q.description
-            a.share href="#" data-title=@proposal.title data-description=q.description data-caption=@candidate.name data-photo=@candidate.photo
-              img src="/assets/bt_share.jpg"
-
       br
 
       #fb-root
-        .fb-comments data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
+        .fb-comments data-notify="true" data-href="#{candidate_proposal_url(@candidate, @proposal)}" data-num-posts="5"
 
 = content_for :left do
   = render :partial => 'candidates/candidate'

@@ -109,7 +109,7 @@ td.active {
 }
 
 .abc {
-  width: 870px;
+  width: 550px;
   margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -180,12 +180,10 @@ td.active {
   }
 }
 /*CAPA*/
-.capa {
+.opinioes {
   width: 168px;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   height: 30px;
-  margin-left: 0px;
   div {
     height: 28px;
     background-image: url('/assets/balaozinho.jpg');
@@ -221,9 +219,9 @@ td.active {
 /*CONTEUDO*/
 #conteudo {
   margin-bottom: 30px;
-  padding-top: 35px;
-  padding-left: 25px;
-  padding-right: 20px;
+  padding: 32px 20px 0 10px;
+  margin: 0 auto;
+  width: 620px;
   &.interface2 {
     padding-left: 0px;
   }
@@ -231,12 +229,18 @@ td.active {
     text-align: justify;
     line-height: 20px;
     margin-bottom: 10px;
+    &.acesse {
+      margin-bottom: 3px;
+      width: 400px;
+    }
+    &.counter {
+      text-align: right;
+      width: 68;
+      display: block;
+    }
   }
   h2 {
     font-size: 18px;
-  }
-  h3 {
-    font-size: 16px;
   }
   h4 {
     font-size: 14px;
@@ -254,8 +258,9 @@ td.active {
 /*ESQUERDA*/
 #esquerda {
   float: left;
-  width: 695px;
+  width: 1000px;
   display: table;
+  margin-top: 10px;
   &.interface2 {
     width: 240px;
     margin-left: 50px;
@@ -266,13 +271,17 @@ td.active {
 
 /*DIREITA*/
 #direita {
-  width: 305px;
+  width: 1000px;
   float: left;
   display: table;
+  position: absolute;
+  background: #CBECF5;
   &.interface2 {
     width: 700px;
     float: left;
     display: table;
+    position: relative;
+    background: none;
   }
 }
 
@@ -395,18 +404,5 @@ address {
   p {
     width: 34px;
     text-align: center;
-  }
-}
-#conteudo {
-  p {
-    &.acesse {
-      margin-bottom: 3px;
-      width: 400px;
-    }
-    &.counter {
-      text-align: right;
-      width: 68;
-      display: block;
-    }
   }
 }
