@@ -33,8 +33,18 @@
   }
 }
 
+@mixin column(){
+  margin-top: 10px;
+  margin-right: 10px;
+  float: left;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
+  padding: 5px;
+  width: 285px;
+}
+
 .propostasmaisdiscutidas {
-  margin-top: 30px;
+  @include column;
   a.nomedaproposta {
     font-family: Droid Sans, Verdana;
     font-size: 16px;
@@ -46,18 +56,18 @@
   }
   .proposta {
     font-family: Droid Sans, Verdana;
-    color: #DB499B;
+    color: #E945A0;
     margin-left: 35px;
     clear: both;
     width: 255px;
   }
   .header {
-    margin-left: 60px;
+    margin-left: 65px;
     .icon {
-      margin-left: 50px;
+      margin-left: 55px;
       width: 40px;
       border-radius: 5px;
-      background: #DC489A;
+      background: #E945A0;
       height: 30px;
       position: relative;
       .arrow {
@@ -70,7 +80,55 @@
       }
     }
     h3 {
-      color: #DC489A;
+      color: #E945A0;
+      width: 265px;
+      padding: 10px;
+      font-size: 20px;
+      font-family: Droid Sans, Verdana;
+      position: relative;
+    }
+  }
+}
+
+.ultimas-propostas {
+  @include column;
+  a.nomedaproposta {
+    font-family: Droid Sans, Verdana;
+    font-size: 16px;
+    color: #419EBB;
+    position: relative;
+    &:hover {
+      color: #266b81
+    }
+  }
+  .proposta {
+    font-family: Droid Sans, Verdana;
+    color: rgba(97,138,200,1);
+    margin-left: 35px;
+    clear: both;
+    width: 255px;
+  }
+  .header {
+    margin-left: 50px;
+    .icon {
+      margin-left: 89px;
+      width: 9px;
+      border-radius: 2px;
+      background: rgba(97,138,200,1);
+      height: 28px;
+      position: relative;
+      margin-bottom: 3px;
+      .arrow {
+        background: rgba(97,138,200,1);
+        position: absolute;
+        top: 30px;
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+      }
+    }
+    h3 {
+      color: rgba(97,138,200,1);
       width: 265px;
       padding: 10px;
       font-size: 20px;

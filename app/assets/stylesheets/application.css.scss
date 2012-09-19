@@ -109,7 +109,7 @@ td.active {
 }
 
 .abc {
-  width: 870px;
+  width: 550px;
   margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -220,6 +220,8 @@ td.active {
 #conteudo {
   margin-bottom: 30px;
   padding: 32px 20px 0 10px;
+  margin: 0 auto;
+  width: 620px;
   &.interface2 {
     padding-left: 0px;
   }
@@ -256,7 +258,7 @@ td.active {
 /*ESQUERDA*/
 #esquerda {
   float: left;
-  width: 695px;
+  width: 1000px;
   display: table;
   margin-top: 10px;
   &.interface2 {

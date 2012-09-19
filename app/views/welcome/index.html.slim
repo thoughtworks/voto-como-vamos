@@ -16,12 +16,21 @@
       - @categories.each do |c|
         li
           = link_to c.name, proposals_path(:categories => [c.id])
+
 .propostasmaisdiscutidas
   .header
     .icon
       .arrow
     h3
       | Mais Votadas
-
   ol
     = render @proposals
+
+.ultimas-propostas
+  .header
+    .icon
+      .arrow
+    h3
+      | Ultimas Propostas
+  ul
+    = render Proposal.ordered_by_creation_date
