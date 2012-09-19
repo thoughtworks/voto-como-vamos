@@ -9,9 +9,6 @@
         br
         a target="vimeo_video" href="http://player.vimeo.com/video/44025139?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f"
           | Você sabe o que faz um vereador?
-        /br
-        /a target="vimeo_video" href="http://player.vimeo.com/video/41771045?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f"
-          | Você sabe o que faz um prefeito?
 
 - content_for(:right) do
   #propostas_areas
@@ -20,9 +17,11 @@
         li
           = link_to c.name, proposals_path(:categories => [c.id])
 .propostasmaisdiscutidas
-  h3
-    | Propostas Mais Discutidas
-    .arrow
+  .header
+    .icon
+      .arrow
+    h3
+      | Mais Votadas
 
   ol
     = render @proposals

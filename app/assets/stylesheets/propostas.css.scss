@@ -21,19 +21,6 @@
   }
 }
 
-#proposta {
-  p {
-    a {
-      color: #FF9966;
-      text-decoration: none;
-      &:hover {
-        color: #FF9966;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
 .maispropostas {
   margin-bottom: 30px;
   a {
@@ -47,39 +34,48 @@
 }
 
 .propostasmaisdiscutidas {
+  margin-top: 30px;
   a.nomedaproposta {
     font-family: Droid Sans, Verdana;
-    font-size: 18px;
+    font-size: 16px;
     color: #419EBB;
     position: relative;
     &:hover {
       color: #266b81
     }
   }
-  li {
+  .proposta {
     font-family: Droid Sans, Verdana;
-    font-size: 20px;
     color: #DB499B;
     margin-left: 35px;
-    vertical-align: top;
     clear: both;
+    width: 255px;
   }
-  h3 {
-    background: #DC489A;
-    border-radius: 8px;
-    color: white;
-    width: 265px;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 20px;
-    font-family: Droid Sans, Verdana;
-    position: relative;
-    .arrow {
-      background: url("/assets/pink_bubble_arrow.png");
-      position: absolute;
-      top: 44px;
-      width: 15px;
-      height: 9px;
+  .header {
+    margin-left: 60px;
+    .icon {
+      margin-left: 50px;
+      width: 40px;
+      border-radius: 5px;
+      background: #DC489A;
+      height: 30px;
+      position: relative;
+      .arrow {
+        background: url("/assets/pink_bubble_arrow.png");
+        position: absolute;
+        top: 30px;
+        width: 15px;
+        height: 9px;
+        left: 11px;
+      }
+    }
+    h3 {
+      color: #DC489A;
+      width: 265px;
+      padding: 10px;
+      font-size: 20px;
+      font-family: Droid Sans, Verdana;
+      position: relative;
     }
   }
 }
