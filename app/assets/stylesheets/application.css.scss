@@ -380,26 +380,29 @@ address {
 }
 
 .acoes {
-  width: 295px;
+  width: 405px;
   margin-top: 5px;
   margin-bottom: 40px;
   height: 30px;
   float: right;
   div {
+    float: left;
+    margin-left: 15px;
+  }
+  .acao_curtir, .acao_naocurtir {
     height: 28px;
     background-image: url('/assets/balaozinho.jpg');
     background-repeat: no-repeat;
     background-position: right center;
     min-width: 68px;
     padding-top: 2px;
-    float: left;
-    margin-left: 15px;
     p,  img {
       float: left;
     }
   }
-  a.acao_sharefacebook {
-    float: left;
+  .twitter {
+    margin-right: -30px;
+    margin-top: 2px;
   }
   p {
     width: 34px;
