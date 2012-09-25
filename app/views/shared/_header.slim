@@ -17,4 +17,19 @@
       li
         = link_to "Candidatos", candidates_path, :class => "candidatos button"
 
-  .fb-login-button#login_button data-autologoutlink="true" data-show-faces="false" data-width="75" data-max-rows="1"
+  / .fb-login-button#login_button data-autologoutlink="true" data-show-faces="false" data-width="75" data-max-rows="1"
+
+  #login
+    .loginbutton
+      span Bem-vindo(a)! 
+
+      a href="#"
+          = image_tag "bt_login.jpg", :alt => "Gerencie seu perfil", :id => "bt_login"
+    ul
+      li class="title"  Gerencie seu perfil
+      li 
+        = link_to "José Fortunati", parties_path, :class => "login_list" 
+      li 
+        = link_to "Advogada Adriana Cristina Fernandes", parties_path, :class => "login_list" 
+      li class="logout"
+        = link_to "Sair", parties_path, :class => "login_list" 
