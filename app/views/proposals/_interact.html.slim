@@ -1,6 +1,13 @@
+
 script function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script>
 style html .fb_share_link { padding:2px 0 0 20px; height:16px; background:url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top left; }</style>
 .acoes
-  a.share.acao_sharefacebook href="#" data-title=proposal.title data-description=proposal.abstract data-caption=proposal.title data-photo=candidate.photo data-url=proposal_url(proposal)
-    img src="/assets/bt_share.jpg"
+  .twitter
+    a.twitter-share-button href="https://twitter.com/share" data-lang="pt-br" data-text="#{proposal.title} - #{proposal_url(proposal)}" data-url="#{proposal_url(proposal)}" data-hashtags="VotoComoVamos"= t('common.tweet')
+    script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+  .facebook
+    a.share.acao_sharefacebook href="#" data-title=proposal.title data-description=proposal.abstract data-caption=proposal.title data-photo=candidate.photo data-url=proposal_url(proposal)
+      img src="/assets/bt_share.jpg"
+
   = opinion_widget current_user, proposal
