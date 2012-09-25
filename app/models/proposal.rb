@@ -17,7 +17,8 @@ class Proposal < ActiveRecord::Base
 
   validates :description, :presence => true
 
-  scope :ordered_by_votes, order("opinions_count DESC")
+  LIMIT = 5
+  scope :ordered_by_votes, order("opinions_count DESC").limit(LIMIT)
 
   attr_accessible :title, :abstract, :description, :category_ids
 
@@ -42,7 +43,7 @@ class Proposal < ActiveRecord::Base
   end
 
   def self.ordered_by_creation_date
-    Proposal.order("created_at DESC").limit(10)
+    Proposal.order("created_at DESC").limit(LIMIT)
   end
 
   searchable :auto_index => true, :auto_remove => true do

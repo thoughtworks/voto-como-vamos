@@ -85,7 +85,7 @@ describe Proposal do
     ordered[0].should == new_proposal
     ordered[1].should == old_proposal
     ordered[2].should == very_old_proposal
-    ordered.should have_exactly(10).items
+    ordered.should have_exactly(5).items
   end
 
 end
