@@ -170,6 +170,52 @@ td.active {
   position: relative;
 }
 
+#login {
+  position: absolute;
+  right: 0;
+}
+
+#login img {
+  vertical-align: middle;
+}
+
+#login ul {
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  float: right;
+  padding: 20px 10px 0px 10px;
+  clear: both;
+  /* display: none;  Hiding options and waiting for the devs*/
+}
+
+#login ul li {
+  padding-bottom: 15px;
+}
+
+#login ul li.title {
+  color: #315d8c;
+  padding-bottom: 10px;
+}
+
+#login ul li.logout {
+  border-top: 1px solid #cdcdcd;
+  padding-top: 10px
+}
+
+.loginbutton {
+  float: right;
+  padding-top: 15px;
+}
+
+#login ul a.login_list {
+  text-decoration: none;
+}
+
+#login ul a:hover.login_list {
+  text-decoration: underline;
+  color: #315d8c;
+}
+
 #logo {
   width: 185px;
   float: left;
