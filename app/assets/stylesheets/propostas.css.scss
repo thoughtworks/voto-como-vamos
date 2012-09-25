@@ -39,7 +39,6 @@
   float: left;
   border: 1px solid whitesmoke;
   border-radius: 3px;
-  padding: 5px;
   width: 285px;
 }
 
@@ -47,7 +46,7 @@
   @include column;
   a.nomedaproposta {
     font-family: Droid Sans, Verdana;
-    font-size: 16px;
+    font-size: 14px;
     color: #419EBB;
     position: relative;
     &:hover {
