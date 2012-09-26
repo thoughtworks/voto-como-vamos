@@ -1,3 +1,10 @@
+- content_for(:right) do
+  #propostas_areas
+    ul
+      - @categories.each do |c|
+        li
+          = link_to c.name, proposals_path(:categories => [c.id])
+
 h2.proposta
   | Lista de Propostas
 p.maispropostas

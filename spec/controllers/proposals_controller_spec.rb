@@ -10,6 +10,7 @@ describe ProposalsController do
   let(:candidate_id) { '1' }
   let(:candidate)    { stub('candidate', :id => candidate_id) }
   let(:arguments) { {include: {questions: :user}} }
+  let(:categories) { [ mock_model(Category) ] }
 
   describe '#show' do
     let(:proposal_id) { '1' }
@@ -35,39 +36,48 @@ describe ProposalsController do
   describe 'filtered listing' do
     let(:proposals) { [double('proposal1'), double('proposal2')] }
     let(:category) {[double('Category')]}
+    
+    before do
+      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
+      proposals.should_receive(:shuffle).and_return(proposals)
+    end
+    
+    after do
+      should render_template('index')
+      should assign_to(:proposals).with(proposals)
+      should respond_with(:success)
+    end
 
     it 'search by category when specified' do
-      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       Category.should_receive(:find).with(['Test']).and_return(category)
-      proposals.should_receive(:shuffle).and_return(proposals)
       get :index, :categories => ['Test']
 
-      should respond_with(:success)
-      should assign_to(:proposals).with(proposals)
       should assign_to(:categories).with(category)
-      should render_template('index')
     end
 
     it 'search by text criteria when specified' do
-      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
       Category.should_receive(:find).with(nil).and_return(nil)
-      proposals.should_receive(:shuffle).and_return(proposals)
       get :index, :query => 'test'
-
-      should respond_with(:success)
-      should assign_to(:proposals).with(proposals)
-      should render_template('index')
+    end
+    
+    it 'shows the complet list for further filttering' do
+      Category.should_receive(:find).with(['Test']).and_return(category)
+      Category.should_receive(:all).and_return(categories)
+      
+      get :index, :categories => ['Test']
+      
+      should assign_to(:all_categories).with(categories)
     end
   end
 
-  context 'for the proposals page' do
+  context 'for the proposals page' do    
     before do
       Proposal.should_receive(:all, :order => "random()", :limit => 5)
-    end
-
-    it 'shows proposals sorted randomly' do
+      Category.should_receive(:all).and_return(categories)
       get :random_listing
     end
+    
+    it { should assign_to(:categories).with(categories) }
   end
 
   context 'for a specified candidate' do
