@@ -59,4 +59,10 @@ $(function(d) {
       }
     );
   });
+
+  $(".logout").click(function(){
+    FB.logout(function(response) {
+        window.location = "/logout";
+    });
+  });
 }(document));
