@@ -24,6 +24,12 @@ $(function(d) {
   FB.getLoginStatus(function(response) {
     if (response.status == 'connected') {
 
+      $(".logout").click(function(){
+        FB.logout(function(response) {
+            window.location = "/logout";
+        });
+      });
+
       FB.Event.subscribe('auth.logout', function () {
         window.location = "/logout";
       });
@@ -60,9 +66,4 @@ $(function(d) {
     );
   });
 
-  $(".logout").click(function(){
-    FB.logout(function(response) {
-        window.location = "/logout";
-    });
-  });
 }(document));
