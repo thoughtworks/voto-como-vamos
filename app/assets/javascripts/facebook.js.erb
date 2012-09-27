@@ -28,6 +28,7 @@ $(function(d) {
         FB.logout(function(response) {
             window.location = "/logout";
         });
+        return false;
       });
 
       FB.Event.subscribe('auth.logout', function () {
