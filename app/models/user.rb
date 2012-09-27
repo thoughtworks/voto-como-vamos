@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   validates :name, :uid, :provider, :presence => true
 
+  has_many :ownerships
+
   attr_accessible # none
 
   def self.create_with_auth(auth)

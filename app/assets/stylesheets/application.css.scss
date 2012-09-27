@@ -185,7 +185,7 @@ td.active {
   float: right;
   padding: 20px 10px 0px 10px;
   clear: both;
-  /* display: none;  Hiding options and waiting for the devs*/
+  display: none;
 }
 
 #login ul li {
@@ -205,8 +205,11 @@ td.active {
 .loginbutton {
   float: right;
   padding-top: 15px;
-}
 
+}
+#login:hover ul {
+  display: block;
+}
 #login ul a.login_list {
   text-decoration: none;
 }
