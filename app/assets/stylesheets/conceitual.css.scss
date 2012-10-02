@@ -7,10 +7,86 @@
   background-position: center top;
   margin-top: 10px;
 }
-#video {
+
+#container {
   width: 1000px;
   margin: auto;
   padding-top: 35px;
+  #video {
+    background: rgba(50,50,50,.8);
+    padding: 5px;
+    width: 285px;
+    float: right;
+  }
+  #intro {
+    background: rgba(50, 50, 50, 0.8);
+    width: 600px;
+    height: 201px;
+    float: left;
+    margin: auto;
+    #proposals {
+      .icon {
+        background: url(glyphicons/glyphicons_061_keynote.png) no-repeat center;
+        margin: 50px 75px 10px 75px;
+      }
+    }
+    #share {
+      .notice {
+        padding-left: 25px;
+      }
+      .icon {
+        margin: 9px;
+        &.facebook {
+          background: url(glyphicons/glyphicons_390_facebook.png) no-repeat center;
+        }
+        &.twitter {
+          background: url(glyphicons/glyphicons_392_twitter.png) no-repeat center;
+        }
+        &.mail {
+          background: url(glyphicons/glyphicons_010_envelope.png) no-repeat center;
+        }
+        &.comment {
+          background: url(glyphicons/glyphicons_043_group.png) no-repeat center;
+        }
+      }
+    }
+    .box {
+      &:first-child {
+        border: none;
+      }
+      margin: 10px 2px;
+      border-left: 2px solid white;
+      width: 194px;
+      float: left;
+      .notice {
+        height: 135px;
+        padding-top: 5px;
+        .candidate {
+          .picture {
+            width: 50px;
+            height: 50px;
+            background: url(foto_tw.jpg) 107px -119px;
+            border-radius: 90px;
+            border: 2px solid whiteSmoke;
+            float: left;
+            margin: 5px;
+          }
+        }
+        .icon {
+          width: 50px;
+          height: 50px;
+          float: left;
+          background-color: rgba(230, 230, 230, 0.7) !important;
+          border-radius: 3px;
+        }
+      }
+      .subtitle {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
   a {
     float: right;
     margin-left: 10px;
@@ -37,9 +113,3 @@ div.video {
   margin-bottom: 30px;
 }
 
-.videos  {
-  background: rgba(50,50,50,.8);
-  padding: 5px;
-  width: 285px;
-  float: right;
-}

@@ -1,8 +1,38 @@
 - content_for(:geral_css) { 'welcome' }
 - content_for(:conceptual) do
   #conceitual
-    #video
-     .videos
+    #container
+      #intro
+        #candidates.box
+          ul.notice
+            li.candidate
+              img.picture alt="Foto de candidato"
+            li.candidate
+              img.picture alt="Foto de candidato"
+            li.candidate
+              img.picture alt="Foto de candidato"
+            li.candidate
+              img.picture alt="Foto de candidato"
+            li.candidate
+              img.picture alt="Foto de candidato"
+            li.candidate
+              img.picture alt="Foto de candidato"
+          .subtitle
+            | Conheça seus candidatos
+        #proposals.box
+          .notice
+            img.icon alt="Proposta"
+          .subtitle
+            | Conheça suas propostas
+        #share.box
+          .notice
+            img.icon.facebook alt="Facebook"
+            img.icon.twitter alt="Twitter"
+            img.icon.mail alt="Mail"
+            img.icon.comment alt="Comment"
+          .subtitle
+            | Interaja e compartilhe
+      #video
         iframe class="video_frame" id="vimeo_video" src="http://player.vimeo.com/video/46839535?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f" width="285" height="160" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
         a target="vimeo_video" href="http://player.vimeo.com/video/46839535?title=0&amp;byline=0&amp;portrait=0&amp;color=ef3b4f"
           | Tutorial Voto Como Vamos
