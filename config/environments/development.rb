@@ -41,8 +41,8 @@ VotoComoVamos::Application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-      :user_name => "votocomovamos",
-      :password => "7abaf1e52c5bc55d",
+      :user_name => Settings.mailtrap_io_user,
+      :password => Settings.mailtrap_io_password,
       :address => "mailtrap.io",
       :port => 2525,
       :authentication => :plain

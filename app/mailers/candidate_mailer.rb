@@ -1,6 +1,6 @@
 # encoding: utf-8
 class CandidateMailer < ActionMailer::Base
-  default from: "sistema@votocomovamos.com.br"
+  default from: Settings.email_sender
 
   def claim(candidate_id)
     @candidate = Candidate.find(candidate_id)

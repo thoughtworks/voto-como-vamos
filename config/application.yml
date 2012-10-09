@@ -2,6 +2,12 @@ common:
   facebook_scopes: "offline_access,read_stream,email"
   heroku_app_url: "http://voto-como-vamos.herokuapp.com"
   facebook_permission_request_url: "http://www.facebook.com/connect/uiserver.php"
+  email_sender: "sistema@votocomovamos.com.br"
+  exception_sender: "noreply@votocomovamos.com.br"
+  exception_recipient: "votocomovamos@thoughtworks.com"
+  fqdn: "www.votocomovamos.com.br"
+  mailtrap_io_user: "votocomovamos"
+  mailtrap_io_password: "7abaf1e52c5bc55d"
 
 development:
   facebook_app_id: 342716239136799
@@ -16,6 +22,7 @@ test:
 staging:
   facebook_app_id: 250842391695084
   facebook_app_url: "http://apps.facebook.com/250842391695084"
+  fqdn: "teste.votocomovamos.com.br"
 
 production:
   facebook_app_id: 502204129793230
