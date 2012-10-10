@@ -80,6 +80,6 @@ VotoComoVamos::Application.configure do
   ActionMailer::Base.delivery_method = :smtp
 
   config.middleware.use ExceptionNotifier,
-    sender_address: Settings.exception_sender
+    sender_address: Settings.exception_sender,
     exception_recipients: Settings.exception_recipient
 end
