@@ -36,6 +36,8 @@ describe Candidate do
     it { should validate_presence_of :email }
     it { should_not allow_value("blah").for(:email) }
     it { should allow_value("a@blah.com").for(:email) }
+
+    it { subject.should_not be_elected }
   end
 
   it 'should generate a unique slug for candidate' do
