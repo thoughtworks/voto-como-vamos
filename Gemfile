@@ -40,7 +40,7 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 1.2'
   gem 'simplecov', :require => false
   gem 'email_spec'
 end
