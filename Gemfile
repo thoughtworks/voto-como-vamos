@@ -43,6 +43,7 @@ group :test do
   gem 'shoulda-matchers', '~> 1.2'
   gem 'simplecov', :require => false
   gem 'email_spec'
+  gem 'selenium-webdriver', '2.25.0'
 end
 
 group :development do
