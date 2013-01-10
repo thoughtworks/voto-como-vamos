@@ -127,6 +127,7 @@ GEM
     netrc (0.7.7)
     newrelic_rpm (3.4.0.1)
     nokogiri (1.5.3)
+    nyan-cat-formatter (0.2.0)
     oauth2 (0.6.1)
       faraday (~> 0.7)
       httpauth (~> 0.1)
@@ -273,6 +274,7 @@ DEPENDENCIES
   koala
   launchy
   newrelic_rpm
+  nyan-cat-formatter
   omniauth-facebook
   pg
   progress_bar
