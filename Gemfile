@@ -24,6 +24,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'nyan-cat-formatter'
   gem 'debugger'
   gem 'rspec-rails', '~> 2.0'
   gem 'pry'
