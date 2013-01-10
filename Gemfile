@@ -25,7 +25,6 @@ end
 
 group :test, :development do
   gem 'nyan-cat-formatter'
-  gem 'debugger'
   gem 'rspec-rails', '~> 2.0'
   gem 'pry'
   gem 'launchy'
@@ -44,6 +43,10 @@ group :test do
   gem 'shoulda-matchers', '~> 1.2'
   gem 'simplecov', :require => false
   gem 'email_spec'
+end
+
+group :development do
+  gem 'debugger'
 end
 
 group :production do
