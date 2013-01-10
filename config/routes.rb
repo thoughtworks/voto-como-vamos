@@ -7,7 +7,7 @@ VotoComoVamos::Application.routes.draw do
   match '/credits' => 'welcome#credits'
   match 'panel' => 'panel#show'
 
-  scope :scope_paths => { :new => "novo", :edit => "editar" } do
+  scope :path_names => { :new => "novo", :edit => "editar" } do
     resources :candidates, :path => "candidatos" do
       resources :proposals, :path => "propostas", :only => [:new, :create, :show, :destroy, :edit, :update] do
         get :delete
@@ -28,6 +28,7 @@ VotoComoVamos::Application.routes.draw do
   end
 
   resources :parties, :path => "partidos", :only => [:index, :show]
+  resources :comments, :only => :create
 
   resource :main_search
   root :to => 'welcome#index'

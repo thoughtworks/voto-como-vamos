@@ -244,7 +244,8 @@ describe ProposalsController do
     let(:fake_params) do
       {
         :candidate_id => candidate_id,
-        :proposal_id  => proposal_id
+        :proposal_id  => proposal_id,
+        :id => 1
       }
     end
 

@@ -8,6 +8,18 @@ class FooController < ApplicationController
 end
 
 describe FooController do
+
+  before do
+    Rails.application.routes.draw do
+      resources :foo, :only => :index
+    end
+  end
+
+  after do
+    Rails.application.reload_routes!
+  end
+
+
   context 'not logged in (outside canvas)' do
     before(:each) do
       session[:user_id] = 1
@@ -16,7 +28,7 @@ describe FooController do
     end
 
     it 'should store the fb app url plus the path to return to' do
-      session[:return_to].should == '/assets'
+      session[:return_to].should == '/foo'
     end
     it { should redirect_to("/auth/facebook") }
   end
