@@ -2,6 +2,11 @@ language: ruby
 rvm:
   - 1.9.3
 
+before_install:
+  - gem update --system
+  - rvm @default,@global do gem uninstall -ax bundler
+  - gem install bundler --pre
+
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
