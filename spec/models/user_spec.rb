@@ -29,5 +29,17 @@ describe User do
     User.find_by_provider_and_uid('facebook', '1234').should == user
   end
 
+  context 'pesquisa' do
+    it 'should send the pesquisa to the user email'do
+      user_email = "bla@example.com"
+      email_mock = stub(:email)
+
+      User.stub_chain(:uniq,:pluck).and_return([user_email])
+      UserMailer.should_receive(:pesquisa).with(user_email).and_return(email_mock)
+      email_mock.should_receive(:deliver)
+
+      User.send_pesquisa_to_users
+    end
+  end
 
 end

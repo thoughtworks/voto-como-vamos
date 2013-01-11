@@ -19,4 +19,9 @@ class User < ActiveRecord::Base
   def self.find_by_provider_and_uid(provider, uid)
     where(provider: provider, uid: uid).first
   end
+
+
+  def self.send_pesquisa_to_users
+    uniq.pluck(:email).each { |email| UserMailer.pesquisa(email).deliver }
+  end
 end
