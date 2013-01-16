@@ -38,7 +38,7 @@ describe ProposalsController do
     let(:category) {[double('Category')]}
     
     before do
-      Proposal.stub_chain(:search_in_categories, :results).and_return(proposals)
+      Proposal.should_receive(:search_in_categories).and_return(proposals)
       proposals.should_receive(:shuffle).and_return(proposals)
     end
     
