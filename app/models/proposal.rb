@@ -23,18 +23,13 @@ class Proposal < ActiveRecord::Base
   attr_accessible :title, :abstract, :description, :category_ids
 
   def self.search_in_categories(query_string, categories = [])
-    search do
-      fulltext query_string
-      with(:category_ids, categories)
-    end
+    title = "%" << query_string.to_s << "%"
+    joins(:categories).where(:categories => {:id => categories}).where("title like ?", title)
   end
 
   def self.text_search(query_string, page)
-    search do
-      fulltext query_string, :highlight => true
-      paginate :page => page
-      order_by(:title)
-    end
+    title = "%" << query_string << "%" unless query_string.nil?
+    where("title like ?", (title || "")).paginate(:page => page)
   end
 
   def self.ordered_by_votes_in_the_last_week
@@ -46,11 +41,4 @@ class Proposal < ActiveRecord::Base
     Proposal.order("created_at DESC").limit(LIMIT)
   end
 
-  searchable :auto_index => true, :auto_remove => true do
-    string :title, :stored => true
-    text :title, :boost => 5, :stored => true
-    text :abstract
-    text :description
-    integer :category_ids, :multiple => true, :references => Category
-  end
 end

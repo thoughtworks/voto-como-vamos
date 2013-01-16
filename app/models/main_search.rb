@@ -21,6 +21,6 @@ class MainSearch
   end
 
   def empty?
-    candidates.results.empty? && proposals.results.empty?
+    candidates.empty? && proposals.empty?
   end
 end

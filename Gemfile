@@ -31,7 +31,6 @@ group :test, :development do
   gem 'sqlite3'
   gem 'hitch'
   gem 'spork'
-  gem 'sunspot_solr'
   gem 'progress_bar'
   gem 'factory_girl_rails'
 end

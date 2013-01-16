@@ -14,18 +14,9 @@ class Candidate < ActiveRecord::Base
 
   attr_accessible :about, :phone, :email, :site, :blog, :facebook, :twitter, :press_agent, :elected
 
-  searchable :auto_index => true, :auto_remove => true do
-    text :name, :stored => true
-    text :short_name, :stored => true
-    string :short_name
-  end
-
   def self.text_search(query_string, page = 1)
-    search do
-      fulltext query_string, :highlight => true
-      paginate :page => page
-      order_by(:short_name)
-    end
+    name = "%" << query_string << "%" unless query_string.nil?
+    where("name like ?", (name || "")).paginate(:page => page)
   end
 
   def generate_obfuscated_slug

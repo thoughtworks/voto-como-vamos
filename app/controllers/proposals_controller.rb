@@ -7,7 +7,7 @@ class ProposalsController < ApplicationController
   def index
     @all_categories = Category.all
     @categories = Category.find(params[:categories])
-    @proposals = Proposal.search_in_categories(params[:query], params[:categories]).results.shuffle[0..4]
+    @proposals = Proposal.search_in_categories(params[:query], params[:categories]).shuffle[0..4]
   end
 
   def random_listing

@@ -20,16 +20,14 @@ describe Proposal do
   it 'can be found by text criteria and filtered by categories' do
     category = FactoryGirl.create :category
     proposal = FactoryGirl.create :proposal, :title => 'Test', :categories => [category]
-    Sunspot.commit
-    results = Proposal.search_in_categories('Test', [category.id]).results
+    results = Proposal.search_in_categories('Test', [category.id])
     results.should include(proposal)
   end
 
   it 'should not include another categories than specified in search' do
     another_category = FactoryGirl.create :category
     proposal = FactoryGirl.create :proposal, :title => 'Test'
-    Sunspot.commit
-    results = Proposal.search_in_categories('Test', [another_category.id]).results
+    results = Proposal.search_in_categories('Test', [another_category.id])
     results.should_not include(proposal)
   end
 

@@ -10,26 +10,26 @@
         |  Resultados para
         span.termobuscado
           = "\"#{@main_search.query}\""
-      - unless @main_search.candidates.results.empty?
+      - unless @main_search.candidates.empty?
         h3.candidatos Candidatos
-        = will_paginate @main_search.candidates.results, { :class => "abc", :link_separator => " - ", :param_name => "candidates_page" }
-        - @main_search.candidates.each_hit_with_result do |hit, c|
+        = will_paginate @main_search.candidates, { :class => "abc", :link_separator => " - ", :param_name => "candidates_page" }
+        - @main_search.candidates.each do |c|
           div.resultado
             div.titulo
               a href=candidate_path(c)
-                = formatted_highlight hit, :short_name
+                = c.short_name
                 |&nbsp;(
-                = formatted_highlight hit, :name
+                = c.name
                 |)
             p.resumo= [c.tse_number, c.role, c.party, c.alliance].join(", ")
 
-      - unless @main_search.proposals.results.empty?
+      - unless @main_search.proposals.empty?
         h3.propostas Propostas
-        = will_paginate @main_search.proposals.results, { :class => "abc", :link_separator => " - ", :param_name => "proposals_page" }
-        - @main_search.proposals.each_hit_with_result do |hit, p|
+        = will_paginate @main_search.proposals, { :class => "abc", :link_separator => " - ", :param_name => "proposals_page" }
+        - @main_search.proposals.each do |p|
           .resultado
             .titulo
               a href=proposal_path(p)
-                = formatted_highlight hit, :title
+                = p.title
                 p.resumo
                   = p.abstract
