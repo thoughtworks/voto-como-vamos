@@ -1,4 +1,3 @@
-
 [![Build Status](https://secure.travis-ci.org/thoughtworks/voto-como-vamos.png?branch=master)](http://travis-ci.org/thoughtworks/voto-como-vamos)
 
 Voto Como Vamos
