@@ -1,0 +1,8 @@
+require 'bundler/setup'
+Bundler.require
+
+set :static_cache_control, [:public, :max_age => 300]
+
+get '/' do
+  slim :index
+end

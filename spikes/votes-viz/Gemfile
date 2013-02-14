@@ -1,0 +1,7 @@
+source :rubygems
+
+gem 'slim'
+gem 'sinatra'
+
+gem 'rake'
+
