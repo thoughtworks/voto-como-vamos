@@ -20,17 +20,15 @@ html
         stroke-width: 2px;
       }
 
-      .RdYlGn .q0-11{fill:rgb(165,0,38)}
-      .RdYlGn .q1-11{fill:rgb(215,48,39)}
-      .RdYlGn .q2-11{fill:rgb(244,109,67)}
-      .RdYlGn .q3-11{fill:rgb(253,174,97)}
-      .RdYlGn .q4-11{fill:rgb(254,224,139)}
-      .RdYlGn .q5-11{fill:rgb(255,255,191)}
-      .RdYlGn .q6-11{fill:rgb(217,239,139)}
-      .RdYlGn .q7-11{fill:rgb(166,217,106)}
-      .RdYlGn .q8-11{fill:rgb(102,189,99)}
-      .RdYlGn .q9-11{fill:rgb(26,152,80)}
-      .RdYlGn .q10-11{fill:rgb(0,104,55)}
+      .Greens .q0-9{fill:rgb(247,252,245)}
+      .Greens .q1-9{fill:rgb(229,245,224)}
+      .Greens .q2-9{fill:rgb(199,233,192)}
+      .Greens .q3-9{fill:rgb(161,217,155)}
+      .Greens .q4-9{fill:rgb(116,196,118)}
+      .Greens .q5-9{fill:rgb(65,171,93)}
+      .Greens .q6-9{fill:rgb(35,139,69)}
+      .Greens .q7-9{fill:rgb(0,109,44)}
+      .Greens .q8-9{fill:rgb(0,68,27)}
 
   body
     h1 Votações da Câmara de Vereadores de Porto Alegre
@@ -43,19 +41,18 @@ html
 
       var day = d3.time.format("%w"),
           week = d3.time.format("%U"),
-          percent = d3.format(".1%"),
+          percent = d3.format("d"),
           format = d3.time.format("%d/%m/%Y");
 
       var color = d3.scale.quantize()
-          .domain([0, 257])
-          .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+          .range(d3.range(9).map(function(d) { return "q" + d + "-9"; }));
 
       var svg = d3.select("body").selectAll("svg")
-          .data(d3.range(2012, 2014))
+          .data(d3.range(2010, 2014))
         .enter().append("svg")
           .attr("width", width)
           .attr("height", height)
-          .attr("class", "RdYlGn")
+          .attr("class", "Greens")
         .append("g")
           .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
@@ -83,17 +80,17 @@ html
           .attr("class", "month")
           .attr("d", monthPath);
 
-      var csvData = 'https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=csv&name=votacoes&attach=vereadores_camarapoa_1&query=select%20tipo_sessao%2C%20data_sessao%2C%20horario_inicio_votacao%2C%20parlamentar%2C%20voto%20from%20%60presencas%60%20where%20parlamentar%20in%20(select%20nome%20from%20%60vereadores%60)';
+      var csvData = 'https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=csv&name=votacoes&attach=vereadores_camarapoa_1&query=select%20tipo_sessao%2C%20data_sessao%2C%20horario_inicio_votacao%2C%20count(*)%20as%20votos%20from%20%60presencas%60%20where%20voto%20not%20in%20(%22Ausente%22%2C%20%22N%C3%A3o%20votou%22)%20group%20by%20tipo_sessao%2C%20data_sessao%2C%20horario_inicio_votacao';
 
       d3.csv(csvData, function(error, csv) {
         var data = d3.nest()
           .key(function(d) { return d.data_sessao; })
           .rollup(function(d) {
-            return d3.sum(d, function(e) {
-              return e.voto == 'Sim' || e.voto == 'Presente' ? 1 : 0;
-            });
+            return d3.sum(d, function(e) { return e.votos; });
           })
           .map(csv);
+
+        color = color.domain([d3.min(d3.values(data)), d3.max(d3.values(data))]);
 
         rect.filter(function(d) { return d in data; })
             .attr("class", function(d) { return "day " + color(data[d]); })
@@ -113,10 +110,3 @@ html
       }
 
       d3.select(self.frameElement).style("height", "2910px");
-
-    h2 Vereadores
-
-    ul.vereadores
-      li.vereador
-
-    ul.votos
