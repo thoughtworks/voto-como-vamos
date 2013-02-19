@@ -48,8 +48,8 @@ html
           format = d3.time.format("%d/%m/%Y");
 
       var color = d3.scale.quantize()
-          .domain([0, 257])
-          .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+          .domain([0, 100])
+          .range(d3.range(10).map(function(d) { return "q" + d + "-11"; }));
 
       var svg = d3.select("body").selectAll("svg")
           .data(d3.range(2012, 2014))
@@ -85,24 +85,19 @@ html
           .attr("d", monthPath);
 
       var csvData = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=csv&name=votacoes&query=select%20%60data_sessao%60%2C%20%60parlamentar%60%2C%20%60voto%60%20from%20presencas%20where%20%60parlamentar%60%3D'#{params[:name]}'"
-      var votingPresency = {
-      	  Sim: 1,
-	  Presente: 1,
-	  Não: 1
-      };
+      var csvData = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=csv&name=votacoes&query=select%20p.data_sessao%2C%20p.presencas_diarias%2C%20v.sessoes%20from%20(select%20data_sessao%2C%20count(*)%20as%20presencas_diarias%20from%20presencas%20where%20parlamentar%3D'#{params[:name]}'%20and%20voto%20in%20('Sim'%2C%20'Presente'%2C%20'N%C3%A3o')%20group%20by%20data_sessao)%20p%2C%20(select%20data%2C%20count(*)%20as%20sessoes%20from%20votacoes%20group%20by%20data)%20v%20where%20p.data_sessao%20%3D%20v.data"
 
       d3.csv(csvData, function(error, csv) {
         var data = d3.nest()
           .key(function(d) { return d.data_sessao; })
           .rollup(function(d) {
-	      return d3.mean(d, function(e) {
-	          return votingPresency[e.voto] ? 100 : 0;
-	      });
+	      var data = d[0];
+	      return data.presencas_diarias / data.sessoes;
           })
           .map(csv);
 
         rect.filter(function(d) { return d in data; })
-            .attr("class", function(d) { return "day " + color(data[d]); })
+            .attr("class", function(d) { return "day " + color(Math.round(100*data[d])); })
           .select("title")
             .text(function(d) { return d + ": " + percent(data[d]); });
       });
