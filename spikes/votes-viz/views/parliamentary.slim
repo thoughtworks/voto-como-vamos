@@ -157,7 +157,7 @@ html
 
       d3.select(self.frameElement).style("height", "2910px");
 
-      var jsonUrlQuery = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=votacoes&query=select%20*%20from%20%60presencas%60%0Awhere%20%60parlamentar%60%20%3D%20%20'Alberto%20Kopittke'"
+      var jsonUrlQuery = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=votacoes&query=select%20*%20from%20%60presencas%60%0Awhere%20%60parlamentar%60%20%3D%20%20'#{params[:name]}'"
 
       d3.json(jsonUrlQuery, function(data) {
         var haveAttended = data.filter(function(e) { return e.voto != 'Ausente'; }).length;
