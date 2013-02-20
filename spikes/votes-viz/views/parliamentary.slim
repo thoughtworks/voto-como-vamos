@@ -30,6 +30,48 @@ html
       .Greens .q7-9{fill:rgb(0,109,44)}
       .Greens .q8-9{fill:rgb(0,68,27)}
 
+      #statistics {
+        margin: 20px;
+        display: block;
+        border-radius: 2px;
+        border: 1px solid #000;
+        width: 600px;
+      }
+
+      #statistics div {
+        display: inline-block;
+        padding-top: 15px;
+        border-right: 1px solid #000;
+        width: 200px;
+        box-sizing: border-box;
+        font-size: 1.25em;
+        text-align: center;
+      }
+      #statistics div > span {
+        display: block;
+      }
+
+      #statistics div:last-child {
+        border-right: none;
+      }
+
+      #statistics .title {
+        padding: 10px 0;
+        border-top: 1px solid #aeaeae;
+      }
+      #statistics .detail {
+        margin-bottom: 10px;
+      }
+
+      #statistics .detail, #statistics .title {
+        color: #999;
+      }
+
+      #statistics .value {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
 
   body
     h1 Presenca do candidato #{params[:name]}
@@ -89,8 +131,8 @@ html
         var data = d3.nest()
           .key(function(d) { return d.data_sessao; })
           .rollup(function(d) {
-            var data = d[0];
-            return data.presencas_diarias / data.sessoes;
+            var current = d[0];
+            return current.presencas_diarias / current.sessoes;
           })
           .map(csv);
 
@@ -112,3 +154,41 @@ html
       }
 
       d3.select(self.frameElement).style("height", "2910px");
+
+      var jsonUrlQuery = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=votacoes&query=select%20*%20from%20%60presencas%60%0Awhere%20%60parlamentar%60%20%3D%20%20'#{params[:name]}'"
+
+      d3.json(jsonUrlQuery, function(data) {
+        var haveAttended = data.filter(function(e) { return e.voto != 'Ausente'; }).length;
+        var approvals = data.filter(function(e) { return e.voto == 'Sim'; }).length
+        var abstained = data.filter(function(e) { return e.voto == 'N\u00e3o votou'; }).length
+
+        d3.select('#assiduity .value').html(Math.round((haveAttended / data.length) * 100) + '%');
+        d3.select('#assiduity .detail').html(haveAttended + ' / ' + data.length);
+
+        d3.select('#approvals .value').html(Math.round((approvals/ data.length) * 100) + '%');
+        d3.select('#approvals .detail').html(approvals + ' / ' + data.length);
+
+        d3.select('#abstained .value').html(Math.round((abstained/ data.length) * 100) + '%');
+        d3.select('#abstained .detail').html(abstained + ' / ' + data.length);
+      });
+
+    div#statistics
+      div#assiduity
+        span.value
+        span.detail
+        span.title Assiduidade
+      div#approvals
+        span.value
+        span.detail
+        span.title Votou Sim
+      div#abstained
+        span.value
+        span.detail
+        span.title Não Votou
+
+    h2 Vereadores
+
+    ul.vereadores
+      li.vereador
+
+    ul.votos
