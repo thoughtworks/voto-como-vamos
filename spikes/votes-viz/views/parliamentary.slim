@@ -35,7 +35,7 @@ html
         display: block;
         border-radius: 2px;
         border: 1px solid #000;
-        width: 600px;
+        width: 1000px;
       }
 
       #statistics div {
@@ -158,18 +158,26 @@ html
       var jsonUrlQuery = "https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=votacoes&query=select%20*%20from%20%60presencas%60%0Awhere%20%60parlamentar%60%20%3D%20%20'#{params[:name]}'"
 
       d3.json(jsonUrlQuery, function(data) {
-        var attended  = data.filter(function(e) { return e.voto != 'Ausente'; }).length;
-        var approvals = data.filter(function(e) { return e.voto == 'Sim'; }).length
-        var abstained = data.filter(function(e) { return e.voto == 'N\u00e3o votou'; }).length
+        var attended   = data.filter(function(e) { return e.voto != 'Ausente'; }).length;
+        var approvals  = data.filter(function(e) { return e.voto == 'Sim'; }).length
+        var rejections = data.filter(function(e) { return e.voto == 'Não'; }).length
+        var abstained  = data.filter(function(e) { return e.voto == 'Não votou'; }).length
+        var external   = data.filter(function(e) { return e.voto == 'Representação externa'; }).length
 
         d3.select('#assiduity .value').html(Math.round((attended / data.length) * 100) + '%');
         d3.select('#assiduity .detail').html(attended + ' / ' + data.length);
 
-        d3.select('#approvals .value').html(Math.round((approvals/ data.length) * 100) + '%');
+        d3.select('#approvals .value').html(Math.round((approvals / data.length) * 100) + '%');
         d3.select('#approvals .detail').html(approvals + ' / ' + data.length);
 
-        d3.select('#abstained .value').html(Math.round((abstained/ data.length) * 100) + '%');
+        d3.select('#rejections .value').html(Math.round((rejections / data.length) * 100) + '%');
+        d3.select('#rejections .detail').html(rejections + ' / ' + data.length);
+
+        d3.select('#abstained .value').html(Math.round((abstained / data.length) * 100) + '%');
         d3.select('#abstained .detail').html(abstained + ' / ' + data.length);
+
+        d3.select('#external .value').html(Math.round((external / data.length) * 100) + '%');
+        d3.select('#external .detail').html(external + ' / ' + data.length);
       });
 
     div#statistics
@@ -177,18 +185,23 @@ html
         span.value
         span.detail
         span.title Assiduidade
+
       div#approvals
         span.value
         span.detail
         span.title Votou Sim
+
+      div#rejections
+        span.value
+        span.detail
+        span.title Votou Não
+
       div#abstained
         span.value
         span.detail
         span.title Não Votou
 
-    h2 Vereadores
-
-    ul.vereadores
-      li.vereador
-
-    ul.votos
+      div#external
+        span.value
+        span.detail
+        span.title Representação externa
